@@ -31,7 +31,8 @@ body {
   line-height: 1.55;
   min-height: 100vh;
 }
-html[lang="zh-Hans"] body { font-family: "Noto Sans SC", "Outfit", "PingFang SC", sans-serif; }
+html[lang="zh-Hans"] body,
+html[lang="zh-CN"] body { font-family: "Noto Sans SC", "Outfit", "PingFang SC", sans-serif; }
 html[lang="ja"] body { font-family: "Noto Sans JP", "Outfit", "Hiragino Sans", sans-serif; }
 img { max-width: 100%; }
 a { color: var(--wine); }
@@ -177,6 +178,27 @@ h1 {
   margin: 0 0 0.7rem;
 }
 .lead { margin: 0; color: var(--muted); font-size: 1.02rem; }
+.cross { margin: 0.85rem 0 0; }
+.cross a { font-weight: 650; }
+.list-section > h2,
+.faq h2 {
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+  margin: 0.2rem 0 0.75rem;
+}
+.faq {
+  margin-top: 2rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.05rem 1.15rem 0.35rem;
+}
+.faq-lead { margin: -0.2rem 0 0.9rem; color: var(--muted); }
+.faq-item { margin: 0 0 0.95rem; }
+.faq-item h3 { margin: 0 0 0.25rem; font-size: 1.02rem; }
+.faq-item p { margin: 0; color: var(--muted); }
 .hero-side {
   background: var(--ink);
   color: var(--header-text);
@@ -423,11 +445,12 @@ body.is-gated .site-footer { visibility: hidden; }
   padding: 0.15rem 0.55rem;
   font-size: 0.78rem;
 }
-.age-card h2 {
+.age-card .age-title {
   font-family: var(--serif);
   font-size: 1.7rem;
   margin: 0.7rem 0 0.45rem;
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 .age-card p { margin: 0 0 1rem; color: var(--muted); }
 .age-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }

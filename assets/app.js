@@ -71,6 +71,36 @@
     return url;
   }
 
+  function withLang(href) {
+    var hash = "";
+    var base = href;
+    var cut = href.indexOf("#");
+    if (cut !== -1) {
+      hash = href.slice(cut);
+      base = href.slice(0, cut);
+    }
+    if (state.lang === "zh-CN") return base + hash;
+    var join = base.indexOf("?") === -1 ? "?" : "&";
+    return base + join + "lang=" + encodeURIComponent(state.lang) + hash;
+  }
+
+  function absoluteImage(src) {
+    if (!src) return BASE + "/assets/og-share.png";
+    if (/^https?:\/\//i.test(src)) return src;
+    return BASE + "/" + String(src).replace(/^\//, "");
+  }
+
+  function priceString(price) {
+    var n = Number(price);
+    if (!isFinite(n)) return null;
+    return n.toFixed(2);
+  }
+
+  function asinFrom(url) {
+    var match = String(url || "").match(/\/dp\/([A-Z0-9]{10})(?:[/?#]|$)/);
+    return match ? match[1] : null;
+  }
+
   function writeUrl(lang) {
     var url = new URL(location.href);
     if (lang === "zh-CN") url.searchParams.delete("lang");
@@ -108,6 +138,10 @@
     setMeta("og:url", pageUrl(lang), true);
     setMeta("twitter:title", pageMeta.title);
     setMeta("twitter:description", pageMeta.description);
+    if (meta.ogImageAlt) {
+      setMeta("og:image:alt", meta.ogImageAlt, true);
+      setMeta("twitter:image:alt", meta.ogImageAlt);
+    }
     var canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) canonical.setAttribute("href", pageUrl(lang));
   }
@@ -206,7 +240,8 @@
     text("age-body", ui.ageBody);
     text("age-enter", ui.ageEnter);
     text("age-leave", ui.ageLeave);
-    text("foot-age", ui.footerAge);
+    var ageLine = document.getElementById("foot-age");
+    if (ageLine && ui.footerAge) ageLine.replaceChildren(el("strong", null, ui.footerAge));
     text("foot-snapshot", ui.footerSnapshot);
     text("foot-data", ui.footerData);
     text("skipped-title", ui.skippedTitle);
@@ -216,15 +251,144 @@
       text("stat-tz", data.timezone || "Asia/Shanghai");
       text("foot-links", fill(ui.footerLinks, { time: data.generated_at }));
     }
+    text("list-title", page.listTitle);
+    text("faq-title", dict.faq && dict.faq.title);
+    text("faq-lead", dict.faq && dict.faq.lead);
     var nav = document.getElementById("site-nav");
     if (nav) nav.setAttribute("aria-label", ui.navLabel);
     var langGroup = document.getElementById("lang-switch");
     if (langGroup) langGroup.setAttribute("aria-label", ui.langLabel);
     var jump = document.getElementById("jump-nav");
     if (jump) jump.setAttribute("aria-label", ui.jumpLabel);
+    var brand = document.querySelector(".brand");
+    if (brand) brand.setAttribute("href", withLang("index.html"));
+    var navTop = document.getElementById("nav-top");
+    if (navTop) navTop.setAttribute("href", withLang("index.html"));
+    var navPlatform = document.getElementById("nav-platform");
+    if (navPlatform) navPlatform.setAttribute("href", withLang("by-platform.html"));
+    var cross = document.getElementById("cross-link");
+    if (cross && page.cross) {
+      cross.textContent = page.cross;
+      cross.setAttribute("href", withLang(PAGE === "platform" ? "index.html" : "by-platform.html"));
+    }
     paintSources();
     paintSkipped();
+    paintFaq();
     setPressedLang(state.lang);
+  }
+
+  function paintFaq() {
+    var host = document.getElementById("faq-list");
+    var faq = state.dict && state.dict.faq;
+    if (!host || !faq) return;
+    clear(host);
+    (faq.items || []).forEach(function (item) {
+      var block = el("div", "faq-item");
+      block.appendChild(el("h3", null, item.q));
+      block.appendChild(el("p", null, item.a));
+      host.appendChild(block);
+    });
+  }
+
+  function productNode(item) {
+    var copy = copyFor(item);
+    var node = {
+      "@type": "Product",
+      "name": item.name,
+      "url": item.product_url,
+      "image": absoluteImage(item.image),
+      "brand": { "@type": "Brand", "name": item.store }
+    };
+    if (copy.display && copy.display !== item.name) node.alternateName = copy.display;
+    var sku = asinFrom(item.product_url);
+    if (sku) node.sku = sku;
+    var price = priceString(item.price);
+    if (price && item.currency) {
+      node.offers = {
+        "@type": "Offer",
+        "url": item.purchase_url || item.product_url,
+        "priceCurrency": item.currency,
+        "price": price
+      };
+    }
+    var reviews = item.reviews || {};
+    if (typeof reviews.rating === "number" && typeof reviews.count === "number" && reviews.count > 0) {
+      node.aggregateRating = {
+        "@type": "AggregateRating",
+        "ratingValue": reviews.rating,
+        "bestRating": 5,
+        "ratingCount": reviews.count
+      };
+    }
+    return node;
+  }
+
+  function writeStructuredData() {
+    var dict = state.dict;
+    var data = state.data;
+    var slot = document.getElementById("ld-json");
+    if (!dict || !data || !slot) return;
+    var meta = dict.meta;
+    var pageMeta = PAGE === "platform"
+      ? { title: meta.platformTitle, description: meta.platformDescription }
+      : { title: meta.topTitle, description: meta.topDescription };
+    var page = pageUrl(state.lang);
+    var items = data.items || [];
+    var faqEntities = ((dict.faq && dict.faq.items) || []).map(function (item) {
+      return {
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": { "@type": "Answer", "text": item.a }
+      };
+    });
+    var graph = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": page + "#webpage",
+          "url": page,
+          "name": pageMeta.title,
+          "description": pageMeta.description,
+          "inLanguage": meta.htmlLang,
+          "isFamilyFriendly": false,
+          "dateModified": data.date,
+          "audience": { "@type": "PeopleAudience", "requiredMinAge": 18 },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": BASE + "/assets/og-share.png",
+            "width": 1200,
+            "height": 630
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": page + "#itemlist",
+          "name": pageMeta.title,
+          "description": pageMeta.description,
+          "url": page,
+          "numberOfItems": items.length,
+          "itemListOrder": "https://schema.org/ItemListOrderAscending",
+          "itemListElement": items.map(function (item, index) {
+            return {
+              "@type": "ListItem",
+              "position": item.overall_rank || index + 1,
+              "item": productNode(item)
+            };
+          })
+        }
+      ]
+    };
+    if (faqEntities.length) {
+      graph["@graph"].push({
+        "@type": "FAQPage",
+        "@id": page + "#faq",
+        "inLanguage": meta.htmlLang,
+        "isFamilyFriendly": false,
+        "mainEntity": faqEntities
+      });
+    }
+    slot.textContent = JSON.stringify(graph);
   }
 
   function paintSources() {
@@ -234,7 +398,7 @@
     (state.data.sources_included || []).forEach(function (id) {
       var info = platformCopy(id);
       var chip = el("a", "chip", info.name);
-      chip.href = PAGE === "platform" ? "#" + id : "by-platform.html#" + id;
+      chip.href = withLang(PAGE === "platform" ? "#" + id : "by-platform.html#" + id);
       host.appendChild(chip);
     });
   }
@@ -426,6 +590,7 @@
 
   function render() {
     paintChrome();
+    writeStructuredData();
     if (!state.ageOk) return;
     if (PAGE === "top") paintFilters();
     paintCatalog();

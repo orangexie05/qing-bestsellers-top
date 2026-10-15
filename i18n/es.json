@@ -2,10 +2,11 @@
   "meta": {
     "htmlLang": "es",
     "ogLocale": "es_ES",
-    "topTitle": "Instantánea de más vendidos para adultos · Top 20 | 2026-10-15",
-    "topDescription": "Solo para mayores de 18 años. Instantánea del 15 de octubre de 2026 (hora de Shanghái) de listas públicas de Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Precios, valoraciones y puestos son de ese día.",
-    "platformTitle": "Más vendidos por tienda · instantánea para adultos 2026-10-15",
-    "platformDescription": "Solo para mayores de 18 años. La misma instantánea del 15 de octubre de 2026, separada por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy."
+    "topTitle": "Más vendidos para adultos, top 20 | 15 oct 2026",
+    "topDescription": "Solo mayores de 18 años. Listas públicas del 15 de octubre de 2026 (hora de Shanghái): Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Precios, valoraciones y puestos son de ese día.",
+    "platformTitle": "Más vendidos para adultos por tienda | 15 oct 2026",
+    "platformDescription": "Solo mayores de 18 años. La misma instantánea del 15 de octubre de 2026, separada por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy.",
+    "ogImageAlt": "Lista Qing, instantánea de más vendidos para adultos del 15 de octubre de 2026. Solo mayores de 18."
   },
   "ui": {
     "skip": "Saltar al contenido",
@@ -92,12 +93,37 @@
   "pages": {
     "top": {
       "h1": "Bienestar íntimo · top 20 combinado",
-      "lead": "Listas públicas que se pudieron abrir ese día: marcas independientes, Amazon.com y una tienda en chino de Hong Kong. Solo nombres, precios, valoraciones y enlaces que estaban en la página."
+      "lead": "Listas públicas que se pudieron abrir ese día: marcas independientes, Amazon.com y una tienda en chino de Hong Kong. Solo nombres, precios, valoraciones y enlaces que estaban en la página.",
+      "listTitle": "Productos de esta instantánea",
+      "cross": "Ver la misma lista por tienda"
     },
     "platform": {
       "h1": "La misma instantánea, por tienda",
-      "lead": "Los mismos 20 productos del 15 de octubre de 2026, agrupados por la tienda de origen. El número es cuántos entraron en la lista combinada, no la longitud completa del ranking de cada tienda."
+      "lead": "Los mismos 20 productos del 15 de octubre de 2026, agrupados por la tienda de origen. El número es cuántos entraron en la lista combinada, no la longitud completa del ranking de cada tienda.",
+      "cross": "Ver el orden combinado"
     }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "lead": "Algunas respuestas breves sobre esta instantánea pública.",
+    "items": [
+      {
+        "q": "¿Esto es una tienda?",
+        "a": "No. Lista Qing reúne páginas públicas de más vendidos que se pudieron abrir el 15 de octubre de 2026, para comparar nombres, precios y valoraciones. El pedido se hace en la tienda, después de revisar la ficha actual."
+      },
+      {
+        "q": "¿Qué tiendas entran?",
+        "a": "Amazon.com, Dame, Lovense, We-Vibe, Womanizer y Waddy de Hong Kong. Las que no se pudieron abrir figuran al final. No se inventó ningún producto para completar la lista."
+      },
+      {
+        "q": "¿Los precios siguen vigentes?",
+        "a": "Son los de esa instantánea. El stock, los descuentos y los puestos cambian; no es una cotización en vivo."
+      },
+      {
+        "q": "¿Para quién es la página?",
+        "a": "Solo para mayores de 18 años. No es un consejo médico ni de salud, y no recomienda comprar."
+      }
+    ]
   },
   "products": {
     "dame-hug": {

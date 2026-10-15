@@ -2,10 +2,11 @@
   "meta": {
     "htmlLang": "en",
     "ogLocale": "en_US",
-    "topTitle": "Adult bestseller snapshot · Top 20 | 2026-10-15",
-    "topDescription": "Adults 18+ only. A 15 October 2026 (Asia/Shanghai) snapshot of public bestseller lists from Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Prices, ratings, and ranks are from that day’s pages.",
-    "platformTitle": "Bestsellers by shop · adult snapshot 2026-10-15",
-    "platformDescription": "Adults 18+ only. The same 15 October 2026 snapshot, split by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy."
+    "topTitle": "Adult bestseller snapshot: top 20 | 15 Oct 2026",
+    "topDescription": "Adults 18+ only. Public bestseller lists from 15 October 2026 (Shanghai time): Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Prices, ratings, and ranks are from that day.",
+    "platformTitle": "Adult bestsellers by shop | snapshot 15 Oct 2026",
+    "platformDescription": "Adults 18+ only. The same 15 October 2026 snapshot, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. Counts are what made the combined list.",
+    "ogImageAlt": "Qing List adult bestseller snapshot, 15 October 2026. Adults 18+ only."
   },
   "ui": {
     "skip": "Skip to content",
@@ -92,12 +93,37 @@
   "pages": {
     "top": {
       "h1": "Intimate wellness · combined top 20",
-      "lead": "Public lists that could be opened that day, side by side: independent brands, Amazon.com, and a Chinese-language Hong Kong shop. Only names, prices, ratings, and links that were actually on the page."
+      "lead": "Public lists that could be opened that day, side by side: independent brands, Amazon.com, and a Chinese-language Hong Kong shop. Only names, prices, ratings, and links that were actually on the page.",
+      "listTitle": "Products in this snapshot",
+      "cross": "Browse the same list by shop"
     },
     "platform": {
       "h1": "The same snapshot, by shop",
-      "lead": "The same 20 products from 15 October 2026, grouped by the shop they came from. The count is how many entered the combined list, not the full length of each shop’s own chart."
+      "lead": "The same 20 products from 15 October 2026, grouped by the shop they came from. The count is how many entered the combined list, not the full length of each shop’s own chart.",
+      "cross": "View the combined ranking"
     }
+  },
+  "faq": {
+    "title": "Questions",
+    "lead": "A few plain answers about this public snapshot.",
+    "items": [
+      {
+        "q": "Is this a shop?",
+        "a": "No. Qing List lines up public bestseller pages that were open on 15 October 2026, so you can compare names, prices, and ratings. Order from the merchant only after you check the live page."
+      },
+      {
+        "q": "Which shops are included?",
+        "a": "Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Shops that could not be opened are listed at the bottom. Nothing was added to fill a gap."
+      },
+      {
+        "q": "Are the prices still current?",
+        "a": "They are the figures from that day’s snapshot. Stock, discounts, and ranks move, so treat this as a record, not a live quote."
+      },
+      {
+        "q": "Who is this for?",
+        "a": "Adults aged 18 and over. It is not medical or health advice, and it is not a suggestion that you should buy."
+      }
+    ]
   },
   "products": {
     "dame-hug": {

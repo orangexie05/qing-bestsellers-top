@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Important URLs for this adults-only snapshot.
+  zh-CN is the URL with no lang parameter and is also x-default.
+  en, ja, and es are the same paths with ?lang=en|ja|es.
+  Each URL below repeats the full hreflang set so alternates stay reciprocal.
+  data.json is the source snapshot, not a landing page.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
@@ -17,18 +24,33 @@
     <lastmod>2026-10-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://orangexie05.github.io/qing-bestsellers-top/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orangexie05.github.io/qing-bestsellers-top/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orangexie05.github.io/qing-bestsellers-top/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orangexie05.github.io/qing-bestsellers-top/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orangexie05.github.io/qing-bestsellers-top/"/>
   </url>
   <url>
     <loc>https://orangexie05.github.io/qing-bestsellers-top/?lang=ja</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://orangexie05.github.io/qing-bestsellers-top/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orangexie05.github.io/qing-bestsellers-top/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orangexie05.github.io/qing-bestsellers-top/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orangexie05.github.io/qing-bestsellers-top/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orangexie05.github.io/qing-bestsellers-top/"/>
   </url>
   <url>
     <loc>https://orangexie05.github.io/qing-bestsellers-top/?lang=es</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://orangexie05.github.io/qing-bestsellers-top/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orangexie05.github.io/qing-bestsellers-top/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orangexie05.github.io/qing-bestsellers-top/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orangexie05.github.io/qing-bestsellers-top/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orangexie05.github.io/qing-bestsellers-top/"/>
   </url>
   <url>
     <loc>https://orangexie05.github.io/qing-bestsellers-top/by-platform.html</loc>
@@ -45,19 +67,34 @@
     <loc>https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=en</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html"/>
   </url>
   <url>
     <loc>https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=ja</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html"/>
   </url>
   <url>
     <loc>https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=es</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orangexie05.github.io/qing-bestsellers-top/by-platform.html"/>
   </url>
   <url>
     <loc>https://orangexie05.github.io/qing-bestsellers-top/data.json</loc>
