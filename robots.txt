@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://orangexie05.github.io/qing-bestsellers-top/sitemap.xml
