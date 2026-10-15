@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "htmlLang": "en",
+    "ogLocale": "en_US",
+    "topTitle": "Adult bestseller snapshot · Top 20 | 2026-10-15",
+    "topDescription": "Adults 18+ only. A 15 October 2026 (Asia/Shanghai) snapshot of public bestseller lists from Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Prices, ratings, and ranks are from that day’s pages.",
+    "platformTitle": "Bestsellers by shop · adult snapshot 2026-10-15",
+    "platformDescription": "Adults 18+ only. The same 15 October 2026 snapshot, split by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy."
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "brand": "Qing List",
+    "brandSub": "Adult bestseller snapshot",
+    "badge": "18+",
+    "navLabel": "Pages",
+    "navTop": "Top 20",
+    "navPlatform": "By shop",
+    "navData": "Raw data",
+    "langLabel": "Language",
+    "langChanged": "Language set to English",
+    "heroKicker": "A public-list snapshot · not a paid placement",
+    "dateLabel": "Snapshot date",
+    "tzLabel": "Time zone",
+    "sortLabel": "How it’s ordered",
+    "sortRule": "Shop rank first, then rating and review count. Duplicate links are removed, and the first 20 remain. No products were invented to fill the list.",
+    "sourcesLabel": "Shops in this list",
+    "filtersLabel": "Filter by shop",
+    "filterAll": "All",
+    "resultCount": "Showing {n}",
+    "storeRank": "Shop rank #{n}",
+    "overallRank": "Overall {n}",
+    "originalLabel": "Listing name",
+    "cta": "View product page",
+    "noRating": "No rating on the list page",
+    "ratingOnly": "{rating}",
+    "ratingCount": "{rating} · {count} reviews",
+    "placeholderCaption": "No stable product photo was available, so this is a color card, not a photograph.",
+    "inList": "{n} in the combined list",
+    "jumpLabel": "Jump to a shop",
+    "empty": "Nothing in this view right now.",
+    "loading": "Loading this snapshot…",
+    "loadError": "The list data did not load. Refresh and try again.",
+    "skippedTitle": "Sources left out this time",
+    "skippedLead": "These shops could not be read, or the page had no list to extract. Nothing was filled in from elsewhere.",
+    "ageTitle": "Adults only",
+    "ageBody": "This page lists adult intimate products from public bestseller snapshots. If you are under 18, please leave. Continuing means you confirm you meet the age of adulthood where you live.",
+    "ageEnter": "I am 18 or older",
+    "ageLeave": "Leave",
+    "footerAge": "For adults aged 18 and over.",
+    "footerSnapshot": "This is a snapshot of public bestseller lists, not medical or health advice, and not a recommendation to buy. Prices, stock, and ranks change — check the merchant before you order.",
+    "footerLinks": "Outbound links use nofollow. Time zone Asia/Shanghai. Captured {time}.",
+    "footerData": "View the JSON data"
+  },
+  "notes": {
+    "asin_verified": "The product code was checked against a public search.",
+    "asin_unverified": "A standalone product page was not verified, so the button opens the source list.",
+    "list_no_rating": "The price is from the shop’s list page, which did not show a rating.",
+    "waddy_no_rating": "The price is from the Hong Kong shop’s public bestseller page, which did not show a rating."
+  },
+  "platforms": {
+    "dame": {
+      "name": "Dame Products",
+      "blurb": "Public bestseller collection from the independent brand Dame."
+    },
+    "amazon_us": {
+      "name": "Amazon.com",
+      "blurb": "Public bestseller list in Amazon.com’s sex-toy category."
+    },
+    "we_vibe": {
+      "name": "We-Vibe",
+      "blurb": "Public bestseller page on We-Vibe’s US shop."
+    },
+    "womanizer": {
+      "name": "Womanizer",
+      "blurb": "Public bestseller page on Womanizer’s US shop."
+    },
+    "lovense": {
+      "name": "Lovense",
+      "blurb": "Lovense’s public best-selling page. Ratings are usually absent there."
+    },
+    "waddy_store": {
+      "name": "Waddy Store (Hong Kong)",
+      "blurb": "A public Chinese-language bestseller list from a Hong Kong shop that could be opened."
+    }
+  },
+  "skipped": {
+    "lelo": "The bestseller section is a scripted app, with no product list in the static page.",
+    "mysteryvibe": "The request returned 429, so it was not collected.",
+    "taobao_tmall": "The search page had no product ids or prices to extract.",
+    "pchome_24h": "The request returned 429, so it was not collected."
+  },
+  "pages": {
+    "top": {
+      "h1": "Intimate wellness · combined top 20",
+      "lead": "Public lists that could be opened that day, side by side: independent brands, Amazon.com, and a Chinese-language Hong Kong shop. Only names, prices, ratings, and links that were actually on the page."
+    },
+    "platform": {
+      "h1": "The same snapshot, by shop",
+      "lead": "The same 20 products from 15 October 2026, grouped by the shop they came from. The count is how many entered the combined list, not the full length of each shop’s own chart."
+    }
+  },
+  "products": {
+    "dame-hug": {
+      "display": "Hug Vibrating Ring",
+      "blurb": "Number 1 on Dame’s public bestseller list. A vibrating ring made for couples — confirm fit and features on the product page.",
+      "alt": "Product photo of the Dame Hug vibrating ring"
+    },
+    "amazon-ava": {
+      "display": "Ava Personal Massager",
+      "blurb": "Ranked 1 on Amazon.com’s public bestseller list for this category in the snapshot. The long marketplace title is kept below so you can match the listing.",
+      "alt": "Color placeholder for Ava, not a product photograph"
+    },
+    "wevibe-chorus": {
+      "display": "Chorus Pro for Couples",
+      "blurb": "First on We-Vibe’s US bestseller list. A massager for couples; the product page is the source of truth for what is included.",
+      "alt": "Product photo of We-Vibe Chorus Pro"
+    },
+    "womanizer-next": {
+      "display": "Womanizer Next",
+      "blurb": "First on Womanizer’s US bestseller list in this snapshot. Only the name, price, and rating captured that day are shown.",
+      "alt": "Product photo of Womanizer Next"
+    },
+    "lovense-lush4": {
+      "display": "Lush 4 App Massager",
+      "blurb": "First on Lovense’s best-selling page. The listing name says it connects to an app. That page did not publish a star rating.",
+      "alt": "Product photo of Lovense Lush 4"
+    },
+    "waddy-mood": {
+      "display": "Mood Chocolate",
+      "blurb": "First on Waddy Store’s public Hong Kong list. The shop presents it as a chocolate for intimate moments and mentions flavor choices in the title. This page does not verify any effect and is not health advice.",
+      "alt": "Retail photo of Mood Chocolate from the shop listing"
+    },
+    "dame-eva": {
+      "display": "Eva Wearable Massager",
+      "blurb": "Second on Dame’s bestseller list. The name describes a wearable design. The rating and review count are from this snapshot only.",
+      "alt": "Product photo of the Dame Eva wearable massager"
+    },
+    "womanizer-duo2": {
+      "display": "Womanizer DUO 2",
+      "blurb": "Second on Womanizer’s US bestseller list. Price and rating come from that day’s list, with no extra specs added.",
+      "alt": "Product photo of Womanizer DUO 2"
+    },
+    "amazon-rose": {
+      "display": "MOOLIGIRL Rose Massager",
+      "blurb": "Second on the Amazon.com list in this snapshot: a rose-shaped massager. A direct product page was not verified, so the button opens the source list.",
+      "alt": "Color placeholder for MOOLIGIRL, not a product photograph"
+    },
+    "wevibe-melt2": {
+      "display": "Melt 2",
+      "blurb": "Second on We-Vibe’s US bestseller list. The price and rating are the figures published on that page.",
+      "alt": "Product photo of We-Vibe Melt 2"
+    },
+    "lovense-ferri": {
+      "display": "Ferri Wearable Massager",
+      "blurb": "Second on Lovense’s best-selling page. The listing name describes a wearable magnetic design. No rating was shown there.",
+      "alt": "Product photo of the Lovense Ferri wearable massager"
+    },
+    "waddy-fly": {
+      "display": "Spanish Fly Maroc 15 ml",
+      "blurb": "Second on the Hong Kong shop’s public list, listed as a 15 ml bottle. We do not describe use, ingredients, or effects. Read the merchant page and follow the rules where you live.",
+      "alt": "Retail photo of the Spanish Fly Maroc 15 ml listing"
+    },
+    "wevibe-nova2": {
+      "display": "Nova 2",
+      "blurb": "Third on We-Vibe’s US list. The product name refers to a dual-stimulation massager; details stay on the product page.",
+      "alt": "Product photo of We-Vibe Nova 2"
+    },
+    "womanizer-premium2": {
+      "display": "Womanizer Premium 2",
+      "blurb": "Third on Womanizer’s US bestseller list. The rating and review count are from that day’s page.",
+      "alt": "Product photo of Womanizer Premium 2"
+    },
+    "amazon-plusone": {
+      "display": "plusOne Mini Massager",
+      "blurb": "Third on the Amazon.com list. A mini massager. Check any detail in the long marketplace title on Amazon; nothing extra is added here.",
+      "alt": "Color placeholder for plusOne, not a product photograph"
+    },
+    "dame-lay": {
+      "display": "Lay Wearable Massager",
+      "blurb": "Third on Dame’s bestseller list. A massager meant to be worn. The review count is small and is shown as captured.",
+      "alt": "Product photo of the Dame Lay wearable massager"
+    },
+    "lovense-max2": {
+      "display": "Max 2 for Men",
+      "blurb": "Third on Lovense’s best-selling page: an app-connected product for men. The list did not show a rating. The captured link opens the brand’s men’s category.",
+      "alt": "Product photo of Lovense Max 2"
+    },
+    "waddy-npg": {
+      "display": "NPG Misono Waka",
+      "blurb": "Third on the Hong Kong shop’s list. An adult product for men associated with an adult performer. The shop title is promotional; this page does not repeat that hype or promise a result.",
+      "alt": "Retail photo for the NPG listing associated with adult performer Misono Waka. Adults only."
+    },
+    "dame-aer": {
+      "display": "Aer Suction Massager",
+      "blurb": "Fourth on Dame’s bestseller list. The product name identifies a suction massager. The rating is from this snapshot.",
+      "alt": "Product photo of the Dame Aer suction massager"
+    },
+    "wevibe-touchx": {
+      "display": "Touch X",
+      "blurb": "Fourth on We-Vibe’s US list. A handheld massager. Price and rating are shown as captured.",
+      "alt": "Product photo of We-Vibe Touch X"
+    }
+  }
+}

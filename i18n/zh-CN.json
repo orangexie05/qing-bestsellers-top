@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "htmlLang": "zh-Hans",
+    "ogLocale": "zh_CN",
+    "topTitle": "成人情趣热销快照 Top 20｜2026-10-15",
+    "topDescription": "仅限年满 18 周岁的成年人。2026 年 10 月 15 日（上海时区）的公开热销快照，汇总 Amazon、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy。价格、评分与名次均来自当日页面。",
+    "platformTitle": "分平台热销｜成人情趣快照 2026-10-15",
+    "platformDescription": "仅限成年人。同一份 2026-10-15 快照，按 Amazon、Dame、Lovense、We-Vibe、Womanizer、Waddy 分开查看。"
+  },
+  "ui": {
+    "skip": "跳到主要内容",
+    "brand": "青榜",
+    "brandSub": "成人热销快照",
+    "badge": "18+",
+    "navLabel": "页面",
+    "navTop": "综合榜",
+    "navPlatform": "分平台",
+    "navData": "原始数据",
+    "langLabel": "语言",
+    "langChanged": "已切换为简体中文",
+    "heroKicker": "公开榜单整理 · 非广告位",
+    "dateLabel": "快照日期",
+    "tzLabel": "时区",
+    "sortLabel": "怎么排的",
+    "sortRule": "先看各店自己的名次，再参考评分和评价数量；去掉重复链接后，留下前 20 名。没有为了凑数编造商品。",
+    "sourcesLabel": "这份榜收录了",
+    "filtersLabel": "按店铺看",
+    "filterAll": "全部",
+    "resultCount": "显示 {n} 款",
+    "storeRank": "店内第 {n} 名",
+    "overallRank": "综合第 {n}",
+    "originalLabel": "榜单原名",
+    "cta": "前往商品页",
+    "noRating": "列表页没有评分",
+    "ratingOnly": "{rating} 分",
+    "ratingCount": "{rating} 分 · {count} 条评价",
+    "placeholderCaption": "没有取得可引用的商品图，这是色块占位，不是照片。",
+    "inList": "综合榜中的 {n} 款",
+    "jumpLabel": "店铺跳转",
+    "empty": "这个范围里暂时没有商品。",
+    "loading": "正在读取这份快照…",
+    "loadError": "榜单数据没有载入。请刷新后再试。",
+    "skippedTitle": "这次没能收录的来源",
+    "skippedLead": "下面几家当时打不开，或页面里没有可提取的列表。没有用别的数据填补。",
+    "ageTitle": "此页面仅面向成年人",
+    "ageBody": "这里整理的是成人情趣用品的公开热销快照。未满 18 周岁，请离开。继续即表示你确认已达到所在地的法定成人年龄。",
+    "ageEnter": "我已年满 18 周岁",
+    "ageLeave": "离开",
+    "footerAge": "仅供年满 18 周岁的成年人浏览。",
+    "footerSnapshot": "本页是各平台公开热销榜的整理快照，不是医疗或健康建议，也不代表推荐购买。价格、库存和名次都会变，下单前请回到商家页面核对。",
+    "footerLinks": "外链使用 nofollow。数据时区 Asia/Shanghai，抓取时间 {time}。",
+    "footerData": "查看 JSON 数据"
+  },
+  "notes": {
+    "asin_verified": "商品编号曾通过公开检索核对。",
+    "asin_unverified": "没有核对到单独商品页，按钮会打开来源榜单。",
+    "list_no_rating": "价格来自店铺列表页，该页没有展示评分。",
+    "waddy_no_rating": "价格来自香港店铺的公开热卖页，该页没有展示评分。"
+  },
+  "platforms": {
+    "dame": {
+      "name": "Dame Products",
+      "blurb": "美国独立品牌 Dame 的公开热销合集。"
+    },
+    "amazon_us": {
+      "name": "Amazon.com",
+      "blurb": "亚马逊美国站情趣类目的公开热销榜。"
+    },
+    "we_vibe": {
+      "name": "We-Vibe",
+      "blurb": "We-Vibe 美国站的公开热销页。"
+    },
+    "womanizer": {
+      "name": "Womanizer",
+      "blurb": "Womanizer 美国站的公开热销页。"
+    },
+    "lovense": {
+      "name": "Lovense",
+      "blurb": "Lovense 的公开热销页。列表上通常不显示评分。"
+    },
+    "waddy_store": {
+      "name": "Waddy Store（香港）",
+      "blurb": "香港中文店的公开热卖榜，用来补上当时能打开的中文来源。"
+    }
+  },
+  "skipped": {
+    "lelo": "最佳销售分类是前端应用，静态页面里没有商品列表。",
+    "mysteryvibe": "访问返回 429，这次没有抓取。",
+    "taobao_tmall": "搜索页没有可提取的商品编号或价格。",
+    "pchome_24h": "返回 429，这次没有抓取。"
+  },
+  "pages": {
+    "top": {
+      "h1": "成人亲密好物 · 综合热销 20 名",
+      "lead": "把几家当天能打开的公开榜放在一起：海外独立品牌、亚马逊美国站，以及香港店的中文热卖。只保留核对到的名称、价格、评分和链接。"
+    },
+    "platform": {
+      "h1": "同一份快照，按店铺分开",
+      "lead": "还是 2026 年 10 月 15 日的那 20 款，只是按来源店铺分组。括号里是进入综合榜的数量，不是该店榜单的全部长度。"
+    }
+  },
+  "products": {
+    "dame-hug": {
+      "display": "Hug 情侣震动环",
+      "blurb": "Dame 公开热销合集的第 1 名，定位是情侣一起使用的震动环。功能与尺寸以商品页为准。",
+      "alt": "Dame Hug 情侣震动环的商品图片"
+    },
+    "amazon-ava": {
+      "display": "Ava 个人按摩器",
+      "blurb": "这份快照里，它排在亚马逊美国站情趣类目公开热销榜第 1 名。榜单标题很长，下面保留原文，方便对照商家页面。",
+      "alt": "Ava 的色块占位图，不是商品照片"
+    },
+    "wevibe-chorus": {
+      "display": "Chorus Pro 情侣按摩器",
+      "blurb": "We-Vibe 美国站公开热销第 1 名，面向情侣一起使用。包装里有什么，请以商品页为准。",
+      "alt": "We-Vibe Chorus Pro 的商品图片"
+    },
+    "womanizer-next": {
+      "display": "Womanizer Next",
+      "blurb": "Womanizer 美国站公开热销第 1 名。快照只记录了名称、价格和评分，没有另补参数。",
+      "alt": "Womanizer Next 的商品图片"
+    },
+    "lovense-lush4": {
+      "display": "Lush 4 应用互动按摩器",
+      "blurb": "Lovense 公开热销页第 1 名。榜单名称写明可由应用连接。该列表页没有展示评分。",
+      "alt": "Lovense Lush 4 的商品图片"
+    },
+    "waddy-mood": {
+      "display": "Mood 亲密巧克力",
+      "blurb": "香港 Waddy 公开热卖榜第 1 名。店家把它写成亲密场合的巧克力，并在标题里提到多种口味。本页不核实任何效果，也不是健康建议。",
+      "alt": "Mood 巧克力的零售页商品图片"
+    },
+    "dame-eva": {
+      "display": "Eva 可穿戴按摩器",
+      "blurb": "Dame 热销第 2 名。商品名标明可穿戴。评分和评价数都来自当天快照。",
+      "alt": "Dame Eva 可穿戴按摩器的商品图片"
+    },
+    "womanizer-duo2": {
+      "display": "Womanizer DUO 2",
+      "blurb": "Womanizer 美国站热销第 2 名。价格与评分均来自当天榜单，没有补充未出现的参数。",
+      "alt": "Womanizer DUO 2 的商品图片"
+    },
+    "amazon-rose": {
+      "display": "MOOLIGIRL 玫瑰按摩器",
+      "blurb": "亚马逊美国站热销第 2 名，玫瑰造型的按摩器。这条没有核对到独立商品页，按钮会打开来源榜单。",
+      "alt": "MOOLIGIRL 的色块占位图，不是商品照片"
+    },
+    "wevibe-melt2": {
+      "display": "Melt 2",
+      "blurb": "We-Vibe 美国站热销第 2 名。快照里的价格和评分即当天页面上的数字。",
+      "alt": "We-Vibe Melt 2 的商品图片"
+    },
+    "lovense-ferri": {
+      "display": "Ferri 贴身按摩器",
+      "blurb": "Lovense 热销第 2 名。名称写明可贴身穿着，并带有磁吸结构。列表页没有评分。",
+      "alt": "Lovense Ferri 贴身按摩器的商品图片"
+    },
+    "waddy-fly": {
+      "display": "Spanish Fly Maroc 15ml",
+      "blurb": "香港店热卖第 2 名，15ml 装。店家标题把用途写得很直接。本页不介绍用法、成分或效果，请只在商家页面自行阅读，并遵守你所在地的规定。",
+      "alt": "Spanish Fly Maroc 15ml 的零售页商品图片"
+    },
+    "wevibe-nova2": {
+      "display": "Nova 2 双点按摩器",
+      "blurb": "We-Vibe 美国站热销第 3 名。商品名对应可同时照顾两处的按摩器，细节以商品页为准。",
+      "alt": "We-Vibe Nova 2 的商品图片"
+    },
+    "womanizer-premium2": {
+      "display": "Womanizer Premium 2",
+      "blurb": "Womanizer 美国站热销第 3 名。评分和评价数来自当天页面。",
+      "alt": "Womanizer Premium 2 的商品图片"
+    },
+    "amazon-plusone": {
+      "display": "plusOne 迷你按摩器",
+      "blurb": "亚马逊美国站热销第 3 名，迷你按摩器。榜单标题里提到的参数，请回到亚马逊核对，本页不另作补充。",
+      "alt": "plusOne 的色块占位图，不是商品照片"
+    },
+    "dame-lay": {
+      "display": "Lay 贴身按摩器",
+      "blurb": "Dame 热销第 3 名，贴身穿着的按摩器。评价数量不多，数字仍按快照原样列出。",
+      "alt": "Dame Lay 贴身按摩器的商品图片"
+    },
+    "lovense-max2": {
+      "display": "Max 2 男士器具",
+      "blurb": "Lovense 热销第 3 名，面向男士的互动器具。列表页没有评分。快照里的链接打开的是品牌的男士器具分类页。",
+      "alt": "Lovense Max 2 男士器具的商品图片"
+    },
+    "waddy-npg": {
+      "display": "NPG 美园和花 男士器具",
+      "blurb": "香港店热卖第 3 名。与成年出演者相关的男士器具，仅限成年人。店家标题里的促销语气没有照搬，本页也不承诺使用感受。",
+      "alt": "NPG 美园和花商品的零售页图片，仅限成年人"
+    },
+    "dame-aer": {
+      "display": "Aer 吸吮按摩器",
+      "blurb": "Dame 热销第 4 名。商品名标明为吸吮式按摩器。评分来自当天快照。",
+      "alt": "Dame Aer 吸吮按摩器的商品图片"
+    },
+    "wevibe-touchx": {
+      "display": "Touch X 手持按摩器",
+      "blurb": "We-Vibe 美国站热销第 4 名，手持按摩器。价格与评分按快照原样展示。",
+      "alt": "We-Vibe Touch X 的商品图片"
+    }
+  }
+}

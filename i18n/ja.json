@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "htmlLang": "ja",
+    "ogLocale": "ja_JP",
+    "topTitle": "アダルト売れ筋スナップショット Top 20｜2026-10-15",
+    "topDescription": "18歳未満の方はご遠慮ください。2026年10月15日（上海時間）の公開売れ筋を、Amazon、Dame、Lovense、We-Vibe、Womanizer、香港の Waddy から整理しました。価格・評価・順位はその日のページのものです。",
+    "platformTitle": "ショップ別の売れ筋｜アダルトスナップショット 2026-10-15",
+    "platformDescription": "18歳未満の方はご遠慮ください。2026-10-15 の同じ記録を、Amazon、Dame、Lovense、We-Vibe、Womanizer、Waddy ごとにご覧いただけます。"
+  },
+  "ui": {
+    "skip": "本文へ移動",
+    "brand": "青榜",
+    "brandSub": "アダルト売れ筋の記録",
+    "badge": "18+",
+    "navLabel": "ページ",
+    "navTop": "総合",
+    "navPlatform": "ショップ別",
+    "navData": "元データ",
+    "langLabel": "言語",
+    "langChanged": "日本語に切り替えました",
+    "heroKicker": "公開リストの整理 · 広告枠ではありません",
+    "dateLabel": "記録日",
+    "tzLabel": "時間帯",
+    "sortLabel": "並び順",
+    "sortRule": "各店の順位を先に見て、そのあと評価とレビュー数を参考にしています。同じリンクは除き、20件までです。件数を埋めるための創作はありません。",
+    "sourcesLabel": "このリストに含まれる店",
+    "filtersLabel": "ショップで絞り込む",
+    "filterAll": "すべて",
+    "resultCount": "{n} 件を表示",
+    "storeRank": "店内 {n} 位",
+    "overallRank": "総合 {n} 位",
+    "originalLabel": "掲載名",
+    "cta": "商品ページへ",
+    "noRating": "一覧に評価はありません",
+    "ratingOnly": "{rating}",
+    "ratingCount": "{rating} · レビュー {count} 件",
+    "placeholderCaption": "参照できる商品画像がなかったため、色面で代用しています。写真ではありません。",
+    "inList": "総合リストに {n} 件",
+    "jumpLabel": "ショップへ移動",
+    "empty": "この条件に当てはまる商品はありません。",
+    "loading": "記録を読み込んでいます…",
+    "loadError": "リストのデータを読み込めませんでした。再読み込みしてください。",
+    "skippedTitle": "今回は含めなかった情報源",
+    "skippedLead": "開けなかった店、または一覧を取り出せなかったページです。別のデータで埋めてはいません。",
+    "ageTitle": "成人向けのページです",
+    "ageBody": "アダルトグッズの公開売れ筋を整理しています。18歳未満の方はご退出ください。先へ進むことで、お住まいの地域の成人年齢に達していることを確認したものとします。",
+    "ageEnter": "18歳以上です",
+    "ageLeave": "退出する",
+    "footerAge": "18歳以上の方を対象としています。",
+    "footerSnapshot": "各店の公開売れ筋をその時点で写したものです。医療・健康上の助言ではなく、購入をおすすめするものでもありません。価格・在庫・順位は変わります。注文前に販売ページをご確認ください。",
+    "footerLinks": "外部リンクは nofollow です。時間帯は Asia/Shanghai、取得時刻は {time} です。",
+    "footerData": "JSON データを見る"
+  },
+  "notes": {
+    "asin_verified": "商品コードは公開検索で照合済みです。",
+    "asin_unverified": "個別の商品ページは確認できていないため、ボタンは元のランキングを開きます。",
+    "list_no_rating": "価格は店舗の一覧ページのもので、そのページに評価はありません。",
+    "waddy_no_rating": "価格は香港店舗の公開売れ筋ページのもので、そのページに評価はありません。"
+  },
+  "platforms": {
+    "dame": {
+      "name": "Dame Products",
+      "blurb": "インディーブランド Dame の公開ベストセラーです。"
+    },
+    "amazon_us": {
+      "name": "Amazon.com",
+      "blurb": "Amazon.com の該当カテゴリの公開ランキングです。"
+    },
+    "we_vibe": {
+      "name": "We-Vibe",
+      "blurb": "We-Vibe 米国サイトの公開ベストセラーです。"
+    },
+    "womanizer": {
+      "name": "Womanizer",
+      "blurb": "Womanizer 米国サイトの公開ベストセラーです。"
+    },
+    "lovense": {
+      "name": "Lovense",
+      "blurb": "Lovense の公開売れ筋ページです。評価は載っていないことがほとんどです。"
+    },
+    "waddy_store": {
+      "name": "Waddy Store（香港）",
+      "blurb": "当時開けた香港の中文ショップの公開売れ筋です。"
+    }
+  },
+  "skipped": {
+    "lelo": "ベストセラー分類はアプリ画面のみで、静的ページに商品一覧がありません。",
+    "mysteryvibe": "429 が返ったため、今回は取得していません。",
+    "taobao_tmall": "検索画面から商品番号や価格を取り出せませんでした。",
+    "pchome_24h": "429 が返ったため、今回は取得していません。"
+  },
+  "pages": {
+    "top": {
+      "h1": "大人の親密なくらし · 総合 20 件",
+      "lead": "その日に開けた公開リストを並べています。海外のインディーブランド、Amazon.com、そして香港の中文ショップです。ページにあった名称・価格・評価・リンクだけを残しています。"
+    },
+    "platform": {
+      "h1": "同じ記録を、ショップごとに",
+      "lead": "2026年10月15日の 20 件を、出てきた店舗ごとに分けたものです。件数は総合リストに入った数であり、各店のランキング全件ではありません。"
+    }
+  },
+  "products": {
+    "dame-hug": {
+      "display": "Hug バイブリング",
+      "blurb": "Dame の公開ベストセラー 1 位です。カップル向けのバイブリングで、仕様は商品ページでご確認ください。",
+      "alt": "Dame Hug バイブリングの商品画像"
+    },
+    "amazon-ava": {
+      "display": "Ava パーソナルマッサージャー",
+      "blurb": "このスナップショットでは、Amazon.com の公開ランキング 1 位です。長い掲載名はそのまま下に残してあります。",
+      "alt": "Ava の色面プレースホルダー。商品写真ではありません"
+    },
+    "wevibe-chorus": {
+      "display": "Chorus Pro（カップル向け）",
+      "blurb": "We-Vibe 米国サイトのベストセラー 1 位です。カップルで使うマッサージ器で、付属内容は商品ページをご覧ください。",
+      "alt": "We-Vibe Chorus Pro の商品画像"
+    },
+    "womanizer-next": {
+      "display": "Womanizer Next",
+      "blurb": "Womanizer 米国サイトのベストセラー 1 位です。このページにあるのは当日記録できた名称・価格・評価だけです。",
+      "alt": "Womanizer Next の商品画像"
+    },
+    "lovense-lush4": {
+      "display": "Lush 4 アプリ連動",
+      "blurb": "Lovense の売れ筋 1 位です。掲載名ではアプリ連動とあります。一覧ページに評価は出ていませんでした。",
+      "alt": "Lovense Lush 4 の商品画像"
+    },
+    "waddy-mood": {
+      "display": "Mood チョコレート",
+      "blurb": "香港 Waddy の公開売れ筋 1 位です。店舗は親密な時間向けのチョコレートとして紹介し、タイトルに味の選択肢を記しています。効果は確認しておらず、健康上の案内でもありません。",
+      "alt": "Mood チョコレートの販売ページ画像"
+    },
+    "dame-eva": {
+      "display": "Eva ウェアラブル",
+      "blurb": "Dame のベストセラー 2 位です。商品名では身につけるタイプとされています。評価はこの日の記録です。",
+      "alt": "Dame Eva の商品画像"
+    },
+    "womanizer-duo2": {
+      "display": "Womanizer DUO 2",
+      "blurb": "Womanizer 米国サイトの 2 位です。価格と評価は当日のリストのもので、載っていない仕様は足していません。",
+      "alt": "Womanizer DUO 2 の商品画像"
+    },
+    "amazon-rose": {
+      "display": "MOOLIGIRL ローズ",
+      "blurb": "Amazon.com の 2 位です。バラ型のマッサージ器です。個別商品ページは確認できていないため、ボタンは元のランキングを開きます。",
+      "alt": "MOOLIGIRL の色面プレースホルダー。商品写真ではありません"
+    },
+    "wevibe-melt2": {
+      "display": "Melt 2",
+      "blurb": "We-Vibe 米国サイトの 2 位です。価格と評価は、そのページに出ていた数字です。",
+      "alt": "We-Vibe Melt 2 の商品画像"
+    },
+    "lovense-ferri": {
+      "display": "Ferri ウェアラブル",
+      "blurb": "Lovense の売れ筋 2 位です。掲載名ではマグネット式で身につけるタイプとあります。一覧に評価はありません。",
+      "alt": "Lovense Ferri の商品画像"
+    },
+    "waddy-fly": {
+      "display": "Spanish Fly Maroc 15ml",
+      "blurb": "香港店舗の公開売れ筋 2 位、15ml です。用法・成分・効果には触れていません。商品ページと、お住まいの地域のルールをご確認ください。",
+      "alt": "Spanish Fly Maroc 15ml の販売ページ画像"
+    },
+    "wevibe-nova2": {
+      "display": "Nova 2",
+      "blurb": "We-Vibe 米国サイトの 3 位です。商品名は二点を同時にケアするタイプを指します。詳細は商品ページでご確認ください。",
+      "alt": "We-Vibe Nova 2 の商品画像"
+    },
+    "womanizer-premium2": {
+      "display": "Womanizer Premium 2",
+      "blurb": "Womanizer 米国サイトの 3 位です。評価と件数は当日のページのものです。",
+      "alt": "Womanizer Premium 2 の商品画像"
+    },
+    "amazon-plusone": {
+      "display": "plusOne ミニ",
+      "blurb": "Amazon.com の 3 位です。ミニタイプのマッサージ器です。長い掲載名にある仕様は販売ページでご確認ください。",
+      "alt": "plusOne の色面プレースホルダー。商品写真ではありません"
+    },
+    "dame-lay": {
+      "display": "Lay ウェアラブル",
+      "blurb": "Dame の 3 位です。身につけるタイプのマッサージ器です。レビュー件数は少なめですが、記録どおり掲載しています。",
+      "alt": "Dame Lay の商品画像"
+    },
+    "lovense-max2": {
+      "display": "Max 2（男性向け）",
+      "blurb": "Lovense の売れ筋 3 位で、男性向けのアプリ連動商品です。一覧に評価はなく、リンク先はブランドのメンズカテゴリです。",
+      "alt": "Lovense Max 2 の商品画像"
+    },
+    "waddy-npg": {
+      "display": "NPG 美園和花",
+      "blurb": "香港店舗の 3 位です。成人向け映像の出演者に関連する、男性向けの商品です。18 歳未満の方は対象外です。店舗タイトルの強い宣伝文句は繰り返さず、使用感も約束しません。",
+      "alt": "成人出演者・美園和花に関連する NPG 商品の販売ページ画像。18 歳未満の方はご覧にならないでください"
+    },
+    "dame-aer": {
+      "display": "Aer 吸引タイプ",
+      "blurb": "Dame の 4 位です。商品名では吸引タイプのマッサージ器とされています。評価はこの日の記録です。",
+      "alt": "Dame Aer の商品画像"
+    },
+    "wevibe-touchx": {
+      "display": "Touch X",
+      "blurb": "We-Vibe 米国サイトの 4 位です。手持ちのマッサージ器です。価格と評価は記録どおりです。",
+      "alt": "We-Vibe Touch X の商品画像"
+    }
+  }
+}

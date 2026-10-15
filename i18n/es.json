@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "htmlLang": "es",
+    "ogLocale": "es_ES",
+    "topTitle": "Instantánea de más vendidos para adultos · Top 20 | 2026-10-15",
+    "topDescription": "Solo para mayores de 18 años. Instantánea del 15 de octubre de 2026 (hora de Shanghái) de listas públicas de Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Precios, valoraciones y puestos son de ese día.",
+    "platformTitle": "Más vendidos por tienda · instantánea para adultos 2026-10-15",
+    "platformDescription": "Solo para mayores de 18 años. La misma instantánea del 15 de octubre de 2026, separada por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy."
+  },
+  "ui": {
+    "skip": "Saltar al contenido",
+    "brand": "Lista Qing",
+    "brandSub": "Instantánea de más vendidos para adultos",
+    "badge": "18+",
+    "navLabel": "Páginas",
+    "navTop": "Top 20",
+    "navPlatform": "Por tienda",
+    "navData": "Datos",
+    "langLabel": "Idioma",
+    "langChanged": "Idioma cambiado a español",
+    "heroKicker": "Listas públicas reunidas · no es un espacio de pago",
+    "dateLabel": "Fecha de la instantánea",
+    "tzLabel": "Zona horaria",
+    "sortLabel": "Cómo se ordena",
+    "sortRule": "Primero el puesto en cada tienda, después la valoración y el número de reseñas. Se quitan enlaces repetidos y se dejan 20. No se inventaron productos para completar la lista.",
+    "sourcesLabel": "Tiendas incluidas",
+    "filtersLabel": "Filtrar por tienda",
+    "filterAll": "Todas",
+    "resultCount": "Se muestran {n}",
+    "storeRank": "Puesto {n} en la tienda",
+    "overallRank": "Puesto global {n}",
+    "originalLabel": "Nombre del anuncio",
+    "cta": "Ver la ficha",
+    "noRating": "La lista no mostraba valoración",
+    "ratingOnly": "{rating}",
+    "ratingCount": "{rating} · {count} reseñas",
+    "placeholderCaption": "No había una foto estable para citar, así que esto es una tarjeta de color, no una fotografía.",
+    "inList": "{n} en la lista combinada",
+    "jumpLabel": "Ir a una tienda",
+    "empty": "No hay productos en esta vista.",
+    "loading": "Cargando esta instantánea…",
+    "loadError": "No se pudieron cargar los datos. Actualiza la página e inténtalo de nuevo.",
+    "skippedTitle": "Fuentes que quedaron fuera",
+    "skippedLead": "Estas tiendas no se pudieron abrir, o la página no tenía una lista que extraer. No se rellenó con otros datos.",
+    "ageTitle": "Solo para adultos",
+    "ageBody": "Esta página reúne productos íntimos para adultos a partir de listas públicas. Si no tienes 18 años, sal de aquí. Al continuar confirmas que cumples la mayoría de edad donde vives.",
+    "ageEnter": "Tengo 18 años o más",
+    "ageLeave": "Salir",
+    "footerAge": "Destinado a personas de 18 años o más.",
+    "footerSnapshot": "Es una instantánea de listas públicas de más vendidos, no un consejo médico ni de salud, y no es una recomendación de compra. Los precios, el stock y los puestos cambian: compruébalos en la tienda antes de pedir.",
+    "footerLinks": "Los enlaces externos usan nofollow. Zona horaria Asia/Shanghai. Captura: {time}.",
+    "footerData": "Ver los datos JSON"
+  },
+  "notes": {
+    "asin_verified": "El código del producto se contrastó con una búsqueda pública.",
+    "asin_unverified": "No se verificó una ficha propia, así que el botón abre la lista de origen.",
+    "list_no_rating": "El precio sale de la lista de la tienda, que no mostraba valoración.",
+    "waddy_no_rating": "El precio sale de la lista pública de la tienda de Hong Kong, que no mostraba valoración."
+  },
+  "platforms": {
+    "dame": {
+      "name": "Dame Products",
+      "blurb": "Colección pública de más vendidos de la marca independiente Dame."
+    },
+    "amazon_us": {
+      "name": "Amazon.com",
+      "blurb": "Lista pública de más vendidos de Amazon.com en esta categoría."
+    },
+    "we_vibe": {
+      "name": "We-Vibe",
+      "blurb": "Página pública de más vendidos de We-Vibe en EE. UU."
+    },
+    "womanizer": {
+      "name": "Womanizer",
+      "blurb": "Página pública de más vendidos de Womanizer en EE. UU."
+    },
+    "lovense": {
+      "name": "Lovense",
+      "blurb": "Página pública de más vendidos de Lovense. Casi nunca muestra valoración."
+    },
+    "waddy_store": {
+      "name": "Waddy Store (Hong Kong)",
+      "blurb": "Lista pública en chino de una tienda de Hong Kong que sí se pudo abrir."
+    }
+  },
+  "skipped": {
+    "lelo": "La sección de más vendidos es una aplicación y la página estática no trae productos.",
+    "mysteryvibe": "La petición devolvió 429 y no se recogió.",
+    "taobao_tmall": "La búsqueda no dejó extraer identificadores ni precios.",
+    "pchome_24h": "La petición devolvió 429 y no se recogió."
+  },
+  "pages": {
+    "top": {
+      "h1": "Bienestar íntimo · top 20 combinado",
+      "lead": "Listas públicas que se pudieron abrir ese día: marcas independientes, Amazon.com y una tienda en chino de Hong Kong. Solo nombres, precios, valoraciones y enlaces que estaban en la página."
+    },
+    "platform": {
+      "h1": "La misma instantánea, por tienda",
+      "lead": "Los mismos 20 productos del 15 de octubre de 2026, agrupados por la tienda de origen. El número es cuántos entraron en la lista combinada, no la longitud completa del ranking de cada tienda."
+    }
+  },
+  "products": {
+    "dame-hug": {
+      "display": "Hug, anillo vibrador",
+      "blurb": "Número 1 en la lista pública de más vendidos de Dame. Un anillo vibrador pensado para parejas; los detalles están en la ficha de la tienda.",
+      "alt": "Foto de producto del anillo vibrador Hug de Dame"
+    },
+    "amazon-ava": {
+      "display": "Ava, masajeador personal",
+      "blurb": "En esta captura ocupa el puesto 1 de la lista pública de Amazon.com. El título largo del anuncio se conserva debajo para identificarlo.",
+      "alt": "Tarjeta de color para Ava, no es una fotografía del producto"
+    },
+    "wevibe-chorus": {
+      "display": "Chorus Pro para parejas",
+      "blurb": "Primero en la lista de más vendidos de We-Vibe en EE. UU. Un masajeador para usar en pareja; lo incluido figura en la ficha.",
+      "alt": "Foto de producto de We-Vibe Chorus Pro"
+    },
+    "womanizer-next": {
+      "display": "Womanizer Next",
+      "blurb": "Primero en la lista de más vendidos de Womanizer en EE. UU. Solo mostramos el nombre, el precio y la valoración capturados ese día.",
+      "alt": "Foto de producto de Womanizer Next"
+    },
+    "lovense-lush4": {
+      "display": "Lush 4 con aplicación",
+      "blurb": "Primero en la página de más vendidos de Lovense. El nombre indica control por aplicación. Esa lista no mostraba valoración.",
+      "alt": "Foto de producto de Lovense Lush 4"
+    },
+    "waddy-mood": {
+      "display": "Mood Chocolate",
+      "blurb": "Primero en la lista pública de Waddy en Hong Kong. La tienda lo presenta como un chocolate para momentos íntimos y el título menciona sabores. Aquí no se comprueba ningún efecto y no es un consejo de salud.",
+      "alt": "Foto de la ficha de Mood Chocolate"
+    },
+    "dame-eva": {
+      "display": "Eva para llevar",
+      "blurb": "Segundo en la lista de Dame. El nombre lo describe como un diseño para llevar puesto. La valoración es la de esta captura.",
+      "alt": "Foto de producto del masajeador Eva de Dame"
+    },
+    "womanizer-duo2": {
+      "display": "Womanizer DUO 2",
+      "blurb": "Segundo en la lista de Womanizer en EE. UU. El precio y la valoración salen de esa lista; no añadimos especificaciones.",
+      "alt": "Foto de producto de Womanizer DUO 2"
+    },
+    "amazon-rose": {
+      "display": "MOOLIGIRL Rose",
+      "blurb": "Segundo en la lista de Amazon.com de esta captura: un masajeador con forma de rosa. No se verificó una ficha propia, así que el enlace abre la lista de origen.",
+      "alt": "Tarjeta de color para MOOLIGIRL, no es una fotografía del producto"
+    },
+    "wevibe-melt2": {
+      "display": "Melt 2",
+      "blurb": "Segundo en la lista de We-Vibe en EE. UU. El precio y la valoración son los publicados ese día.",
+      "alt": "Foto de producto de We-Vibe Melt 2"
+    },
+    "lovense-ferri": {
+      "display": "Ferri para llevar",
+      "blurb": "Segundo en la página de más vendidos de Lovense. El nombre describe un diseño magnético para llevar puesto. Esa lista no tenía valoración.",
+      "alt": "Foto de producto del masajeador Ferri de Lovense"
+    },
+    "waddy-fly": {
+      "display": "Spanish Fly Maroc 15 ml",
+      "blurb": "Segundo en la lista pública de la tienda de Hong Kong, en presentación de 15 ml. No describimos uso, ingredientes ni efectos. Revísalo en la tienda y cumple la normativa local.",
+      "alt": "Foto de la ficha de Spanish Fly Maroc 15 ml"
+    },
+    "wevibe-nova2": {
+      "display": "Nova 2",
+      "blurb": "Tercero en la lista de We-Vibe en EE. UU. El nombre corresponde a un masajeador de estimulación dual; los detalles están en la ficha.",
+      "alt": "Foto de producto de We-Vibe Nova 2"
+    },
+    "womanizer-premium2": {
+      "display": "Womanizer Premium 2",
+      "blurb": "Tercero en la lista de Womanizer en EE. UU. La valoración y el número de reseñas son de esa página.",
+      "alt": "Foto de producto de Womanizer Premium 2"
+    },
+    "amazon-plusone": {
+      "display": "plusOne mini",
+      "blurb": "Tercero en la lista de Amazon.com. Un masajeador mini. Lo que diga el título largo hay que comprobarlo en Amazon; aquí no añadimos datos.",
+      "alt": "Tarjeta de color para plusOne, no es una fotografía del producto"
+    },
+    "dame-lay": {
+      "display": "Lay para llevar",
+      "blurb": "Tercero en la lista de Dame. Un masajeador para llevar puesto. Hay pocas reseñas y el número se muestra tal como se capturó.",
+      "alt": "Foto de producto del masajeador Lay de Dame"
+    },
+    "lovense-max2": {
+      "display": "Max 2 para hombres",
+      "blurb": "Tercero en la página de más vendidos de Lovense: un producto con app pensado para hombres. La lista no mostraba valoración. El enlace abre la categoría de la marca que quedó en la captura.",
+      "alt": "Foto de producto de Lovense Max 2"
+    },
+    "waddy-npg": {
+      "display": "NPG Misono Waka",
+      "blurb": "Tercero en la lista de la tienda de Hong Kong. Un producto para hombres asociado a una intérprete adulta. El tono promocional es del título de la tienda; aquí no lo repetimos ni prometemos resultados.",
+      "alt": "Foto de la ficha NPG asociada a la intérprete adulta Misono Waka. Solo para adultos."
+    },
+    "dame-aer": {
+      "display": "Aer de succión",
+      "blurb": "Cuarto en la lista de Dame. El nombre lo identifica como un masajeador de succión. La valoración es de esta captura.",
+      "alt": "Foto de producto del masajeador de succión Aer de Dame"
+    },
+    "wevibe-touchx": {
+      "display": "Touch X",
+      "blurb": "Cuarto en la lista de We-Vibe en EE. UU. Un masajeador de mano. El precio y la valoración se muestran tal como se capturaron.",
+      "alt": "Foto de producto de We-Vibe Touch X"
+    }
+  }
+}

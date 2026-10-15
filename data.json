@@ -51,7 +51,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 1
+      "overall_rank": 1,
+      "id": "dame-hug",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/hug-1-fir.png?v=1776325569",
+      "image_kind": "official"
     },
     {
       "platform": "amazon_us",
@@ -69,7 +72,11 @@
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
       "notes": "ASIN verified via WebSearch",
-      "overall_rank": 2
+      "overall_rank": 2,
+      "id": "amazon-ava",
+      "image": "assets/products/amazon-ava.svg",
+      "image_kind": "placeholder",
+      "note_key": "asin_verified"
     },
     {
       "platform": "we_vibe",
@@ -86,7 +93,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 3
+      "overall_rank": 3,
+      "id": "wevibe-chorus",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_chorus_pro_gallery_image_purple_01_without_new_label_en.jpg",
+      "image_kind": "official"
     },
     {
       "platform": "womanizer",
@@ -103,7 +113,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 4
+      "overall_rank": 4,
+      "id": "womanizer-next",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_next_ce_dusky_pink_pdp_category_image_1000x1000.jpg",
+      "image_kind": "official"
     },
     {
       "platform": "lovense",
@@ -121,7 +134,11 @@
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
       "notes": "Sale/current price from storefront HTML; review ratings not exposed on list page",
-      "overall_rank": 5
+      "overall_rank": 5,
+      "id": "lovense-lush4",
+      "image": "https://cdn.lovense.com/resources/images/lush4/pic.jpg",
+      "image_kind": "official",
+      "note_key": "list_no_rating"
     },
     {
       "platform": "waddy_store",
@@ -139,7 +156,11 @@
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
       "notes": "Hong Kong adult retailer public 熱賣榜; prices from category page or product page; reviews not on list",
-      "overall_rank": 6
+      "overall_rank": 6,
+      "id": "waddy-mood",
+      "image": "https://img.shoplineapp.com/media/image_clips/68145f90e9ac10000aca58dc/original.png?1746165648",
+      "image_kind": "official",
+      "note_key": "waddy_no_rating"
     },
     {
       "platform": "dame",
@@ -156,7 +177,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 7
+      "overall_rank": 7,
+      "id": "dame-eva",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/eva-1-ice.png?v=1776326231",
+      "image_kind": "official"
     },
     {
       "platform": "womanizer",
@@ -173,7 +197,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 8
+      "overall_rank": 8,
+      "id": "womanizer-duo2",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_duo2_black_pdp_gallery_1000x1000_en_01_1.jpg",
+      "image_kind": "official"
     },
     {
       "platform": "amazon_us",
@@ -191,7 +218,11 @@
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
       "notes": "ASIN not verified; product_url is Amazon search, purchase_url is category bestseller list",
-      "overall_rank": 9
+      "overall_rank": 9,
+      "id": "amazon-rose",
+      "image": "assets/products/amazon-rose.svg",
+      "image_kind": "placeholder",
+      "note_key": "asin_unverified"
     },
     {
       "platform": "we_vibe",
@@ -208,7 +239,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 10
+      "overall_rank": 10,
+      "id": "wevibe-melt2",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_melt2_purple_pdp_gallery_1000x1000_02_en.jpg",
+      "image_kind": "official"
     },
     {
       "platform": "lovense",
@@ -226,7 +260,11 @@
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
       "notes": "Sale/current price from storefront HTML; review ratings not exposed on list page",
-      "overall_rank": 11
+      "overall_rank": 11,
+      "id": "lovense-ferri",
+      "image": "https://cdn.lovense.com/resources/img/ferriNew/01.webp",
+      "image_kind": "official",
+      "note_key": "list_no_rating"
     },
     {
       "platform": "waddy_store",
@@ -244,7 +282,11 @@
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
       "notes": "Hong Kong adult retailer public 熱賣榜; prices from category page or product page; reviews not on list",
-      "overall_rank": 12
+      "overall_rank": 12,
+      "id": "waddy-fly",
+      "image": "https://img.shoplineapp.com/media/image_clips/693947010cb19e75e2247e36/original.jpg?1765361409",
+      "image_kind": "official",
+      "note_key": "waddy_no_rating"
     },
     {
       "platform": "we_vibe",
@@ -261,7 +303,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 13
+      "overall_rank": 13,
+      "id": "wevibe-nova2",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_nova2_blue_pdp_gallery_1500x1500_01a.jpg",
+      "image_kind": "official"
     },
     {
       "platform": "womanizer",
@@ -278,7 +323,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 14
+      "overall_rank": 14,
+      "id": "womanizer-premium2",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/c/a/category_image_premium_2_red.jpg",
+      "image_kind": "official"
     },
     {
       "platform": "amazon_us",
@@ -296,7 +344,11 @@
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
       "notes": "ASIN verified via WebSearch",
-      "overall_rank": 15
+      "overall_rank": 15,
+      "id": "amazon-plusone",
+      "image": "assets/products/amazon-plusone.svg",
+      "image_kind": "placeholder",
+      "note_key": "asin_verified"
     },
     {
       "platform": "dame",
@@ -313,7 +365,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 16
+      "overall_rank": 16,
+      "id": "dame-lay",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/PDPImages_LAY-IC_01.jpg?v=1775651051",
+      "image_kind": "official"
     },
     {
       "platform": "lovense",
@@ -331,7 +386,11 @@
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
       "notes": "Sale/current price from storefront HTML; review ratings not exposed on list page",
-      "overall_rank": 17
+      "overall_rank": 17,
+      "id": "lovense-max2",
+      "image": "https://cdn.lovense.com/UploadFiles/web/category/product/max2.png",
+      "image_kind": "official",
+      "note_key": "list_no_rating"
     },
     {
       "platform": "waddy_store",
@@ -349,7 +408,11 @@
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
       "notes": "Hong Kong adult retailer public 熱賣榜; prices from category page or product page; reviews not on list",
-      "overall_rank": 18
+      "overall_rank": 18,
+      "id": "waddy-npg",
+      "image": "https://img.shoplineapp.com/media/image_clips/69b276ca2cb5184b214f341b/original.jpg?1773303498",
+      "image_kind": "official",
+      "note_key": "waddy_no_rating"
     },
     {
       "platform": "dame",
@@ -366,7 +429,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 19
+      "overall_rank": 19,
+      "id": "dame-aer",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/aer-1-periwinkle.png?v=1776325568",
+      "image_kind": "official"
     },
     {
       "platform": "we_vibe",
@@ -383,7 +449,10 @@
         "sample": null
       },
       "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 20
+      "overall_rank": 20,
+      "id": "wevibe-touchx",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_touchx_dalia_pdp_01.jpg",
+      "image_kind": "official"
     }
   ]
 }

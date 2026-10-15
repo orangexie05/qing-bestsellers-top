@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="A">
+  <rect width="400" height="400" fill="#232F3E"/>
+  <rect width="400" height="14" fill="#FF9900"/>
+  <circle cx="200" cy="168" r="74" fill="none" stroke="#F3E6D4" stroke-width="6"/>
+  <text x="200" y="192" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="84" fill="#F6EFE8">A</text>
+  <text x="200" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" letter-spacing="3" fill="#E4C48A">AMAZON</text>
+</svg>
