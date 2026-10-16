@@ -73,16 +73,53 @@
     if (node) node.replaceChildren();
   }
 
+  function isChartPage() {
+    return PAGE === "top" || PAGE === "platform";
+  }
+
   function pagePath() {
-    return PAGE === "platform" ? "/by-platform.html" : "/";
+    if (PAGE === "platform") return "/by-platform.html";
+    if (PAGE === "about") return "/about.html";
+    if (PAGE === "method") return "/method.html";
+    if (PAGE === "faq") return "/faq.html";
+    return "/";
   }
 
   function pageUrl(lang) {
     var params = [];
-    if (state.board === "weekly") params.push("board=weekly");
+    if (isChartPage() && state.board === "weekly") params.push("board=weekly");
     if (lang && lang !== "zh-CN") params.push("lang=" + encodeURIComponent(lang));
     var path = pagePath();
     return BASE + path + (params.length ? "?" + params.join("&") : "");
+  }
+
+  function linkFor(file, opts) {
+    opts = opts || {};
+    var hash = "";
+    var base = file;
+    var cut = file.indexOf("#");
+    if (cut !== -1) {
+      hash = file.slice(cut);
+      base = file.slice(0, cut);
+    }
+    var query = base.indexOf("?");
+    if (query !== -1) base = base.slice(0, query);
+    var params = [];
+    var chartFile = /(?:^|\/)(?:index\.html|by-platform\.html)$/.test(base);
+    if (opts.board === "weekly" || (opts.keepBoard && state.board === "weekly" && chartFile)) {
+      params.push("board=weekly");
+    }
+    if (state.lang !== "zh-CN") params.push("lang=" + encodeURIComponent(state.lang));
+    return base + (params.length ? "?" + params.join("&") : "") + hash;
+  }
+
+  function setLink(id, label, href, current) {
+    var node = document.getElementById(id);
+    if (!node) return;
+    if (label != null) node.textContent = label;
+    if (href) node.setAttribute("href", href);
+    if (current) node.setAttribute("aria-current", "page");
+    else node.removeAttribute("aria-current");
   }
 
   function withLang(href) {
@@ -123,7 +160,7 @@
     var url = new URL(location.href);
     var hash = url.hash;
     url.search = "";
-    if (state.board === "weekly") url.searchParams.set("board", "weekly");
+    if (isChartPage() && state.board === "weekly") url.searchParams.set("board", "weekly");
     if (lang !== "zh-CN") url.searchParams.set("lang", lang);
     var next = url.pathname + url.search + hash;
     var current = location.pathname + location.search + location.hash;
@@ -163,6 +200,14 @@
 
   function resolvePageMeta(dict) {
     var meta = (dict && dict.meta) || {};
+    if (PAGE === "about" || PAGE === "method" || PAGE === "faq") {
+      var info = (dict.pages && dict.pages[PAGE]) || {};
+      return {
+        title: info.title || "",
+        description: info.description || "",
+        alt: info.ogImageAlt || meta.ogImageAlt || ""
+      };
+    }
     var boards = meta.boards || {};
     var pack = boards[state.board] || boards.daily || {};
     var period = periodToken(state.data || {});
@@ -361,9 +406,12 @@
     text("brand-name", ui.brand);
     text("brand-sub", ui.brandSub);
     text("skip-link", ui.skip);
-    text("nav-top", ui.navTop);
-    text("nav-platform", ui.navPlatform);
-    text("nav-data", ui.navData);
+    setLink("nav-daily", ui.navDaily, linkFor("index.html", { board: "daily" }), PAGE === "top" && state.board === "daily");
+    setLink("nav-weekly", ui.navWeekly, linkFor("index.html", { board: "weekly" }), PAGE === "top" && state.board === "weekly");
+    setLink("nav-platform", ui.navPlatform, linkFor("by-platform.html", { keepBoard: true }), PAGE === "platform");
+    setLink("nav-about", ui.navAbout, linkFor("about.html"), PAGE === "about");
+    setLink("nav-method", ui.navMethod, linkFor("method.html"), PAGE === "method");
+    setLink("nav-faq", ui.navFaq, linkFor("faq.html"), PAGE === "faq");
     text("hero-kicker", ui.heroKicker);
     text("hero-title", page.h1);
     text("hero-lead", page.lead);
@@ -382,8 +430,16 @@
     text("age-leave", ui.ageLeave);
     var ageLine = document.getElementById("foot-age");
     if (ageLine && ui.footerAge) ageLine.replaceChildren(el("strong", null, ui.footerAge));
+    text("foot-sources", ui.footerSources);
+    text("foot-cadence", ui.footerCadence);
     text("foot-snapshot", ui.footerSnapshot);
     text("foot-data", ui.footerData);
+    setLink("foot-daily", ui.navDaily, linkFor("index.html", { board: "daily" }));
+    setLink("foot-weekly", ui.navWeekly, linkFor("index.html", { board: "weekly" }));
+    setLink("foot-platform", ui.navPlatform, linkFor("by-platform.html", { keepBoard: true }));
+    setLink("foot-about", ui.footerAbout, linkFor("about.html"));
+    setLink("foot-method", ui.footerMethod, linkFor("method.html"));
+    setLink("foot-faq", ui.footerFaq, linkFor("faq.html"));
     text("skipped-title", ui.skippedTitle);
     text("skipped-lead", ui.skippedLead);
     if (data) {
@@ -394,6 +450,9 @@
         archive.hidden = !archivePath;
         archive.textContent = archivePath ? fill(ui.footerArchive, { path: archivePath }) : "";
       }
+    } else if (ui.footerLinksFixed) {
+      text("foot-links", ui.footerLinksFixed);
+      text("foot-archive", ui.footerArchiveFixed);
     }
     var footData = document.getElementById("foot-data");
     if (footData) {
@@ -405,6 +464,11 @@
     text("list-title", page.listTitle);
     text("faq-title", dict.faq && dict.faq.title);
     text("faq-lead", dict.faq && dict.faq.lead);
+    var faqMore = document.getElementById("faq-more");
+    if (faqMore && dict.faq && dict.faq.more) {
+      faqMore.textContent = dict.faq.more;
+      faqMore.setAttribute("href", linkFor("faq.html"));
+    }
     var nav = document.getElementById("site-nav");
     if (nav) nav.setAttribute("aria-label", ui.navLabel);
     var langGroup = document.getElementById("lang-switch");
@@ -412,11 +476,7 @@
     var jump = document.getElementById("jump-nav");
     if (jump) jump.setAttribute("aria-label", ui.jumpLabel);
     var brand = document.querySelector(".brand");
-    if (brand) brand.setAttribute("href", withLang("index.html"));
-    var navTop = document.getElementById("nav-top");
-    if (navTop) navTop.setAttribute("href", withLang("index.html"));
-    var navPlatform = document.getElementById("nav-platform");
-    if (navPlatform) navPlatform.setAttribute("href", withLang("by-platform.html"));
+    if (brand) brand.setAttribute("href", linkFor("index.html", { keepBoard: true }));
     var cross = document.getElementById("cross-link");
     if (cross && page.cross) {
       cross.textContent = page.cross;
@@ -439,6 +499,173 @@
       block.appendChild(el("p", null, item.a));
       host.appendChild(block);
     });
+  }
+
+  function topItem(data) {
+    var items = (data && data.items) || [];
+    var best = null;
+    items.forEach(function (item) {
+      var rank = item.overall_rank || 9999;
+      if (!best || rank < (best.overall_rank || 9999)) best = item;
+    });
+    return best;
+  }
+
+  function joinSources(ids) {
+    var sep = state.lang === "en" || state.lang === "es" ? ", " : "、";
+    return (ids || []).map(function (id) {
+      return platformCopy(id).name;
+    }).filter(Boolean).join(sep);
+  }
+
+  function weekClause(data) {
+    var week = data && data.period && data.period.iso_week;
+    if (!week) return "";
+    if (state.lang === "zh-CN") return "，" + week;
+    if (state.lang === "ja") return "、" + week;
+    return ", " + week;
+  }
+
+  function topSentence(page, item) {
+    if (!item || !page) return "";
+    var copy = copyFor(item);
+    var listing = item.name;
+    var display = copy.display || "";
+    var named = display && display !== listing;
+    var template = named ? (page.geoTopNamed || page.geoTop) : page.geoTop;
+    if (!template) return "";
+    return fill(template, {
+      store: item.store || "",
+      listing: listing,
+      display: display,
+      price: formatPrice(item.price, item.currency, state.lang)
+    });
+  }
+
+  function paintGeo() {
+    var host = document.getElementById("geo-summary");
+    if (!host || !state.dict || !state.data) return;
+    var page = pageCopy();
+    var lines = page.geo;
+    if (!lines || !lines.length) return;
+    var ui = state.dict.ui || {};
+    if (ui.geoLabel) host.setAttribute("aria-label", ui.geoLabel);
+    var item = topItem(state.data);
+    var seed = "";
+    if (state.board === "weekly") {
+      seed = state.data.seed
+        ? fill(page.geoSeed || "", { snapshot: state.data.seed.snapshot_date || state.data.as_of || "" })
+        : (page.geoNoSeed || "");
+    }
+    var vars = {
+      period: periodToken(state.data),
+      tz: state.data.timezone || "Asia/Shanghai",
+      count: String((state.data.items || []).length),
+      sources: joinSources(state.data.sources_included),
+      weekClause: weekClause(state.data),
+      top: topSentence(page, item),
+      seed: seed
+    };
+    clear(host);
+    lines.forEach(function (line) {
+      var sentence = line === "{top}" ? vars.top : line === "{seed}" ? vars.seed : fill(line, vars);
+      sentence = String(sentence || "").trim();
+      if (!sentence) return;
+      host.appendChild(el("p", null, sentence));
+    });
+  }
+
+  function relatedHref(kind) {
+    if (kind === "daily") return linkFor("index.html", { board: "daily" });
+    if (kind === "weekly") return linkFor("index.html", { board: "weekly" });
+    if (kind === "platform") return linkFor("by-platform.html", { keepBoard: true });
+    if (kind === "about") return linkFor("about.html");
+    if (kind === "method") return linkFor("method.html");
+    if (kind === "faq") return linkFor("faq.html");
+    return linkFor("index.html", { board: "daily" });
+  }
+
+  function paintInfo() {
+    var info = state.dict && state.dict.pages && state.dict.pages[PAGE];
+    if (!info) return;
+    text("page-kicker", info.kicker);
+    text("page-title", info.h1);
+    text("page-lead", info.lead);
+    var related = document.getElementById("related-links");
+    if (related) {
+      clear(related);
+      (info.related || []).forEach(function (item, index) {
+        if (index) related.appendChild(document.createTextNode(" · "));
+        var anchor = el("a", null, item.label);
+        anchor.href = relatedHref(item.page);
+        related.appendChild(anchor);
+      });
+    }
+    var host = document.getElementById("page-sections");
+    if (!host) return;
+    clear(host);
+    if (PAGE === "faq") {
+      var section = el("section", "faq");
+      section.setAttribute("aria-labelledby", "faq-page-title");
+      var heading = el("h2", null, info.listTitle || info.h1);
+      heading.id = "faq-page-title";
+      section.appendChild(heading);
+      (info.items || []).forEach(function (item) {
+        var block = el("div", "faq-item");
+        block.appendChild(el("h3", null, item.q));
+        block.appendChild(el("p", null, item.a));
+        section.appendChild(block);
+      });
+      host.appendChild(section);
+      return;
+    }
+    (info.sections || []).forEach(function (sectionData) {
+      var block = el("section", "prose-block");
+      block.appendChild(el("h2", null, sectionData.h2));
+      (sectionData.paragraphs || []).forEach(function (paragraph) {
+        block.appendChild(el("p", null, paragraph));
+      });
+      if (sectionData.items && sectionData.items.length) {
+        var list = el("ul");
+        sectionData.items.forEach(function (item) {
+          list.appendChild(el("li", null, item));
+        });
+        block.appendChild(list);
+      }
+      host.appendChild(block);
+    });
+  }
+
+  function siteGraphNodes(dict) {
+    var ui = (dict && dict.ui) || {};
+    var meta = (dict && dict.meta) || {};
+    var name = ui.brand || "青榜";
+    var description = meta.siteDescription || "";
+    return [
+      {
+        "@type": "WebSite",
+        "@id": BASE + "/#website",
+        "url": BASE + "/",
+        "name": name,
+        "alternateName": name === "青榜" ? ["Qing List", "情趣用品销售榜"] : ["青榜", "情趣用品销售榜"],
+        "inLanguage": ["zh-Hans", "en", "ja", "es"],
+        "isFamilyFriendly": false,
+        "description": description,
+        "publisher": { "@id": BASE + "/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": BASE + "/#organization",
+        "name": name,
+        "alternateName": name === "青榜" ? "Qing List" : "青榜",
+        "url": BASE + "/",
+        "description": description,
+        "logo": {
+          "@type": "ImageObject",
+          "url": BASE + "/favicon.svg"
+        }
+      }
+    ];
   }
 
   function productNode(item) {
@@ -492,7 +719,7 @@
     });
     var graph = {
       "@context": "https://schema.org",
-      "@graph": [
+      "@graph": siteGraphNodes(dict).concat([
         {
           "@type": "WebPage",
           "@id": page + "#webpage",
@@ -501,6 +728,7 @@
           "description": pageMeta.description,
           "inLanguage": meta.htmlLang,
           "isFamilyFriendly": false,
+          "isPartOf": { "@id": BASE + "/#website" },
           "dateModified": data.date,
           "temporalCoverage": temporalCoverage(data),
           "audience": { "@type": "PeopleAudience", "requiredMinAge": 18 },
@@ -527,7 +755,7 @@
             };
           })
         }
-      ]
+      ])
     };
     if (faqEntities.length) {
       graph["@graph"].push({
@@ -539,6 +767,51 @@
       });
     }
     slot.textContent = JSON.stringify(graph);
+  }
+
+  function writeInfoStructuredData() {
+    var dict = state.dict;
+    var slot = document.getElementById("ld-json");
+    if (!dict || !slot) return;
+    var meta = dict.meta;
+    var pageMeta = resolvePageMeta(dict);
+    var page = pageUrl(state.lang);
+    var info = (dict.pages && dict.pages[PAGE]) || {};
+    var type = "WebPage";
+    if (PAGE === "about") type = "AboutPage";
+    if (PAGE === "faq") type = "FAQPage";
+    var node = {
+      "@type": type,
+      "@id": page + "#webpage",
+      "url": page,
+      "name": pageMeta.title,
+      "description": pageMeta.description,
+      "inLanguage": meta.htmlLang,
+      "isFamilyFriendly": false,
+      "isPartOf": { "@id": BASE + "/#website" },
+      "publisher": { "@id": BASE + "/#organization" },
+      "dateModified": "2026-10-16",
+      "audience": { "@type": "PeopleAudience", "requiredMinAge": 18 },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": BASE + "/assets/og-share.png",
+        "width": 1200,
+        "height": 630
+      }
+    };
+    if (PAGE === "faq") {
+      node.mainEntity = (info.items || []).map(function (item) {
+        return {
+          "@type": "Question",
+          "name": item.q,
+          "acceptedAnswer": { "@type": "Answer", "text": item.a }
+        };
+      });
+    }
+    slot.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": siteGraphNodes(dict).concat([node])
+    });
   }
 
   function paintSources() {
@@ -611,7 +884,9 @@
     badge.setAttribute("aria-hidden", "true");
     var img = document.createElement("img");
     img.src = item.image;
-    img.alt = copy.alt || copy.display;
+    var altText = copy.alt || copy.display || item.name || "";
+    if (item.image_kind === "placeholder" && !copy.alt) altText = ui.placeholderCaption || altText;
+    img.alt = altText || item.name || "product";
     img.decoding = "async";
     var eager = item.overall_rank <= 3 && state.filter === "all" && PAGE === "top";
     img.loading = eager ? "eager" : "lazy";
@@ -788,6 +1063,12 @@
 
   function render() {
     paintChrome();
+    if (!isChartPage()) {
+      paintInfo();
+      writeInfoStructuredData();
+      return;
+    }
+    paintGeo();
     writeStructuredData();
     if (!state.ageOk) return;
     if (PAGE === "top") paintFilters();
@@ -821,7 +1102,7 @@
     try { localStorage.setItem(AGE_KEY, "ok"); } catch (err) {}
     document.body.classList.remove("is-gated");
     setBackgroundInert(false);
-    var title = document.getElementById("hero-title");
+    var title = document.getElementById("hero-title") || document.getElementById("page-title");
     if (title) title.setAttribute("tabindex", "-1");
     if (title) title.focus();
     render();
@@ -859,7 +1140,7 @@
       });
     }
     window.addEventListener("popstate", function () {
-      var board = readBoard();
+      var board = isChartPage() ? readBoard() : state.board;
       var lang = readLang();
       var boardChanged = board !== state.board;
       var langChanged = lang !== state.lang;
@@ -903,6 +1184,7 @@
   }
 
   function fail() {
+    if (!isChartPage()) return;
     var message = (state.dict && state.dict.ui && state.dict.ui.loadError) || "The list data did not load.";
     if (state.ageOk) showStatus(message, true);
   }
@@ -916,13 +1198,15 @@
       setBackgroundInert(false);
     }
     var lang = readLang();
-    state.board = readBoard();
+    state.board = isChartPage() ? readBoard() : "daily";
     try { localStorage.setItem(LANG_KEY, lang); } catch (err) {}
     writeUrl(lang);
-    Promise.all([loadDict(lang), loadData(state.board)]).then(function (result) {
+    var tasks = [loadDict(lang)];
+    if (isChartPage()) tasks.push(loadData(state.board));
+    Promise.all(tasks).then(function (result) {
       state.lang = lang;
       state.dict = result[0];
-      state.data = result[1];
+      state.data = isChartPage() ? result[1] : null;
       applyHead(result[0], lang);
       render();
       if (!state.ageOk) {
