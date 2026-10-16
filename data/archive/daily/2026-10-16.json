@@ -1,6 +1,6 @@
 {
   "board": "daily",
-  "generated_at": "2026-10-16T10:59:47+08:00",
+  "generated_at": "2026-10-16T17:03:22+08:00",
   "date": "2026-10-16",
   "as_of": "2026-10-16",
   "timezone": "Asia/Shanghai",
@@ -24,33 +24,41 @@
   "category_zh": "性工具 / 情趣用品",
   "sort_rule": "dedupe by product_url; cap 6 per source; sort by source rank ASC, then rating DESC (nulls last), then review count DESC (nulls last), then platform id, then name; take Top 20",
   "sources_included": [
-    "amazon_us",
     "dame",
+    "amazon_us",
+    "lesplay_hk",
     "lovense",
+    "sexconcept_hk",
+    "sistalk_hk",
+    "waddy_store",
     "we_vibe",
-    "womanizer",
-    "waddy_store"
+    "womanizer"
   ],
   "sources_skipped": [
     {
+      "platform": "taobao_tmall",
+      "status": "blocked",
+      "note": "2026-10-16 later fetch of https://s.taobao.com/search returned the PC search shell (documentOnly/CSR, noscript asks for JavaScript). Static HTML had no item.taobao.com or detail.tmall.com URLs, no item ids, and no prices. Rows were not invented. Empty placeholder: data/sources/taobao_tmall.placeholder.json."
+    },
+    {
+      "platform": "gifts_18",
+      "status": "blocked",
+      "note": "https://www.18gifts.com/bestsellers/ (本月最佳销量排行榜) returned a Cloudflare interstitial ('Just a moment...') on 2026-10-16. No product rows extracted."
+    },
+    {
       "platform": "lelo",
-      "status": "not_requested",
-      "note": "Not fetched in the 2026-10-16 daily scrape."
+      "status": "not_found",
+      "note": "https://www.lelo.com/best-sellers returned HTTP 404 on 2026-10-16. Not included."
     },
     {
       "platform": "mysteryvibe",
       "status": "not_requested",
-      "note": "Not fetched in the 2026-10-16 daily scrape."
-    },
-    {
-      "platform": "taobao_tmall",
-      "status": "not_requested",
-      "note": "Not fetched in the 2026-10-16 daily scrape."
+      "note": "Not fetched again on 2026-10-16. The 2026-10-15 attempt was HTTP 429. Not backfilled."
     },
     {
       "platform": "pchome_24h",
-      "status": "not_requested",
-      "note": "Not fetched in the 2026-10-16 daily scrape."
+      "status": "not_merged",
+      "note": "A PChome 24h category URL responded on 2026-10-16, but it was not a confirmed public bestseller list, so no rows were merged. The 2026-10-15 attempt was HTTP 429."
     }
   ],
   "omissions": [
@@ -105,6 +113,28 @@
       "overall_rank": 2
     },
     {
+      "platform": "lesplay_hk",
+      "store": "Les'Play (HK)",
+      "rank": 1,
+      "name": "Womanizer Next Liberty 3D陰蒂吸啜智能按摩器",
+      "product_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "purchase_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "price": 988.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T17:03:22+08:00",
+      "id": "lesplay_hk-womanizer-next-liberty-3d-pleasure-air-stimulato",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6aa42b364f6f2d67e12c5d43/375x.gif",
+      "image_kind": "official",
+      "list_url": "https://www.lesplayhk.com/categories/best-seller",
+      "note_key": "hk_list_order",
+      "overall_rank": 3
+    },
+    {
       "platform": "lovense",
       "store": "Lovense",
       "rank": 1,
@@ -126,7 +156,52 @@
       "compare_at_price": 199.0,
       "note_key": "on_sale",
       "notes": "Price from the homepage flagship carousel (bestSeller_3). No bestseller URL returned a list; /best-sellers is 404.",
-      "overall_rank": 3
+      "overall_rank": 4
+    },
+    {
+      "platform": "sexconcept_hk",
+      "store": "Sex Concept (HK)",
+      "rank": 1,
+      "name": "Fuji World Seigi48 凸凹堂 二つ巴 忍者編 性愛體位動力機械擺件",
+      "product_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-karakuri-dolls-ninja-positions-powered-mechanical-ornament-2",
+      "purchase_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-karakuri-dolls-ninja-positions-powered-mechanical-ornament-2",
+      "price": 98.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T17:03:22+08:00",
+      "id": "sexconcept_hk-fuji-world-seigi48-karakuri-dolls-ninja-position",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/6abf83edd41407a256da9536/375x.png",
+      "image_kind": "official",
+      "list_url": "https://www.sexconcepthk.com/categories/best-sellers",
+      "note_key": "hk_list_sale",
+      "compare_at_price": 128.0,
+      "overall_rank": 5
+    },
+    {
+      "platform": "sistalk_hk",
+      "store": "SISTALK HK",
+      "rank": 1,
+      "name": "小怪獸 魚擺擺 抗菌魚尾震動器",
+      "product_url": "https://www.sistalk.hk/products/monster-pub-wiwi-fish-tail-antibacterial-vibrator",
+      "purchase_url": "https://www.sistalk.hk/products/monster-pub-wiwi-fish-tail-antibacterial-vibrator",
+      "price": 398.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T17:03:22+08:00",
+      "id": "sistalk_hk-monster-pub-wiwi-fish-tail-antibacterial-vibrato",
+      "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/6970712b5240724b98fe011e/375x.gif",
+      "image_kind": "official",
+      "list_url": "https://www.sistalk.hk/categories/hot-selling",
+      "note_key": "hk_list_order",
+      "overall_rank": 6
     },
     {
       "platform": "waddy_store",
@@ -149,7 +224,7 @@
       "list_url": "https://www.waddystore.com/",
       "note_key": "waddy_top10",
       "notes": "Homepage block “男士成人用品 | TOP 10 銷量排名”, active 飛機杯 tab, in page order. Review stars are a skeleton with no number.",
-      "overall_rank": 4
+      "overall_rank": 7
     },
     {
       "platform": "we_vibe",
@@ -172,7 +247,7 @@
       "list_url": "https://www.we-vibe.com/us/bestsellers",
       "note_key": "price_from",
       "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
-      "overall_rank": 5
+      "overall_rank": 8
     },
     {
       "platform": "womanizer",
@@ -195,7 +270,7 @@
       "list_url": "https://www.womanizer.com/us/bestseller",
       "note_key": "price_from",
       "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
-      "overall_rank": 6
+      "overall_rank": 9
     },
     {
       "platform": "dame",
@@ -216,7 +291,7 @@
       "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/eva-1-ice.png?v=1776326231",
       "image_kind": "official",
       "list_url": "https://dame.com/collections/bestsellers",
-      "overall_rank": 7
+      "overall_rank": 10
     },
     {
       "platform": "amazon_us",
@@ -237,7 +312,29 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/71ibbU+OxdL._AC_UL600_SR600,400_.jpg",
       "image_kind": "official",
       "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
-      "overall_rank": 8
+      "overall_rank": 11
+    },
+    {
+      "platform": "lesplay_hk",
+      "store": "Les'Play (HK)",
+      "rank": 2,
+      "name": "Roomfun 雙人共震 穿戴式按摩棒套裝",
+      "product_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
+      "purchase_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
+      "price": 798.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T17:03:22+08:00",
+      "id": "lesplay_hk-roomfun-double-vibration-wearable-dildo-set",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a7f097fc377fa203b144236/375x.png",
+      "image_kind": "official",
+      "list_url": "https://www.lesplayhk.com/categories/best-seller",
+      "note_key": "hk_list_order",
+      "overall_rank": 12
     },
     {
       "platform": "lovense",
@@ -261,7 +358,52 @@
       "compare_at_price": 399.0,
       "note_key": "on_sale",
       "notes": "Price from the homepage flagship carousel (bestSeller_3). No bestseller URL returned a list; /best-sellers is 404.",
-      "overall_rank": 9
+      "overall_rank": 13
+    },
+    {
+      "platform": "sexconcept_hk",
+      "store": "Sex Concept (HK)",
+      "rank": 2,
+      "name": "Fuji World Seigi48 凸凹堂 忍者編 深山 性愛體位動力機械擺件",
+      "product_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja-doll",
+      "purchase_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja-doll",
+      "price": 98.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T17:03:22+08:00",
+      "id": "sexconcept_hk-fuji-world-seigi48-miyama-clock-work-ukiyo-e-nin",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/6abf81188523e64f2dbd373b/375x.png",
+      "image_kind": "official",
+      "list_url": "https://www.sexconcepthk.com/categories/best-sellers",
+      "note_key": "hk_list_sale",
+      "compare_at_price": 128.0,
+      "overall_rank": 14
+    },
+    {
+      "platform": "sistalk_hk",
+      "store": "SISTALK HK",
+      "rank": 2,
+      "name": "HARU: ORGASM 草本熱浪迷情 高潮潤滑液",
+      "product_url": "https://www.sistalk.hk/products/orgasm-大麻熱浪迷情-熱感潤滑液-150ml",
+      "purchase_url": "https://www.sistalk.hk/products/orgasm-大麻熱浪迷情-熱感潤滑液-150ml",
+      "price": 218.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T17:03:22+08:00",
+      "id": "sistalk_hk-orgasm-150ml",
+      "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/64467f32e55f380023436cc5/375x.png",
+      "image_kind": "official",
+      "list_url": "https://www.sistalk.hk/categories/hot-selling",
+      "note_key": "hk_list_order",
+      "overall_rank": 15
     },
     {
       "platform": "waddy_store",
@@ -284,7 +426,7 @@
       "list_url": "https://www.waddystore.com/",
       "note_key": "waddy_top10",
       "notes": "Homepage block “男士成人用品 | TOP 10 銷量排名”, active 飛機杯 tab, in page order. Review stars are a skeleton with no number.",
-      "overall_rank": 10
+      "overall_rank": 16
     },
     {
       "platform": "we_vibe",
@@ -307,7 +449,7 @@
       "list_url": "https://www.we-vibe.com/us/bestsellers",
       "note_key": "price_from",
       "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
-      "overall_rank": 11
+      "overall_rank": 17
     },
     {
       "platform": "womanizer",
@@ -330,7 +472,7 @@
       "list_url": "https://www.womanizer.com/us/bestseller",
       "note_key": "price_from",
       "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
-      "overall_rank": 12
+      "overall_rank": 18
     },
     {
       "platform": "amazon_us",
@@ -351,7 +493,7 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/61xedFnFwLL._AC_UL600_SR600,400_.jpg",
       "image_kind": "official",
       "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
-      "overall_rank": 13
+      "overall_rank": 19
     },
     {
       "platform": "dame",
@@ -372,143 +514,17 @@
       "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/PDPImages_LAY-IC_01.jpg?v=1775651051",
       "image_kind": "official",
       "list_url": "https://dame.com/collections/bestsellers",
-      "overall_rank": 14
-    },
-    {
-      "platform": "lovense",
-      "store": "Lovense",
-      "rank": 3,
-      "name": "Ferri",
-      "product_url": "https://www.lovense.com/magnetic-panty-vibrator",
-      "purchase_url": "https://www.lovense.com/magnetic-panty-vibrator",
-      "price": 99.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-16T10:47:15+08:00",
-      "id": "lovense-ferri",
-      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_ferri.jpg?v=20261015",
-      "image_kind": "official",
-      "list_url": "https://www.lovense.com/",
-      "compare_at_price": 199.0,
-      "note_key": "on_sale",
-      "notes": "Price from the homepage flagship carousel (bestSeller_3). No bestseller URL returned a list; /best-sellers is 404.",
-      "overall_rank": 15
-    },
-    {
-      "platform": "waddy_store",
-      "store": "Waddy Store (HK)",
-      "rank": 3,
-      "name": "MyToys Rocky 全方位旋轉自動抽插電動飛機杯",
-      "product_url": "https://www.waddystore.com/products/mytoys-rocky",
-      "purchase_url": "https://www.waddystore.com/products/mytoys-rocky",
-      "price": 705.0,
-      "currency": "HKD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-16T10:47:15+08:00",
-      "id": "waddy-mytoys-rocky",
-      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/6916dfccff076c0010d8fbdc/375x.jpg",
-      "image_kind": "official",
-      "list_url": "https://www.waddystore.com/",
-      "compare_at_price": 800.0,
-      "note_key": "waddy_top10",
-      "notes": "Homepage block “男士成人用品 | TOP 10 銷量排名”, active 飛機杯 tab, in page order. Review stars are a skeleton with no number.",
-      "overall_rank": 16
-    },
-    {
-      "platform": "we_vibe",
-      "store": "We-Vibe",
-      "rank": 3,
-      "name": "We-Vibe Nova 2",
-      "product_url": "https://www.we-vibe.com/us/nova2",
-      "purchase_url": "https://www.we-vibe.com/us/nova2",
-      "price": 159.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-16T10:47:15+08:00",
-      "id": "wevibe-nova2",
-      "image": "https://www.we-vibe.com/media/catalog/product/cache/1bc522adbdeb181b78a833de4363b825/w/v/wvi_nova2_blue_pdp_gallery_1500x1500_01a.jpg",
-      "image_kind": "official",
-      "list_url": "https://www.we-vibe.com/us/bestsellers",
-      "note_key": "price_from",
-      "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
-      "overall_rank": 17
-    },
-    {
-      "platform": "womanizer",
-      "store": "Womanizer",
-      "rank": 3,
-      "name": "Womanizer Premium 2",
-      "product_url": "https://www.womanizer.com/us/premium-2",
-      "purchase_url": "https://www.womanizer.com/us/premium-2",
-      "price": 189.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-16T10:47:15+08:00",
-      "id": "womanizer-premium2",
-      "image": "https://www.womanizer.com/media/catalog/product/cache/22858c641609ec6b1ca73cd5f575e920/c/a/category_image_premium_2_red.jpg",
-      "image_kind": "official",
-      "list_url": "https://www.womanizer.com/us/bestseller",
-      "note_key": "price_from",
-      "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
-      "overall_rank": 18
-    },
-    {
-      "platform": "dame",
-      "store": "Dame Products",
-      "rank": 4,
-      "name": "Aer Suction Vibrator",
-      "product_url": "https://dame.com/products/aer",
-      "purchase_url": "https://dame.com/products/aer",
-      "price": 125.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": 4.8,
-        "count": 937,
-        "sample": null
-      },
-      "scraped_at": "2026-10-16T10:47:15+08:00",
-      "id": "dame-aer",
-      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/aer-1-periwinkle.png?v=1776325568",
-      "image_kind": "official",
-      "list_url": "https://dame.com/collections/bestsellers",
-      "overall_rank": 19
-    },
-    {
-      "platform": "amazon_us",
-      "store": "Amazon.com",
-      "rank": 4,
-      "name": "Kstert 7.8\" Realistic Flesh Liquid Silicone Dildo with Strong Suction Cup | Sensual lifelike toy featuring a powerful suction base and perfect length, ideal for hands-free solo or couples' play.",
-      "product_url": "https://www.amazon.com/dp/B0C4GZ7CC4",
-      "purchase_url": "https://www.amazon.com/dp/B0C4GZ7CC4",
-      "price": 13.99,
-      "currency": "USD",
-      "reviews": {
-        "rating": 4.3,
-        "count": 4351,
-        "sample": null
-      },
-      "scraped_at": "2026-10-16T10:47:15+08:00",
-      "id": "amazon-b0c4gz7cc4",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/51qiE+X+42L._AC_UL600_SR600,400_.jpg",
-      "image_kind": "official",
-      "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
       "overall_rank": 20
     }
-  ]
+  ],
+  "supplement": {
+    "at": "2026-10-16T17:03:22+08:00",
+    "extracts": [
+      "lesplay_hk",
+      "sexconcept_hk",
+      "sistalk_hk"
+    ],
+    "rows_added": 18,
+    "note": "Same Shanghai date as the 10:59 scrape. Public HK category pages that returned product URL, name, and price were merged, then the published daily rule was re-run. Taobao/Tmall stayed empty. No rows were invented."
+  }
 }

@@ -3,24 +3,26 @@
     "htmlLang": "zh-Hans",
     "ogLocale": "zh_CN",
     "topTitle": "情趣用品销售榜 · 日榜 Top 20｜{period}（上海时间）",
-    "topDescription": "仅限 18 周岁以上。{period}（Asia/Shanghai）情趣用品销售日榜，汇总 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy。价格、评分和名次以该日榜文件为准。",
+    "topDescription": "仅限 18 周岁以上。{period}（Asia/Shanghai）情趣用品销售日榜，汇总 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。价格、评分和名次以该日榜文件为准。",
     "platformTitle": "情趣用品销售榜 · 分平台日榜｜{period}（上海时间）",
-    "platformDescription": "仅限成年人。{period}（Asia/Shanghai）情趣用品销售日榜，按 Amazon、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy 分开查看，不另编商品。",
+    "platformDescription": "仅限成年人。{period}（Asia/Shanghai）情趣用品销售日榜，按 Amazon、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept 分开查看，不另编商品。",
     "ogImageAlt": "青榜：{period} 情趣用品销售榜，仅限 18 周岁以上",
     "boards": {
       "daily": {
         "topTitle": "情趣用品销售榜 · 日榜 Top 20｜{period}（上海时间）",
-        "topDescription": "仅限 18 周岁以上。{period}（Asia/Shanghai）情趣用品销售日榜，汇总 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy。价格、评分和名次以该日榜文件为准。",
+        "topDescription": "仅限 18 周岁以上。{period}（Asia/Shanghai）情趣用品销售日榜，汇总 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。价格、评分和名次以该日榜文件为准。",
         "platformTitle": "情趣用品销售榜 · 分平台日榜｜{period}（上海时间）",
-        "platformDescription": "仅限成年人。{period}（Asia/Shanghai）情趣用品销售日榜，按 Amazon、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy 分开查看，不另编商品。",
-        "ogImageAlt": "青榜日榜：{period} 情趣用品销售榜，仅限 18 周岁以上"
+        "platformDescription": "仅限成年人。{period}（Asia/Shanghai）情趣用品销售日榜，按 Amazon、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept 分开查看，不另编商品。",
+        "ogImageAlt": "青榜日榜：{period} 情趣用品销售榜，仅限 18 周岁以上",
+        "archiveTitle": "归档日榜 · Top 20｜{period}（上海时间）"
       },
       "weekly": {
         "topTitle": "情趣用品销售榜 · 周榜 Top 20｜本周 {period}",
         "topDescription": "仅限 18 周岁以上。本周 {period}（Asia/Shanghai，周一至周日）情趣用品销售周榜。价格、评分和名次以该周榜文件为准。",
         "platformTitle": "情趣用品销售榜 · 分平台周榜｜本周 {period}",
         "platformDescription": "仅限成年人。本周 {period}（Asia/Shanghai）情趣用品销售周榜按店铺分开。商品与综合榜相同，没有另编。",
-        "ogImageAlt": "青榜周榜：本周 {period} 情趣用品销售榜，仅限 18 周岁以上"
+        "ogImageAlt": "青榜周榜：本周 {period} 情趣用品销售榜，仅限 18 周岁以上",
+        "archiveTitle": "归档周榜 · Top 20｜{period}"
       }
     },
     "siteDescription": "青榜整理面向成年人的情趣用品公开销售榜，有日榜和周榜，不直接售卖。"
@@ -59,7 +61,7 @@
     "loading": "正在读取这份快照…",
     "loadError": "榜单数据没有载入。请刷新后再试。",
     "skippedTitle": "这次没能收录的来源",
-    "skippedLead": "下面几家这次日榜没有再请求。没有用别的数据填补。",
+    "skippedLead": "下面几家没有进入这一份榜。没有用别的数据填补。",
     "ageTitle": "此页面仅面向成年人",
     "ageBody": "这里整理的是成人情趣用品的公开热销快照。未满 18 周岁，请离开。继续即表示你确认已达到所在地的法定成人年龄。",
     "ageEnter": "我已年满 18 周岁",
@@ -88,14 +90,28 @@
     "navAbout": "关于",
     "navMethod": "方法",
     "navFaq": "FAQ",
-    "footerSources": "来源以每期 JSON 为准。设计上包括淘宝 / 天猫、Amazon 和独立品牌店；2026-10-16 实际收录 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy。",
-    "footerCadence": "更新频率：日榜按上海时间每天整份更新；周榜按周一至周日的自然周整份更新。",
+    "footerSources": "来源以每期 JSON 为准。设计上包括淘宝 / 天猫、Amazon 和独立品牌店。2026-10-16 实际收录 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫仍未收录。",
+    "footerCadence": "更新频率：日榜按上海时间每天整份更新。周榜在同一 ISO 周有两份或更多日榜时由这些日榜汇总；只有一份日榜时，周榜仍可能是带 seed 的副本，页面会写明。",
     "footerAbout": "关于本站",
     "footerMethod": "数据方法",
     "footerFaq": "常见问题",
     "footerLinksFixed": "外链使用 nofollow。数据时区 Asia/Shanghai。",
-    "footerArchiveFixed": "日期归档：data/archive/daily/2026-10-16.json · data/archive/weekly/2026-W42.json",
-    "geoLabel": "本页摘要"
+    "footerArchiveFixed": "可读归档：archive/index.html。JSON：data/archive/daily/2026-10-16.json · data/archive/weekly/2026-W42.json",
+    "geoLabel": "本页摘要",
+    "navArchive": "归档",
+    "navPrivacy": "隐私",
+    "navContact": "联系",
+    "footerArchivePage": "归档",
+    "footerPrivacy": "隐私政策",
+    "footerContact": "联系",
+    "footerArchiveData": "查看这份归档 JSON",
+    "archiveDailyHeading": "日榜",
+    "archiveWeeklyHeading": "周榜",
+    "archiveDailyHint": "这是已归档的日榜",
+    "archiveWeeklyHint": "这是已归档的周榜",
+    "dailySeedNote": "这份日榜文件带有 seed，来源是 {source}（{snapshot}，{tz}）。商品与那份快照相同。例行发布会整份覆盖 {latest}，并写入 {archive}。",
+    "aggNote": "这份周榜由 {count} 份日榜汇总（{days}，{week}）。按商品链接去重，出现天数多的靠前。不是商家申报的一周销量。文件里没有 seed。",
+    "appearancesNote": "这一周的日榜里出现了 {n} 天（{days}）。"
   },
   "notes": {
     "asin_verified": "商品编号曾通过公开检索核对。",
@@ -104,7 +120,9 @@
     "waddy_no_rating": "价格来自香港店铺的公开热卖页，该页没有展示评分。",
     "price_from": "列表把这个数字标成 “As low as”，是该页展示的起步价。",
     "on_sale": "列表上的现价低于划线价。这一页没有展示评分。",
-    "waddy_top10": "价格来自 Waddy 首页「男士成人用品 | TOP 10 销量排名」的飞机杯分页。这一页没有展示评分。"
+    "waddy_top10": "价格来自 Waddy 首页「男士成人用品 | TOP 10 销量排名」的飞机杯分页。这一页没有展示评分。",
+    "hk_list_order": "名次是该店公开热卖或畅销分类页上的顺序。这一页没有展示评分。",
+    "hk_list_sale": "名次是该店公开热卖或畅销分类页上的顺序。标价是页面上的现价，低于划线价。这一页没有展示评分。"
   },
   "platforms": {
     "dame": {
@@ -130,6 +148,18 @@
     "waddy_store": {
       "name": "Waddy Store（香港）",
       "blurb": "香港中文店的公开热卖榜，用来补上当时能打开的中文来源。"
+    },
+    "sistalk_hk": {
+      "name": "SISTALK（香港）",
+      "blurb": "香港 SISTALK 公开的热卖分类，名次是页面顺序。"
+    },
+    "lesplay_hk": {
+      "name": "Les'Play（香港）",
+      "blurb": "香港 Les'Play 公开的畅销分类，名次是页面顺序。"
+    },
+    "sexconcept_hk": {
+      "name": "Sex Concept（香港）",
+      "blurb": "香港 Sex Concept 公开的畅销分类，名次是页面顺序。"
     }
   },
   "skipped": {
@@ -170,7 +200,8 @@
         "geoSeed": "这份周榜文件写明：它是 {snapshot} 日榜的副本，不是单独统计的一周销量。商品、价格、评分和名次与该日榜相同。",
         "geoNoSeed": "名次、价格和评分以该周榜文件为准，不是实时报价。",
         "geoTop": "综合第 1 名是 {store} 的 {listing}，标价 {price}。",
-        "geoTopNamed": "综合第 1 名是 {store} 的 {listing}（页面中文名：{display}），标价 {price}。"
+        "geoTopNamed": "综合第 1 名是 {store} 的 {listing}（页面中文名：{display}），标价 {price}。",
+        "geoAggregated": "这份周榜由 {count} 份日榜汇总（{days}），按商品链接去重。出现天数多的靠前。不是单日副本，也不是商家申报的一周销量。"
       }
     },
     "platform": {
@@ -202,7 +233,8 @@
         "geoSeed": "这份周榜文件写明：它是 {snapshot} 日榜的副本，不是单独统计的一周销量。商品、价格、评分和名次与该日榜相同。",
         "geoNoSeed": "名次、价格和评分以该周榜文件为准，不是实时报价。",
         "geoTop": "综合第 1 名是 {store} 的 {listing}，标价 {price}。",
-        "geoTopNamed": "综合第 1 名是 {store} 的 {listing}（页面中文名：{display}），标价 {price}。"
+        "geoTopNamed": "综合第 1 名是 {store} 的 {listing}（页面中文名：{display}），标价 {price}。",
+        "geoAggregated": "这份周榜由 {count} 份日榜汇总（{days}），按商品链接去重。出现天数多的靠前。不是单日副本，也不是商家申报的一周销量。"
       }
     },
     "about": {
@@ -228,6 +260,14 @@
         {
           "page": "faq",
           "label": "常见问题"
+        },
+        {
+          "page": "privacy",
+          "label": "隐私政策"
+        },
+        {
+          "page": "contact",
+          "label": "联系"
         }
       ],
       "sections": [
@@ -249,7 +289,7 @@
           "h2": "日榜和周榜是什么",
           "paragraphs": [
             "日榜是上海时间一个自然日的公开热销 Top 20。周榜是同一时区周一至周日的 Top 20。打开首页先看到日榜，地址栏加上 ?board=weekly 就是周榜。",
-            "每一期以对应的 JSON 文件为准。若周榜文件里带有 seed 说明，页面会写明它是某一天日榜的副本，不是单独统计的一周销量。排名怎么来、哪些店进了榜，写在「数据方法」。"
+            "每一期以对应的 JSON 文件为准。若周榜带有 seed，页面会写明它是某一天日榜的副本。若同一 ISO 周已有两份或更多日榜，scripts/build_weekly.py 会汇总成没有 seed 的周榜。2026-W42 就是这种汇总。排名怎么来、哪些店进了榜，写在「数据方法」。"
           ]
         },
         {
@@ -289,9 +329,9 @@
         {
           "h2": "数据来源",
           "paragraphs": [
-            "榜单设计上会看三类公开页面：淘宝 / 天猫、Amazon，以及独立品牌或地区店铺。目前出现过的独立店和地区店有 Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy。",
+            "榜单设计上会看三类公开页面：淘宝 / 天猫、Amazon，以及独立品牌或地区店铺。目前出现过的独立店和地区店有 Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。",
             "某一期实际收录谁，以该期 JSON 的 sources_included 为准。没请求或打不开的来源写在 sources_skipped，不会用其他数据填补。",
-            "2026-10-16 这一期实际收录了 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 和香港 Waddy。淘宝 / 天猫、LELO、MysteryVibe、PChome 24h 写在 sources_skipped，状态是 not_requested，所以榜上没有这些来源的商品。"
+            "2026-10-16 在当天较早的抓取之后，又并入了三家公开页面能直接读到商品链接、名称和港币价格的香港店：SISTALK 的热卖分类、Les'Play 的畅销分类、Sex Concept 的畅销分类。名次是该页从上到下的顺序，每个来源最多 6 款，再按原有规则重排前 20。淘宝 / 天猫同日打开的是要靠 JavaScript 的搜索壳，静态 HTML 里没有商品链接和价格，sources_skipped 记为 blocked，没有编造商品。空的占位结构在 data/sources/taobao_tmall.placeholder.json。18 Gifts 的月销量页被 Cloudflare 拦住。LELO 的 /best-sellers 返回 404。MysteryVibe 没有重试（2026-10-15 是 HTTP 429）。PChome 24h 返回过页面，但不是可以确认的热销榜，所以没有并入。"
           ]
         },
         {
@@ -299,7 +339,8 @@
           "paragraphs": [
             "日榜按 Asia/Shanghai 的自然日更新。例行发布会整份覆盖 data/daily-latest.json，并把同一份文件写到 data/daily-YYYY-MM-DD.json 和 data/archive/daily/YYYY-MM-DD.json。不与旧条目合并。",
             "周榜按 Asia/Shanghai 的周一至周日（ISO 周）更新。例行发布会整份覆盖 data/weekly-latest.json，并写入 data/archive/weekly/YYYY-Www.json。",
-            "当前日榜与周榜文件的生成时间都是 2026-10-16T10:59:47+08:00。页面上的价格和名次对得上文件里的日期，不是打开页面这一刻的实时库存。"
+            "日榜文件在 2026-10-16T10:59:47+08:00 形成第一版，同日 2026-10-16T17:03:22+08:00 并入香港店后重写。页面上的价格和名次对得上文件里的日期，不是打开页面这一刻的实时库存。",
+            "周榜不会停在“把某一天复制成一周”当作最终做法。scripts/build_weekly.py 查看 data/archive/daily/。同一个 ISO 周（上海时间，周一至周日）若有两份或更多日榜，就按商品链接去重，用出现天数、平均店内名次和最好店内名次汇总，写下 data/weekly-latest.json 和 data/archive/weekly/YYYY-Www.json，并且不写 seed。2026-W42 使用了 2026-10-15 与 2026-10-16，所以是汇总，不是副本。若某一周只有一份日榜，脚本不改写已有周榜；那种文件若仍带 seed，页面会写明它是那天日榜的副本。"
           ]
         },
         {
@@ -319,7 +360,7 @@
             "这不是全网销量，也不是淘宝、天猫或 Amazon 的官方总榜。",
             "只保留抓取时能打开、并且有商品链接的条目。没有链接的展示（例如 2026-10-16 日榜里 Lovense 首页轮播的 Lush 4 / Lush Mini）记在 omissions，不进 Top 20。",
             "价格、库存、折扣和名次都会变。标成 “As low as” 的数字是该页展示的起步价。",
-            "若周榜 JSON 带有 seed，它是某一天日榜的副本，不是单独统计的一周销量。2026-W42（2026-10-12 至 2026-10-18）这份周榜就是 2026-10-16 日榜的副本。",
+            "若周榜 JSON 带有 seed，它是某一天日榜的副本，不是单独统计的一周销量。2026-W42 没有 seed：它由 2026-10-15 与 2026-10-16 两份日榜汇总。只有一份日榜的周，仍可能是 seed。",
             "外链使用 nofollow。本站不收款、不发货、不提供医疗或健康建议，也不代替你决定买不买。"
           ]
         }
@@ -354,11 +395,11 @@
       "items": [
         {
           "q": "数据从哪里来？",
-          "a": "来自抓取时能打开的公开热销页。设计上的来源包括淘宝 / 天猫、Amazon，以及独立品牌店和地区店。2026-10-16 这一期实际进入榜单的是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 和香港 Waddy。淘宝 / 天猫该期没有请求，所以没有对应商品。原始文件在 data/daily-latest.json 和 data/weekly-latest.json。"
+          "a": "来自抓取时能打开的公开热销页。设计上的来源包括淘宝 / 天猫、Amazon，以及独立品牌店和地区店。2026-10-16 实际进入榜单的是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫同日是 JavaScript 搜索壳，没有商品行，所以没有编造淘宝商品。原始文件在 data/daily-latest.json 和 data/weekly-latest.json。"
         },
         {
           "q": "多久更新一次？",
-          "a": "日榜按上海时间每个自然日整份更新；周榜按周一至周日的自然周整份更新。更新会覆盖最新文件，并按日期或 ISO 周另存归档，不与旧条目合并。当前文件生成于 2026-10-16T10:59:47+08:00。"
+          "a": "日榜按上海时间每个自然日整份更新。周榜在同一 ISO 周有两份或更多日榜时，用 scripts/build_weekly.py 按商品链接汇总，不再把单日副本当作那一周的最终结果。只有一份日榜时，周榜仍可能带 seed，页面会写明。当前日榜文件写于 2026-10-16T17:03:22+08:00。"
         },
         {
           "q": "怎么读这份榜？",
@@ -374,7 +415,7 @@
         },
         {
           "q": "日榜和周榜有什么不同？",
-          "a": "日榜是上海时间的一天，周榜是周一到周日。首页默认是日榜；?board=weekly 是周榜。如果周榜文件带有 seed，就表示它是同一天日榜的副本，不是单独统计的一周销量。2026-W42 这份周榜就是这种情况，对应 2026-10-12 至 2026-10-18，数据截止 2026-10-16。"
+          "a": "日榜是上海时间的一天，周榜是周一到周日。首页默认是日榜；?board=weekly 是周榜。带 seed 的周榜是某一天日榜的副本。2026-W42 没有 seed，它汇总了 2026-10-15 与 2026-10-16，对应 2026-10-12 至 2026-10-18。"
         },
         {
           "q": "这里的价格还准吗？",
@@ -383,6 +424,166 @@
         {
           "q": "这是购物网站吗？",
           "a": "不是。青榜只整理公开热销快照，方便对照名称、价格和评分。没有广告位，也不直接售卖。"
+        }
+      ]
+    },
+    "archive": {
+      "daily": {
+        "h1": "归档日榜 · 前 20 名",
+        "lead": "这是已经归档的一天。商品、价格和名次只对得上这一份日榜文件。",
+        "listTitle": "这一期日榜里的商品"
+      },
+      "weekly": {
+        "h1": "归档周榜 · 前 20 名",
+        "lead": "这是已经归档的一周。带 seed 的文件会写明它是某一天日榜的副本；写明由多份日榜汇总的，就不是 seed。",
+        "listTitle": "这一期周榜里的商品"
+      }
+    },
+    "privacy": {
+      "title": "隐私政策｜青榜",
+      "description": "青榜是面向成年人的静态站点。说明 Google Analytics 4（G-1SF9TQS3F1）、浏览器里保存的年龄和语言选择、不出售个人数据，以及外链去向。",
+      "ogImageAlt": "青榜隐私政策，仅限 18 周岁以上",
+      "kicker": "成人站点 · 不出售个人数据",
+      "h1": "隐私政策",
+      "lead": "青榜不卖货，也没有账号系统。下面只写这个站点实际会碰到的数据。",
+      "related": [
+        {
+          "page": "contact",
+          "label": "联系"
+        },
+        {
+          "page": "about",
+          "label": "关于本站"
+        },
+        {
+          "page": "method",
+          "label": "数据方法"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "这个站是什么",
+          "paragraphs": [
+            "青榜是面向年满 18 周岁成年人的情趣用品公开销售榜，部署在 GitHub Pages 上，是静态页面。没有注册、没有购物车、没有支付，也不发货。",
+            "商品按钮会离开本站，打开商家自己的页面。那些网站如何处理数据，以它们的隐私政策为准。"
+          ]
+        },
+        {
+          "h2": "年龄确认和语言",
+          "paragraphs": [
+            "进入前需要确认已满 18 周岁。选择保存在你自己的浏览器 localStorage，键名是 qbt-age。语言选择保存在 qbt-lang。",
+            "这两项不上传到青榜的服务器。本站没有自有后端，也没有按姓名检索的用户档案。"
+          ]
+        },
+        {
+          "h2": "统计",
+          "paragraphs": [
+            "页面使用 Google Analytics 4，衡量 ID 是 G-1SF9TQS3F1。它可能通过 Cookie 记录页面浏览、大致地区、设备和引荐来源，用来了解哪些榜单被打开。",
+            "我们不用这份统计出售广告画像，也不把访客名单交给商家。你可以在浏览器里限制第三方 Cookie，或使用拦截 Google Analytics 的插件。"
+          ]
+        },
+        {
+          "h2": "不出售个人数据",
+          "paragraphs": [
+            "不出售、不交换、不出租个人数据。没有会员名单，也没有结账信息可以出售。"
+          ]
+        },
+        {
+          "h2": "外链",
+          "paragraphs": [
+            "商品链接指向 Amazon、品牌官网或香港网店，并使用 nofollow。点出去之后的 Cookie、账号和订单属于那个网站。"
+          ]
+        },
+        {
+          "h2": "成人内容",
+          "paragraphs": [
+            "页面只面向 18 周岁以上。不要把本站提交给未成年人。内容不是医疗或健康建议。"
+          ]
+        },
+        {
+          "h2": "更正",
+          "paragraphs": [
+            "静态站点无法按姓名删除一份不存在的用户档案。若要更正某一期的商品信息，或询问这份政策，请使用联系页里的 GitHub Issues。"
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "联系与勘误｜青榜",
+      "description": "青榜不是网店客服。商品信息有误时，请到 GitHub 仓库 orangexie05/qing-bestsellers-top 开 Issue。本站没有公开的客服邮箱或电话。",
+      "ogImageAlt": "青榜联系页，仅限 18 周岁以上",
+      "kicker": "勘误 · 不是商家客服",
+      "h1": "联系与勘误",
+      "lead": "这里不是网店的售前或售后。价格、库存和退货请回到商品页面上的商家。",
+      "related": [
+        {
+          "page": "privacy",
+          "label": "隐私政策"
+        },
+        {
+          "page": "method",
+          "label": "数据方法"
+        },
+        {
+          "page": "faq",
+          "label": "常见问题"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "哪里留言",
+          "paragraphs": [
+            "某一期的商品名、价格、链接或来源说明若和公开页面不符，请到 GitHub 仓库开 Issue。写上榜单日期和商品链接。不必留下姓名、电话或地址。"
+          ],
+          "links": [
+            {
+              "href": "https://github.com/orangexie05/qing-bestsellers-top/issues",
+              "label": "orangexie05/qing-bestsellers-top 的 Issues"
+            }
+          ]
+        },
+        {
+          "h2": "没有公开的其他联系方式",
+          "paragraphs": [
+            "本站没有公开的客服邮箱、电话或门店。不要把别的地址当成青榜的联系方式。仓库页面上没有另写的邮箱时，就用上面的 Issues。"
+          ]
+        },
+        {
+          "h2": "商家的问题",
+          "paragraphs": [
+            "下单、配送、退货和使用问题，请联系商品页上的店铺。青榜不收款、不发货，也不能代商家改价。"
+          ]
+        }
+      ]
+    },
+    "archive-index": {
+      "title": "归档｜情趣用品日榜与周榜",
+      "description": "仅限 18 周岁以上。青榜已归档的情趣用品销售日榜和周榜，每期都有可读 HTML 和原始 JSON。",
+      "ogImageAlt": "青榜归档目录，仅限 18 周岁以上",
+      "kicker": "已保存的各期 · 仅限 18 周岁以上",
+      "h1": "归档",
+      "lead": "每一期日榜和周榜都有一页可读的 HTML，旁边是当时的 JSON。页面只列出文件里的商品。",
+      "related": [
+        {
+          "page": "daily",
+          "label": "最新日榜"
+        },
+        {
+          "page": "weekly",
+          "label": "最新周榜"
+        },
+        {
+          "page": "method",
+          "label": "数据方法"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "怎么读",
+          "paragraphs": [
+            "日榜文件名是上海时间的日期。周榜文件名是 ISO 周，周一到周日。若周榜 JSON 带有 seed，那一页会写明它是某一天日榜的副本。若写明由多份日榜汇总，就不是 seed。",
+            "2026-W42 由 2026-10-15 与 2026-10-16 两份日榜汇总，不是单日副本。"
+          ]
         }
       ]
     }
@@ -397,7 +598,7 @@
       },
       {
         "q": "榜上有哪些店铺？",
-        "a": "目前是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy。当天打不开的来源写在页面末尾，没有拿别的数据来凑数。"
+        "a": "2026-10-16 这一期是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫没有商品行。没能收录的来源写在页面末尾，没有拿别的数据来凑数。"
       },
       {
         "q": "这里的价格还准吗？",
@@ -409,7 +610,7 @@
       },
       {
         "q": "日榜和周榜怎么分？",
-        "a": "日榜是上海时间的一天，周榜是周一到周日的一周。打开页面时先看到日榜，页首可以改看周榜。两份最新数据在 data/daily-latest.json 和 data/weekly-latest.json；例行更新会整份覆盖，并按日期另存归档。数据里若带有 seed 说明，表示那份周榜是同一天日榜的副本，不是单独统计的一周销量。"
+        "a": "日榜是上海时间的一天，周榜是周一到周日的一周。打开页面时先看到日榜，页首可以改看周榜。两份最新数据在 data/daily-latest.json 和 data/weekly-latest.json。同一周有多份日榜时，周榜由它们汇总；数据里若仍带有 seed，那一份才是同一天日榜的副本，不是单独统计的一周销量。"
       }
     ],
     "more": "查看全部常见问题"

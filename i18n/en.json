@@ -3,24 +3,26 @@
     "htmlLang": "en",
     "ogLocale": "en_US",
     "topTitle": "Intimate-product sales chart, top 20 today | {period}",
-    "topDescription": "Adults 18+ only. Intimate-product sales chart for {period} (Asia/Shanghai) from Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Prices, ratings, and ranks are whatever that day's file records.",
+    "topDescription": "Adults 18+ only. Intimate-product sales chart for {period} (Asia/Shanghai) from Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and, in Hong Kong, Waddy, SISTALK, Les'Play, and Sex Concept. Prices, ratings, and ranks are whatever that day's file records.",
     "platformTitle": "Intimate-product sales chart by shop, today | {period}",
     "platformDescription": "Adults 18+ only. The {period} (Asia/Shanghai) daily sales chart, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. No extra products were added.",
     "ogImageAlt": "Qing List intimate-product sales chart for {period}. Adults 18+ only.",
     "boards": {
       "daily": {
         "topTitle": "Intimate-product sales chart, top 20 today | {period}",
-        "topDescription": "Adults 18+ only. Intimate-product sales chart for {period} (Asia/Shanghai) from Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Prices, ratings, and ranks are whatever that day's file records.",
+        "topDescription": "Adults 18+ only. Intimate-product sales chart for {period} (Asia/Shanghai) from Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and, in Hong Kong, Waddy, SISTALK, Les'Play, and Sex Concept. Prices, ratings, and ranks are whatever that day's file records.",
         "platformTitle": "Intimate-product sales chart by shop, today | {period}",
         "platformDescription": "Adults 18+ only. The {period} (Asia/Shanghai) daily sales chart, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. No extra products were added.",
-        "ogImageAlt": "Qing List, today's intimate-product sales chart for {period}. Adults 18+ only."
+        "ogImageAlt": "Qing List, today's intimate-product sales chart for {period}. Adults 18+ only.",
+        "archiveTitle": "Archived daily chart, top 20 | {period}"
       },
       "weekly": {
         "topTitle": "Intimate-product sales chart, top 20 this week | {period}",
         "topDescription": "Adults 18+ only. This week's intimate-product sales chart for {period} (Asia/Shanghai, Monday–Sunday). Prices, ratings, and ranks are whatever that week's file records.",
         "platformTitle": "Intimate-product sales chart by shop, this week | {period}",
         "platformDescription": "Adults 18+ only. This week's {period} (Asia/Shanghai) sales chart, grouped by shop. Same products as the combined list; nothing new was added.",
-        "ogImageAlt": "Qing List, this week's intimate-product sales chart for {period}. Adults 18+ only."
+        "ogImageAlt": "Qing List, this week's intimate-product sales chart for {period}. Adults 18+ only.",
+        "archiveTitle": "Archived weekly chart, top 20 | {period}"
       }
     },
     "siteDescription": "Qing List is an adults-only snapshot of public intimate-product sales charts, daily and weekly. It does not sell products."
@@ -59,7 +61,7 @@
     "loading": "Loading this snapshot…",
     "loadError": "The list data did not load. Refresh and try again.",
     "skippedTitle": "Sources left out this time",
-    "skippedLead": "These shops were not requested again for this daily chart. Nothing else was added in their place.",
+    "skippedLead": "These shops are not on this chart. Nothing else was added in their place.",
     "ageTitle": "Adults only",
     "ageBody": "This page lists adult intimate products from public bestseller snapshots. If you are under 18, please leave. Continuing means you confirm you meet the age of adulthood where you live.",
     "ageEnter": "I am 18 or older",
@@ -88,14 +90,28 @@
     "navAbout": "About",
     "navMethod": "Method",
     "navFaq": "FAQ",
-    "footerSources": "Sources follow each file. The chart is built to read Taobao/Tmall, Amazon, and independent shops. The 2026-10-16 file includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong.",
-    "footerCadence": "Updates: the daily chart is replaced in full once per Shanghai date; the weekly chart is replaced in full for each Monday–Sunday week.",
+    "footerSources": "Each issue follows its JSON. The design includes Taobao/Tmall, Amazon, and independent shops. The 2026-10-16 issue includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Taobao/Tmall is still absent.",
+    "footerCadence": "Cadence: the daily file is replaced in full once per Shanghai day. The weekly file is aggregated when that ISO week has two or more daily archives. With only one daily, a weekly file may still be a seeded copy, and the page says so.",
     "footerAbout": "About",
     "footerMethod": "Methodology",
     "footerFaq": "FAQ",
     "footerLinksFixed": "Outbound links use nofollow. Time zone Asia/Shanghai.",
-    "footerArchiveFixed": "Dated archives: data/archive/daily/2026-10-16.json and data/archive/weekly/2026-W42.json",
-    "geoLabel": "Summary"
+    "footerArchiveFixed": "Readable archive: archive/index.html. JSON: data/archive/daily/2026-10-16.json · data/archive/weekly/2026-W42.json",
+    "geoLabel": "Summary",
+    "navArchive": "Archive",
+    "navPrivacy": "Privacy",
+    "navContact": "Contact",
+    "footerArchivePage": "Archive",
+    "footerPrivacy": "Privacy",
+    "footerContact": "Contact",
+    "footerArchiveData": "This archive JSON",
+    "archiveDailyHeading": "Daily",
+    "archiveWeeklyHeading": "Weekly",
+    "archiveDailyHint": "This daily chart is archived",
+    "archiveWeeklyHint": "This weekly chart is archived",
+    "dailySeedNote": "This daily file is seeded from {source} ({snapshot}, {tz}). The products match that snapshot. A later publish replaces {latest} in full and writes {archive}.",
+    "aggNote": "This weekly chart aggregates {count} daily files ({days}, {week}). Rows are deduped by product URL and days-on-chart come first. It is not a merchant-reported weekly sales total. The file has no seed.",
+    "appearancesNote": "On this week's daily charts: {n} day(s) ({days})."
   },
   "notes": {
     "asin_verified": "The product code was checked against a public search.",
@@ -104,7 +120,9 @@
     "waddy_no_rating": "The price is from the Hong Kong shop’s public bestseller page, which did not show a rating.",
     "price_from": "The list labels this figure “As low as,” the starting price shown on that page.",
     "on_sale": "The list shows a current price below a crossed-out price. That page did not show a rating.",
-    "waddy_top10": "The price is from the men’s TOP 10 block on the Waddy homepage (the sleeve tab). That block did not show a rating."
+    "waddy_top10": "The price is from the men’s TOP 10 block on the Waddy homepage (the sleeve tab). That block did not show a rating.",
+    "hk_list_order": "The rank is the order on that shop's public hot-seller or best-seller page. That page did not show a rating.",
+    "hk_list_sale": "The rank is the order on that shop's public hot-seller or best-seller page. The price is the current price, below a crossed-out price. That page did not show a rating."
   },
   "platforms": {
     "dame": {
@@ -130,6 +148,18 @@
     "waddy_store": {
       "name": "Waddy Store (Hong Kong)",
       "blurb": "A public Chinese-language bestseller list from a Hong Kong shop that could be opened."
+    },
+    "sistalk_hk": {
+      "name": "SISTALK (Hong Kong)",
+      "blurb": "SISTALK Hong Kong public hot-selling category. Rank is the page order."
+    },
+    "lesplay_hk": {
+      "name": "Les'Play (Hong Kong)",
+      "blurb": "Les'Play Hong Kong public best-seller category. Rank is the page order."
+    },
+    "sexconcept_hk": {
+      "name": "Sex Concept (Hong Kong)",
+      "blurb": "Sex Concept Hong Kong public best-seller category. Rank is the page order."
     }
   },
   "skipped": {
@@ -170,7 +200,8 @@
         "geoSeed": "The weekly file says it is a copy of the daily chart from {snapshot}, not a separate week-long tally. Products, prices, ratings, and ranks match that day.",
         "geoNoSeed": "Ranks, prices, and ratings are whatever that week's file records, not a live quote.",
         "geoTop": "Number 1 overall is {listing} from {store}, listed at {price}.",
-        "geoTopNamed": "Number 1 overall is {listing} from {store} (shown here as {display}), listed at {price}."
+        "geoTopNamed": "Number 1 overall is {listing} from {store} (shown here as {display}), listed at {price}.",
+        "geoAggregated": "This weekly file aggregates {count} daily charts ({days}), deduped by product URL. Days on the chart come first. It is not a one-day copy and not a merchant-reported weekly sales total."
       }
     },
     "platform": {
@@ -202,7 +233,8 @@
         "geoSeed": "The weekly file says it is a copy of the daily chart from {snapshot}, not a separate week-long tally. Products, prices, ratings, and ranks match that day.",
         "geoNoSeed": "Ranks, prices, and ratings are whatever that week's file records, not a live quote.",
         "geoTop": "Number 1 overall is {listing} from {store}, listed at {price}.",
-        "geoTopNamed": "Number 1 overall is {listing} from {store} (shown here as {display}), listed at {price}."
+        "geoTopNamed": "Number 1 overall is {listing} from {store} (shown here as {display}), listed at {price}.",
+        "geoAggregated": "This weekly file aggregates {count} daily charts ({days}), deduped by product URL. Days on the chart come first. It is not a one-day copy and not a merchant-reported weekly sales total."
       }
     },
     "about": {
@@ -228,6 +260,14 @@
         {
           "page": "faq",
           "label": "FAQ"
+        },
+        {
+          "page": "privacy",
+          "label": "Privacy"
+        },
+        {
+          "page": "contact",
+          "label": "Contact"
         }
       ],
       "sections": [
@@ -248,8 +288,8 @@
         {
           "h2": "What today and this week mean",
           "paragraphs": [
-            "Today is the public top 20 for one Shanghai date. This week is the top 20 for Monday–Sunday in the same time zone. The home page opens on today. Adding ?board=weekly opens the week.",
-            "Each issue follows its JSON file. If the weekly file includes a seed note, the page says it is a copy of one day's chart, not a separate week-long tally. How the order is built, and which shops are in, is on Methodology."
+            "Today is the public Top 20 for one Shanghai date. This week is the Top 20 for Monday through Sunday in that timezone. The home page opens on today; ?board=weekly opens the week.",
+            "Each issue follows its JSON file. If the weekly file has seed, the page says it is a copy of one day. When the same ISO week already has two or more daily files, scripts/build_weekly.py writes an aggregate with no seed. 2026-W42 is that aggregate. How the order is built, and which shops are in, is on Methodology."
           ]
         },
         {
@@ -289,9 +329,9 @@
         {
           "h2": "Sources",
           "paragraphs": [
-            "The chart is built to read three kinds of public page: Taobao/Tmall, Amazon, and independent or regional shops. Shops that have appeared so far include Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong.",
+            "The chart is designed to read three kinds of public pages: Taobao/Tmall, Amazon, and independent or regional shops. Shops that have appeared include Dame, Lovense, We-Vibe, Womanizer, and, in Hong Kong, Waddy, SISTALK, Les'Play, and Sex Concept.",
             "Who is actually in an issue is sources_included in that JSON file. Sources that were not requested, or could not be opened, are listed in sources_skipped. They are not backfilled.",
-            "The 2026-10-16 issue includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Taobao/Tmall, LELO, MysteryVibe, and PChome 24h are in sources_skipped with status not_requested, so none of their products are on the chart."
+            "After the earlier 2026-10-16 scrape, three Hong Kong category pages were merged because the static HTML had a product URL, a name, and an HKD price: SISTALK hot-selling, Les'Play best-sellers, and Sex Concept best-sellers. Rank is the top-to-bottom order on that page, at most 6 rows per source, then the existing rule rebuilds the Top 20. Taobao/Tmall the same day returned a JavaScript search shell with no product URL or price, so sources_skipped marks it blocked and no rows were invented. The empty placeholder is data/sources/taobao_tmall.placeholder.json. 18 Gifts' monthly bestseller page was a Cloudflare interstitial. LELO /best-sellers returned 404. MysteryVibe was not retried (HTTP 429 on 2026-10-15). PChome 24h responded, but not as a confirmed bestseller list, so it was not merged."
           ]
         },
         {
@@ -299,7 +339,8 @@
           "paragraphs": [
             "The daily chart updates once per Asia/Shanghai date. A routine publish replaces data/daily-latest.json in full and writes the same document to data/daily-YYYY-MM-DD.json and data/archive/daily/YYYY-MM-DD.json. Older rows are not merged in.",
             "The weekly chart updates for each Monday–Sunday week in Asia/Shanghai (the ISO week). A routine publish replaces data/weekly-latest.json in full and writes data/archive/weekly/YYYY-Www.json.",
-            "The current daily and weekly files were both generated at 2026-10-16T10:59:47+08:00. Prices and ranks match the date in the file, not live stock at the moment you open the page."
+            "The daily file was first written at 2026-10-16T10:59:47+08:00 and rewritten at 2026-10-16T17:03:22+08:00 after the Hong Kong shops were added. Prices and ranks match the date in the file, not live stock at the moment you open the page.",
+            "The weekly chart is not meant to stay a copy of one day. scripts/build_weekly.py reads data/archive/daily/. When one ISO week (Asia/Shanghai, Monday–Sunday) has two or more daily files, it dedupes by product URL, ranks by days appeared, mean source rank, and best source rank, and writes data/weekly-latest.json plus data/archive/weekly/YYYY-Www.json with no seed. 2026-W42 uses 2026-10-15 and 2026-10-16, so it is an aggregate, not a copy. If a week has only one daily, the script leaves the existing weekly file alone. If that file still has seed, the page says it is a copy of that day."
           ]
         },
         {
@@ -319,7 +360,7 @@
             "This is not worldwide sales, and it is not an official Taobao, Tmall, or Amazon master chart.",
             "Only rows that were open and had a product link are kept. A slide with no link (Lush 4 / Lush Mini on the Lovense homepage in the 2026-10-16 daily file) is recorded under omissions and is not in the top 20.",
             "Price, stock, discounts, and rank all move. A figure labeled “As low as” is the starting price shown on that page.",
-            "If the weekly JSON has a seed, it is a copy of one day's chart, not a separate week-long tally. The 2026-W42 file (2026-10-12 through 2026-10-18) is a copy of the 2026-10-16 daily chart.",
+            "If a weekly JSON has seed, it is a copy of one day's chart, not a separate week-long tally. 2026-W42 has no seed: it is aggregated from the 2026-10-15 and 2026-10-16 daily files. A week with only one daily may still be a seed.",
             "Outbound links use nofollow. This site does not take payment, ship orders, or give medical or health advice, and it does not decide a purchase for you."
           ]
         }
@@ -354,11 +395,11 @@
       "items": [
         {
           "q": "Where does the data come from?",
-          "a": "From public bestseller pages that were open when they were read. The chart is built to include Taobao/Tmall, Amazon, and independent or regional shops. The 2026-10-16 issue actually includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Taobao/Tmall was not requested that day, so none of those products are listed. The files are data/daily-latest.json and data/weekly-latest.json."
+          "a": "From public bestseller pages that could be opened at scrape time. The design includes Taobao/Tmall, Amazon, and independent or regional shops. The 2026-10-16 chart includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Taobao/Tmall that day was a JavaScript search shell with no product rows, so no Taobao products were invented. The files are data/daily-latest.json and data/weekly-latest.json."
         },
         {
           "q": "How often is it updated?",
-          "a": "The daily chart is replaced in full once per Shanghai date. The weekly chart is replaced in full for each Monday–Sunday week. A publish overwrites the latest file and keeps a dated or ISO-week archive. Older rows are not merged in. The current files were generated at 2026-10-16T10:59:47+08:00."
+          "a": "The daily file is replaced in full once per Shanghai date. When an ISO week has two or more daily archives, scripts/build_weekly.py aggregates them by product URL instead of leaving a one-day copy as the finished week. With only one daily, the weekly file may still carry seed, and the page says so. The current daily file was written at 2026-10-16T17:03:22+08:00."
         },
         {
           "q": "How do I read the list?",
@@ -374,7 +415,7 @@
         },
         {
           "q": "What is the difference between today and this week?",
-          "a": "Today is one Shanghai date. This week is Monday through Sunday. The home page opens on today; ?board=weekly opens the week. If the weekly file has a seed, it is a copy of that day's chart, not a separate week-long tally. The 2026-W42 file is that case: it covers 2026-10-12 through 2026-10-18, with data as of 2026-10-16."
+          "a": "Today is one Shanghai date. This week is Monday through Sunday. The home page opens on today; ?board=weekly opens the week. A weekly file with seed is a copy of one day. 2026-W42 has no seed: it aggregates 2026-10-15 and 2026-10-16, covering 2026-10-12 through 2026-10-18."
         },
         {
           "q": "Are the prices still current?",
@@ -383,6 +424,166 @@
         {
           "q": "Is this a shop?",
           "a": "No. Qing List only lines up a public bestseller snapshot so names, prices, and ratings can be compared. There is no paid placement, and nothing is sold here."
+        }
+      ]
+    },
+    "archive": {
+      "daily": {
+        "h1": "Archived daily chart · top 20",
+        "lead": "This day is archived. Products, prices, and ranks belong to this daily file.",
+        "listTitle": "Products in this daily archive"
+      },
+      "weekly": {
+        "h1": "Archived weekly chart · top 20",
+        "lead": "This week is archived. A file with seed is a copy of one day. A file that names several daily dates is an aggregate, not a seed.",
+        "listTitle": "Products in this weekly archive"
+      }
+    },
+    "privacy": {
+      "title": "Privacy | Qing List",
+      "description": "Qing List is a static adults-only site. This page covers Google Analytics 4 (G-1SF9TQS3F1), the age and language choices stored in the browser, no sale of personal data, and outbound shop links.",
+      "ogImageAlt": "Qing List privacy policy. Adults 18+ only.",
+      "kicker": "Adults-only site · no sale of personal data",
+      "h1": "Privacy",
+      "lead": "Qing List does not sell products and has no accounts. This page only describes data the site actually touches.",
+      "related": [
+        {
+          "page": "contact",
+          "label": "Contact"
+        },
+        {
+          "page": "about",
+          "label": "About"
+        },
+        {
+          "page": "method",
+          "label": "Methodology"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "What this site is",
+          "paragraphs": [
+            "Qing List is a static GitHub Pages chart of public intimate-product bestsellers for adults 18 and older. There is no registration, cart, payment, or shipping.",
+            "Product buttons leave this site for the merchant. Those sites have their own privacy policies."
+          ]
+        },
+        {
+          "h2": "Age check and language",
+          "paragraphs": [
+            "Before entering, you confirm you are 18 or older. That choice stays in your browser's localStorage under qbt-age. Language stays under qbt-lang.",
+            "Neither value is uploaded to a Qing List server. There is no backend and no profile that can be looked up by name."
+          ]
+        },
+        {
+          "h2": "Analytics",
+          "paragraphs": [
+            "Pages use Google Analytics 4, measurement ID G-1SF9TQS3F1. It may record page views, approximate region, device, and referrer through cookies, so we can see which charts are opened.",
+            "That measurement is not sold as an advertising profile and is not handed to merchants as a visitor list. You can limit third-party cookies or block Google Analytics in the browser."
+          ]
+        },
+        {
+          "h2": "No sale of personal data",
+          "paragraphs": [
+            "Personal data is not sold, traded, or rented. There is no member list and no checkout record to sell."
+          ]
+        },
+        {
+          "h2": "Outbound links",
+          "paragraphs": [
+            "Product links go to Amazon, brand sites, or Hong Kong shops and use nofollow. Cookies, accounts, and orders after that belong to the other site."
+          ]
+        },
+        {
+          "h2": "Adult content",
+          "paragraphs": [
+            "Pages are for adults 18 and older. Do not give this site to minors. The charts are not medical advice."
+          ]
+        },
+        {
+          "h2": "Corrections",
+          "paragraphs": [
+            "A static site cannot delete a profile it does not have. To correct a product row, or to ask about this policy, use the GitHub issues link on the contact page."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact and corrections | Qing List",
+      "description": "Qing List is not a shop's customer service. For a wrong product row, open a GitHub issue on orangexie05/qing-bestsellers-top. There is no published support email or phone number.",
+      "ogImageAlt": "Qing List contact page. Adults 18+ only.",
+      "kicker": "Corrections · not a shop help desk",
+      "h1": "Contact and corrections",
+      "lead": "This is not pre-sale or after-sale support for a store. Price, stock, and returns belong to the merchant on the product page.",
+      "related": [
+        {
+          "page": "privacy",
+          "label": "Privacy"
+        },
+        {
+          "page": "method",
+          "label": "Methodology"
+        },
+        {
+          "page": "faq",
+          "label": "FAQ"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "Where to write",
+          "paragraphs": [
+            "If a name, price, link, or source note does not match the public page, open a GitHub issue. Include the chart date and the product URL. You do not need to leave a name, phone number, or address."
+          ],
+          "links": [
+            {
+              "href": "https://github.com/orangexie05/qing-bestsellers-top/issues",
+              "label": "Issues for orangexie05/qing-bestsellers-top"
+            }
+          ]
+        },
+        {
+          "h2": "No other published contact",
+          "paragraphs": [
+            "This site does not publish a support email, phone number, or storefront. Do not treat some other address as Qing List. When the repository lists no other email, use the issues link above."
+          ]
+        },
+        {
+          "h2": "Questions for the merchant",
+          "paragraphs": [
+            "Orders, delivery, returns, and how a product works are for the shop on the product page. Qing List does not take payment, ship goods, or change a merchant's price."
+          ]
+        }
+      ]
+    },
+    "archive-index": {
+      "title": "Archive | daily and weekly intimate-product charts",
+      "description": "Adults 18+ only. Readable HTML and the original JSON for each archived daily and weekly intimate-product chart.",
+      "ogImageAlt": "Qing List archive index. Adults 18+ only.",
+      "kicker": "Saved issues · adults 18+ only",
+      "h1": "Archive",
+      "lead": "Each daily and weekly issue has a readable HTML page next to the JSON from that issue. The page lists only products that are in the file.",
+      "related": [
+        {
+          "page": "daily",
+          "label": "Latest daily"
+        },
+        {
+          "page": "weekly",
+          "label": "Latest weekly"
+        },
+        {
+          "page": "method",
+          "label": "Methodology"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "How to read it",
+          "paragraphs": [
+            "Daily filenames are Shanghai dates. Weekly filenames are ISO weeks, Monday through Sunday. If a weekly JSON has seed, that page says it is a copy of one day. If it names several daily dates, it is an aggregate, not a seed.",
+            "2026-W42 is aggregated from the 2026-10-15 and 2026-10-16 daily files. It is not a one-day copy."
+          ]
         }
       ]
     }
@@ -397,7 +598,7 @@
       },
       {
         "q": "Which shops are included?",
-        "a": "Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Shops that could not be opened are listed at the bottom. Nothing was added to fill a gap."
+        "a": "The 2026-10-16 issue includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Taobao/Tmall has no product rows. Sources that did not make the file are listed at the bottom and are not backfilled."
       },
       {
         "q": "Are the prices still current?",
@@ -409,7 +610,7 @@
       },
       {
         "q": "What’s the difference between today and this week?",
-        "a": "Today is one Shanghai date. This week is Monday through Sunday. The page opens on today; the switch at the top moves to this week. The latest files are data/daily-latest.json and data/weekly-latest.json. A routine publish replaces each file in full and keeps a dated archive. If the file includes a seed note, that weekly chart is a copy of the daily chart from the same date, not a separate week-long tally."
+        "a": "Today is one Shanghai date. This week is Monday through Sunday. The page opens on today; the switch at the top moves to this week. The latest files are data/daily-latest.json and data/weekly-latest.json. When several daily files exist for the same week, the weekly chart aggregates them. Only a file that still includes seed is a copy of that day's chart, not a separate week-long tally."
       }
     ],
     "more": "Read the full FAQ"

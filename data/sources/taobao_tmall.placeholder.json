@@ -1,0 +1,17 @@
+{
+  "platform": "taobao_tmall",
+  "store": "淘宝 / 天猫",
+  "list_url": "https://s.taobao.com/search?q=%E6%83%85%E8%B6%A3%E7%94%A8%E5%93%81",
+  "fetched_at": "2026-10-16T17:03:22+08:00",
+  "status": "blocked",
+  "items": [],
+  "note": "2026-10-16 fetch returned the Taobao PC search shell (documentOnly/CSR). Static HTML contained no item.taobao.com or detail.tmall.com product URLs, no item ids, and no prices. Do not invent rows. When a later fetch returns objects with product_url, name, price, currency, and rank, a daily merge may append those rows. An empty items array means the source stays in sources_skipped.",
+  "item_schema": {
+    "rank": "integer, 1-based order on the public list",
+    "name": "string from the page",
+    "product_url": "https URL of the product",
+    "price": "number",
+    "currency": "CNY",
+    "image": "https URL or null"
+  }
+}

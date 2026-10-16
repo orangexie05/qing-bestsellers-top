@@ -1,0 +1,84 @@
+{
+  "platform": "sexconcept_hk",
+  "store": "Sex Concept (HK)",
+  "list_url": "https://www.sexconcepthk.com/categories/best-sellers",
+  "fetched_at": "2026-10-16T17:03:22+08:00",
+  "status": "ok",
+  "currency": "HKD",
+  "rank_basis": "document_order_on_public_category_page",
+  "note": "Public Shopline category 畅销热卖. Rank is document order. Price is the visible sale price when a crossed price is also shown. No rating was present.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Fuji World Seigi48 凸凹堂 二つ巴 忍者編 性愛體位動力機械擺件",
+      "product_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-karakuri-dolls-ninja-positions-powered-mechanical-ornament-2",
+      "purchase_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-karakuri-dolls-ninja-positions-powered-mechanical-ornament-2",
+      "price": 98.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/6abf83edd41407a256da9536/375x.png",
+      "image_kind": "official",
+      "source_product_id": "6abf8410d09f07e189471bdf",
+      "compare_at_price": 128.0
+    },
+    {
+      "rank": 2,
+      "name": "Fuji World Seigi48 凸凹堂 忍者編 深山 性愛體位動力機械擺件",
+      "product_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja-doll",
+      "purchase_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja-doll",
+      "price": 98.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/6abf81188523e64f2dbd373b/375x.png",
+      "image_kind": "official",
+      "source_product_id": "6abf81bf8523e65dfabd35bc",
+      "compare_at_price": 128.0
+    },
+    {
+      "rank": 3,
+      "name": "紅色性感塑身蕾絲內衣套裝 JK-2103 (S/M/L/XL)",
+      "product_url": "https://www.sexconcepthk.com/products/紅色性感塑身蕾絲內衣套裝-jk-2103-smlxl",
+      "purchase_url": "https://www.sexconcepthk.com/products/紅色性感塑身蕾絲內衣套裝-jk-2103-smlxl",
+      "price": 268.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/69db51243da1c648f44409eb/375x.png",
+      "image_kind": "official",
+      "source_product_id": "69db51f4f3cf64e7a2cdab87",
+      "compare_at_price": 298.0
+    },
+    {
+      "rank": 4,
+      "name": "岡本 0.02 真貼身 (日本版) 24 片裝 PU 安全套",
+      "product_url": "https://www.sexconcepthk.com/products/okamoto-002-real-fit-japan-edition-24s-pack-pu-condom",
+      "purchase_url": "https://www.sexconcepthk.com/products/okamoto-002-real-fit-japan-edition-24s-pack-pu-condom",
+      "price": 308.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/6928a3cd86002b00109c65ef/375x.png",
+      "image_kind": "official",
+      "source_product_id": "6928a595216ad90012b499d2",
+      "compare_at_price": 355.0
+    },
+    {
+      "rank": 5,
+      "name": "Fuji World Seigi48 凸凹堂 達磨返し 性愛體位動力機械擺件",
+      "product_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-karakuri-dolls-darumagaeshi-sex-positions-powered-mechanical-ornament",
+      "purchase_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-karakuri-dolls-darumagaeshi-sex-positions-powered-mechanical-ornament",
+      "price": 98.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/6920bdb686dbe00014c941dc/375x.jpg",
+      "image_kind": "official",
+      "source_product_id": "6920bcf977751700109c1f9c",
+      "compare_at_price": 128.0
+    },
+    {
+      "rank": 6,
+      "name": "Fuji World Seigi48 凸凹堂 松葉崩し 性愛體位動力機械擺件",
+      "product_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-karakuri-dolls-matsubakuzushi-sex-positions-powered-mechanical-ornament",
+      "purchase_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-karakuri-dolls-matsubakuzushi-sex-positions-powered-mechanical-ornament",
+      "price": 98.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/6920b93849aba8000e0a9eb7/375x.jpg",
+      "image_kind": "official",
+      "source_product_id": "6920ba90a6619b000cdb4403",
+      "compare_at_price": 128.0
+    }
+  ]
+}

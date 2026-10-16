@@ -3,24 +3,26 @@
     "htmlLang": "es",
     "ogLocale": "es_ES",
     "topTitle": "Ranking de ventas de productos íntimos, top 20 de hoy | {period}",
-    "topDescription": "Solo mayores de 18 años. Ranking de ventas de productos íntimos del {period} (Asia/Shanghai): Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Precios, valoraciones y puestos son los de ese archivo del día.",
+    "topDescription": "Solo mayores de 18 años. Ranking de ventas de productos íntimos del {period} (Asia/Shanghai): Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Precios, valoraciones y puestos son los de ese archivo del día.",
     "platformTitle": "Ranking de ventas de hoy por tienda | {period}",
     "platformDescription": "Solo mayores de 18 años. El ranking de ventas del {period} (Asia/Shanghai), separado por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy. No se añadieron productos.",
     "ogImageAlt": "Lista Qing, ranking de ventas de productos íntimos del {period}. Solo mayores de 18.",
     "boards": {
       "daily": {
         "topTitle": "Ranking de ventas de productos íntimos, top 20 de hoy | {period}",
-        "topDescription": "Solo mayores de 18 años. Ranking de ventas de productos íntimos del {period} (Asia/Shanghai): Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Precios, valoraciones y puestos son los de ese archivo del día.",
+        "topDescription": "Solo mayores de 18 años. Ranking de ventas de productos íntimos del {period} (Asia/Shanghai): Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Precios, valoraciones y puestos son los de ese archivo del día.",
         "platformTitle": "Ranking de ventas de hoy por tienda | {period}",
         "platformDescription": "Solo mayores de 18 años. El ranking de ventas del {period} (Asia/Shanghai), separado por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy. No se añadieron productos.",
-        "ogImageAlt": "Lista Qing, ranking de hoy del {period}. Solo mayores de 18."
+        "ogImageAlt": "Lista Qing, ranking de hoy del {period}. Solo mayores de 18.",
+        "archiveTitle": "Archivo del día, top 20 | {period}"
       },
       "weekly": {
         "topTitle": "Ranking de ventas de productos íntimos, top 20 de esta semana | {period}",
         "topDescription": "Solo mayores de 18 años. Ranking de ventas de esta semana, {period} (lunes a domingo, hora de Shanghái). Precios, valoraciones y puestos son los de ese archivo semanal.",
         "platformTitle": "Ranking de ventas de la semana por tienda | {period}",
         "platformDescription": "Solo mayores de 18 años. El ranking semanal del {period} (Asia/Shanghai), separado por tienda. Mismos productos que la lista combinada; no se inventó ninguno.",
-        "ogImageAlt": "Lista Qing, ranking de la semana del {period}. Solo mayores de 18."
+        "ogImageAlt": "Lista Qing, ranking de la semana del {period}. Solo mayores de 18.",
+        "archiveTitle": "Archivo semanal, top 20 | {period}"
       }
     },
     "siteDescription": "Lista Qing reúne, para adultos, rankings públicos de ventas de productos íntimos, diarios y semanales. No vende productos."
@@ -59,7 +61,7 @@
     "loading": "Cargando esta instantánea…",
     "loadError": "No se pudieron cargar los datos. Actualiza la página e inténtalo de nuevo.",
     "skippedTitle": "Fuentes que quedaron fuera",
-    "skippedLead": "Estas tiendas no se volvieron a pedir para la lista de hoy. No se rellenó con otros datos.",
+    "skippedLead": "Estas tiendas no están en esta lista. No se rellenó con otros datos.",
     "ageTitle": "Solo para adultos",
     "ageBody": "Esta página reúne productos íntimos para adultos a partir de listas públicas. Si no tienes 18 años, sal de aquí. Al continuar confirmas que cumples la mayoría de edad donde vives.",
     "ageEnter": "Tengo 18 años o más",
@@ -88,14 +90,28 @@
     "navAbout": "Acerca",
     "navMethod": "Método",
     "navFaq": "FAQ",
-    "footerSources": "Las fuentes salen de cada archivo. El ranking está pensado para leer Taobao/Tmall, Amazon y tiendas independientes. El archivo del 2026-10-16 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong.",
-    "footerCadence": "Actualización: la lista de hoy se sustituye entera una vez por fecha de Shanghái; la de la semana, entera para cada semana de lunes a domingo.",
+    "footerSources": "Cada entrega sigue su JSON. El diseño incluye Taobao/Tmall, Amazon y tiendas independientes. La entrega del 2026-10-16 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Taobao/Tmall sigue sin filas.",
+    "footerCadence": "Cadencia: el día se sustituye por completo una vez por fecha de Shanghái. La semana se agrega cuando ese ISO tiene dos o más diarios. Si solo hay un día, la semana puede seguir siendo una copia con seed, y la página lo dice.",
     "footerAbout": "Acerca de",
     "footerMethod": "Método",
     "footerFaq": "Preguntas",
     "footerLinksFixed": "Los enlaces externos usan nofollow. Zona horaria Asia/Shanghai.",
-    "footerArchiveFixed": "Archivos con fecha: data/archive/daily/2026-10-16.json y data/archive/weekly/2026-W42.json",
-    "geoLabel": "Resumen"
+    "footerArchiveFixed": "Archivo legible: archive/index.html. JSON: data/archive/daily/2026-10-16.json · data/archive/weekly/2026-W42.json",
+    "geoLabel": "Resumen",
+    "navArchive": "Archivo",
+    "navPrivacy": "Privacidad",
+    "navContact": "Contacto",
+    "footerArchivePage": "Archivo",
+    "footerPrivacy": "Privacidad",
+    "footerContact": "Contacto",
+    "footerArchiveData": "JSON de este archivo",
+    "archiveDailyHeading": "Día",
+    "archiveWeeklyHeading": "Semana",
+    "archiveDailyHint": "Este ranking del día está archivado",
+    "archiveWeeklyHint": "Este ranking de la semana está archivado",
+    "dailySeedNote": "Este archivo del día tiene seed y sale de {source} ({snapshot}, {tz}). Los productos coinciden con esa copia. Una publicación posterior sustituye {latest} por completo y guarda {archive}.",
+    "aggNote": "Esta semana junta {count} listas del día ({days}, {week}). Se quitan duplicados por la URL y pesan más los que salen más días. No es un total semanal declarado por la tienda. El archivo no tiene seed.",
+    "appearancesNote": "Sale en {n} día(s) de esta semana ({days})."
   },
   "notes": {
     "asin_verified": "El código del producto se contrastó con una búsqueda pública.",
@@ -104,7 +120,9 @@
     "waddy_no_rating": "El precio sale de la lista pública de la tienda de Hong Kong, que no mostraba valoración.",
     "price_from": "La lista marca esta cifra como “As low as”: es el precio de partida que muestra esa página.",
     "on_sale": "La lista muestra un precio actual por debajo del precio tachado. Esa página no traía valoración.",
-    "waddy_top10": "El precio sale del bloque TOP 10 de productos para hombres en la portada de Waddy (la pestaña de masturbadores). Ese bloque no mostraba valoración."
+    "waddy_top10": "El precio sale del bloque TOP 10 de productos para hombres en la portada de Waddy (la pestaña de masturbadores). Ese bloque no mostraba valoración.",
+    "hk_list_order": "El puesto es el orden en la página pública de más vendidos de esa tienda. Esa página no mostraba valoración.",
+    "hk_list_sale": "El puesto es el orden en la página pública de más vendidos. El precio es el vigente, por debajo de un precio tachado. Esa página no mostraba valoración."
   },
   "platforms": {
     "dame": {
@@ -130,6 +148,18 @@
     "waddy_store": {
       "name": "Waddy Store (Hong Kong)",
       "blurb": "Lista pública en chino de una tienda de Hong Kong que sí se pudo abrir."
+    },
+    "sistalk_hk": {
+      "name": "SISTALK (Hong Kong)",
+      "blurb": "Categoría pública de más vendidos de SISTALK en Hong Kong. El puesto es el orden de la página."
+    },
+    "lesplay_hk": {
+      "name": "Les'Play (Hong Kong)",
+      "blurb": "Categoría pública de más vendidos de Les'Play en Hong Kong. El puesto es el orden de la página."
+    },
+    "sexconcept_hk": {
+      "name": "Sex Concept (Hong Kong)",
+      "blurb": "Categoría pública de más vendidos de Sex Concept en Hong Kong. El puesto es el orden de la página."
     }
   },
   "skipped": {
@@ -170,7 +200,8 @@
         "geoSeed": "El archivo semanal dice que es una copia de la lista del día {snapshot}, no un recuento aparte de toda la semana. Productos, precios, valoraciones y puestos coinciden con ese día.",
         "geoNoSeed": "Puestos, precios y valoraciones son los de ese archivo semanal, no una cotización en vivo.",
         "geoTop": "El número 1 global es {listing} de {store}, a {price}.",
-        "geoTopNamed": "El número 1 global es {listing} de {store} (aquí figura como {display}), a {price}."
+        "geoTopNamed": "El número 1 global es {listing} de {store} (aquí figura como {display}), a {price}.",
+        "geoAggregated": "Este archivo semanal junta {count} listas del día ({days}), sin duplicar la URL del producto. Pesan más los que salen más días. No es la copia de un solo día ni un total declarado por la tienda."
       }
     },
     "platform": {
@@ -202,7 +233,8 @@
         "geoSeed": "El archivo semanal dice que es una copia de la lista del día {snapshot}, no un recuento aparte de toda la semana. Productos, precios, valoraciones y puestos coinciden con ese día.",
         "geoNoSeed": "Puestos, precios y valoraciones son los de ese archivo semanal, no una cotización en vivo.",
         "geoTop": "El número 1 global es {listing} de {store}, a {price}.",
-        "geoTopNamed": "El número 1 global es {listing} de {store} (aquí figura como {display}), a {price}."
+        "geoTopNamed": "El número 1 global es {listing} de {store} (aquí figura como {display}), a {price}.",
+        "geoAggregated": "Este archivo semanal junta {count} listas del día ({days}), sin duplicar la URL del producto. Pesan más los que salen más días. No es la copia de un solo día ni un total declarado por la tienda."
       }
     },
     "about": {
@@ -228,6 +260,14 @@
         {
           "page": "faq",
           "label": "Preguntas"
+        },
+        {
+          "page": "privacy",
+          "label": "Privacidad"
+        },
+        {
+          "page": "contact",
+          "label": "Contacto"
         }
       ],
       "sections": [
@@ -248,8 +288,8 @@
         {
           "h2": "Qué son hoy y esta semana",
           "paragraphs": [
-            "Hoy es el top 20 público de una fecha de Shanghái. La semana es el top 20 de lunes a domingo en la misma zona. La portada abre en hoy. Con ?board=weekly se abre la semana.",
-            "Cada entrega sigue su archivo JSON. Si el semanal lleva una nota seed, la página dice que es una copia de la lista de un día, no un recuento aparte de toda la semana. Cómo se ordena y qué tiendas entran está en Método."
+            "Hoy es el top 20 público de una fecha de Shanghái. La semana es el top 20 de lunes a domingo en esa zona horaria. La portada abre en hoy; ?board=weekly abre la semana.",
+            "Cada entrega sigue su JSON. Si la semana tiene seed, la página dice que es la copia de un día. Cuando esa semana ISO ya tiene dos o más diarios, scripts/build_weekly.py escribe un agregado sin seed. 2026-W42 es ese agregado. Cómo se ordena y qué tiendas entran está en Método."
           ]
         },
         {
@@ -289,9 +329,9 @@
         {
           "h2": "Fuentes",
           "paragraphs": [
-            "El ranking está pensado para leer tres tipos de página pública: Taobao/Tmall, Amazon, y tiendas independientes o regionales. Las que han aparecido hasta ahora son Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong.",
+            "El ranking está pensado para leer tres clases de páginas públicas: Taobao/Tmall, Amazon y tiendas independientes o regionales. Han aparecido Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept.",
             "Quién entra de verdad en una entrega es sources_included de ese JSON. Las fuentes que no se pidieron, o que no se pudieron abrir, quedan en sources_skipped. No se rellenan con otros datos.",
-            "La entrega del 2026-10-16 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Taobao/Tmall, LELO, MysteryVibe y PChome 24h están en sources_skipped con estado not_requested, así que ninguno de sus productos está en la lista."
+            "Después de la captura más temprana del 2026-10-16 se añadieron tres tiendas de Hong Kong cuyo HTML estático traía URL, nombre y precio en HKD: la categoría de más vendidos de SISTALK, la de Les'Play y la de Sex Concept. El puesto es el orden de arriba abajo en esa página, como máximo 6 filas por fuente, y luego la regla de siempre rehace el top 20. Taobao/Tmall ese día devolvió un cascarón de búsqueda en JavaScript, sin URL ni precio, así que sources_skipped queda en blocked y no se inventaron filas. El hueco vacío está en data/sources/taobao_tmall.placeholder.json. La página mensual de 18 Gifts la paró Cloudflare. /best-sellers de LELO devolvió 404. MysteryVibe no se volvió a pedir (HTTP 429 el 2026-10-15). PChome 24h respondió, pero no era una lista de más vendidos que se pudiera confirmar, así que no se mezcló."
           ]
         },
         {
@@ -299,7 +339,8 @@
           "paragraphs": [
             "La lista del día se actualiza una vez por fecha de Asia/Shanghai. Una publicación sustituye data/daily-latest.json por completo y escribe el mismo documento en data/daily-YYYY-MM-DD.json y data/archive/daily/YYYY-MM-DD.json. No se mezcla con filas viejas.",
             "La de la semana se actualiza para cada semana de lunes a domingo en Asia/Shanghai (semana ISO). Una publicación sustituye data/weekly-latest.json por completo y escribe data/archive/weekly/YYYY-Www.json.",
-            "Los archivos actuales del día y de la semana se generaron a las 2026-10-16T10:59:47+08:00. Los precios y los puestos corresponden a la fecha del archivo, no al stock en el momento de abrir la página."
+            "El archivo del día se escribió primero a las 2026-10-16T10:59:47+08:00 y se reescribió a las 2026-10-16T17:03:22+08:00 al añadir las tiendas de Hong Kong. Precios y puestos corresponden a la fecha del archivo, no al stock del momento en que abres la página.",
+            "La semana no se queda en «copiar un día y llamarlo semana» como estado final. scripts/build_weekly.py lee data/archive/daily/. Si una semana ISO (hora de Shanghái, lunes a domingo) tiene dos o más diarios, quita duplicados por la URL del producto, ordena por días de aparición, puesto medio y mejor puesto, y escribe data/weekly-latest.json y data/archive/weekly/YYYY-Www.json sin seed. 2026-W42 usa 2026-10-15 y 2026-10-16, así que es un agregado y no una copia. Si una semana solo tiene un día, el script no reescribe el semanal que ya existe. Si ese archivo sigue con seed, la página dice que es la copia de ese día."
           ]
         },
         {
@@ -319,7 +360,7 @@
             "No son las ventas de todo internet, ni el ranking oficial de Taobao, Tmall o Amazon.",
             "Solo se conservan filas que estaban abiertas y tenían enlace de producto. Una ficha sin enlace (Lush 4 / Lush Mini en la portada de Lovense, en el archivo del 2026-10-16) queda en omissions y no entra en el top 20.",
             "El precio, el stock, los descuentos y el puesto cambian. Una cifra marcada “As low as” es el precio de partida que mostraba esa página.",
-            "Si el JSON semanal tiene seed, es una copia de la lista de un día, no un recuento aparte de toda la semana. El archivo 2026-W42 (del 2026-10-12 al 2026-10-18) es una copia del día 2026-10-16.",
+            "Si el JSON semanal tiene seed, es una copia de la lista de un día, no un recuento aparte de toda la semana. 2026-W42 no tiene seed: junta los días 2026-10-15 y 2026-10-16. Una semana con un solo día todavía puede ser seed.",
             "Los enlaces externos usan nofollow. Este sitio no cobra, no envía pedidos ni da consejo médico o de salud, y no decide la compra por ti."
           ]
         }
@@ -354,11 +395,11 @@
       "items": [
         {
           "q": "¿De dónde salen los datos?",
-          "a": "De páginas públicas de más vendidos que estaban abiertas al leerlas. El ranking está pensado para incluir Taobao/Tmall, Amazon y tiendas independientes o regionales. La entrega del 2026-10-16 incluye de hecho Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Taobao/Tmall no se pidió ese día, así que no hay productos de ahí. Los archivos son data/daily-latest.json y data/weekly-latest.json."
+          "a": "De páginas públicas de más vendidos que se pudieron abrir al capturarlas. El diseño incluye Taobao/Tmall, Amazon y tiendas independientes o regionales. La entrega del 2026-10-16 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Taobao/Tmall ese día era un cascarón de búsqueda en JavaScript, sin filas, y no se inventaron productos de Taobao. Los archivos son data/daily-latest.json y data/weekly-latest.json."
         },
         {
           "q": "¿Cada cuánto se actualiza?",
-          "a": "La lista del día se sustituye entera una vez por fecha de Shanghái. La de la semana, entera para cada semana de lunes a domingo. Una publicación sustituye el archivo más reciente y guarda un archivo con fecha o semana ISO. No se mezcla con filas viejas. Los archivos actuales se generaron a las 2026-10-16T10:59:47+08:00."
+          "a": "El día se sustituye por completo una vez por fecha de Shanghái. Cuando una semana ISO tiene dos o más diarios, scripts/build_weekly.py los junta por la URL del producto y no deja la copia de un día como semana terminada. Si solo hay un día, la semana puede seguir con seed, y la página lo dice. El archivo del día actual se escribió a las 2026-10-16T17:03:22+08:00."
         },
         {
           "q": "¿Cómo se lee la lista?",
@@ -374,7 +415,7 @@
         },
         {
           "q": "¿En qué se diferencian hoy y esta semana?",
-          "a": "Hoy es una fecha de Shanghái. La semana es de lunes a domingo. La portada abre en hoy; ?board=weekly abre la semana. Si el archivo semanal tiene seed, es una copia de la lista de ese día, no un recuento aparte de toda la semana. El archivo 2026-W42 es ese caso: cubre del 2026-10-12 al 2026-10-18, con datos al 2026-10-16."
+          "a": "Hoy es una fecha de Shanghái. La semana es de lunes a domingo. La portada abre en hoy; ?board=weekly abre la semana. Una semana con seed es la copia de un día. 2026-W42 no tiene seed: junta 2026-10-15 y 2026-10-16, del 2026-10-12 al 2026-10-18."
         },
         {
           "q": "¿Los precios siguen vigentes?",
@@ -383,6 +424,166 @@
         {
           "q": "¿Esto es una tienda?",
           "a": "No. Lista Qing solo reúne una instantánea pública de más vendidos para comparar nombres, precios y valoraciones. No hay espacio de pago y aquí no se vende nada."
+        }
+      ]
+    },
+    "archive": {
+      "daily": {
+        "h1": "Archivo del día · top 20",
+        "lead": "Este día ya está archivado. Productos, precios y puestos son los de ese archivo del día.",
+        "listTitle": "Productos de este archivo del día"
+      },
+      "weekly": {
+        "h1": "Archivo de la semana · top 20",
+        "lead": "Esta semana ya está archivada. Si el archivo tiene seed, es la copia de un día. Si nombra varios días, es un agregado y no un seed.",
+        "listTitle": "Productos de este archivo semanal"
+      }
+    },
+    "privacy": {
+      "title": "Privacidad | Lista Qing",
+      "description": "Lista Qing es un sitio estático solo para adultos. Explica Google Analytics 4 (G-1SF9TQS3F1), la edad y el idioma guardados en el navegador, que no vende datos personales y los enlaces externos.",
+      "ogImageAlt": "Privacidad de Lista Qing. Solo mayores de 18.",
+      "kicker": "Sitio para adultos · no vende datos personales",
+      "h1": "Privacidad",
+      "lead": "Lista Qing no vende productos y no tiene cuentas. Aquí solo se describe los datos que el sitio sí toca.",
+      "related": [
+        {
+          "page": "contact",
+          "label": "Contacto"
+        },
+        {
+          "page": "about",
+          "label": "Sobre el sitio"
+        },
+        {
+          "page": "method",
+          "label": "Método"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "Qué es el sitio",
+          "paragraphs": [
+            "Lista Qing es un ranking estático en GitHub Pages de productos íntimos de venta pública, para mayores de 18 años. No hay registro, carrito, pago ni envío.",
+            "El botón del producto abre la página de la tienda. Esa tienda tiene su propia política de privacidad."
+          ]
+        },
+        {
+          "h2": "Edad e idioma",
+          "paragraphs": [
+            "Antes de entrar confirmas que tienes 18 años o más. Esa elección queda en el localStorage del navegador, clave qbt-age. El idioma queda en qbt-lang.",
+            "Ninguno de los dos se sube a un servidor de Lista Qing. No hay backend ni un expediente que se pueda buscar por nombre."
+          ]
+        },
+        {
+          "h2": "Medición",
+          "paragraphs": [
+            "Las páginas usan Google Analytics 4, ID de medición G-1SF9TQS3F1. Puede registrar visitas, región aproximada, dispositivo y referencia mediante cookies, para ver qué rankings se abren.",
+            "Esa medición no se vende como perfil publicitario ni se entrega a las tiendas como lista de visitantes. Puedes limitar las cookies de terceros o bloquear Google Analytics."
+          ]
+        },
+        {
+          "h2": "No se venden datos personales",
+          "paragraphs": [
+            "No se venden, intercambian ni alquilan datos personales. No hay lista de socios ni datos de pago que vender."
+          ]
+        },
+        {
+          "h2": "Enlaces externos",
+          "paragraphs": [
+            "Los enlaces de producto van a Amazon, a la marca o a tiendas de Hong Kong, con nofollow. Las cookies y los pedidos de después son de ese otro sitio."
+          ]
+        },
+        {
+          "h2": "Contenido para adultos",
+          "paragraphs": [
+            "Las páginas son para mayores de 18 años. No se las pases a menores. No son consejo médico."
+          ]
+        },
+        {
+          "h2": "Correcciones",
+          "paragraphs": [
+            "Un sitio estático no puede borrar un expediente que no tiene. Para corregir un producto, o preguntar por esta política, usa las incidencias de GitHub de la página de contacto."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contacto y correcciones | Lista Qing",
+      "description": "Lista Qing no es el servicio de una tienda. Si un dato está mal, abre una incidencia en orangexie05/qing-bestsellers-top. No hay correo ni teléfono de soporte publicados.",
+      "ogImageAlt": "Contacto de Lista Qing. Solo mayores de 18.",
+      "kicker": "Correcciones · no es el mostrador de la tienda",
+      "h1": "Contacto y correcciones",
+      "lead": "Esto no es atención antes ni después de la compra. Precio, stock y devoluciones se consultan en la tienda del producto.",
+      "related": [
+        {
+          "page": "privacy",
+          "label": "Privacidad"
+        },
+        {
+          "page": "method",
+          "label": "Método"
+        },
+        {
+          "page": "faq",
+          "label": "Preguntas"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "Dónde escribir",
+          "paragraphs": [
+            "Si el nombre, el precio, el enlace o la nota de la fuente no coinciden con la página pública, abre una incidencia en GitHub. Indica la fecha del ranking y la URL del producto. No hace falta dejar nombre, teléfono ni dirección."
+          ],
+          "links": [
+            {
+              "href": "https://github.com/orangexie05/qing-bestsellers-top/issues",
+              "label": "Incidencias de orangexie05/qing-bestsellers-top"
+            }
+          ]
+        },
+        {
+          "h2": "No hay otro contacto publicado",
+          "paragraphs": [
+            "El sitio no publica un correo de soporte, un teléfono ni una tienda física. No trates otra dirección como si fuera de Lista Qing. Si el repositorio no lista otro correo, usa el enlace de arriba."
+          ]
+        },
+        {
+          "h2": "Preguntas para la tienda",
+          "paragraphs": [
+            "Pedidos, envío, devoluciones y el uso del producto corresponden a la tienda de la ficha. Lista Qing no cobra, no envía y no cambia el precio de la tienda."
+          ]
+        }
+      ]
+    },
+    "archive-index": {
+      "title": "Archivo | rankings diarios y semanales",
+      "description": "Solo mayores de 18. HTML legible y el JSON original de cada ranking diario y semanal archivado.",
+      "ogImageAlt": "Índice de archivo de Lista Qing. Solo mayores de 18.",
+      "kicker": "Entregas guardadas · solo mayores de 18",
+      "h1": "Archivo",
+      "lead": "Cada día y cada semana tienen una página HTML legible junto al JSON de esa entrega. La página solo lista productos que están en el archivo.",
+      "related": [
+        {
+          "page": "daily",
+          "label": "Día más reciente"
+        },
+        {
+          "page": "weekly",
+          "label": "Semana más reciente"
+        },
+        {
+          "page": "method",
+          "label": "Método"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "Cómo leerlo",
+          "paragraphs": [
+            "El nombre del día es la fecha de Shanghái. El de la semana es la semana ISO, de lunes a domingo. Si el JSON semanal tiene seed, esa página dice que es la copia de un día. Si nombra varios días, es un agregado y no un seed.",
+            "2026-W42 junta los días 2026-10-15 y 2026-10-16. No es la copia de un solo día."
+          ]
         }
       ]
     }
@@ -397,7 +598,7 @@
       },
       {
         "q": "¿Qué tiendas entran?",
-        "a": "Amazon.com, Dame, Lovense, We-Vibe, Womanizer y Waddy de Hong Kong. Las que no se pudieron abrir figuran al final. No se inventó ningún producto para completar la lista."
+        "a": "La entrega del 2026-10-16 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Taobao/Tmall no tiene filas. Lo que no entró se lista al final y no se rellena con otros datos."
       },
       {
         "q": "¿Los precios siguen vigentes?",
@@ -409,7 +610,7 @@
       },
       {
         "q": "¿En qué se distinguen la de hoy y la de la semana?",
-        "a": "La de hoy es un día en hora de Shanghái. La de la semana va de lunes a domingo. La página abre en la de hoy; el cambio de arriba pasa a la semana. Los archivos vigentes son data/daily-latest.json y data/weekly-latest.json. Una publicación rutinaria sustituye cada archivo por completo y guarda una copia con fecha. Si el archivo trae una nota seed, esa lista semanal es una copia de la lista del mismo día, no un recuento aparte de toda la semana."
+        "a": "La de hoy es un día en hora de Shanghái. La de la semana va de lunes a domingo. La página abre en la de hoy; el cambio de arriba pasa a la semana. Los archivos vigentes son data/daily-latest.json y data/weekly-latest.json. Cuando hay varios diarios de la misma semana, la semana los junta. Solo un archivo que todavía trae seed es la copia de ese día, no un recuento aparte de toda la semana."
       }
     ],
     "more": "Ver todas las preguntas"
