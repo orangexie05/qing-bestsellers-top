@@ -3,6 +3,7 @@
 # The URL with no lang parameter is zh-CN and x-default.
 # Daily chart is the default (no board parameter). Weekly adds ?board=weekly.
 # Latest boards: /data/daily-latest.json and /data/weekly-latest.json.
+# Info pages are public and indexable: /about.html /method.html /faq.html
 User-agent: *
 Allow: /
 
