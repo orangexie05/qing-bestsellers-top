@@ -205,6 +205,10 @@
       <a href="about.html" id="nav-about">关于</a>
       <a href="method.html" id="nav-method" aria-current="page">方法</a>
       <a href="faq.html" id="nav-faq">FAQ</a>
+    
+      <a href="archive/index.html" id="nav-archive">归档</a>
+      <a href="privacy.html" id="nav-privacy">隐私</a>
+      <a href="contact.html" id="nav-contact">联系</a>
     </nav>
     <div class="lang" id="lang-switch" role="group" aria-label="语言">
       <button type="button" data-lang="zh-CN" aria-pressed="true">简体中文</button>
@@ -238,15 +242,16 @@
   <div id="page-sections" class="page-sections">
     <section class="prose-block">
       <h2>数据来源</h2>
-      <p>榜单设计上会看三类公开页面：淘宝 / 天猫、Amazon，以及独立品牌或地区店铺。目前出现过的独立店和地区店有 Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy。</p>
+      <p>榜单设计上会看三类公开页面：淘宝 / 天猫、Amazon，以及独立品牌或地区店铺。目前出现过的独立店和地区店有 Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。</p>
       <p>某一期实际收录谁，以该期 JSON 的 sources_included 为准。没请求或打不开的来源写在 sources_skipped，不会用其他数据填补。</p>
-      <p>2026-10-16 这一期实际收录了 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 和香港 Waddy。淘宝 / 天猫、LELO、MysteryVibe、PChome 24h 写在 sources_skipped，状态是 not_requested，所以榜上没有这些来源的商品。</p>
+      <p>2026-10-16 在当天较早的抓取之后，又并入了三家公开页面能直接读到商品链接、名称和港币价格的香港店：SISTALK 的热卖分类、Les'Play 的畅销分类、Sex Concept 的畅销分类。名次是该页从上到下的顺序，每个来源最多 6 款，再按原有规则重排前 20。淘宝 / 天猫同日打开的是要靠 JavaScript 的搜索壳，静态 HTML 里没有商品链接和价格，sources_skipped 记为 blocked，没有编造商品。空的占位结构在 data/sources/taobao_tmall.placeholder.json。18 Gifts 的月销量页被 Cloudflare 拦住。LELO 的 /best-sellers 返回 404。MysteryVibe 没有重试（2026-10-15 是 HTTP 429）。PChome 24h 返回过页面，但不是可以确认的热销榜，所以没有并入。</p>
     </section>
     <section class="prose-block">
       <h2>更新频率</h2>
       <p>日榜按 Asia/Shanghai 的自然日更新。例行发布会整份覆盖 data/daily-latest.json，并把同一份文件写到 data/daily-YYYY-MM-DD.json 和 data/archive/daily/YYYY-MM-DD.json。不与旧条目合并。</p>
       <p>周榜按 Asia/Shanghai 的周一至周日（ISO 周）更新。例行发布会整份覆盖 data/weekly-latest.json，并写入 data/archive/weekly/YYYY-Www.json。</p>
-      <p>当前日榜与周榜文件的生成时间都是 2026-10-16T10:59:47+08:00。页面上的价格和名次对得上文件里的日期，不是打开页面这一刻的实时库存。</p>
+      <p>日榜文件在 2026-10-16T10:59:47+08:00 形成第一版，同日 2026-10-16T17:03:22+08:00 并入香港店后重写。页面上的价格和名次对得上文件里的日期，不是打开页面这一刻的实时库存。</p>
+      <p>周榜不会停在“把某一天复制成一周”当作最终做法。scripts/build_weekly.py 查看 data/archive/daily/。同一个 ISO 周（上海时间，周一至周日）若有两份或更多日榜，就按商品链接去重，用出现天数、平均店内名次和最好店内名次汇总，写下 data/weekly-latest.json 和 data/archive/weekly/YYYY-Www.json，并且不写 seed。2026-W42 使用了 2026-10-15 与 2026-10-16，所以是汇总，不是副本。若某一周只有一份日榜，脚本不改写已有周榜；那种文件若仍带 seed，页面会写明它是那天日榜的副本。</p>
     </section>
     <section class="prose-block">
       <h2>排名规则</h2>
@@ -261,7 +266,7 @@
         <li>这不是全网销量，也不是淘宝、天猫或 Amazon 的官方总榜。</li>
         <li>只保留抓取时能打开、并且有商品链接的条目。没有链接的展示（例如 2026-10-16 日榜里 Lovense 首页轮播的 Lush 4 / Lush Mini）记在 omissions，不进 Top 20。</li>
         <li>价格、库存、折扣和名次都会变。标成 “As low as” 的数字是该页展示的起步价。</li>
-        <li>若周榜 JSON 带有 seed，它是某一天日榜的副本，不是单独统计的一周销量。2026-W42（2026-10-12 至 2026-10-18）这份周榜就是 2026-10-16 日榜的副本。</li>
+        <li>若周榜 JSON 带有 seed，它是某一天日榜的副本，不是单独统计的一周销量。2026-W42 没有 seed：它由 2026-10-15 与 2026-10-16 两份日榜汇总。只有一份日榜的周，仍可能是 seed。</li>
         <li>外链使用 nofollow。本站不收款、不发货、不提供医疗或健康建议，也不代替你决定买不买。</li>
       </ul>
     </section>
@@ -272,11 +277,11 @@
 <footer class="site-footer">
   <div class="wrap">
     <p id="foot-age"><strong>仅供年满 18 周岁的成年人浏览。</strong></p>
-    <p id="foot-sources">来源以每期 JSON 为准。设计上包括淘宝 / 天猫、Amazon 和独立品牌店；2026-10-16 实际收录 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy。</p>
-    <p id="foot-cadence">更新频率：日榜按上海时间每天整份更新；周榜按周一至周日的自然周整份更新。</p>
+    <p id="foot-sources">来源以每期 JSON 为准。设计上包括淘宝 / 天猫、Amazon 和独立品牌店；2026-10-16 实际收录 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。</p>
+    <p id="foot-cadence">更新频率：日榜按上海时间每天整份更新。周榜在同一 ISO 周有两份或更多日榜时由这些日榜汇总；只有一份日榜时，周榜仍可能是带 seed 的副本，页面会写明。</p>
     <p id="foot-snapshot">本页是各平台公开热销榜的整理快照，不是医疗或健康建议，也不代表推荐购买。价格、库存和名次都会变，下单前请回到商家页面核对。</p>
     <p id="foot-links">外链使用 nofollow。数据时区 Asia/Shanghai。</p>
-    <p id="foot-pages"><a id="foot-daily" href="index.html">日榜</a> · <a id="foot-weekly" href="index.html?board=weekly">周榜</a> · <a id="foot-platform" href="by-platform.html">分平台</a> · <a id="foot-about" href="about.html">关于本站</a> · <a id="foot-method" href="method.html">数据方法</a> · <a id="foot-faq" href="faq.html">常见问题</a></p>
+    <p id="foot-pages"><a id="foot-daily" href="index.html">日榜</a> · <a id="foot-weekly" href="index.html?board=weekly">周榜</a> · <a id="foot-platform" href="by-platform.html">分平台</a> · <a id="foot-about" href="about.html">关于本站</a> · <a id="foot-method" href="method.html">数据方法</a> · <a id="foot-faq" href="faq.html">常见问题</a> · <a id="foot-archive-page" href="archive/index.html">归档</a> · <a id="foot-privacy" href="privacy.html">隐私政策</a> · <a id="foot-contact" href="contact.html">联系</a></p>
     <p><a id="foot-data" href="data/daily-latest.json">查看当前榜单 JSON</a> · <a id="foot-snapshot-data" href="data.json">综合快照</a></p>
     <p id="foot-archive">日期归档：data/archive/daily/2026-10-16.json · data/archive/weekly/2026-W42.json</p>
   </div>

@@ -577,6 +577,32 @@ body.is-gated .site-footer { visibility: hidden; }
   .header-inner { padding-inline: 0.9rem; }
   .wrap { padding-inline: 0.9rem; }
 }
+.static-board {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+}
+.static-board li {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  gap: 0.35rem 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.static-board .rank {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+.static-board .meta {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.archive-index { margin: 0.2rem 0 0; padding-left: 1.15rem; }
+.archive-index li { margin: 0.35rem 0; }
+.archive-groups { display: grid; gap: 1rem; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }

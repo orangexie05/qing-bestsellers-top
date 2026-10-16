@@ -1,0 +1,79 @@
+{
+  "platform": "lesplay_hk",
+  "store": "Les'Play (HK)",
+  "list_url": "https://www.lesplayhk.com/categories/best-seller",
+  "fetched_at": "2026-10-16T17:03:22+08:00",
+  "status": "ok",
+  "currency": "HKD",
+  "rank_basis": "document_order_on_public_category_page",
+  "note": "Public Shopline category best-seller. Rank is document order. Static HTML had a product URL, name, and HKD price. No rating was present.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Womanizer Next Liberty 3D陰蒂吸啜智能按摩器",
+      "product_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "purchase_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "price": 988.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6aa42b364f6f2d67e12c5d43/375x.gif",
+      "image_kind": "official",
+      "source_product_id": "6aa4313258b72dc327d8de88"
+    },
+    {
+      "rank": 2,
+      "name": "Roomfun 雙人共震 穿戴式按摩棒套裝",
+      "product_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
+      "purchase_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
+      "price": 798.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a7f097fc377fa203b144236/375x.png",
+      "image_kind": "official",
+      "source_product_id": "6a7f11cdef21cc0012d6bdd9"
+    },
+    {
+      "rank": 3,
+      "name": "Kisstoy 氣墊 PUPU 手機遙控 吸啜器震蛋組",
+      "product_url": "https://www.lesplayhk.com/products/kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "purchase_url": "https://www.lesplayhk.com/products/kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "price": 428.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a788bd5a7398aa91f72bf77/375x.png",
+      "image_kind": "official",
+      "source_product_id": "6a788f4ebe354e411265844b"
+    },
+    {
+      "rank": 4,
+      "name": "Kisstoy 手指糯米棒 超柔軟恆溫幼身按摩棒",
+      "product_url": "https://www.lesplayhk.com/products/kisstoy-finger-sticky-rice-vibrator",
+      "purchase_url": "https://www.lesplayhk.com/products/kisstoy-finger-sticky-rice-vibrator",
+      "price": 338.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a12ed4403db9ec9627cfcb9/375x.png",
+      "image_kind": "official",
+      "source_product_id": "6a12f1ed27181083f4a87b48"
+    },
+    {
+      "rank": 5,
+      "name": "Kisstoy 迷路 手機遙控穿戴震蛋【入體｜拍打｜吸啜｜震動 四款選】",
+      "product_url": "https://www.lesplayhk.com/products/kisstoy-lost-wearable-vibrator",
+      "purchase_url": "https://www.lesplayhk.com/products/kisstoy-lost-wearable-vibrator",
+      "price": 298.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a16fa91ffc4310d02b591d1/375x.png",
+      "image_kind": "official",
+      "source_product_id": "6a1701824281380b6f306aba"
+    },
+    {
+      "rank": 6,
+      "name": "Kisstoy TUTU 2｜突突二代 智能加溫二段伸縮炮機",
+      "product_url": "https://www.lesplayhk.com/products/kisstoy-tutu2-automatic-thrusting-machine",
+      "purchase_url": "https://www.lesplayhk.com/products/kisstoy-tutu2-automatic-thrusting-machine",
+      "price": 978.0,
+      "currency": "HKD",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a0fc804e0d90c5c5f87619d/375x.png",
+      "image_kind": "official",
+      "source_product_id": "6a0f4c78bf797328e3bccd52",
+      "compare_at_price": 1562.0
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# 青榜 Qing List
+
+> Adults-only (18+) charts of publicly listed intimate-product bestsellers. This site does not sell products, take payment, or ship orders. It is a static GitHub Pages snapshot, not a store and not medical advice.
+
+青榜把若干店铺当天或当周能打开的公开热销页整理成日榜和周榜，保留商品名称、价格、评分、图片和链接，方便对照。页面默认简体中文，同一 URL 可用 ?lang=en、?lang=ja、?lang=es。不带 lang 的网址是 zh-CN，也是 hreflang 的 x-default。
+
+## Adult-only
+
+The charts are for adults aged 18 or older. An age gate asks the visitor to confirm that before the product cards are shown. Content is sexual-wellness / adult-product retail data. Do not present it to minors. It is not a recommendation to buy or use any product.
+
+## Update cadence
+
+Time zone for every board date is Asia/Shanghai.
+
+- Daily: one calendar day. A routine publish replaces data/daily-latest.json in full and writes the same document to data/daily-YYYY-MM-DD.json and data/archive/daily/YYYY-MM-DD.json. Older rows are not merged into that file, and products are not invented to fill a Top 20.
+- Weekly: Monday through Sunday (ISO week). When data/archive/daily/ contains two or more daily files for that week, scripts/build_weekly.py dedupes by product URL and ranks by how many of those days the product appeared, then mean source rank, then best source rank, then rating, then review count. It writes data/weekly-latest.json and data/archive/weekly/YYYY-Www.json and does not mark that file as a seed.
+- If a week has only one daily archive, the script leaves the weekly file alone. A weekly JSON that still has a seed object is a copy of one day's chart, not a separate week-long tally. The page says so.
+- The current week 2026-W42 (2026-10-12 through 2026-10-18) is an aggregate of the 2026-10-15 and 2026-10-16 daily archives. It is not a seed.
+
+Prices, ratings, and ranks match the file's date. They are not a live quote.
+
+## What is and is not included
+
+Included when a public page could be read without login: Amazon.com sex-toy bestsellers, Dame, Lovense, We-Vibe, Womanizer, Waddy (Hong Kong), and — on 2026-10-16 — SISTALK HK hot-selling, Les'Play best-sellers, and Sex Concept best-sellers. Hong Kong ranks follow the order on that shop's public category page. Each source contributes at most 6 rows to the combined Top 20.
+
+Taobao / Tmall is still missing. A fetch on 2026-10-16 returned the JavaScript search shell only: no product URL, item id, or price in the static HTML. Those rows were not invented. See data/sources/taobao_tmall.placeholder.json (empty items) and sources_skipped on the daily JSON. 18 Gifts' monthly bestseller page was blocked by a Cloudflare interstitial. LELO /best-sellers returned 404. MysteryVibe was not retried after HTTP 429. PChome 24h was not merged because the response was not a confirmed bestseller list.
+
+## Key URLs
+
+- Home, daily chart: https://orangexie05.github.io/qing-bestsellers-top/
+- Weekly chart: https://orangexie05.github.io/qing-bestsellers-top/?board=weekly
+- By shop: https://orangexie05.github.io/qing-bestsellers-top/by-platform.html
+- Archive index: https://orangexie05.github.io/qing-bestsellers-top/archive/index.html
+- Example daily archive: https://orangexie05.github.io/qing-bestsellers-top/archive/daily/2026-10-16.html
+- Example weekly archive: https://orangexie05.github.io/qing-bestsellers-top/archive/weekly/2026-W42.html
+- About: https://orangexie05.github.io/qing-bestsellers-top/about.html
+- Methodology: https://orangexie05.github.io/qing-bestsellers-top/method.html
+- FAQ: https://orangexie05.github.io/qing-bestsellers-top/faq.html
+- Privacy: https://orangexie05.github.io/qing-bestsellers-top/privacy.html
+- Contact: https://orangexie05.github.io/qing-bestsellers-top/contact.html
+- Latest JSON: https://orangexie05.github.io/qing-bestsellers-top/data/daily-latest.json and https://orangexie05.github.io/qing-bestsellers-top/data/weekly-latest.json
+- Sitemap: https://orangexie05.github.io/qing-bestsellers-top/sitemap.xml
+
+Outbound product links use rel="nofollow". Corrections go to GitHub issues: https://github.com/orangexie05/qing-bestsellers-top/issues
+
+## Privacy in short
+
+Google Analytics 4 measurement ID G-1SF9TQS3F1 may receive page-view data. The site has no accounts, no checkout, and no sale of personal data. Age confirmation and language choice stay in the browser (localStorage keys qbt-age and qbt-lang). Details are on the privacy page.

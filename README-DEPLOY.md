@@ -48,12 +48,40 @@ find . -type f \( -name '*.html' -o -name '*.xml' -o -name 'robots.txt' \) -exec
 - 日榜归档：`data/archive/daily/YYYY-MM-DD.json`（Asia/Shanghai 的日期）
 - 周榜最新：`data/weekly-latest.json`
 - 周榜归档：`data/archive/weekly/YYYY-Www.json`（上海时间，周一到周日，ISO 周）
+- 可读归档页：`archive/daily/YYYY-MM-DD.html`、`archive/weekly/YYYY-Www.html`，目录在 `archive/index.html`
 
-2026-10-16 的日榜来自当天打开的公开页面（Amazon Sex Toys 热销、Dame bestsellers、Lovense 首页旗舰轮播、We-Vibe /us/bestsellers、Womanizer /us/bestseller、Waddy 首页男士 TOP 10）。同一份内容写在 `data/daily-2026-10-16.json`、`data/daily-latest.json` 和 `data/archive/daily/2026-10-16.json`。日榜文件没有 `seed`。周榜暂时整份复制这份日榜，`seed` 还在时页面会说明它不是单独统计的一周销量。`date` / `as_of` 是数据截止日，`period` 是日榜当天或周榜那一周，时区都是 `Asia/Shanghai`。`data.json` 和 `data/archive/daily/2026-10-15.json` 仍是 2026-10-15 的综合快照。
+`date` / `as_of` 是数据截止日，`period` 是日榜当天或周榜那一周，时区都是 `Asia/Shanghai`。
+
+2026-10-16 的日榜来自当天打开的公开页面：Amazon Sex Toys 热销、Dame bestsellers、Lovense 首页旗舰轮播、We-Vibe /us/bestsellers、Womanizer /us/bestseller、Waddy 首页男士 TOP 10，以及当天能解析的香港公开分类 SISTALK 热卖、Les'Play 畅销、Sex Concept 畅销。同一份内容写在 `data/daily-2026-10-16.json`、`data/daily-latest.json` 和 `data/archive/daily/2026-10-16.json`。这份日榜没有 `seed`。
+
+`data.json` 和 `data/archive/daily/2026-10-15.json` 仍是 2026-10-15 的综合快照，文件里带有 `seed`。不要把 10-16 的香港新行写回 10-15。
+
+### 周榜怎么来
+
+同一 ISO 周在 `data/archive/daily/` 里有两份或更多日榜时，`scripts/build_weekly.py` 按商品链接去重，按出现天数、平均店内名次、最好店内名次、评分、评价数排序，写出没有 `seed` 的周榜。每店最多 6 条，综合最多 20 条。
+
+只有一份日榜时，脚本不改已有周榜。那份周榜若仍带 `seed`，页面会写明它是某一天日榜的副本，不是单独统计的一周销量。
+
+2026-W42（2026-10-12–2026-10-18）由 2026-10-15 与 2026-10-16 两份日榜汇总，不是 seed。
+
+淘宝 / 天猫仍未收录。2026-10-16 打开 `https://s.taobao.com/search` 只得到需要 JavaScript 的搜索壳，静态 HTML 里没有商品链接、商品 id 或价格，所以没有编造行。空结构在 `data/sources/taobao_tmall.placeholder.json`。18 Gifts 被 Cloudflare 拦住，LELO `/best-sellers` 返回 404，MysteryVibe 在 429 之后没有重试，PChome 24h 的响应不是确认过的热销榜，都记在日榜 `sources_skipped`。
+
+周一（或有新日榜时）在仓库根目录：
+
+```bash
+python3 scripts/apply_source_extracts.py   # 仅当 data/sources/*-YYYY-MM-DD.json 已有 status ok
+python3 scripts/build_weekly.py
+python3 scripts/build_archive_html.py
+python3 scripts/build_sitemap.py
+python3 scripts/refresh_jsonld.py
+python3 scripts/build_trust_pages.py       # 隐私 / 联系文案改了 i18n 之后
+```
+
+信任页：`privacy.html`、`contact.html`。给抓取器用的说明：`llms.txt`。联系方式只有 GitHub Issues，没有另写邮箱。
 
 ## 本地预览
 
 ```bash
-cd site && python3 -m http.server 8080
+python3 -m http.server 8080
 # 浏览器打开 http://127.0.0.1:8080/
 ```

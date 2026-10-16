@@ -5,8 +5,21 @@
   var LANG_KEY = "qbt-lang";
   var AGE_KEY = "qbt-age";
   var BASE = "https://orangexie05.github.io/qing-bestsellers-top";
-  var PLATFORM_ORDER = ["dame", "amazon_us", "we_vibe", "womanizer", "lovense", "waddy_store"];
+  var PLATFORM_ORDER = ["dame", "amazon_us", "we_vibe", "womanizer", "lovense", "waddy_store", "lesplay_hk", "sistalk_hk", "sexconcept_hk"];
   var PAGE = document.body.getAttribute("data-page") || "top";
+
+  function siteRoot() {
+    return (document.body && document.body.getAttribute("data-root")) || "";
+  }
+
+  function asset(path) {
+    if (!path || /^(?:https?:)?\/\//i.test(path) || path.charAt(0) === "#") return path;
+    return siteRoot() + path;
+  }
+
+  function boardFile() {
+    return (document.body && document.body.getAttribute("data-board-file")) || "";
+  }
 
   var DATA_URL = {
     daily: "data/daily-latest.json",
@@ -42,6 +55,10 @@
   }
 
   function readBoard() {
+    if (boardFile()) {
+      var locked = document.body.getAttribute("data-board");
+      if (locked === "weekly" || locked === "daily") return locked;
+    }
     try {
       var value = new URLSearchParams(location.search).get("board");
       if (value === "weekly" || value === "daily") return value;
@@ -74,14 +91,19 @@
   }
 
   function isChartPage() {
-    return PAGE === "top" || PAGE === "platform";
+    return PAGE === "top" || PAGE === "platform" || PAGE === "archive";
   }
 
   function pagePath() {
+    var explicit = document.body && document.body.getAttribute("data-path");
+    if (explicit) return explicit;
     if (PAGE === "platform") return "/by-platform.html";
     if (PAGE === "about") return "/about.html";
     if (PAGE === "method") return "/method.html";
     if (PAGE === "faq") return "/faq.html";
+    if (PAGE === "privacy") return "/privacy.html";
+    if (PAGE === "contact") return "/contact.html";
+    if (PAGE === "archive-index") return "/archive/index.html";
     return "/";
   }
 
@@ -110,7 +132,7 @@
       params.push("board=weekly");
     }
     if (state.lang !== "zh-CN") params.push("lang=" + encodeURIComponent(state.lang));
-    return base + (params.length ? "?" + params.join("&") : "") + hash;
+    return asset(base) + (params.length ? "?" + params.join("&") : "") + hash;
   }
 
   function setLink(id, label, href, current) {
@@ -134,9 +156,9 @@
     var extra = [];
     if (pageLink && state.board === "weekly") extra.push("board=weekly");
     if (state.lang !== "zh-CN") extra.push("lang=" + encodeURIComponent(state.lang));
-    if (!extra.length) return base + hash;
+    if (!extra.length) return asset(base) + hash;
     var join = base.indexOf("?") === -1 ? "?" : "&";
-    return base + join + extra.join("&") + hash;
+    return asset(base) + join + extra.join("&") + hash;
   }
 
   function absoluteImage(src) {
@@ -160,7 +182,7 @@
     var url = new URL(location.href);
     var hash = url.hash;
     url.search = "";
-    if (isChartPage() && state.board === "weekly") url.searchParams.set("board", "weekly");
+    if (!boardFile() && isChartPage() && state.board === "weekly") url.searchParams.set("board", "weekly");
     if (lang !== "zh-CN") url.searchParams.set("lang", lang);
     var next = url.pathname + url.search + hash;
     var current = location.pathname + location.search + location.hash;
@@ -184,6 +206,14 @@
 
   function pageCopy() {
     var pages = (state.dict && state.dict.pages) || {};
+    if (PAGE === "archive") {
+      var top = (pages.top && (pages.top[state.board] || pages.top.daily)) || {};
+      var extra = (pages.archive && (pages.archive[state.board] || pages.archive.daily)) || {};
+      var merged = {};
+      Object.keys(top).forEach(function (key) { merged[key] = top[key]; });
+      Object.keys(extra).forEach(function (key) { merged[key] = extra[key]; });
+      return merged;
+    }
     var page = pages[PAGE] || pages.top || {};
     if (page.daily || page.weekly) return page[state.board] || page.daily || page;
     return page;
@@ -200,7 +230,7 @@
 
   function resolvePageMeta(dict) {
     var meta = (dict && dict.meta) || {};
-    if (PAGE === "about" || PAGE === "method" || PAGE === "faq") {
+    if (PAGE === "about" || PAGE === "method" || PAGE === "faq" || PAGE === "privacy" || PAGE === "contact" || PAGE === "archive-index") {
       var info = (dict.pages && dict.pages[PAGE]) || {};
       return {
         title: info.title || "",
@@ -212,6 +242,7 @@
     var pack = boards[state.board] || boards.daily || {};
     var period = periodToken(state.data || {});
     var title = PAGE === "platform" ? (pack.platformTitle || meta.platformTitle) : (pack.topTitle || meta.topTitle);
+    if (PAGE === "archive" && pack.archiveTitle) title = pack.archiveTitle;
     var description = PAGE === "platform" ? (pack.platformDescription || meta.platformDescription) : (pack.topDescription || meta.topDescription);
     return {
       title: fill(title || "", { period: period }),
@@ -369,11 +400,31 @@
     }
     var publish = data.publish || {};
     node.hidden = false;
-    node.textContent = fill(ui.seedNote, {
+    var template = state.board === "weekly" || data.board === "weekly" ? ui.seedNote : (ui.dailySeedNote || ui.seedNote);
+    node.textContent = fill(template, {
       snapshot: data.seed.snapshot_date || data.as_of || data.date,
+      source: data.seed.source || "",
       tz: data.timezone || "Asia/Shanghai",
       latest: publish.latest || "",
       archive: publish.archive || ""
+    });
+  }
+
+  function paintAggregation() {
+    var node = document.getElementById("agg-note");
+    var ui = state.dict && state.dict.ui;
+    if (!node || !ui) return;
+    var agg = state.data && state.data.aggregation;
+    if (!agg) {
+      node.hidden = true;
+      return;
+    }
+    var sep = state.lang === "en" || state.lang === "es" ? ", " : "、";
+    node.hidden = false;
+    node.textContent = fill(ui.aggNote, {
+      days: (agg.daily_dates || []).join(sep),
+      count: String(agg.daily_count || (agg.daily_dates || []).length),
+      week: (state.data.period && state.data.period.iso_week) || ""
     });
   }
 
@@ -394,7 +445,11 @@
       weekly.setAttribute("aria-selected", state.board === "weekly" ? "true" : "false");
       weekly.tabIndex = state.board === "weekly" ? 0 : -1;
     }
-    text("board-hint", state.board === "weekly" ? ui.boardWeeklyHint : ui.boardDailyHint);
+    var hint = state.board === "weekly" ? ui.boardWeeklyHint : ui.boardDailyHint;
+    if (boardFile()) {
+      hint = state.board === "weekly" ? (ui.archiveWeeklyHint || hint) : (ui.archiveDailyHint || hint);
+    }
+    text("board-hint", hint);
   }
 
   function paintChrome() {
@@ -412,6 +467,9 @@
     setLink("nav-about", ui.navAbout, linkFor("about.html"), PAGE === "about");
     setLink("nav-method", ui.navMethod, linkFor("method.html"), PAGE === "method");
     setLink("nav-faq", ui.navFaq, linkFor("faq.html"), PAGE === "faq");
+    setLink("nav-archive", ui.navArchive, linkFor("archive/index.html"), PAGE === "archive" || PAGE === "archive-index");
+    setLink("nav-privacy", ui.navPrivacy, linkFor("privacy.html"), PAGE === "privacy");
+    setLink("nav-contact", ui.navContact, linkFor("contact.html"), PAGE === "contact");
     text("hero-kicker", ui.heroKicker);
     text("hero-title", page.h1);
     text("hero-lead", page.lead);
@@ -419,6 +477,7 @@
     paintBoardSwitch();
     paintPeriod();
     paintSeed();
+    paintAggregation();
     text("sort-label", ui.sortLabel);
     text("sort-rule", ui.sortRule);
     text("sources-label", ui.sourcesLabel);
@@ -440,6 +499,14 @@
     setLink("foot-about", ui.footerAbout, linkFor("about.html"));
     setLink("foot-method", ui.footerMethod, linkFor("method.html"));
     setLink("foot-faq", ui.footerFaq, linkFor("faq.html"));
+    setLink("foot-archive-page", ui.footerArchivePage, linkFor("archive/index.html"));
+    setLink("foot-privacy", ui.footerPrivacy, linkFor("privacy.html"));
+    setLink("foot-contact", ui.footerContact, linkFor("contact.html"));
+    setLink("archive-back-daily", ui.navDaily, linkFor("index.html", { board: "daily" }));
+    setLink("archive-back-weekly", ui.navWeekly, linkFor("index.html", { board: "weekly" }));
+    setLink("archive-back-index", ui.navArchive, linkFor("archive/index.html"));
+    text("archive-daily-heading", ui.archiveDailyHeading);
+    text("archive-weekly-heading", ui.archiveWeeklyHeading);
     text("skipped-title", ui.skippedTitle);
     text("skipped-lead", ui.skippedLead);
     if (data) {
@@ -456,8 +523,13 @@
     }
     var footData = document.getElementById("foot-data");
     if (footData) {
-      footData.textContent = ui.footerBoardData || ui.footerData;
-      footData.setAttribute("href", DATA_URL[state.board] || DATA_URL.daily);
+      if (boardFile()) {
+        footData.textContent = ui.footerArchiveData || ui.footerBoardData || ui.footerData;
+        footData.setAttribute("href", asset(boardFile()));
+      } else {
+        footData.textContent = ui.footerBoardData || ui.footerData;
+        footData.setAttribute("href", asset(DATA_URL[state.board] || DATA_URL.daily));
+      }
     }
     var footSnapshot = document.getElementById("foot-snapshot-data");
     if (footSnapshot) footSnapshot.textContent = ui.footerSnapshotData || ui.footerData;
@@ -552,10 +624,18 @@
     if (ui.geoLabel) host.setAttribute("aria-label", ui.geoLabel);
     var item = topItem(state.data);
     var seed = "";
-    if (state.board === "weekly") {
-      seed = state.data.seed
-        ? fill(page.geoSeed || "", { snapshot: state.data.seed.snapshot_date || state.data.as_of || "" })
-        : (page.geoNoSeed || "");
+    if (state.data.board === "weekly" || state.board === "weekly") {
+      var sep = state.lang === "en" || state.lang === "es" ? ", " : "、";
+      if (state.data.aggregation) {
+        seed = fill(page.geoAggregated || "", {
+          days: (state.data.aggregation.daily_dates || []).join(sep),
+          count: String(state.data.aggregation.daily_count || (state.data.aggregation.daily_dates || []).length)
+        });
+      } else if (state.data.seed) {
+        seed = fill(page.geoSeed || "", { snapshot: state.data.seed.snapshot_date || state.data.as_of || "" });
+      } else {
+        seed = page.geoNoSeed || "";
+      }
     }
     var vars = {
       period: periodToken(state.data),
@@ -582,6 +662,9 @@
     if (kind === "about") return linkFor("about.html");
     if (kind === "method") return linkFor("method.html");
     if (kind === "faq") return linkFor("faq.html");
+    if (kind === "privacy") return linkFor("privacy.html");
+    if (kind === "contact") return linkFor("contact.html");
+    if (kind === "archive") return linkFor("archive/index.html");
     return linkFor("index.html", { board: "daily" });
   }
 
@@ -624,6 +707,17 @@
       block.appendChild(el("h2", null, sectionData.h2));
       (sectionData.paragraphs || []).forEach(function (paragraph) {
         block.appendChild(el("p", null, paragraph));
+      });
+      (sectionData.links || []).forEach(function (link) {
+        var anchor = el("a", null, link.label || link.href);
+        anchor.href = link.href;
+        if (/^https?:/i.test(link.href || "")) {
+          anchor.target = "_blank";
+          anchor.rel = "noopener noreferrer";
+        }
+        var line = el("p");
+        line.appendChild(anchor);
+        block.appendChild(line);
       });
       if (sectionData.items && sectionData.items.length) {
         var list = el("ul");
@@ -835,7 +929,9 @@
       var li = el("li");
       var strong = el("strong", null, item.platform);
       li.appendChild(strong);
-      li.appendChild(document.createTextNode(" — " + (notes[item.platform] || item.note || "")));
+      var detail = item.note || notes[item.platform] || "";
+      var status = item.status ? " (" + item.status + ")" : "";
+      li.appendChild(document.createTextNode(" — " + detail + status));
       list.appendChild(li);
     });
   }
@@ -854,7 +950,11 @@
       paintCatalog();
     });
     host.appendChild(all);
-    PLATFORM_ORDER.forEach(function (id) {
+    var ordered = PLATFORM_ORDER.slice();
+    (state.data.sources_included || []).forEach(function (id) {
+      if (ordered.indexOf(id) === -1) ordered.push(id);
+    });
+    ordered.forEach(function (id) {
       if ((state.data.sources_included || []).indexOf(id) === -1) return;
       var info = platformCopy(id);
       var button = el("button", null, info.name);
@@ -895,7 +995,7 @@
     img.addEventListener("error", function () {
       if (img.getAttribute("data-fallback") === "1") return;
       img.setAttribute("data-fallback", "1");
-      img.src = "assets/products/fallback.svg";
+      img.src = asset("assets/products/fallback.svg");
       img.alt = ui.placeholderCaption;
     });
     media.appendChild(badge);
@@ -917,6 +1017,13 @@
     if (item.note_key && state.dict.notes && state.dict.notes[item.note_key]) {
       body.appendChild(el("p", "note", state.dict.notes[item.note_key]));
     }
+    if (item.appearances && ui.appearancesNote) {
+      var daySep = state.lang === "en" || state.lang === "es" ? ", " : "、";
+      body.appendChild(el("p", "note", fill(ui.appearancesNote, {
+        n: item.appearances,
+        days: (item.appearance_dates || []).join(daySep)
+      })));
+    }
     if (item.image_kind === "placeholder") {
       body.appendChild(el("p", "ph-note", ui.placeholderCaption));
     }
@@ -936,7 +1043,7 @@
 
   function visibleItems() {
     var items = (state.data && state.data.items) || [];
-    if (PAGE !== "top" || state.filter === "all") return items;
+    if ((PAGE !== "top" && PAGE !== "archive") || state.filter === "all") return items;
     return items.filter(function (item) { return item.platform === state.filter; });
   }
 
@@ -948,7 +1055,11 @@
     clear(host);
     var ui = state.dict.ui;
     if (PAGE === "platform") {
-      PLATFORM_ORDER.forEach(function (id) {
+      var ordered = PLATFORM_ORDER.slice();
+      (state.data.sources_included || []).forEach(function (id) {
+        if (ordered.indexOf(id) === -1) ordered.push(id);
+      });
+      ordered.forEach(function (id) {
         var group = (state.data.items || []).filter(function (item) { return item.platform === id; });
         if (!group.length) return;
         var info = platformCopy(id);
@@ -993,7 +1104,7 @@
 
   function loadDict(lang) {
     if (dictCache[lang]) return Promise.resolve(dictCache[lang]);
-    return fetch("i18n/" + lang + ".json", { credentials: "same-origin" }).then(function (res) {
+    return fetch(asset("i18n/" + lang + ".json"), { credentials: "same-origin" }).then(function (res) {
       if (!res.ok) throw new Error("dict");
       return res.json();
     }).then(function (json) {
@@ -1003,9 +1114,11 @@
   }
 
   function loadData(board) {
-    var key = board === "weekly" ? "weekly" : "daily";
+    var file = boardFile();
+    var key = file || (board === "weekly" ? "weekly" : "daily");
     if (dataCache[key]) return Promise.resolve(dataCache[key]);
-    return fetch(DATA_URL[key], { credentials: "same-origin" }).then(function (res) {
+    var url = file || DATA_URL[key];
+    return fetch(asset(url), { credentials: "same-origin" }).then(function (res) {
       if (!res.ok) throw new Error("data");
       return res.json();
     }).then(function (json) {
