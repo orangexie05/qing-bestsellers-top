@@ -49,7 +49,7 @@ find . -type f \( -name '*.html' -o -name '*.xml' -o -name 'robots.txt' \) -exec
 - 周榜最新：`data/weekly-latest.json`
 - 周榜归档：`data/archive/weekly/YYYY-Www.json`（上海时间，周一到周日，ISO 周）
 
-当前两份榜都是 `data.json` 里 2026-10-15 综合 Top 20 的副本。文件里的 `seed` 说明还在时，页面会标明这一点；正式发布去掉 `seed` 后，这句提示会消失。`date` / `as_of` 是数据截止日，`period` 是日榜当天或周榜那一周，时区都是 `Asia/Shanghai`。
+2026-10-16 的日榜来自当天打开的公开页面（Amazon Sex Toys 热销、Dame bestsellers、Lovense 首页旗舰轮播、We-Vibe /us/bestsellers、Womanizer /us/bestseller、Waddy 首页男士 TOP 10）。同一份内容写在 `data/daily-2026-10-16.json`、`data/daily-latest.json` 和 `data/archive/daily/2026-10-16.json`。日榜文件没有 `seed`。周榜暂时整份复制这份日榜，`seed` 还在时页面会说明它不是单独统计的一周销量。`date` / `as_of` 是数据截止日，`period` 是日榜当天或周榜那一周，时区都是 `Asia/Shanghai`。`data.json` 和 `data/archive/daily/2026-10-15.json` 仍是 2026-10-15 的综合快照。
 
 ## 本地预览
 

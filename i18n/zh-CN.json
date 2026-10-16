@@ -2,11 +2,11 @@
   "meta": {
     "htmlLang": "zh-Hans",
     "ogLocale": "zh_CN",
-    "topTitle": "成人情趣热销榜 Top 20｜2026-10-15 公开快照",
-    "topDescription": "仅限 18 周岁以上。汇总 2026 年 10 月 15 日（上海时间）Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy 的公开热销。价格、评分和名次都来自当天页面。",
-    "platformTitle": "分平台成人热销｜Amazon、Dame、Lovense 等｜2026-10-15",
-    "platformDescription": "仅限成年人。同一份 2026-10-15 快照，按 Amazon、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy 分开查看，不另编商品。",
-    "ogImageAlt": "青榜：2026 年 10 月 15 日成人热销快照，仅限 18 周岁以上",
+    "topTitle": "成人情趣热销榜 Top 20｜2026-10-16 公开日榜",
+    "topDescription": "仅限 18 周岁以上。汇总 2026 年 10 月 16 日（上海时间）Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy 的公开热销。价格、评分和名次都来自当天页面。",
+    "platformTitle": "分平台成人热销｜Amazon、Dame、Lovense 等｜2026-10-16",
+    "platformDescription": "仅限成年人。同一份 2026-10-16 日榜，按 Amazon、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy 分开查看，不另编商品。",
+    "ogImageAlt": "青榜：2026 年 10 月 16 日成人热销日榜，仅限 18 周岁以上",
     "boards": {
       "daily": {
         "topTitle": "成人情趣日榜 Top 20｜{period}（上海时间）",
@@ -58,7 +58,7 @@
     "loading": "正在读取这份快照…",
     "loadError": "榜单数据没有载入。请刷新后再试。",
     "skippedTitle": "这次没能收录的来源",
-    "skippedLead": "下面几家当时打不开，或页面里没有可提取的列表。没有用别的数据填补。",
+    "skippedLead": "下面几家这次日榜没有再请求。没有用别的数据填补。",
     "ageTitle": "此页面仅面向成年人",
     "ageBody": "这里整理的是成人情趣用品的公开热销快照。未满 18 周岁，请离开。继续即表示你确认已达到所在地的法定成人年龄。",
     "ageEnter": "我已年满 18 周岁",
@@ -78,7 +78,7 @@
     "periodRange": "{start} – {end}",
     "isoWeek": "{week} · 周一至周日",
     "asOf": "数据截至 {date}",
-    "seedNote": "日榜和周榜目前仍是同一份综合 Top 20 的副本，快照日 {snapshot}（{tz}）。商品、价格、评分和名次没有另编。例行发布会整份覆盖 {latest}，并写入 {archive}。",
+    "seedNote": "这份周榜是 {snapshot}（{tz}）日榜的副本，不是单独统计的一周销量。商品、价格、评分和名次与当天日榜相同。例行发布会整份覆盖 {latest}，并写入 {archive}。",
     "footerBoardData": "查看当前榜单 JSON",
     "footerSnapshotData": "综合快照",
     "footerArchive": "日期归档：{path}"
@@ -87,7 +87,10 @@
     "asin_verified": "商品编号曾通过公开检索核对。",
     "asin_unverified": "没有核对到单独商品页，按钮会打开来源榜单。",
     "list_no_rating": "价格来自店铺列表页，该页没有展示评分。",
-    "waddy_no_rating": "价格来自香港店铺的公开热卖页，该页没有展示评分。"
+    "waddy_no_rating": "价格来自香港店铺的公开热卖页，该页没有展示评分。",
+    "price_from": "列表把这个数字标成 “As low as”，是该页展示的起步价。",
+    "on_sale": "列表上的现价低于划线价。这一页没有展示评分。",
+    "waddy_top10": "价格来自 Waddy 首页「男士成人用品 | TOP 10 销量排名」的飞机杯分页。这一页没有展示评分。"
   },
   "platforms": {
     "dame": {
@@ -116,10 +119,10 @@
     }
   },
   "skipped": {
-    "lelo": "最佳销售分类是前端应用，静态页面里没有商品列表。",
-    "mysteryvibe": "访问返回 429，这次没有抓取。",
-    "taobao_tmall": "搜索页没有可提取的商品编号或价格。",
-    "pchome_24h": "返回 429，这次没有抓取。"
+    "lelo": "这次日榜没有再请求 LELO。",
+    "mysteryvibe": "这次日榜没有再请求 MysteryVibe。",
+    "taobao_tmall": "这次日榜没有再请求淘宝 / 天猫。",
+    "pchome_24h": "这次日榜没有再请求 PChome。"
   },
   "pages": {
     "top": {
@@ -155,7 +158,7 @@
     "items": [
       {
         "q": "这是购物网站吗？",
-        "a": "不是。青榜把 2026 年 10 月 15 日能打开的公开热销页整理在一起，方便对照商品名称、价格和评分。要下单，请回到商家自己的页面核对。"
+        "a": "不是。青榜把 2026 年 10 月 16 日能打开的公开热销页整理在一起，方便对照商品名称、价格和评分。要下单，请回到商家自己的页面核对。"
       },
       {
         "q": "榜上有哪些店铺？",
@@ -171,7 +174,7 @@
       },
       {
         "q": "日榜和周榜怎么分？",
-        "a": "日榜是上海时间的一天，周榜是周一到周日的一周。打开页面时先看到日榜，页首可以改看周榜。两份最新数据在 data/daily-latest.json 和 data/weekly-latest.json；例行更新会整份覆盖，并按日期另存归档。数据里若带有 seed 说明，表示它仍是 2026-10-15 综合快照的副本，不是另编的榜。"
+        "a": "日榜是上海时间的一天，周榜是周一到周日的一周。打开页面时先看到日榜，页首可以改看周榜。两份最新数据在 data/daily-latest.json 和 data/weekly-latest.json；例行更新会整份覆盖，并按日期另存归档。数据里若带有 seed 说明，表示那份周榜是同一天日榜的副本，不是单独统计的一周销量。"
       }
     ]
   },

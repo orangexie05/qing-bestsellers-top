@@ -201,6 +201,18 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://orangexie05.github.io/qing-bestsellers-top/data/daily-2026-10-16.json</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://orangexie05.github.io/qing-bestsellers-top/data/archive/daily/2026-10-16.json</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
     <loc>https://orangexie05.github.io/qing-bestsellers-top/data/archive/daily/2026-10-15.json</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>

@@ -2,11 +2,11 @@
   "meta": {
     "htmlLang": "en",
     "ogLocale": "en_US",
-    "topTitle": "Adult bestseller snapshot: top 20 | 15 Oct 2026",
-    "topDescription": "Adults 18+ only. Public bestseller lists from 15 October 2026 (Shanghai time): Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Prices, ratings, and ranks are from that day.",
-    "platformTitle": "Adult bestsellers by shop | snapshot 15 Oct 2026",
-    "platformDescription": "Adults 18+ only. The same 15 October 2026 snapshot, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. Counts are what made the combined list.",
-    "ogImageAlt": "Qing List adult bestseller snapshot, 15 October 2026. Adults 18+ only.",
+    "topTitle": "Adult bestseller snapshot: top 20 | 16 Oct 2026",
+    "topDescription": "Adults 18+ only. Public bestseller lists from 16 October 2026 (Shanghai time): Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Prices, ratings, and ranks are from that day.",
+    "platformTitle": "Adult bestsellers by shop | snapshot 16 Oct 2026",
+    "platformDescription": "Adults 18+ only. The same 16 October 2026 daily chart, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. Counts are what made the combined list.",
+    "ogImageAlt": "Qing List adult bestseller snapshot, 16 October 2026. Adults 18+ only.",
     "boards": {
       "daily": {
         "topTitle": "Today's adult bestsellers, top 20 | {period}",
@@ -58,7 +58,7 @@
     "loading": "Loading this snapshot…",
     "loadError": "The list data did not load. Refresh and try again.",
     "skippedTitle": "Sources left out this time",
-    "skippedLead": "These shops could not be read, or the page had no list to extract. Nothing was filled in from elsewhere.",
+    "skippedLead": "These shops were not requested again for this daily chart. Nothing else was added in their place.",
     "ageTitle": "Adults only",
     "ageBody": "This page lists adult intimate products from public bestseller snapshots. If you are under 18, please leave. Continuing means you confirm you meet the age of adulthood where you live.",
     "ageEnter": "I am 18 or older",
@@ -78,7 +78,7 @@
     "periodRange": "{start} – {end}",
     "isoWeek": "{week} · Monday–Sunday",
     "asOf": "As of {date}",
-    "seedNote": "Today's chart and this week's chart are still the same copy of the combined top 20. Snapshot date {snapshot} ({tz}). Products, prices, ratings, and ranks were not newly researched. A later publish replaces {latest} in full and writes {archive}.",
+    "seedNote": "This week's chart is a copy of the daily chart from {snapshot} ({tz}). It is not a separate week-long tally. Products, prices, ratings, and ranks match that day's file. A later publish replaces {latest} in full and writes {archive}.",
     "footerBoardData": "View this chart’s JSON",
     "footerSnapshotData": "Combined snapshot",
     "footerArchive": "Dated archive: {path}"
@@ -87,7 +87,10 @@
     "asin_verified": "The product code was checked against a public search.",
     "asin_unverified": "A standalone product page was not verified, so the button opens the source list.",
     "list_no_rating": "The price is from the shop’s list page, which did not show a rating.",
-    "waddy_no_rating": "The price is from the Hong Kong shop’s public bestseller page, which did not show a rating."
+    "waddy_no_rating": "The price is from the Hong Kong shop’s public bestseller page, which did not show a rating.",
+    "price_from": "The list labels this figure “As low as,” the starting price shown on that page.",
+    "on_sale": "The list shows a current price below a crossed-out price. That page did not show a rating.",
+    "waddy_top10": "The price is from the men’s TOP 10 block on the Waddy homepage (the sleeve tab). That block did not show a rating."
   },
   "platforms": {
     "dame": {
@@ -116,10 +119,10 @@
     }
   },
   "skipped": {
-    "lelo": "The bestseller section is a scripted app, with no product list in the static page.",
-    "mysteryvibe": "The request returned 429, so it was not collected.",
-    "taobao_tmall": "The search page had no product ids or prices to extract.",
-    "pchome_24h": "The request returned 429, so it was not collected."
+    "lelo": "This daily scrape did not request LELO again.",
+    "mysteryvibe": "This daily scrape did not request MysteryVibe again.",
+    "taobao_tmall": "This daily scrape did not request Taobao or Tmall again.",
+    "pchome_24h": "This daily scrape did not request PChome again."
   },
   "pages": {
     "top": {
@@ -155,7 +158,7 @@
     "items": [
       {
         "q": "Is this a shop?",
-        "a": "No. Qing List lines up public bestseller pages that were open on 15 October 2026, so you can compare names, prices, and ratings. Order from the merchant only after you check the live page."
+        "a": "No. Qing List lines up public bestseller pages that were open on 16 October 2026, so you can compare names, prices, and ratings. Order from the merchant only after you check the live page."
       },
       {
         "q": "Which shops are included?",
@@ -171,7 +174,7 @@
       },
       {
         "q": "What’s the difference between today and this week?",
-        "a": "Today is one Shanghai date. This week is Monday through Sunday. The page opens on today; the switch at the top moves to this week. The latest files are data/daily-latest.json and data/weekly-latest.json. A routine publish replaces each file in full and keeps a dated archive. If the file includes a seed note, it is still a copy of the 15 October 2026 combined snapshot, not a newly researched chart."
+        "a": "Today is one Shanghai date. This week is Monday through Sunday. The page opens on today; the switch at the top moves to this week. The latest files are data/daily-latest.json and data/weekly-latest.json. A routine publish replaces each file in full and keeps a dated archive. If the file includes a seed note, that weekly chart is a copy of the daily chart from the same date, not a separate week-long tally."
       }
     ]
   },

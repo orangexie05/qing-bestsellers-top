@@ -1,24 +1,24 @@
 {
   "board": "weekly",
-  "generated_at": "2026-10-15T10:41:25+08:00",
-  "date": "2026-10-15",
-  "as_of": "2026-10-15",
+  "generated_at": "2026-10-16T10:59:47+08:00",
+  "date": "2026-10-16",
+  "as_of": "2026-10-16",
   "timezone": "Asia/Shanghai",
   "period": {
     "kind": "week",
     "start": "2026-10-12",
     "end": "2026-10-18",
+    "label": "2026-10-12 – 2026-10-18",
     "iso_week": "2026-W42",
-    "label": "2026-10-12/2026-10-18",
-    "timezone": "Asia/Shanghai",
-    "week_starts_on": "monday"
+    "week_starts_on": "monday",
+    "timezone": "Asia/Shanghai"
   },
   "seed": {
-    "source": "data.json",
-    "snapshot_date": "2026-10-15",
-    "snapshot_generated_at": "2026-10-15T10:41:25+08:00",
+    "source": "data/daily-2026-10-16.json",
+    "snapshot_date": "2026-10-16",
+    "snapshot_generated_at": "2026-10-16T10:59:47+08:00",
     "timezone": "Asia/Shanghai",
-    "note": "Seeded by cloning the consolidated Top 20 snapshot. Product rows, ranks, prices, ratings, images, and links are unchanged. A publishing routine may overwrite the latest file and write a new dated archive."
+    "note": "Seeded by copying the 2026-10-16 daily scrape. This is not a separate week-long tally. Product rows, ranks, prices, ratings, images, and links match that daily file."
   },
   "publish": {
     "schema_version": 1,
@@ -26,12 +26,11 @@
     "archive": "data/archive/weekly/2026-W42.json",
     "archive_pattern": "data/archive/weekly/YYYY-Www.json",
     "timezone": "Asia/Shanghai",
-    "week_starts_on": "monday",
-    "overwrite": "Replace data/weekly-latest.json in full and write the same document to data/archive/weekly/YYYY-Www.json for the Monday-Sunday week in Asia/Shanghai. Do not merge with older items. Do not invent products."
+    "overwrite": "Replace data/weekly-latest.json in full and write the same document to data/archive/weekly/YYYY-Www.json using the ISO week in Asia/Shanghai. Do not merge with older items. Do not invent products."
   },
   "category": "adult_sex_toys_sexual_wellness",
   "category_zh": "性工具 / 情趣用品",
-  "sort_rule": "dedupe by product_url; sort by source rank ASC, then rating DESC, then review count DESC; take Top 20",
+  "sort_rule": "dedupe by product_url; cap 6 per source; sort by source rank ASC, then rating DESC (nulls last), then review count DESC (nulls last), then platform id, then name; take Top 20",
   "sources_included": [
     "amazon_us",
     "dame",
@@ -43,23 +42,31 @@
   "sources_skipped": [
     {
       "platform": "lelo",
-      "status": "blocked",
-      "note": "Bestseller taxonomy URL loads SPA shell only; product cards not in static HTML (JS app). Not included."
+      "status": "not_requested",
+      "note": "Not fetched in the 2026-10-16 daily scrape."
     },
     {
       "platform": "mysteryvibe",
-      "status": "blocked",
-      "note": "HTTP 429 local_rate_limited from this network."
+      "status": "not_requested",
+      "note": "Not fetched in the 2026-10-16 daily scrape."
     },
     {
       "platform": "taobao_tmall",
-      "status": "blocked",
-      "note": "Search shell loads; no extractable item ids/prices without login/JS anti-bot."
+      "status": "not_requested",
+      "note": "Not fetched in the 2026-10-16 daily scrape."
     },
     {
       "platform": "pchome_24h",
-      "status": "blocked",
-      "note": "HTTP 429 Too Many Requests."
+      "status": "not_requested",
+      "note": "Not fetched in the 2026-10-16 daily scrape."
+    }
+  ],
+  "omissions": [
+    {
+      "platform": "lovense",
+      "name": "Lush 4 / Lush Mini",
+      "price_shown": "$129.00",
+      "reason": "Homepage flagship carousel shows this price, but the slide controls are javascript:void(0) popups with no product URL."
     }
   ],
   "items": [
@@ -77,11 +84,12 @@
         "count": 95,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 1,
+      "scraped_at": "2026-10-16T10:47:15+08:00",
       "id": "dame-hug",
       "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/hug-1-fir.png?v=1776325569",
-      "image_kind": "official"
+      "image_kind": "official",
+      "list_url": "https://dame.com/collections/bestsellers",
+      "overall_rank": 1
     },
     {
       "platform": "amazon_us",
@@ -94,16 +102,62 @@
       "currency": "USD",
       "reviews": {
         "rating": 4.2,
-        "count": 45141,
+        "count": 45142,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "notes": "ASIN verified via WebSearch",
-      "overall_rank": 2,
+      "scraped_at": "2026-10-16T10:47:15+08:00",
       "id": "amazon-ava",
-      "image": "assets/products/amazon-ava.svg",
-      "image_kind": "placeholder",
-      "note_key": "asin_verified"
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61hB-pRnvdL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official",
+      "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
+      "overall_rank": 2
+    },
+    {
+      "platform": "lovense",
+      "store": "Lovense",
+      "rank": 1,
+      "name": "Gush 2 Motion",
+      "product_url": "https://www.lovense.com/gush-2-motion-remote-controlled-penis-vibrator",
+      "purchase_url": "https://www.lovense.com/gush-2-motion-remote-controlled-penis-vibrator",
+      "price": 99.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "lovense-gush-2-motion-remote-controlled-penis-vibrator",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_gush2motion.jpg?v=20261015",
+      "image_kind": "official",
+      "list_url": "https://www.lovense.com/",
+      "compare_at_price": 199.0,
+      "note_key": "on_sale",
+      "notes": "Price from the homepage flagship carousel (bestSeller_3). No bestseller URL returned a list; /best-sellers is 404.",
+      "overall_rank": 3
+    },
+    {
+      "platform": "waddy_store",
+      "store": "Waddy Store (HK)",
+      "rank": 1,
+      "name": "LELO F1S V3 App 控制聲波電動男士飛機杯",
+      "product_url": "https://www.waddystore.com/products/lelo-f1s™-v3-male-masturbators",
+      "purchase_url": "https://www.waddystore.com/products/lelo-f1s™-v3-male-masturbators",
+      "price": 1947.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "waddy-lelo-f1s-v3-male-masturbators",
+      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/69294be382f98f00163aab6f/375x.jpeg",
+      "image_kind": "official",
+      "list_url": "https://www.waddystore.com/",
+      "note_key": "waddy_top10",
+      "notes": "Homepage block “男士成人用品 | TOP 10 銷量排名”, active 飛機杯 tab, in page order. Review stars are a skeleton with no number.",
+      "overall_rank": 4
     },
     {
       "platform": "we_vibe",
@@ -115,15 +169,18 @@
       "price": 229.0,
       "currency": "USD",
       "reviews": {
-        "rating": 4.07,
-        "count": 58,
+        "rating": null,
+        "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 3,
+      "scraped_at": "2026-10-16T10:47:15+08:00",
       "id": "wevibe-chorus",
-      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_chorus_pro_gallery_image_purple_01_without_new_label_en.jpg",
-      "image_kind": "official"
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/1bc522adbdeb181b78a833de4363b825/w/v/wvi_chorus_pro_purple_category_image_1000x1000_transparent_1.png",
+      "image_kind": "official",
+      "list_url": "https://www.we-vibe.com/us/bestsellers",
+      "note_key": "price_from",
+      "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
+      "overall_rank": 5
     },
     {
       "platform": "womanizer",
@@ -135,59 +192,18 @@
       "price": 229.0,
       "currency": "USD",
       "reviews": {
-        "rating": 3.87,
-        "count": 327,
+        "rating": null,
+        "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 4,
+      "scraped_at": "2026-10-16T10:47:15+08:00",
       "id": "womanizer-next",
-      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_next_ce_dusky_pink_pdp_category_image_1000x1000.jpg",
-      "image_kind": "official"
-    },
-    {
-      "platform": "lovense",
-      "store": "Lovense",
-      "rank": 1,
-      "name": "Lush 4 — Bluetooth App-Controlled G-Spot Egg Vibrator",
-      "product_url": "https://www.lovense.com/lush-4-best-bluetooth-remote-controlled-g-spot-vibrator",
-      "purchase_url": "https://www.lovense.com/lush-4-best-bluetooth-remote-controlled-g-spot-vibrator",
-      "price": 129.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "notes": "Sale/current price from storefront HTML; review ratings not exposed on list page",
-      "overall_rank": 5,
-      "id": "lovense-lush4",
-      "image": "https://cdn.lovense.com/resources/images/lush4/pic.jpg",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/22858c641609ec6b1ca73cd5f575e920/w/m/wmz_next_ce_dusky_pink_pdp_category_image_1000x1000.jpg",
       "image_kind": "official",
-      "note_key": "list_no_rating"
-    },
-    {
-      "platform": "waddy_store",
-      "store": "Waddy Store (HK)",
-      "rank": 1,
-      "name": "【爆款特價！】Mood Chocolate 愛愛催情朱古力|三味可選",
-      "product_url": "https://www.waddystore.com/products/mood-chocolate-love-aphrodisiac-chocolate-original-mint-strawberry",
-      "purchase_url": "https://www.waddystore.com/products/mood-chocolate-love-aphrodisiac-chocolate-original-mint-strawberry",
-      "price": 315.0,
-      "currency": "HKD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "notes": "Hong Kong adult retailer public 熱賣榜; prices from category page or product page; reviews not on list",
-      "overall_rank": 6,
-      "id": "waddy-mood",
-      "image": "https://img.shoplineapp.com/media/image_clips/68145f90e9ac10000aca58dc/original.png?1746165648",
-      "image_kind": "official",
-      "note_key": "waddy_no_rating"
+      "list_url": "https://www.womanizer.com/us/bestseller",
+      "note_key": "price_from",
+      "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
+      "overall_rank": 6
     },
     {
       "platform": "dame",
@@ -203,53 +219,80 @@
         "count": 1220,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 7,
+      "scraped_at": "2026-10-16T10:47:15+08:00",
       "id": "dame-eva",
       "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/eva-1-ice.png?v=1776326231",
-      "image_kind": "official"
-    },
-    {
-      "platform": "womanizer",
-      "store": "Womanizer",
-      "rank": 2,
-      "name": "Womanizer DUO 2",
-      "product_url": "https://www.womanizer.com/us/duo2",
-      "purchase_url": "https://www.womanizer.com/us/duo2",
-      "price": 229.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": 4.48,
-        "count": 271,
-        "sample": null
-      },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 8,
-      "id": "womanizer-duo2",
-      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_duo2_black_pdp_gallery_1000x1000_en_01_1.jpg",
-      "image_kind": "official"
+      "image_kind": "official",
+      "list_url": "https://dame.com/collections/bestsellers",
+      "overall_rank": 7
     },
     {
       "platform": "amazon_us",
       "store": "Amazon.com",
       "rank": 2,
       "name": "Vibrator Dildo Sex Toys for Women - MOOLIGIRL Rose Sex Toy with Thrusting G Spot Vibrators & 10 Sucking Modes for Clitoral Nipple Stimulation Anal Dildos Adult Sex Toys Games for Couples Sex Machine",
-      "product_url": "https://www.amazon.com/s?k=Vibrator+Dildo+Sex+Toys+for+Women+-+MOOLIGIRL+Rose+Sex+Toy+with+Thrusting+G+Spot+Vibrators+%26+10+Sucking+Modes+for+Clitor",
-      "purchase_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
+      "product_url": "https://www.amazon.com/dp/B0CNRZVJMG",
+      "purchase_url": "https://www.amazon.com/dp/B0CNRZVJMG",
       "price": 29.99,
       "currency": "USD",
       "reviews": {
         "rating": 4.3,
-        "count": 6506,
+        "count": 6510,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "notes": "ASIN not verified; product_url is Amazon search, purchase_url is category bestseller list",
-      "overall_rank": 9,
-      "id": "amazon-rose",
-      "image": "assets/products/amazon-rose.svg",
-      "image_kind": "placeholder",
-      "note_key": "asin_unverified"
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "amazon-b0cnrzvjmg",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71ibbU+OxdL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official",
+      "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
+      "overall_rank": 8
+    },
+    {
+      "platform": "lovense",
+      "store": "Lovense",
+      "rank": 2,
+      "name": "Solace Pro",
+      "product_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
+      "purchase_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
+      "price": 199.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "lovense-solace-pro-ai-automatic-blowjob-machine-men",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_solace22.jpg?v=20261015",
+      "image_kind": "official",
+      "list_url": "https://www.lovense.com/",
+      "compare_at_price": 399.0,
+      "note_key": "on_sale",
+      "notes": "Price from the homepage flagship carousel (bestSeller_3). No bestseller URL returned a list; /best-sellers is 404.",
+      "overall_rank": 9
+    },
+    {
+      "platform": "waddy_store",
+      "store": "Waddy Store (HK)",
+      "rank": 2,
+      "name": "Erocome Antlia 唧筒座 仿口愛夾縮吸啜電動飛機杯 黑色",
+      "product_url": "https://www.waddystore.com/products/erocome-antlia-masturbator-black",
+      "purchase_url": "https://www.waddystore.com/products/erocome-antlia-masturbator-black",
+      "price": 808.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "waddy-erocome-antlia-masturbator-black",
+      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/6916d3fbc68aca00149b2ad6/375x.jpg",
+      "image_kind": "official",
+      "list_url": "https://www.waddystore.com/",
+      "note_key": "waddy_top10",
+      "notes": "Homepage block “男士成人用品 | TOP 10 銷量排名”, active 飛機杯 tab, in page order. Review stars are a skeleton with no number.",
+      "overall_rank": 10
     },
     {
       "platform": "we_vibe",
@@ -261,121 +304,62 @@
       "price": 159.0,
       "currency": "USD",
       "reviews": {
-        "rating": 4.06,
-        "count": 62,
+        "rating": null,
+        "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 10,
+      "scraped_at": "2026-10-16T10:47:15+08:00",
       "id": "wevibe-melt2",
-      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_melt2_purple_pdp_gallery_1000x1000_02_en.jpg",
-      "image_kind": "official"
-    },
-    {
-      "platform": "lovense",
-      "store": "Lovense",
-      "rank": 2,
-      "name": "Ferri — Wearable Magnetic Panty Vibrator",
-      "product_url": "https://www.lovense.com/magnetic-panty-vibrator",
-      "purchase_url": "https://www.lovense.com/magnetic-panty-vibrator",
-      "price": 99.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "notes": "Sale/current price from storefront HTML; review ratings not exposed on list page",
-      "overall_rank": 11,
-      "id": "lovense-ferri",
-      "image": "https://cdn.lovense.com/resources/img/ferriNew/01.webp",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/1bc522adbdeb181b78a833de4363b825/w/v/wvi_melt2_purple_pdp_gallery_1000x1000_02_en.jpg",
       "image_kind": "official",
-      "note_key": "list_no_rating"
-    },
-    {
-      "platform": "waddy_store",
-      "store": "Waddy Store (HK)",
-      "rank": 2,
-      "name": "【限量銷售】西班牙蒼蠅水 Spanish Fly Maroc 15ml",
-      "product_url": "https://www.waddystore.com/products/spanish-fly-maroc-15ml",
-      "purchase_url": "https://www.waddystore.com/products/spanish-fly-maroc-15ml",
-      "price": 102.0,
-      "currency": "HKD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "notes": "Hong Kong adult retailer public 熱賣榜; prices from category page or product page; reviews not on list",
-      "overall_rank": 12,
-      "id": "waddy-fly",
-      "image": "https://img.shoplineapp.com/media/image_clips/693947010cb19e75e2247e36/original.jpg?1765361409",
-      "image_kind": "official",
-      "note_key": "waddy_no_rating"
-    },
-    {
-      "platform": "we_vibe",
-      "store": "We-Vibe",
-      "rank": 3,
-      "name": "We-Vibe Nova 2",
-      "product_url": "https://www.we-vibe.com/us/nova2",
-      "purchase_url": "https://www.we-vibe.com/us/nova2",
-      "price": 159.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": 4.49,
-        "count": 255,
-        "sample": null
-      },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 13,
-      "id": "wevibe-nova2",
-      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_nova2_blue_pdp_gallery_1500x1500_01a.jpg",
-      "image_kind": "official"
+      "list_url": "https://www.we-vibe.com/us/bestsellers",
+      "note_key": "price_from",
+      "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
+      "overall_rank": 11
     },
     {
       "platform": "womanizer",
       "store": "Womanizer",
-      "rank": 3,
-      "name": "Womanizer Premium 2",
-      "product_url": "https://www.womanizer.com/us/premium-2",
-      "purchase_url": "https://www.womanizer.com/us/premium-2",
-      "price": 189.0,
+      "rank": 2,
+      "name": "Womanizer DUO 2",
+      "product_url": "https://www.womanizer.com/us/duo2",
+      "purchase_url": "https://www.womanizer.com/us/duo2",
+      "price": 229.0,
       "currency": "USD",
       "reviews": {
-        "rating": 4.42,
-        "count": 1027,
+        "rating": null,
+        "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 14,
-      "id": "womanizer-premium2",
-      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/c/a/category_image_premium_2_red.jpg",
-      "image_kind": "official"
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "womanizer-duo2",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/22858c641609ec6b1ca73cd5f575e920/w/m/wmz_duo2_black_generic_internal_amazongallery_1200px_en_02_1.jpg",
+      "image_kind": "official",
+      "list_url": "https://www.womanizer.com/us/bestseller",
+      "note_key": "price_from",
+      "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
+      "overall_rank": 12
     },
     {
       "platform": "amazon_us",
       "store": "Amazon.com",
       "rank": 3,
       "name": "plusOne Bullet Vibrator for Women - Silicone Mini Vibrator, Pink Mini | Sex Toy Personal Massager with 10 vibration settings, Fully Waterproof, USB Rechargeable",
-      "product_url": "https://www.amazon.com/dp/B07HB55T1S",
-      "purchase_url": "https://www.amazon.com/dp/B07HB55T1S",
-      "price": 15.11,
+      "product_url": "https://www.amazon.com/dp/B0FYKHC327",
+      "purchase_url": "https://www.amazon.com/dp/B0FYKHC327",
+      "price": 12.79,
       "currency": "USD",
       "reviews": {
         "rating": 4.1,
-        "count": 7452,
+        "count": 7454,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "notes": "ASIN verified via WebSearch",
-      "overall_rank": 15,
-      "id": "amazon-plusone",
-      "image": "assets/products/amazon-plusone.svg",
-      "image_kind": "placeholder",
-      "note_key": "asin_verified"
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "amazon-b0fykhc327",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61xedFnFwLL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official",
+      "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
+      "overall_rank": 13
     },
     {
       "platform": "dame",
@@ -391,19 +375,20 @@
         "count": 15,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 16,
+      "scraped_at": "2026-10-16T10:47:15+08:00",
       "id": "dame-lay",
       "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/PDPImages_LAY-IC_01.jpg?v=1775651051",
-      "image_kind": "official"
+      "image_kind": "official",
+      "list_url": "https://dame.com/collections/bestsellers",
+      "overall_rank": 14
     },
     {
       "platform": "lovense",
       "store": "Lovense",
       "rank": 3,
-      "name": "Max 2 — App-Controlled Vibrating & Contracting Masturbator",
-      "product_url": "https://www.lovense.com/male-masturbators",
-      "purchase_url": "https://www.lovense.com/male-masturbators",
+      "name": "Ferri",
+      "product_url": "https://www.lovense.com/magnetic-panty-vibrator",
+      "purchase_url": "https://www.lovense.com/magnetic-panty-vibrator",
       "price": 99.0,
       "currency": "USD",
       "reviews": {
@@ -411,35 +396,85 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "notes": "Sale/current price from storefront HTML; review ratings not exposed on list page",
-      "overall_rank": 17,
-      "id": "lovense-max2",
-      "image": "https://cdn.lovense.com/UploadFiles/web/category/product/max2.png",
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "lovense-ferri",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_ferri.jpg?v=20261015",
       "image_kind": "official",
-      "note_key": "list_no_rating"
+      "list_url": "https://www.lovense.com/",
+      "compare_at_price": 199.0,
+      "note_key": "on_sale",
+      "notes": "Price from the homepage flagship carousel (bestSeller_3). No bestseller URL returned a list; /best-sellers is 404.",
+      "overall_rank": 15
     },
     {
       "platform": "waddy_store",
       "store": "Waddy Store (HK)",
       "rank": 3,
-      "name": "【日本狂斷貨！】NPG 美園和花 極致酮體吸啜震動飛機杯",
-      "product_url": "https://www.waddystore.com/products/npg-misono-waka-18kg-ultra-realistic-breast-sucking-vibration-masturbator",
-      "purchase_url": "https://www.waddystore.com/products/npg-misono-waka-18kg-ultra-realistic-breast-sucking-vibration-masturbator",
-      "price": 628.0,
+      "name": "MyToys Rocky 全方位旋轉自動抽插電動飛機杯",
+      "product_url": "https://www.waddystore.com/products/mytoys-rocky",
+      "purchase_url": "https://www.waddystore.com/products/mytoys-rocky",
+      "price": 705.0,
       "currency": "HKD",
       "reviews": {
         "rating": null,
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "notes": "Hong Kong adult retailer public 熱賣榜; prices from category page or product page; reviews not on list",
-      "overall_rank": 18,
-      "id": "waddy-npg",
-      "image": "https://img.shoplineapp.com/media/image_clips/69b276ca2cb5184b214f341b/original.jpg?1773303498",
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "waddy-mytoys-rocky",
+      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/6916dfccff076c0010d8fbdc/375x.jpg",
       "image_kind": "official",
-      "note_key": "waddy_no_rating"
+      "list_url": "https://www.waddystore.com/",
+      "compare_at_price": 800.0,
+      "note_key": "waddy_top10",
+      "notes": "Homepage block “男士成人用品 | TOP 10 銷量排名”, active 飛機杯 tab, in page order. Review stars are a skeleton with no number.",
+      "overall_rank": 16
+    },
+    {
+      "platform": "we_vibe",
+      "store": "We-Vibe",
+      "rank": 3,
+      "name": "We-Vibe Nova 2",
+      "product_url": "https://www.we-vibe.com/us/nova2",
+      "purchase_url": "https://www.we-vibe.com/us/nova2",
+      "price": 159.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "wevibe-nova2",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/1bc522adbdeb181b78a833de4363b825/w/v/wvi_nova2_blue_pdp_gallery_1500x1500_01a.jpg",
+      "image_kind": "official",
+      "list_url": "https://www.we-vibe.com/us/bestsellers",
+      "note_key": "price_from",
+      "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
+      "overall_rank": 17
+    },
+    {
+      "platform": "womanizer",
+      "store": "Womanizer",
+      "rank": 3,
+      "name": "Womanizer Premium 2",
+      "product_url": "https://www.womanizer.com/us/premium-2",
+      "purchase_url": "https://www.womanizer.com/us/premium-2",
+      "price": 189.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "womanizer-premium2",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/22858c641609ec6b1ca73cd5f575e920/c/a/category_image_premium_2_red.jpg",
+      "image_kind": "official",
+      "list_url": "https://www.womanizer.com/us/bestseller",
+      "note_key": "price_from",
+      "notes": "Yotpo stars are loaded by script and were not in the HTML, so no rating was recorded.",
+      "overall_rank": 18
     },
     {
       "platform": "dame",
@@ -455,31 +490,33 @@
         "count": 937,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 19,
+      "scraped_at": "2026-10-16T10:47:15+08:00",
       "id": "dame-aer",
       "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/aer-1-periwinkle.png?v=1776325568",
-      "image_kind": "official"
+      "image_kind": "official",
+      "list_url": "https://dame.com/collections/bestsellers",
+      "overall_rank": 19
     },
     {
-      "platform": "we_vibe",
-      "store": "We-Vibe",
+      "platform": "amazon_us",
+      "store": "Amazon.com",
       "rank": 4,
-      "name": "We-Vibe Touch X",
-      "product_url": "https://www.we-vibe.com/us/touch-x",
-      "purchase_url": "https://www.we-vibe.com/us/touch-x",
-      "price": 109.0,
+      "name": "Kstert 7.8\" Realistic Flesh Liquid Silicone Dildo with Strong Suction Cup | Sensual lifelike toy featuring a powerful suction base and perfect length, ideal for hands-free solo or couples' play.",
+      "product_url": "https://www.amazon.com/dp/B0C4GZ7CC4",
+      "purchase_url": "https://www.amazon.com/dp/B0C4GZ7CC4",
+      "price": 13.99,
       "currency": "USD",
       "reviews": {
-        "rating": 4.26,
-        "count": 193,
+        "rating": 4.3,
+        "count": 4351,
         "sample": null
       },
-      "scraped_at": "2026-10-15T10:41:25+08:00",
-      "overall_rank": 20,
-      "id": "wevibe-touchx",
-      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_touchx_dalia_pdp_01.jpg",
-      "image_kind": "official"
+      "scraped_at": "2026-10-16T10:47:15+08:00",
+      "id": "amazon-b0c4gz7cc4",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51qiE+X+42L._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official",
+      "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
+      "overall_rank": 20
     }
   ]
 }

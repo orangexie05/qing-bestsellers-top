@@ -2,11 +2,11 @@
   "meta": {
     "htmlLang": "es",
     "ogLocale": "es_ES",
-    "topTitle": "Más vendidos para adultos, top 20 | 15 oct 2026",
-    "topDescription": "Solo mayores de 18 años. Listas públicas del 15 de octubre de 2026 (hora de Shanghái): Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Precios, valoraciones y puestos son de ese día.",
-    "platformTitle": "Más vendidos para adultos por tienda | 15 oct 2026",
-    "platformDescription": "Solo mayores de 18 años. La misma instantánea del 15 de octubre de 2026, separada por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy.",
-    "ogImageAlt": "Lista Qing, instantánea de más vendidos para adultos del 15 de octubre de 2026. Solo mayores de 18.",
+    "topTitle": "Más vendidos para adultos, top 20 | 16 oct 2026",
+    "topDescription": "Solo mayores de 18 años. Listas públicas del 16 de octubre de 2026 (hora de Shanghái): Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Precios, valoraciones y puestos son de ese día.",
+    "platformTitle": "Más vendidos para adultos por tienda | 16 oct 2026",
+    "platformDescription": "Solo mayores de 18 años. La misma lista del 16 de octubre de 2026, separada por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy.",
+    "ogImageAlt": "Lista Qing, más vendidos para adultos del 16 de octubre de 2026. Solo mayores de 18.",
     "boards": {
       "daily": {
         "topTitle": "Más vendidos de hoy, top 20 | {period}",
@@ -58,7 +58,7 @@
     "loading": "Cargando esta instantánea…",
     "loadError": "No se pudieron cargar los datos. Actualiza la página e inténtalo de nuevo.",
     "skippedTitle": "Fuentes que quedaron fuera",
-    "skippedLead": "Estas tiendas no se pudieron abrir, o la página no tenía una lista que extraer. No se rellenó con otros datos.",
+    "skippedLead": "Estas tiendas no se volvieron a pedir para la lista de hoy. No se rellenó con otros datos.",
     "ageTitle": "Solo para adultos",
     "ageBody": "Esta página reúne productos íntimos para adultos a partir de listas públicas. Si no tienes 18 años, sal de aquí. Al continuar confirmas que cumples la mayoría de edad donde vives.",
     "ageEnter": "Tengo 18 años o más",
@@ -78,7 +78,7 @@
     "periodRange": "{start} – {end}",
     "isoWeek": "{week} · de lunes a domingo",
     "asOf": "Con datos al {date}",
-    "seedNote": "La de hoy y la de la semana siguen siendo la misma copia del top 20 combinado. Fecha de la instantánea: {snapshot} ({tz}). No se inventaron productos, precios, valoraciones ni puestos. Una publicación posterior sustituye {latest} por completo y guarda {archive}.",
+    "seedNote": "La de la semana es una copia de la lista del día {snapshot} ({tz}). No es un recuento aparte de toda la semana. Productos, precios, valoraciones y puestos coinciden con ese día. Una publicación posterior sustituye {latest} por completo y guarda {archive}.",
     "footerBoardData": "Ver el JSON de esta lista",
     "footerSnapshotData": "Instantánea combinada",
     "footerArchive": "Archivo con fecha: {path}"
@@ -87,7 +87,10 @@
     "asin_verified": "El código del producto se contrastó con una búsqueda pública.",
     "asin_unverified": "No se verificó una ficha propia, así que el botón abre la lista de origen.",
     "list_no_rating": "El precio sale de la lista de la tienda, que no mostraba valoración.",
-    "waddy_no_rating": "El precio sale de la lista pública de la tienda de Hong Kong, que no mostraba valoración."
+    "waddy_no_rating": "El precio sale de la lista pública de la tienda de Hong Kong, que no mostraba valoración.",
+    "price_from": "La lista marca esta cifra como “As low as”: es el precio de partida que muestra esa página.",
+    "on_sale": "La lista muestra un precio actual por debajo del precio tachado. Esa página no traía valoración.",
+    "waddy_top10": "El precio sale del bloque TOP 10 de productos para hombres en la portada de Waddy (la pestaña de masturbadores). Ese bloque no mostraba valoración."
   },
   "platforms": {
     "dame": {
@@ -116,10 +119,10 @@
     }
   },
   "skipped": {
-    "lelo": "La sección de más vendidos es una aplicación y la página estática no trae productos.",
-    "mysteryvibe": "La petición devolvió 429 y no se recogió.",
-    "taobao_tmall": "La búsqueda no dejó extraer identificadores ni precios.",
-    "pchome_24h": "La petición devolvió 429 y no se recogió."
+    "lelo": "Esta lista del día no volvió a pedir LELO.",
+    "mysteryvibe": "Esta lista del día no volvió a pedir MysteryVibe.",
+    "taobao_tmall": "Esta lista del día no volvió a pedir Taobao ni Tmall.",
+    "pchome_24h": "Esta lista del día no volvió a pedir PChome."
   },
   "pages": {
     "top": {
@@ -155,7 +158,7 @@
     "items": [
       {
         "q": "¿Esto es una tienda?",
-        "a": "No. Lista Qing reúne páginas públicas de más vendidos que se pudieron abrir el 15 de octubre de 2026, para comparar nombres, precios y valoraciones. El pedido se hace en la tienda, después de revisar la ficha actual."
+        "a": "No. Lista Qing reúne páginas públicas de más vendidos que se pudieron abrir el 16 de octubre de 2026, para comparar nombres, precios y valoraciones. El pedido se hace en la tienda, después de revisar la ficha actual."
       },
       {
         "q": "¿Qué tiendas entran?",
@@ -171,7 +174,7 @@
       },
       {
         "q": "¿En qué se distinguen la de hoy y la de la semana?",
-        "a": "La de hoy es un día en hora de Shanghái. La de la semana va de lunes a domingo. La página abre en la de hoy; el cambio de arriba pasa a la semana. Los archivos vigentes son data/daily-latest.json y data/weekly-latest.json. Una publicación rutinaria sustituye cada archivo por completo y guarda una copia con fecha. Si el archivo trae una nota seed, sigue siendo una copia de la instantánea combinada del 15 de octubre de 2026, no una lista investigada aparte."
+        "a": "La de hoy es un día en hora de Shanghái. La de la semana va de lunes a domingo. La página abre en la de hoy; el cambio de arriba pasa a la semana. Los archivos vigentes son data/daily-latest.json y data/weekly-latest.json. Una publicación rutinaria sustituye cada archivo por completo y guarda una copia con fecha. Si el archivo trae una nota seed, esa lista semanal es una copia de la lista del mismo día, no un recuento aparte de toda la semana."
       }
     ]
   },
