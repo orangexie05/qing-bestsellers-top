@@ -38,6 +38,19 @@ find . -type f \( -name '*.html' -o -name '*.xml' -o -name 'robots.txt' \) -exec
 - 外链已加 `rel="nofollow noopener"`。
 - 上线后在 Search Console 验证并提交 sitemap；可请求对首页 URL 编入索引。
 
+## 日榜 / 周榜数据
+
+页面默认打开日榜，用页首切换到周榜（地址栏加上 `?board=weekly`，语言参数仍是 `?lang=`）。
+
+例行任务整份覆盖这两个文件，并另存一份日期归档（不要和旧条目合并，也不要编造商品）：
+
+- 日榜最新：`data/daily-latest.json`
+- 日榜归档：`data/archive/daily/YYYY-MM-DD.json`（Asia/Shanghai 的日期）
+- 周榜最新：`data/weekly-latest.json`
+- 周榜归档：`data/archive/weekly/YYYY-Www.json`（上海时间，周一到周日，ISO 周）
+
+当前两份榜都是 `data.json` 里 2026-10-15 综合 Top 20 的副本。文件里的 `seed` 说明还在时，页面会标明这一点；正式发布去掉 `seed` 后，这句提示会消失。`date` / `as_of` 是数据截止日，`period` 是日榜当天或周榜那一周，时区都是 `Asia/Shanghai`。
+
 ## 本地预览
 
 ```bash

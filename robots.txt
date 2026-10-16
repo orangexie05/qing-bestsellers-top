@@ -1,6 +1,8 @@
 # Adults-only bestseller snapshot (18+). Public HTML is allowed.
 # Language versions are the same paths plus ?lang=en, ?lang=ja, or ?lang=es.
 # The URL with no lang parameter is zh-CN and x-default.
+# Daily chart is the default (no board parameter). Weekly adds ?board=weekly.
+# Latest boards: /data/daily-latest.json and /data/weekly-latest.json.
 User-agent: *
 Allow: /
 

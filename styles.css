@@ -143,6 +143,63 @@ a:hover { color: var(--wine-deep); }
 }
 .lang button:hover { border-color: #fff; }
 
+.board-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1rem;
+  margin: 0 0 1rem;
+}
+.board-switch {
+  display: inline-flex;
+  padding: 0.22rem;
+  background: var(--ink);
+  border-radius: 999px;
+  gap: 0.15rem;
+}
+.board-switch button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #f6efe8;
+  font: inherit;
+  font-weight: 650;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  padding: 0.48rem 1.15rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.board-switch button[aria-selected="true"] {
+  background: #fffaf6;
+  color: var(--ink);
+}
+.board-switch button:hover { color: #fff; }
+.board-switch button[aria-selected="true"]:hover { color: var(--ink); }
+.board-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.seed-note {
+  margin: 0.9rem 0 0;
+  padding: 0.75rem 0.85rem;
+  background: #f6efe6;
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.stat-sub {
+  display: block;
+  margin-top: 0.28rem;
+  color: #cbb8ae;
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: pre-line;
+  letter-spacing: 0;
+}
+
 .wrap {
   max-width: var(--max);
   margin: 0 auto;
@@ -477,6 +534,8 @@ body.is-gated .site-footer { visibility: hidden; }
 @media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; }
   .lang { margin-left: 0; width: 100%; }
+  .board-switch { width: 100%; }
+  .board-switch button { flex: 1; }
   .header-inner { padding-inline: 0.9rem; }
   .wrap { padding-inline: 0.9rem; }
 }

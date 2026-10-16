@@ -6,7 +6,23 @@
     "topDescription": "Adults 18+ only. Public bestseller lists from 15 October 2026 (Shanghai time): Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Prices, ratings, and ranks are from that day.",
     "platformTitle": "Adult bestsellers by shop | snapshot 15 Oct 2026",
     "platformDescription": "Adults 18+ only. The same 15 October 2026 snapshot, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. Counts are what made the combined list.",
-    "ogImageAlt": "Qing List adult bestseller snapshot, 15 October 2026. Adults 18+ only."
+    "ogImageAlt": "Qing List adult bestseller snapshot, 15 October 2026. Adults 18+ only.",
+    "boards": {
+      "daily": {
+        "topTitle": "Today's adult bestsellers, top 20 | {period}",
+        "topDescription": "Adults 18+ only. Public bestsellers for {period} (Asia/Shanghai) from Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Waddy in Hong Kong. Prices, ratings, and ranks are whatever that day's file records.",
+        "platformTitle": "Today's adult bestsellers by shop | {period}",
+        "platformDescription": "Adults 18+ only. The {period} (Asia/Shanghai) daily chart, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. No extra products were added.",
+        "ogImageAlt": "Qing List, today's adult chart for {period}. Adults 18+ only."
+      },
+      "weekly": {
+        "topTitle": "This week's adult bestsellers, top 20 | {period}",
+        "topDescription": "Adults 18+ only. Public bestsellers for the Shanghai week {period} (Monday–Sunday), from the same shops. Prices, ratings, and ranks are whatever that week's file records.",
+        "platformTitle": "This week's adult bestsellers by shop | {period}",
+        "platformDescription": "Adults 18+ only. The {period} (Asia/Shanghai) weekly chart, grouped by shop. Same products as the combined list; nothing new was added.",
+        "ogImageAlt": "Qing List, this week's adult chart for {period}. Adults 18+ only."
+      }
+    }
   },
   "ui": {
     "skip": "Skip to content",
@@ -50,7 +66,22 @@
     "footerAge": "For adults aged 18 and over.",
     "footerSnapshot": "This is a snapshot of public bestseller lists, not medical or health advice, and not a recommendation to buy. Prices, stock, and ranks change — check the merchant before you order.",
     "footerLinks": "Outbound links use nofollow. Time zone Asia/Shanghai. Captured {time}.",
-    "footerData": "View the JSON data"
+    "footerData": "View the JSON data",
+    "boardLabel": "Today or this week",
+    "boardDaily": "Today",
+    "boardWeekly": "This week",
+    "boardDailyHint": "Public bestsellers for that date",
+    "boardWeeklyHint": "Monday–Sunday, Shanghai time",
+    "boardChanged": "Showing {name}",
+    "dateLabelDaily": "Chart date",
+    "dateLabelWeekly": "Week",
+    "periodRange": "{start} – {end}",
+    "isoWeek": "{week} · Monday–Sunday",
+    "asOf": "As of {date}",
+    "seedNote": "Today's chart and this week's chart are still the same copy of the combined top 20. Snapshot date {snapshot} ({tz}). Products, prices, ratings, and ranks were not newly researched. A later publish replaces {latest} in full and writes {archive}.",
+    "footerBoardData": "View this chart’s JSON",
+    "footerSnapshotData": "Combined snapshot",
+    "footerArchive": "Dated archive: {path}"
   },
   "notes": {
     "asin_verified": "The product code was checked against a public search.",
@@ -92,15 +123,30 @@
   },
   "pages": {
     "top": {
-      "h1": "Intimate wellness · combined top 20",
-      "lead": "Public lists that could be opened that day, side by side: independent brands, Amazon.com, and a Chinese-language Hong Kong shop. Only names, prices, ratings, and links that were actually on the page.",
-      "listTitle": "Products in this snapshot",
-      "cross": "Browse the same list by shop"
+      "daily": {
+        "h1": "Intimate bestsellers · today",
+        "lead": "Public lists for a single Shanghai date, side by side: independent brands, Amazon.com, and a Chinese-language Hong Kong shop. Only names, prices, ratings, and links from that file.",
+        "listTitle": "On today’s chart",
+        "cross": "Browse today’s chart by shop"
+      },
+      "weekly": {
+        "h1": "Intimate bestsellers · this week",
+        "lead": "Public bestsellers for a Monday–Sunday week in Shanghai time. Only names, prices, ratings, and links recorded in that week’s file.",
+        "listTitle": "On this week’s chart",
+        "cross": "Browse this week’s chart by shop"
+      }
     },
     "platform": {
-      "h1": "The same snapshot, by shop",
-      "lead": "The same 20 products from 15 October 2026, grouped by the shop they came from. The count is how many entered the combined list, not the full length of each shop’s own chart.",
-      "cross": "View the combined ranking"
+      "daily": {
+        "h1": "Today’s chart, by shop",
+        "lead": "The same 20 products from today’s chart, grouped by the shop they came from. The count is how many made the combined list, not the full length of each shop’s own chart.",
+        "cross": "View today’s combined ranking"
+      },
+      "weekly": {
+        "h1": "This week’s chart, by shop",
+        "lead": "The same 20 products from this week’s chart, grouped by the shop they came from. The count is how many made the combined list, not the full length of each shop’s own chart.",
+        "cross": "View this week’s combined ranking"
+      }
     }
   },
   "faq": {
@@ -117,11 +163,15 @@
       },
       {
         "q": "Are the prices still current?",
-        "a": "They are the figures from that day’s snapshot. Stock, discounts, and ranks move, so treat this as a record, not a live quote."
+        "a": "They match the day or the week printed on the chart (Asia/Shanghai). Stock, discounts, and ranks move, so treat this as a record, not a live quote."
       },
       {
         "q": "Who is this for?",
         "a": "Adults aged 18 and over. It is not medical or health advice, and it is not a suggestion that you should buy."
+      },
+      {
+        "q": "What’s the difference between today and this week?",
+        "a": "Today is one Shanghai date. This week is Monday through Sunday. The page opens on today; the switch at the top moves to this week. The latest files are data/daily-latest.json and data/weekly-latest.json. A routine publish replaces each file in full and keeps a dated archive. If the file includes a seed note, it is still a copy of the 15 October 2026 combined snapshot, not a newly researched chart."
       }
     ]
   },

@@ -8,15 +8,22 @@
   var PLATFORM_ORDER = ["dame", "amazon_us", "we_vibe", "womanizer", "lovense", "waddy_store"];
   var PAGE = document.body.getAttribute("data-page") || "top";
 
+  var DATA_URL = {
+    daily: "data/daily-latest.json",
+    weekly: "data/weekly-latest.json"
+  };
+
   var state = {
     lang: "zh-CN",
     dict: null,
     data: null,
     filter: "all",
-    ageOk: false
+    ageOk: false,
+    board: "daily"
   };
 
   var dictCache = {};
+  var dataCache = {};
   var gate = document.getElementById("age-gate");
   var live = document.getElementById("live");
 
@@ -32,6 +39,14 @@
     } catch (err) {
       return "zh-CN";
     }
+  }
+
+  function readBoard() {
+    try {
+      var value = new URLSearchParams(location.search).get("board");
+      if (value === "weekly" || value === "daily") return value;
+    } catch (err) {}
+    return "daily";
   }
 
   function localeFor(lang) {
@@ -63,12 +78,11 @@
   }
 
   function pageUrl(lang) {
+    var params = [];
+    if (state.board === "weekly") params.push("board=weekly");
+    if (lang && lang !== "zh-CN") params.push("lang=" + encodeURIComponent(lang));
     var path = pagePath();
-    var url = BASE + path;
-    if (lang && lang !== "zh-CN") {
-      url += (path.indexOf("?") === -1 ? "?" : "&") + "lang=" + encodeURIComponent(lang);
-    }
-    return url;
+    return BASE + path + (params.length ? "?" + params.join("&") : "");
   }
 
   function withLang(href) {
@@ -79,9 +93,13 @@
       hash = href.slice(cut);
       base = href.slice(0, cut);
     }
-    if (state.lang === "zh-CN") return base + hash;
+    var pageLink = /(?:^|\/)(?:index\.html|by-platform\.html)$/.test(base);
+    var extra = [];
+    if (pageLink && state.board === "weekly") extra.push("board=weekly");
+    if (state.lang !== "zh-CN") extra.push("lang=" + encodeURIComponent(state.lang));
+    if (!extra.length) return base + hash;
     var join = base.indexOf("?") === -1 ? "?" : "&";
-    return base + join + "lang=" + encodeURIComponent(state.lang) + hash;
+    return base + join + extra.join("&") + hash;
   }
 
   function absoluteImage(src) {
@@ -101,14 +119,17 @@
     return match ? match[1] : null;
   }
 
-  function writeUrl(lang) {
+  function writeUrl(lang, mode) {
     var url = new URL(location.href);
-    if (lang === "zh-CN") url.searchParams.delete("lang");
-    else url.searchParams.set("lang", lang);
-    var next = url.pathname + url.search + url.hash;
-    if (next !== location.pathname + location.search + location.hash) {
-      history.replaceState(null, "", next);
-    }
+    var hash = url.hash;
+    url.search = "";
+    if (state.board === "weekly") url.searchParams.set("board", "weekly");
+    if (lang !== "zh-CN") url.searchParams.set("lang", lang);
+    var next = url.pathname + url.search + hash;
+    var current = location.pathname + location.search + location.hash;
+    if (next === current) return;
+    if (mode === "push") history.pushState({ board: state.board, lang: lang }, "", next);
+    else history.replaceState({ board: state.board, lang: lang }, "", next);
   }
 
   function setBackgroundInert(on) {
@@ -124,11 +145,56 @@
     });
   }
 
+  function pageCopy() {
+    var pages = (state.dict && state.dict.pages) || {};
+    var page = pages[PAGE] || pages.top || {};
+    if (page.daily || page.weekly) return page[state.board] || page.daily || page;
+    return page;
+  }
+
+  function periodToken(data) {
+    var source = data || {};
+    var period = source.period || {};
+    if (period.start && period.end && period.start !== period.end) {
+      return period.start + "–" + period.end;
+    }
+    return source.date || period.label || period.start || "";
+  }
+
+  function resolvePageMeta(dict) {
+    var meta = (dict && dict.meta) || {};
+    var boards = meta.boards || {};
+    var pack = boards[state.board] || boards.daily || {};
+    var period = periodToken(state.data || {});
+    var title = PAGE === "platform" ? (pack.platformTitle || meta.platformTitle) : (pack.topTitle || meta.topTitle);
+    var description = PAGE === "platform" ? (pack.platformDescription || meta.platformDescription) : (pack.topDescription || meta.topDescription);
+    return {
+      title: fill(title || "", { period: period }),
+      description: fill(description || "", { period: period }),
+      alt: fill(pack.ogImageAlt || meta.ogImageAlt || "", { period: period })
+    };
+  }
+
+  function temporalCoverage(data) {
+    var period = (data && data.period) || {};
+    if (period.start && period.end) {
+      return period.start === period.end ? period.start : period.start + "/" + period.end;
+    }
+    return data && data.date;
+  }
+
+  function updateHreflang(lang) {
+    ["zh-CN", "en", "ja", "es", "x-default"].forEach(function (code) {
+      var node = document.querySelector('link[rel="alternate"][hreflang="' + code + '"]');
+      if (!node) return;
+      var target = code === "x-default" || code === "zh-CN" ? "zh-CN" : code;
+      node.setAttribute("href", pageUrl(target));
+    });
+  }
+
   function applyHead(dict, lang) {
     var meta = dict.meta;
-    var pageMeta = PAGE === "platform"
-      ? { title: meta.platformTitle, description: meta.platformDescription }
-      : { title: meta.topTitle, description: meta.topDescription };
+    var pageMeta = resolvePageMeta(dict);
     document.title = pageMeta.title;
     document.documentElement.lang = meta.htmlLang;
     setMeta("description", pageMeta.description);
@@ -138,12 +204,13 @@
     setMeta("og:url", pageUrl(lang), true);
     setMeta("twitter:title", pageMeta.title);
     setMeta("twitter:description", pageMeta.description);
-    if (meta.ogImageAlt) {
-      setMeta("og:image:alt", meta.ogImageAlt, true);
-      setMeta("twitter:image:alt", meta.ogImageAlt);
+    if (pageMeta.alt) {
+      setMeta("og:image:alt", pageMeta.alt, true);
+      setMeta("twitter:image:alt", pageMeta.alt);
     }
     var canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) canonical.setAttribute("href", pageUrl(lang));
+    updateHreflang(lang);
   }
 
   function setMeta(name, content, property) {
@@ -215,11 +282,82 @@
     return platforms[id] || { name: id, blurb: "" };
   }
 
+  function paintPeriod() {
+    var data = state.data;
+    var ui = state.dict && state.dict.ui;
+    if (!data || !ui) return;
+    var period = data.period || {};
+    var weekly = state.board === "weekly";
+    text("date-label", weekly ? ui.dateLabelWeekly : ui.dateLabelDaily);
+    if (weekly && period.start && period.end) {
+      text("stat-date", fill(ui.periodRange, {
+        start: formatDate(period.start, state.lang),
+        end: formatDate(period.end, state.lang)
+      }));
+    } else {
+      text("stat-date", formatDate(data.date, state.lang));
+    }
+    var sub = document.getElementById("stat-period-sub");
+    if (sub) {
+      if (weekly) {
+        var lines = [];
+        if (period.iso_week) lines.push(fill(ui.isoWeek, { week: period.iso_week }));
+        if (data.as_of) lines.push(fill(ui.asOf, { date: formatDate(data.as_of, state.lang) }));
+        sub.hidden = lines.length === 0;
+        sub.textContent = lines.join("\n");
+      } else {
+        sub.hidden = true;
+        sub.textContent = "";
+      }
+    }
+    text("stat-tz", data.timezone || "Asia/Shanghai");
+  }
+
+  function paintSeed() {
+    var node = document.getElementById("seed-note");
+    var ui = state.dict && state.dict.ui;
+    if (!node || !ui) return;
+    var data = state.data;
+    if (!data || !data.seed) {
+      node.hidden = true;
+      return;
+    }
+    var publish = data.publish || {};
+    node.hidden = false;
+    node.textContent = fill(ui.seedNote, {
+      snapshot: data.seed.snapshot_date || data.as_of || data.date,
+      tz: data.timezone || "Asia/Shanghai",
+      latest: publish.latest || "",
+      archive: publish.archive || ""
+    });
+  }
+
+  function paintBoardSwitch() {
+    var ui = state.dict && state.dict.ui;
+    if (!ui) return;
+    var group = document.getElementById("board-switch");
+    if (group) group.setAttribute("aria-label", ui.boardLabel);
+    var daily = document.getElementById("board-daily");
+    var weekly = document.getElementById("board-weekly");
+    if (daily) {
+      daily.textContent = ui.boardDaily;
+      daily.setAttribute("aria-selected", state.board === "daily" ? "true" : "false");
+      daily.tabIndex = state.board === "daily" ? 0 : -1;
+    }
+    if (weekly) {
+      weekly.textContent = ui.boardWeekly;
+      weekly.setAttribute("aria-selected", state.board === "weekly" ? "true" : "false");
+      weekly.tabIndex = state.board === "weekly" ? 0 : -1;
+    }
+    text("board-hint", state.board === "weekly" ? ui.boardWeeklyHint : ui.boardDailyHint);
+  }
+
   function paintChrome() {
     var dict = state.dict;
     var ui = dict.ui;
-    var page = dict.pages[PAGE] || dict.pages.top;
+    var page = pageCopy();
     var data = state.data;
+    document.body.setAttribute("data-board", state.board);
     text("brand-name", ui.brand);
     text("brand-sub", ui.brandSub);
     text("skip-link", ui.skip);
@@ -229,8 +367,10 @@
     text("hero-kicker", ui.heroKicker);
     text("hero-title", page.h1);
     text("hero-lead", page.lead);
-    text("date-label", ui.dateLabel);
     text("tz-label", ui.tzLabel);
+    paintBoardSwitch();
+    paintPeriod();
+    paintSeed();
     text("sort-label", ui.sortLabel);
     text("sort-rule", ui.sortRule);
     text("sources-label", ui.sourcesLabel);
@@ -247,10 +387,21 @@
     text("skipped-title", ui.skippedTitle);
     text("skipped-lead", ui.skippedLead);
     if (data) {
-      text("stat-date", formatDate(data.date, state.lang));
-      text("stat-tz", data.timezone || "Asia/Shanghai");
       text("foot-links", fill(ui.footerLinks, { time: data.generated_at }));
+      var archive = document.getElementById("foot-archive");
+      if (archive) {
+        var archivePath = data.publish && data.publish.archive;
+        archive.hidden = !archivePath;
+        archive.textContent = archivePath ? fill(ui.footerArchive, { path: archivePath }) : "";
+      }
     }
+    var footData = document.getElementById("foot-data");
+    if (footData) {
+      footData.textContent = ui.footerBoardData || ui.footerData;
+      footData.setAttribute("href", DATA_URL[state.board] || DATA_URL.daily);
+    }
+    var footSnapshot = document.getElementById("foot-snapshot-data");
+    if (footSnapshot) footSnapshot.textContent = ui.footerSnapshotData || ui.footerData;
     text("list-title", page.listTitle);
     text("faq-title", dict.faq && dict.faq.title);
     text("faq-lead", dict.faq && dict.faq.lead);
@@ -329,9 +480,7 @@
     var slot = document.getElementById("ld-json");
     if (!dict || !data || !slot) return;
     var meta = dict.meta;
-    var pageMeta = PAGE === "platform"
-      ? { title: meta.platformTitle, description: meta.platformDescription }
-      : { title: meta.topTitle, description: meta.topDescription };
+    var pageMeta = resolvePageMeta(dict);
     var page = pageUrl(state.lang);
     var items = data.items || [];
     var faqEntities = ((dict.faq && dict.faq.items) || []).map(function (item) {
@@ -353,6 +502,7 @@
           "inLanguage": meta.htmlLang,
           "isFamilyFriendly": false,
           "dateModified": data.date,
+          "temporalCoverage": temporalCoverage(data),
           "audience": { "@type": "PeopleAudience", "requiredMinAge": 18 },
           "primaryImageOfPage": {
             "@type": "ImageObject",
@@ -577,14 +727,62 @@
     });
   }
 
-  function loadData() {
-    if (state.data) return Promise.resolve(state.data);
-    return fetch("data.json", { credentials: "same-origin" }).then(function (res) {
+  function loadData(board) {
+    var key = board === "weekly" ? "weekly" : "daily";
+    if (dataCache[key]) return Promise.resolve(dataCache[key]);
+    return fetch(DATA_URL[key], { credentials: "same-origin" }).then(function (res) {
       if (!res.ok) throw new Error("data");
       return res.json();
     }).then(function (json) {
-      state.data = json;
+      dataCache[key] = json;
       return json;
+    });
+  }
+
+  function trackView() {
+    if (typeof window.gtag !== "function") return;
+    var url = pageUrl(state.lang);
+    window.gtag("event", "page_view", {
+      page_title: document.title,
+      page_location: url,
+      page_path: url.replace(BASE, "") || "/"
+    });
+  }
+
+  function switchBoard(board, announce) {
+    if (board !== "daily" && board !== "weekly") board = "daily";
+    if (board === state.board && state.data && state.data.board === board) {
+      paintBoardSwitch();
+      return Promise.resolve(state.data);
+    }
+    var previous = state.board;
+    state.board = board;
+    writeUrl(state.lang, "push");
+    if (state.dict) paintBoardSwitch();
+    if (!dataCache[board] && state.dict) {
+      showStatus(state.dict.ui.loading, false);
+    }
+    return loadData(board).then(function (data) {
+      state.data = data;
+      if (state.dict) {
+        applyHead(state.dict, state.lang);
+        render();
+        trackView();
+        if (announce && live && state.dict.ui.boardChanged) {
+          var name = board === "weekly" ? state.dict.ui.boardWeekly : state.dict.ui.boardDaily;
+          live.textContent = fill(state.dict.ui.boardChanged, { name: name });
+        }
+        var selected = document.getElementById(board === "weekly" ? "board-weekly" : "board-daily");
+        if (announce && selected) selected.focus();
+      }
+      return data;
+    }).catch(function (err) {
+      state.board = previous;
+      writeUrl(state.lang, "replace");
+      if (dataCache[previous]) state.data = dataCache[previous];
+      if (state.dict) paintBoardSwitch();
+      fail();
+      throw err;
     });
   }
 
@@ -604,6 +802,7 @@
       state.dict = dict;
       applyHead(dict, lang);
       render();
+      if (announce) trackView();
       if (announce && live) {
         live.textContent = dict.ui.langChanged;
       }
@@ -634,6 +833,52 @@
         var next = button.getAttribute("data-lang");
         if (next && next !== state.lang) applyLanguage(next, true).catch(fail);
       });
+    });
+    document.querySelectorAll("#board-switch [data-board]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var next = button.getAttribute("data-board");
+        if (next) switchBoard(next, true).catch(function () {});
+      });
+    });
+    var boardSwitch = document.getElementById("board-switch");
+    if (boardSwitch) {
+      boardSwitch.addEventListener("keydown", function (event) {
+        var next = null;
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+          next = state.board === "daily" ? "weekly" : "daily";
+        } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+          next = state.board === "weekly" ? "daily" : "weekly";
+        } else if (event.key === "Home") {
+          next = "daily";
+        } else if (event.key === "End") {
+          next = "weekly";
+        }
+        if (!next) return;
+        event.preventDefault();
+        switchBoard(next, true).catch(function () {});
+      });
+    }
+    window.addEventListener("popstate", function () {
+      var board = readBoard();
+      var lang = readLang();
+      var boardChanged = board !== state.board;
+      var langChanged = lang !== state.lang;
+      if (!boardChanged && !langChanged) return;
+      state.board = board;
+      var tasks = [];
+      if (langChanged) {
+        tasks.push(loadDict(lang).then(function (dict) {
+          state.dict = dict;
+          state.lang = lang;
+        }));
+      }
+      if (boardChanged) {
+        tasks.push(loadData(board).then(function (data) { state.data = data; }));
+      }
+      Promise.all(tasks).then(function () {
+        applyHead(state.dict, state.lang);
+        render();
+      }).catch(fail);
     });
     var enter = document.getElementById("age-enter");
     var leave = document.getElementById("age-leave");
@@ -671,11 +916,13 @@
       setBackgroundInert(false);
     }
     var lang = readLang();
+    state.board = readBoard();
     try { localStorage.setItem(LANG_KEY, lang); } catch (err) {}
     writeUrl(lang);
-    Promise.all([loadDict(lang), loadData()]).then(function (result) {
+    Promise.all([loadDict(lang), loadData(state.board)]).then(function (result) {
       state.lang = lang;
       state.dict = result[0];
+      state.data = result[1];
       applyHead(result[0], lang);
       render();
       if (!state.ageOk) {

@@ -6,7 +6,23 @@
     "topDescription": "仅限 18 周岁以上。汇总 2026 年 10 月 15 日（上海时间）Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy 的公开热销。价格、评分和名次都来自当天页面。",
     "platformTitle": "分平台成人热销｜Amazon、Dame、Lovense 等｜2026-10-15",
     "platformDescription": "仅限成年人。同一份 2026-10-15 快照，按 Amazon、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy 分开查看，不另编商品。",
-    "ogImageAlt": "青榜：2026 年 10 月 15 日成人热销快照，仅限 18 周岁以上"
+    "ogImageAlt": "青榜：2026 年 10 月 15 日成人热销快照，仅限 18 周岁以上",
+    "boards": {
+      "daily": {
+        "topTitle": "成人情趣日榜 Top 20｜{period}（上海时间）",
+        "topDescription": "仅限 18 周岁以上。{period}（Asia/Shanghai）的公开热销日榜，汇总 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy。价格、评分和名次以该日榜文件为准。",
+        "platformTitle": "分平台成人日榜｜{period}（上海时间）",
+        "platformDescription": "仅限成年人。{period}（Asia/Shanghai）的日榜，按 Amazon、Dame、Lovense、We-Vibe、Womanizer 与香港 Waddy 分开查看，不另编商品。",
+        "ogImageAlt": "青榜日榜：{period} 成人热销，仅限 18 周岁以上"
+      },
+      "weekly": {
+        "topTitle": "成人情趣周榜 Top 20｜{period}（上海时间）",
+        "topDescription": "仅限 18 周岁以上。{period}（Asia/Shanghai，周一至周日）的公开热销周榜，来源同上。价格、评分和名次以该周榜文件为准。",
+        "platformTitle": "分平台成人周榜｜{period}（上海时间）",
+        "platformDescription": "仅限成年人。{period}（Asia/Shanghai）的周榜按店铺分开。商品与综合榜相同，没有另编。",
+        "ogImageAlt": "青榜周榜：{period} 成人热销，仅限 18 周岁以上"
+      }
+    }
   },
   "ui": {
     "skip": "跳到主要内容",
@@ -50,7 +66,22 @@
     "footerAge": "仅供年满 18 周岁的成年人浏览。",
     "footerSnapshot": "本页是各平台公开热销榜的整理快照，不是医疗或健康建议，也不代表推荐购买。价格、库存和名次都会变，下单前请回到商家页面核对。",
     "footerLinks": "外链使用 nofollow。数据时区 Asia/Shanghai，抓取时间 {time}。",
-    "footerData": "查看 JSON 数据"
+    "footerData": "查看 JSON 数据",
+    "boardLabel": "日榜或周榜",
+    "boardDaily": "日榜",
+    "boardWeekly": "周榜",
+    "boardDailyHint": "当天的公开热销",
+    "boardWeeklyHint": "周一到周日，以上海时间计",
+    "boardChanged": "已切换到{name}",
+    "dateLabelDaily": "榜单日期",
+    "dateLabelWeekly": "统计周",
+    "periodRange": "{start} – {end}",
+    "isoWeek": "{week} · 周一至周日",
+    "asOf": "数据截至 {date}",
+    "seedNote": "日榜和周榜目前仍是同一份综合 Top 20 的副本，快照日 {snapshot}（{tz}）。商品、价格、评分和名次没有另编。例行发布会整份覆盖 {latest}，并写入 {archive}。",
+    "footerBoardData": "查看当前榜单 JSON",
+    "footerSnapshotData": "综合快照",
+    "footerArchive": "日期归档：{path}"
   },
   "notes": {
     "asin_verified": "商品编号曾通过公开检索核对。",
@@ -92,15 +123,30 @@
   },
   "pages": {
     "top": {
-      "h1": "成人亲密好物 · 综合热销 20 名",
-      "lead": "把几家当天能打开的公开榜放在一起：海外独立品牌、亚马逊美国站，以及香港店的中文热卖。只保留核对到的名称、价格、评分和链接。",
-      "listTitle": "本次上榜的 20 款",
-      "cross": "按店铺查看同一份名单"
+      "daily": {
+        "h1": "成人亲密好物 · 日榜 20 名",
+        "lead": "按上海时间的当天，把几家能打开的公开热销放在一起：海外独立品牌、亚马逊美国站，以及香港店。只保留名称、价格、评分和链接。",
+        "listTitle": "日榜上的 20 款",
+        "cross": "按店铺查看这份日榜"
+      },
+      "weekly": {
+        "h1": "成人亲密好物 · 周榜 20 名",
+        "lead": "按上海时间的自然周（周一到周日）看公开热销。只保留这份周榜文件里的名称、价格、评分和链接。",
+        "listTitle": "周榜上的 20 款",
+        "cross": "按店铺查看这份周榜"
+      }
     },
     "platform": {
-      "h1": "同一份快照，按店铺分开",
-      "lead": "还是 2026 年 10 月 15 日的那 20 款，只是按来源店铺分组。括号里是进入综合榜的数量，不是该店榜单的全部长度。",
-      "cross": "查看综合排序"
+      "daily": {
+        "h1": "日榜，按店铺分开",
+        "lead": "还是这份日榜里的 20 款，只是按来源店铺分组。括号里是进入综合榜的数量，不是该店榜单的全部长度。",
+        "cross": "查看日榜综合排序"
+      },
+      "weekly": {
+        "h1": "周榜，按店铺分开",
+        "lead": "还是这份周榜里的 20 款，只是按来源店铺分组。括号里是进入综合榜的数量，不是该店榜单的全部长度。",
+        "cross": "查看周榜综合排序"
+      }
     }
   },
   "faq": {
@@ -117,11 +163,15 @@
       },
       {
         "q": "这里的价格还准吗？",
-        "a": "只代表那一天的快照。库存、折扣和名次都会变，不能当成实时报价。"
+        "a": "只对得上榜单标明的那一天或那一周（Asia/Shanghai）。库存、折扣和名次都会变，不能当成实时报价。"
       },
       {
         "q": "谁可以看这个页面？",
         "a": "仅限年满 18 周岁的成年人。内容不是医疗或健康建议，也不代替你决定买不买。"
+      },
+      {
+        "q": "日榜和周榜怎么分？",
+        "a": "日榜是上海时间的一天，周榜是周一到周日的一周。打开页面时先看到日榜，页首可以改看周榜。两份最新数据在 data/daily-latest.json 和 data/weekly-latest.json；例行更新会整份覆盖，并按日期另存归档。数据里若带有 seed 说明，表示它仍是 2026-10-15 综合快照的副本，不是另编的榜。"
       }
     ]
   },

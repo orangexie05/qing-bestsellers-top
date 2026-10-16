@@ -6,7 +6,23 @@
     "topDescription": "Solo mayores de 18 años. Listas públicas del 15 de octubre de 2026 (hora de Shanghái): Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Precios, valoraciones y puestos son de ese día.",
     "platformTitle": "Más vendidos para adultos por tienda | 15 oct 2026",
     "platformDescription": "Solo mayores de 18 años. La misma instantánea del 15 de octubre de 2026, separada por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy.",
-    "ogImageAlt": "Lista Qing, instantánea de más vendidos para adultos del 15 de octubre de 2026. Solo mayores de 18."
+    "ogImageAlt": "Lista Qing, instantánea de más vendidos para adultos del 15 de octubre de 2026. Solo mayores de 18.",
+    "boards": {
+      "daily": {
+        "topTitle": "Más vendidos de hoy, top 20 | {period}",
+        "topDescription": "Solo mayores de 18 años. Los más vendidos públicos del {period} (Asia/Shanghai): Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy en Hong Kong. Precios, valoraciones y puestos son los de ese archivo del día.",
+        "platformTitle": "Más vendidos de hoy por tienda | {period}",
+        "platformDescription": "Solo mayores de 18 años. La lista de hoy del {period} (Asia/Shanghai), separada por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy. No se añadieron productos.",
+        "ogImageAlt": "Lista Qing, más vendidos de hoy del {period}. Solo mayores de 18."
+      },
+      "weekly": {
+        "topTitle": "Más vendidos de la semana, top 20 | {period}",
+        "topDescription": "Solo mayores de 18 años. Los más vendidos públicos de la semana {period} (lunes a domingo, hora de Shanghái), de las mismas tiendas. Precios, valoraciones y puestos son los de ese archivo semanal.",
+        "platformTitle": "Más vendidos de la semana por tienda | {period}",
+        "platformDescription": "Solo mayores de 18 años. La lista semanal del {period} (Asia/Shanghai), separada por tienda. Mismos productos que la lista combinada; no se inventó ninguno.",
+        "ogImageAlt": "Lista Qing, más vendidos de la semana del {period}. Solo mayores de 18."
+      }
+    }
   },
   "ui": {
     "skip": "Saltar al contenido",
@@ -50,7 +66,22 @@
     "footerAge": "Destinado a personas de 18 años o más.",
     "footerSnapshot": "Es una instantánea de listas públicas de más vendidos, no un consejo médico ni de salud, y no es una recomendación de compra. Los precios, el stock y los puestos cambian: compruébalos en la tienda antes de pedir.",
     "footerLinks": "Los enlaces externos usan nofollow. Zona horaria Asia/Shanghai. Captura: {time}.",
-    "footerData": "Ver los datos JSON"
+    "footerData": "Ver los datos JSON",
+    "boardLabel": "Hoy o esta semana",
+    "boardDaily": "Hoy",
+    "boardWeekly": "Esta semana",
+    "boardDailyHint": "Los más vendidos de esa fecha",
+    "boardWeeklyHint": "De lunes a domingo, hora de Shanghái",
+    "boardChanged": "Ahora ves: {name}",
+    "dateLabelDaily": "Fecha",
+    "dateLabelWeekly": "Semana",
+    "periodRange": "{start} – {end}",
+    "isoWeek": "{week} · de lunes a domingo",
+    "asOf": "Con datos al {date}",
+    "seedNote": "La de hoy y la de la semana siguen siendo la misma copia del top 20 combinado. Fecha de la instantánea: {snapshot} ({tz}). No se inventaron productos, precios, valoraciones ni puestos. Una publicación posterior sustituye {latest} por completo y guarda {archive}.",
+    "footerBoardData": "Ver el JSON de esta lista",
+    "footerSnapshotData": "Instantánea combinada",
+    "footerArchive": "Archivo con fecha: {path}"
   },
   "notes": {
     "asin_verified": "El código del producto se contrastó con una búsqueda pública.",
@@ -92,15 +123,30 @@
   },
   "pages": {
     "top": {
-      "h1": "Bienestar íntimo · top 20 combinado",
-      "lead": "Listas públicas que se pudieron abrir ese día: marcas independientes, Amazon.com y una tienda en chino de Hong Kong. Solo nombres, precios, valoraciones y enlaces que estaban en la página.",
-      "listTitle": "Productos de esta instantánea",
-      "cross": "Ver la misma lista por tienda"
+      "daily": {
+        "h1": "Más vendidos íntimos · hoy",
+        "lead": "Listas públicas de una sola fecha en hora de Shanghái: marcas independientes, Amazon.com y una tienda en chino de Hong Kong. Solo nombres, precios, valoraciones y enlaces de ese archivo.",
+        "listTitle": "En la lista de hoy",
+        "cross": "Ver la de hoy por tienda"
+      },
+      "weekly": {
+        "h1": "Más vendidos íntimos · esta semana",
+        "lead": "Los más vendidos públicos de una semana de lunes a domingo, en hora de Shanghái. Solo nombres, precios, valoraciones y enlaces que figuran en el archivo de esa semana.",
+        "listTitle": "En la lista de la semana",
+        "cross": "Ver la semana por tienda"
+      }
     },
     "platform": {
-      "h1": "La misma instantánea, por tienda",
-      "lead": "Los mismos 20 productos del 15 de octubre de 2026, agrupados por la tienda de origen. El número es cuántos entraron en la lista combinada, no la longitud completa del ranking de cada tienda.",
-      "cross": "Ver el orden combinado"
+      "daily": {
+        "h1": "La de hoy, por tienda",
+        "lead": "Los mismos 20 productos de la lista de hoy, agrupados por la tienda de origen. El número es cuántos entraron en la lista combinada, no la longitud completa del ranking de cada tienda.",
+        "cross": "Ver el orden de hoy"
+      },
+      "weekly": {
+        "h1": "La de la semana, por tienda",
+        "lead": "Los mismos 20 productos de la lista semanal, agrupados por la tienda de origen. El número es cuántos entraron en la lista combinada, no la longitud completa del ranking de cada tienda.",
+        "cross": "Ver el orden de la semana"
+      }
     }
   },
   "faq": {
@@ -117,11 +163,15 @@
       },
       {
         "q": "¿Los precios siguen vigentes?",
-        "a": "Son los de esa instantánea. El stock, los descuentos y los puestos cambian; no es una cotización en vivo."
+        "a": "Corresponden al día o a la semana que indica la lista (Asia/Shanghai). El stock, los descuentos y los puestos cambian; no es una cotización en vivo."
       },
       {
         "q": "¿Para quién es la página?",
         "a": "Solo para mayores de 18 años. No es un consejo médico ni de salud, y no recomienda comprar."
+      },
+      {
+        "q": "¿En qué se distinguen la de hoy y la de la semana?",
+        "a": "La de hoy es un día en hora de Shanghái. La de la semana va de lunes a domingo. La página abre en la de hoy; el cambio de arriba pasa a la semana. Los archivos vigentes son data/daily-latest.json y data/weekly-latest.json. Una publicación rutinaria sustituye cada archivo por completo y guarda una copia con fecha. Si el archivo trae una nota seed, sigue siendo una copia de la instantánea combinada del 15 de octubre de 2026, no una lista investigada aparte."
       }
     ]
   },
