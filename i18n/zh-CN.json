@@ -90,13 +90,13 @@
     "navAbout": "关于",
     "navMethod": "方法",
     "navFaq": "FAQ",
-    "footerSources": "来源以每期 JSON 为准。设计上包括淘宝 / 天猫、Amazon 和独立品牌店。2026-10-16 实际收录 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫仍未收录。",
+    "footerSources": "来源以每期 JSON 为准。设计上包括淘宝 / 天猫、Amazon 和独立品牌店。2026-10-17 实际收录 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫仍未收录。",
     "footerCadence": "更新频率：日榜按上海时间每天整份更新。周榜在同一 ISO 周有两份或更多日榜时由这些日榜汇总；只有一份日榜时，周榜仍可能是带 seed 的副本，页面会写明。",
     "footerAbout": "关于本站",
     "footerMethod": "数据方法",
     "footerFaq": "常见问题",
     "footerLinksFixed": "外链使用 nofollow。数据时区 Asia/Shanghai。",
-    "footerArchiveFixed": "可读归档：archive/index.html。JSON：data/archive/daily/2026-10-16.json · data/archive/weekly/2026-W42.json",
+    "footerArchiveFixed": "可读归档：archive/index.html。JSON：data/archive/daily/2026-10-17.json · data/archive/weekly/2026-W42.json",
     "geoLabel": "本页摘要",
     "navArchive": "归档",
     "navPrivacy": "隐私",
@@ -340,7 +340,7 @@
             "日榜按 Asia/Shanghai 的自然日更新。例行发布会整份覆盖 data/daily-latest.json，并把同一份文件写到 data/daily-YYYY-MM-DD.json 和 data/archive/daily/YYYY-MM-DD.json。不与旧条目合并。",
             "周榜按 Asia/Shanghai 的周一至周日（ISO 周）更新。例行发布会整份覆盖 data/weekly-latest.json，并写入 data/archive/weekly/YYYY-Www.json。",
             "日榜文件在 2026-10-16T10:59:47+08:00 形成第一版，同日 2026-10-16T17:03:22+08:00 并入香港店后重写。页面上的价格和名次对得上文件里的日期，不是打开页面这一刻的实时库存。",
-            "周榜不会停在“把某一天复制成一周”当作最终做法。scripts/build_weekly.py 查看 data/archive/daily/。同一个 ISO 周（上海时间，周一至周日）若有两份或更多日榜，就按商品链接去重，用出现天数、平均店内名次和最好店内名次汇总，写下 data/weekly-latest.json 和 data/archive/weekly/YYYY-Www.json，并且不写 seed。2026-W42 使用了 2026-10-15 与 2026-10-16，所以是汇总，不是副本。若某一周只有一份日榜，脚本不改写已有周榜；那种文件若仍带 seed，页面会写明它是那天日榜的副本。"
+            "周榜不会停在“把某一天复制成一周”当作最终做法。scripts/build_weekly.py 查看 data/archive/daily/。同一个 ISO 周（上海时间，周一至周日）若有两份或更多日榜，就按商品链接去重，用出现天数、平均店内名次和最好店内名次汇总，写下 data/weekly-latest.json 和 data/archive/weekly/YYYY-Www.json，并且不写 seed。2026-W42 使用了 2026-10-15、2026-10-16 与 2026-10-17，所以是汇总，不是副本。若某一周只有一份日榜，脚本不改写已有周榜；那种文件若仍带 seed，页面会写明它是那天日榜的副本。"
           ]
         },
         {
@@ -360,7 +360,7 @@
             "这不是全网销量，也不是淘宝、天猫或 Amazon 的官方总榜。",
             "只保留抓取时能打开、并且有商品链接的条目。没有链接的展示（例如 2026-10-16 日榜里 Lovense 首页轮播的 Lush 4 / Lush Mini）记在 omissions，不进 Top 20。",
             "价格、库存、折扣和名次都会变。标成 “As low as” 的数字是该页展示的起步价。",
-            "若周榜 JSON 带有 seed，它是某一天日榜的副本，不是单独统计的一周销量。2026-W42 没有 seed：它由 2026-10-15 与 2026-10-16 两份日榜汇总。只有一份日榜的周，仍可能是 seed。",
+            "若周榜 JSON 带有 seed，它是某一天日榜的副本，不是单独统计的一周销量。2026-W42 没有 seed：它由 2026-10-15、2026-10-16 与 2026-10-17 三份日榜汇总。只有一份日榜的周，仍可能是 seed。",
             "外链使用 nofollow。本站不收款、不发货、不提供医疗或健康建议，也不代替你决定买不买。"
           ]
         }
@@ -395,11 +395,11 @@
       "items": [
         {
           "q": "数据从哪里来？",
-          "a": "来自抓取时能打开的公开热销页。设计上的来源包括淘宝 / 天猫、Amazon，以及独立品牌店和地区店。2026-10-16 实际进入榜单的是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫同日是 JavaScript 搜索壳，没有商品行，所以没有编造淘宝商品。原始文件在 data/daily-latest.json 和 data/weekly-latest.json。"
+          "a": "来自抓取时能打开的公开热销页。设计上的来源包括淘宝 / 天猫、Amazon，以及独立品牌店和地区店。2026-10-17 实际进入榜单的是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫这一天没有重抓；此前打开的是 JavaScript 搜索壳，没有商品行，所以没有编造淘宝商品。原始文件在 data/daily-latest.json 和 data/weekly-latest.json。"
         },
         {
           "q": "多久更新一次？",
-          "a": "日榜按上海时间每个自然日整份更新。周榜在同一 ISO 周有两份或更多日榜时，用 scripts/build_weekly.py 按商品链接汇总，不再把单日副本当作那一周的最终结果。只有一份日榜时，周榜仍可能带 seed，页面会写明。当前日榜文件写于 2026-10-16T17:03:22+08:00。"
+          "a": "日榜按上海时间每个自然日整份更新。周榜在同一 ISO 周有两份或更多日榜时，用 scripts/build_weekly.py 按商品链接汇总，不再把单日副本当作那一周的最终结果。只有一份日榜时，周榜仍可能带 seed，页面会写明。当前日榜文件写于 2026-10-17T10:44:14+08:00。"
         },
         {
           "q": "怎么读这份榜？",
@@ -415,7 +415,7 @@
         },
         {
           "q": "日榜和周榜有什么不同？",
-          "a": "日榜是上海时间的一天，周榜是周一到周日。首页默认是日榜；?board=weekly 是周榜。带 seed 的周榜是某一天日榜的副本。2026-W42 没有 seed，它汇总了 2026-10-15 与 2026-10-16，对应 2026-10-12 至 2026-10-18。"
+          "a": "日榜是上海时间的一天，周榜是周一到周日。首页默认是日榜；?board=weekly 是周榜。带 seed 的周榜是某一天日榜的副本。2026-W42 没有 seed，它汇总了 2026-10-15、2026-10-16 与 2026-10-17，对应 2026-10-12 至 2026-10-18。"
         },
         {
           "q": "这里的价格还准吗？",
@@ -582,7 +582,7 @@
           "h2": "怎么读",
           "paragraphs": [
             "日榜文件名是上海时间的日期。周榜文件名是 ISO 周，周一到周日。若周榜 JSON 带有 seed，那一页会写明它是某一天日榜的副本。若写明由多份日榜汇总，就不是 seed。",
-            "2026-W42 由 2026-10-15 与 2026-10-16 两份日榜汇总，不是单日副本。"
+            "2026-W42 由 2026-10-15、2026-10-16 与 2026-10-17 三份日榜汇总，不是单日副本。"
           ]
         }
       ]
@@ -594,11 +594,11 @@
     "items": [
       {
         "q": "这是购物网站吗？",
-        "a": "不是。青榜把 2026 年 10 月 16 日能打开的公开热销页整理在一起，方便对照商品名称、价格和评分。要下单，请回到商家自己的页面核对。"
+        "a": "不是。青榜把 2026 年 10 月 17 日能打开的公开热销页整理在一起，方便对照商品名称、价格和评分。要下单，请回到商家自己的页面核对。"
       },
       {
         "q": "榜上有哪些店铺？",
-        "a": "2026-10-16 这一期是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫没有商品行。没能收录的来源写在页面末尾，没有拿别的数据来凑数。"
+        "a": "2026-10-17 这一期是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫没有商品行。没能收录的来源写在页面末尾，没有拿别的数据来凑数。"
       },
       {
         "q": "这里的价格还准吗？",
@@ -715,6 +715,66 @@
       "display": "Touch X 手持按摩器",
       "blurb": "We-Vibe 美国站热销第 4 名，手持按摩器。价格与评分按快照原样展示。",
       "alt": "We-Vibe Touch X 的商品图片"
+    },
+    "lovense-gush-2-motion-remote-controlled-penis-vibrator": {
+      "display": "Gush 2 Motion 男士按摩器",
+      "blurb": "Lovense 首页旗舰轮播的第 1 名。标价和评分来自当天商品页。尺寸与功能以商品页为准。",
+      "alt": "Lovense Gush 2 Motion 的商品图片"
+    },
+    "lovense-solace-pro-ai-automatic-blowjob-machine-men": {
+      "display": "Solace Pro 男士器具",
+      "blurb": "Lovense 首页旗舰轮播的第 2 名，面向男士。当天商品页的售价低于划线价。评分来自该页，本页不补充用法。",
+      "alt": "Lovense Solace Pro 的商品图片"
+    },
+    "lesplay_hk-roomfun-double-vibration-wearable-dildo-set": {
+      "display": "Roomfun 双人穿戴套装",
+      "blurb": "Les'Play 香港畅销分类里，当天有标价的第 1 条。店名写的是双人穿戴套装。该页没有评分。",
+      "alt": "Roomfun 双人穿戴套装的零售页商品图片"
+    },
+    "lesplay_hk-kisstoy-pupu-app-controlled-suction-vibrator-set": {
+      "display": "Kisstoy PUPU 遥控套装",
+      "blurb": "Les'Play 香港畅销分类第 2 条。店名写明可用手机遥控。该页没有评分，参数以商品页为准。",
+      "alt": "Kisstoy PUPU 遥控套装的零售页商品图片"
+    },
+    "sexconcept_hk-fuji-world-seigi48-karakuri-dolls-ninja-position": {
+      "display": "凸凹堂 二つ巴 机械摆件",
+      "blurb": "Sex Concept 香港畅销第 1 名。这是一套动力机械摆件，不是贴身器具。标价是当天的折扣价，页面没有评分。",
+      "alt": "凸凹堂二つ巴机械摆件的零售页商品图片，仅限成年人"
+    },
+    "sexconcept_hk-fuji-world-seigi48-miyama-clock-work-ukiyo-e-nin": {
+      "display": "凸凹堂 深山 机械摆件",
+      "blurb": "Sex Concept 香港畅销第 2 名。同样是动力机械摆件。标价是当天的折扣价，页面没有评分。",
+      "alt": "凸凹堂深山机械摆件的零售页商品图片，仅限成年人"
+    },
+    "sistalk_hk-monster-pub-wiwi-fish-tail-antibacterial-vibrato": {
+      "display": "小怪兽 鱼摆摆",
+      "blurb": "SISTALK 香港热卖分类第 1 名。店名是鱼尾造型的震动器。该页没有评分。",
+      "alt": "小怪兽鱼摆摆的零售页商品图片"
+    },
+    "sistalk_hk-orgasm-150ml": {
+      "display": "HARU 热感润滑液 150ml",
+      "blurb": "SISTALK 香港热卖第 2 名，150ml 装。店家标题把用途写得很直接。本页不介绍成分或效果，请只在商家页面阅读。",
+      "alt": "HARU 150ml 润滑液的零售页商品图片"
+    },
+    "waddy-lelo-f1s-v3-male-masturbators": {
+      "display": "LELO F1S V3",
+      "blurb": "Waddy 首页男士 TOP 10 里，当天能确认商品链接的第一条。店名写明可用 App 控制。这一栏没有评分。",
+      "alt": "LELO F1S V3 的零售页商品图片，仅限成年人"
+    },
+    "waddy-erocome-antlia-masturbator-black": {
+      "display": "Erocome Antlia 黑色",
+      "blurb": "Waddy 首页男士 TOP 10 里，下一条能确认链接的商品，黑色款。该栏没有评分。",
+      "alt": "Erocome Antlia 黑色款的零售页商品图片，仅限成年人"
+    },
+    "amazon-b0cnrzvjmg": {
+      "display": "MOOLIGIRL 玫瑰按摩器",
+      "blurb": "亚马逊美国站热销第 2 名，玫瑰造型的按摩器。按钮打开的是这条商品页。榜单标题很长，下面保留原文。",
+      "alt": "MOOLIGIRL 玫瑰按摩器的商品图片"
+    },
+    "amazon-b0fykhc327": {
+      "display": "plusOne 迷你按摩器",
+      "blurb": "亚马逊美国站热销第 3 名，迷你按摩器。按钮打开的是这条商品页。标题里的参数请回到亚马逊核对。",
+      "alt": "plusOne 迷你按摩器的商品图片"
     }
   }
 }

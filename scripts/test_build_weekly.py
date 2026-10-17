@@ -19,12 +19,12 @@ def test_real_week() -> None:
     dailies = [doc for _day, _path, doc in boardlib.iter_daily_archives()]
     doc = boardlib.aggregate_dailies(dailies, "2026-10-16T17:03:22+08:00")
     if not doc:
-        fail("expected an aggregate for the two October dailies")
+        fail("expected an aggregate for the October dailies")
     if "seed" in doc:
         fail("aggregated week must not carry seed")
     if doc["period"]["iso_week"] != "2026-W42":
         fail(doc["period"]["iso_week"])
-    if doc["aggregation"]["daily_dates"] != ["2026-10-15", "2026-10-16"]:
+    if doc["aggregation"]["daily_dates"] != ["2026-10-15", "2026-10-16", "2026-10-17"]:
         fail(str(doc["aggregation"]["daily_dates"]))
     if len(doc["items"]) != 20:
         fail(f"expected 20 items, got {len(doc['items'])}")
@@ -36,7 +36,7 @@ def test_real_week() -> None:
         if not item.get("product_url"):
             fail("missing url")
     hug = next(item for item in doc["items"] if item["id"] == "dame-hug")
-    if hug["appearances"] != 2:
+    if hug["appearances"] != 3:
         fail(f"hug appearances {hug['appearances']}")
     one_day = [item for item in doc["items"] if item["appearances"] == 1]
     if not one_day:

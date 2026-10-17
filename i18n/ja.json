@@ -90,13 +90,13 @@
     "navAbout": "このサイト",
     "navMethod": "方法",
     "navFaq": "FAQ",
-    "footerSources": "各回は対応する JSON に従います。設計上は淘宝 / 天猫、Amazon、インディーズ店舗を含みます。2026-10-16 に入っているのは Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫はまだありません。",
+    "footerSources": "各回は対応する JSON に従います。設計上は淘宝 / 天猫、Amazon、インディーズ店舗を含みます。2026-10-17 に入っているのは Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫はまだありません。",
     "footerCadence": "更新：デイリーは上海時間の一日ごとにファイルを差し替えます。週間は、同じ ISO 週にデイリーが 2 件以上あるとき、それらをまとめて作ります。1 件だけの週は seed 付きの写しのままで、ページにその旨を書きます。",
     "footerAbout": "このサイトについて",
     "footerMethod": "データの方法",
     "footerFaq": "よくある質問",
     "footerLinksFixed": "外部リンクは nofollow です。時間帯は Asia/Shanghai です。",
-    "footerArchiveFixed": "読めるアーカイブ：archive/index.html。JSON：data/archive/daily/2026-10-16.json · data/archive/weekly/2026-W42.json",
+    "footerArchiveFixed": "読めるアーカイブ：archive/index.html。JSON：data/archive/daily/2026-10-17.json · data/archive/weekly/2026-W42.json",
     "geoLabel": "このページの要約",
     "navArchive": "アーカイブ",
     "navPrivacy": "プライバシー",
@@ -340,7 +340,7 @@
             "デイリーは Asia/Shanghai の日付ごとに更新します。公開時は data/daily-latest.json をファイルごと差し替え、同じ内容を data/daily-YYYY-MM-DD.json と data/archive/daily/YYYY-MM-DD.json に書きます。古い行とは混ぜません。",
             "週間は Asia/Shanghai の月曜から日曜（ISO 週）で更新します。公開時は data/weekly-latest.json を差し替え、data/archive/weekly/YYYY-Www.json に残します。",
             "デイリーは 2026-10-16T10:59:47+08:00 に最初の版ができ、同日 2026-10-16T17:03:22+08:00 に香港の店を足して書き直しました。価格と順位はファイルの日付に対応し、ページを開いた瞬間の在庫ではありません。",
-            "週間を「ある日のコピーのまま」で終わらせるのが最終形ではありません。scripts/build_weekly.py が data/archive/daily/ を見ます。同じ ISO 週（上海時間、月曜から日曜）にデイリーが 2 件以上あれば、商品 URL で重複を除き、出現日数・平均の店内順位・最良の店内順位でまとめ、data/weekly-latest.json と data/archive/weekly/YYYY-Www.json に書きます。seed は付けません。2026-W42 は 2026-10-15 と 2026-10-16 を使うので、写しではなく集計です。デイリーが 1 件だけの週は、既存の週間ファイルを書き換えません。そのファイルに seed が残っていれば、ページにはその日のデイリーの写しだと書きます。"
+            "週間を「ある日のコピーのまま」で終わらせるのが最終形ではありません。scripts/build_weekly.py が data/archive/daily/ を見ます。同じ ISO 週（上海時間、月曜から日曜）にデイリーが 2 件以上あれば、商品 URL で重複を除き、出現日数・平均の店内順位・最良の店内順位でまとめ、data/weekly-latest.json と data/archive/weekly/YYYY-Www.json に書きます。seed は付けません。2026-W42 は 2026-10-15、2026-10-16、2026-10-17 を使うので、写しではなく集計です。デイリーが 1 件だけの週は、既存の週間ファイルを書き換えません。そのファイルに seed が残っていれば、ページにはその日のデイリーの写しだと書きます。"
           ]
         },
         {
@@ -360,7 +360,7 @@
             "全世界の売上ではなく、淘宝、天猫、Amazon の公式な総合ランキングでもありません。",
             "取得時に開けて、商品リンクがある行だけを残します。リンクのない表示（2026-10-16 のデイリーで、Lovense のホームにある Lush 4 / Lush Mini）は omissions に記録し、トップ 20 には入れません。",
             "価格、在庫、割引、順位は変わります。“As low as” とある数字は、そのページに出ていたスタート価格です。",
-            "週間 JSON に seed がある場合、それはある日のデイリーの複製で、一週間を別に集計した順位ではありません。2026-W42 に seed はありません。2026-10-15 と 2026-10-16 のデイリーをまとめたものです。デイリーが 1 件だけの週は、いまも seed になり得ます。",
+            "週間 JSON に seed がある場合、それはある日のデイリーの複製で、一週間を別に集計した順位ではありません。2026-W42 に seed はありません。2026-10-15、2026-10-16、2026-10-17 のデイリーをまとめたものです。デイリーが 1 件だけの週は、いまも seed になり得ます。",
             "外部リンクは nofollow です。このサイトは代金を受け取らず、発送もせず、医療や健康の助言もせず、買うかどうかを代わりに決めません。"
           ]
         }
@@ -395,11 +395,11 @@
       "items": [
         {
           "q": "データはどこから来ますか？",
-          "a": "取得時に開けた公開の売れ筋ページです。設計上の出典は淘宝 / 天猫、Amazon、インディーズ店舗と地域の店です。2026-10-16 に入っているのは Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫はその日 JavaScript の検索シェルだけで、商品行が無く、作ってもいません。ファイルは data/daily-latest.json と data/weekly-latest.json です。"
+          "a": "取得時に開けた公開の売れ筋ページです。設計上の出典は淘宝 / 天猫、Amazon、インディーズ店舗と地域の店です。2026-10-17 に入っているのは Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫は 2026-10-17 に取り直していません。それ以前は JavaScript の検索シェルだけで商品行が無く、作ってもいません。ファイルは data/daily-latest.json と data/weekly-latest.json です。"
         },
         {
           "q": "どのくらいの頻度で更新しますか？",
-          "a": "デイリーは上海時間の日付ごとにファイルを差し替えます。同じ ISO 週にデイリーが 2 件以上あるときは、scripts/build_weekly.py が商品 URL でまとめ、ある日の写しをその週の最終形にはしません。1 件だけの週は seed のままのことがあり、ページに書きます。現在のデイリーは 2026-10-16T17:03:22+08:00 に書いています。"
+          "a": "デイリーは上海時間の日付ごとにファイルを差し替えます。同じ ISO 週にデイリーが 2 件以上あるときは、scripts/build_weekly.py が商品 URL でまとめ、ある日の写しをその週の最終形にはしません。1 件だけの週は seed のままのことがあり、ページに書きます。現在のデイリーは 2026-10-17T10:44:14+08:00 に書いています。"
         },
         {
           "q": "このランキングはどう読めばよいですか？",
@@ -415,7 +415,7 @@
         },
         {
           "q": "デイリーと週間はどう違いますか？",
-          "a": "デイリーは上海時間の一日、週間は月曜から日曜です。最初に開くのはデイリーで、?board=weekly が週間です。seed のある週間は、ある日のデイリーの写しです。2026-W42 に seed はなく、2026-10-15 と 2026-10-16 をまとめたもので、期間は 2026-10-12 から 2026-10-18 です。"
+          "a": "デイリーは上海時間の一日、週間は月曜から日曜です。最初に開くのはデイリーで、?board=weekly が週間です。seed のある週間は、ある日のデイリーの写しです。2026-W42 に seed はなく、2026-10-15、2026-10-16、2026-10-17 をまとめたもので、期間は 2026-10-12 から 2026-10-18 です。"
         },
         {
           "q": "この価格は今も正しいですか？",
@@ -582,7 +582,7 @@
           "h2": "読み方",
           "paragraphs": [
             "デイリーのファイル名は上海時間の日付です。週間は ISO 週で、月曜から日曜です。週間 JSON に seed があるページは、ある日のデイリーの写しだと書きます。複数の日付からまとめたと書いてあるものは seed ではありません。",
-            "2026-W42 は 2026-10-15 と 2026-10-16 のデイリーをまとめたもので、ある日の写しではありません。"
+            "2026-W42 は 2026-10-15、2026-10-16、2026-10-17 のデイリーをまとめたもので、ある日の写しではありません。"
           ]
         }
       ]
@@ -594,11 +594,11 @@
     "items": [
       {
         "q": "これは通販サイトですか？",
-        "a": "販売サイトではありません。2026年10月16日に開けた公開の売れ筋ページを並べ、商品名、価格、評価を見比べられるようにしたものです。購入は各店のページで在庫と価格を確認してからにしてください。"
+        "a": "販売サイトではありません。2026年10月17日に開けた公開の売れ筋ページを並べ、商品名、価格、評価を見比べられるようにしたものです。購入は各店のページで在庫と価格を確認してからにしてください。"
       },
       {
         "q": "どのショップが入っていますか？",
-        "a": "2026-10-16 の回は Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫の商品行はありません。入れなかった出典はページ末尾に書き、別のデータで埋めません。"
+        "a": "2026-10-17 の回は Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫の商品行はありません。入れなかった出典はページ末尾に書き、別のデータで埋めません。"
       },
       {
         "q": "価格はそのまま使えますか？",
@@ -610,7 +610,7 @@
       },
       {
         "q": "デイリーと週間はどう違いますか？",
-        "a": "デイリーは上海時間の一日、週間は月曜から日曜です。最初に開くのはデイリーで、?board=weekly が週間です。seed のある週間は、ある日のデイリーの写しです。2026-W42 に seed はなく、2026-10-15 と 2026-10-16 をまとめたもので、期間は 2026-10-12 から 2026-10-18 です。"
+        "a": "デイリーは上海時間の一日、週間は月曜から日曜です。最初に開くのはデイリーで、?board=weekly が週間です。seed のある週間は、ある日のデイリーの写しです。2026-W42 に seed はなく、2026-10-15、2026-10-16、2026-10-17 をまとめたもので、期間は 2026-10-12 から 2026-10-18 です。"
       }
     ],
     "more": "よくある質問をすべて見る"
@@ -715,6 +715,66 @@
       "display": "Touch X",
       "blurb": "We-Vibe 米国サイトの 4 位です。手持ちのマッサージ器です。価格と評価は記録どおりです。",
       "alt": "We-Vibe Touch X の商品画像"
+    },
+    "lovense-gush-2-motion-remote-controlled-penis-vibrator": {
+      "display": "Gush 2 Motion",
+      "blurb": "Lovense トップの旗艦の並びで 1 番目です。価格と評価はその日の商品ページの数字です。仕様は商品ページでご確認ください。",
+      "alt": "Lovense Gush 2 Motion の商品画像"
+    },
+    "lovense-solace-pro-ai-automatic-blowjob-machine-men": {
+      "display": "Solace Pro（男性向け）",
+      "blurb": "Lovense トップの旗艦の並びで 2 番目です。男性向けの商品です。当日のページでは、打ち消し線の価格より低い販売価格が出ていました。評価はそのページの数字で、使い方は足していません。",
+      "alt": "Lovense Solace Pro の商品画像"
+    },
+    "lesplay_hk-roomfun-double-vibration-wearable-dildo-set": {
+      "display": "Roomfun 二人用セット",
+      "blurb": "香港 Les'Play の売れ筋分類で、この日価格が付いていた先頭です。店名では二人で身につけるセットとあります。そのページに評価はありません。",
+      "alt": "Roomfun 二人用セットの販売ページ画像"
+    },
+    "lesplay_hk-kisstoy-pupu-app-controlled-suction-vibrator-set": {
+      "display": "Kisstoy PUPU リモコン",
+      "blurb": "香港 Les'Play の売れ筋分類で 2 番目です。店名ではスマホから操作できるとあります。そのページに評価はなく、仕様は商品ページをご覧ください。",
+      "alt": "Kisstoy PUPU の販売ページ画像"
+    },
+    "sexconcept_hk-fuji-world-seigi48-karakuri-dolls-ninja-position": {
+      "display": "凸凹堂 二つ巴 からくり",
+      "blurb": "香港 Sex Concept の売れ筋 1 位です。身につける器具ではなく、動く機械の置物です。価格はその日のセール価格で、評価は出ていません。",
+      "alt": "凸凹堂・二つ巴のからくり置物の販売ページ画像。18歳以上。"
+    },
+    "sexconcept_hk-fuji-world-seigi48-miyama-clock-work-ukiyo-e-nin": {
+      "display": "凸凹堂 深山 からくり",
+      "blurb": "香港 Sex Concept の売れ筋 2 位です。こちらも動く機械の置物です。価格はその日のセール価格で、評価はありません。",
+      "alt": "凸凹堂・深山のからくり置物の販売ページ画像。18歳以上。"
+    },
+    "sistalk_hk-monster-pub-wiwi-fish-tail-antibacterial-vibrato": {
+      "display": "小怪獣 魚擺擺",
+      "blurb": "香港 SISTALK の売れ筋分類 1 位です。店名では魚の尾の形のマッサージ器とあります。そのページに評価はありません。",
+      "alt": "小怪獣 魚擺擺の販売ページ画像"
+    },
+    "sistalk_hk-orgasm-150ml": {
+      "display": "HARU 温感潤滑液 150ml",
+      "blurb": "香港 SISTALK の売れ筋 2 位、150ml です。店のタイトルは用途をかなり直接書いています。成分や効果には触れません。販売ページでご確認ください。",
+      "alt": "HARU 150ml 潤滑液の販売ページ画像"
+    },
+    "waddy-lelo-f1s-v3-male-masturbators": {
+      "display": "LELO F1S V3",
+      "blurb": "Waddy トップの男性向け TOP 10 で、この日商品 URL を確認できた先頭です。店名ではアプリ操作とあります。その欄に評価はありません。",
+      "alt": "LELO F1S V3 の販売ページ画像。18歳以上。"
+    },
+    "waddy-erocome-antlia-masturbator-black": {
+      "display": "Erocome Antlia ブラック",
+      "blurb": "Waddy の男性向け TOP 10 で、URL を確認できた次の商品です。ブラックです。その欄に評価はありません。",
+      "alt": "Erocome Antlia ブラックの販売ページ画像。18歳以上。"
+    },
+    "amazon-b0cnrzvjmg": {
+      "display": "MOOLIGIRL ローズ",
+      "blurb": "Amazon.com の公開ランキング 2 位です。バラ型のマッサージ器で、ボタンはこの商品ページを開きます。長い掲載名はそのまま下に残してあります。",
+      "alt": "MOOLIGIRL ローズの商品画像"
+    },
+    "amazon-b0fykhc327": {
+      "display": "plusOne ミニ",
+      "blurb": "Amazon.com の 3 位です。ミニタイプのマッサージ器で、ボタンはこの商品ページを開きます。長い掲載名の仕様は Amazon でご確認ください。",
+      "alt": "plusOne ミニの商品画像"
     }
   }
 }

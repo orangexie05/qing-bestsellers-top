@@ -73,7 +73,7 @@ def plain(path: str, lastmod: str, changefreq: str, priority: str) -> str:
 
 
 def main() -> int:
-    lastmod = "2026-10-16"
+    lastmod = "2026-10-17"
     chunks: list[str] = []
     chunks += page_set("/", lastmod, "daily", "1.0")
     chunks += page_set("/", lastmod, "weekly", "0.9", ["board=weekly"])
@@ -101,6 +101,7 @@ def main() -> int:
         ("/data/daily-latest.json", "0.4"),
         ("/data/weekly-latest.json", "0.4"),
         ("/data/daily-2026-10-16.json", "0.4"),
+        ("/data/daily-2026-10-17.json", "0.4"),
     ):
         chunks.append(plain(rel, lastmod, "daily", pri))
     for day, path, _doc in boardlib.iter_daily_archives():

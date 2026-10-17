@@ -1,0 +1,46 @@
+{
+  "platform": "womanizer",
+  "store": "Womanizer",
+  "list_url": "https://www.womanizer.com/us/bestseller",
+  "fetched_at": "2026-10-17T10:44:14+08:00",
+  "status": "ok",
+  "currency": "USD",
+  "rank_basis": "bestseller_page_order",
+  "note": "Public US bestseller page order. As-low-as price kept. Yotpo stars were not in the static extract, so rating is null.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Womanizer Next",
+      "product_url": "https://www.womanizer.com/us/next",
+      "purchase_url": "https://www.womanizer.com/us/next",
+      "price": 229.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "womanizer-next",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/22858c641609ec6b1ca73cd5f575e920/w/m/wmz_next_ce_dusky_pink_pdp_category_image_1000x1000.jpg",
+      "image_kind": "official",
+      "note_key": "price_from"
+    },
+    {
+      "rank": 2,
+      "name": "Womanizer DUO 2",
+      "product_url": "https://www.womanizer.com/us/duo2",
+      "purchase_url": "https://www.womanizer.com/us/duo2",
+      "price": 229.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "womanizer-duo2",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/22858c641609ec6b1ca73cd5f575e920/w/m/wmz_duo2_black_generic_internal_amazongallery_1200px_en_02_1.jpg",
+      "image_kind": "official",
+      "note_key": "price_from"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "platform": "amazon_us",
+  "store": "Amazon.com",
+  "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
+  "fetched_at": "2026-10-17T10:44:14+08:00",
+  "status": "ok",
+  "currency": "USD",
+  "rank_basis": "amazon_best_sellers_rank",
+  "note": "Public Amazon Best Sellers rank in Sex Toys. Price and review figures are from the 2026-10-17 extract.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Ava Vibrator Sex Toys – Battery Life 4 Hours | Water Resistant Body Safe Silicone | Clitoral Vibrators Couples Sex Toy with Multi Patterns & speeds Vibrator for Women - Purple",
+      "product_url": "https://www.amazon.com/dp/B07YW5DZBQ",
+      "purchase_url": "https://www.amazon.com/dp/B07YW5DZBQ",
+      "price": 16.47,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.2,
+        "count": 45144,
+        "sample": null
+      },
+      "id": "amazon-ava",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61hB-pRnvdL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 2,
+      "name": "Vibrator Dildo Sex Toys for Women - MOOLIGIRL Rose Sex Toy with Thrusting G Spot Vibrators & 10 Sucking Modes for Clitoral Nipple Stimulation Anal Dildos Adult Sex Toys Games for Couples Sex Machine",
+      "product_url": "https://www.amazon.com/dp/B0CNRZVJMG",
+      "purchase_url": "https://www.amazon.com/dp/B0CNRZVJMG",
+      "price": 29.99,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.3,
+        "count": 6500,
+        "sample": null
+      },
+      "id": "amazon-b0cnrzvjmg",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71ibbU+OxdL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 3,
+      "name": "plusOne Bullet Vibrator for Women - Silicone Mini Vibrator, Pink Mini | Sex Toy Personal Massager with 10 vibration settings, Fully Waterproof, USB Rechargeable",
+      "product_url": "https://www.amazon.com/dp/B0FYKHC327",
+      "purchase_url": "https://www.amazon.com/dp/B0FYKHC327",
+      "price": 15.43,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.1,
+        "count": 7456,
+        "sample": null
+      },
+      "id": "amazon-b0fykhc327",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61xedFnFwLL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 4,
+      "name": "Kstert 7.8\" Realistic Flesh Liquid Silicone Dildo with Strong Suction Cup | Sensual lifelike toy featuring a powerful suction base and perfect length, ideal for hands-free solo or couples' play.",
+      "product_url": "https://www.amazon.com/dp/B0C4GZ7CC4",
+      "purchase_url": "https://www.amazon.com/dp/B0C4GZ7CC4",
+      "price": 13.99,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.3,
+        "count": 4352,
+        "sample": null
+      },
+      "id": "amazon-b0c4gz7cc4",
+      "image": null,
+      "image_kind": "missing"
+    }
+  ]
+}

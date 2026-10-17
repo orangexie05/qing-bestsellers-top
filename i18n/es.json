@@ -90,13 +90,13 @@
     "navAbout": "Acerca",
     "navMethod": "Método",
     "navFaq": "FAQ",
-    "footerSources": "Cada entrega sigue su JSON. El diseño incluye Taobao/Tmall, Amazon y tiendas independientes. La entrega del 2026-10-16 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Taobao/Tmall sigue sin filas.",
+    "footerSources": "Cada entrega sigue su JSON. El diseño incluye Taobao/Tmall, Amazon y tiendas independientes. La entrega del 2026-10-17 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Taobao/Tmall sigue sin filas.",
     "footerCadence": "Cadencia: el día se sustituye por completo una vez por fecha de Shanghái. La semana se agrega cuando ese ISO tiene dos o más diarios. Si solo hay un día, la semana puede seguir siendo una copia con seed, y la página lo dice.",
     "footerAbout": "Acerca de",
     "footerMethod": "Método",
     "footerFaq": "Preguntas",
     "footerLinksFixed": "Los enlaces externos usan nofollow. Zona horaria Asia/Shanghai.",
-    "footerArchiveFixed": "Archivo legible: archive/index.html. JSON: data/archive/daily/2026-10-16.json · data/archive/weekly/2026-W42.json",
+    "footerArchiveFixed": "Archivo legible: archive/index.html. JSON: data/archive/daily/2026-10-17.json · data/archive/weekly/2026-W42.json",
     "geoLabel": "Resumen",
     "navArchive": "Archivo",
     "navPrivacy": "Privacidad",
@@ -340,7 +340,7 @@
             "La lista del día se actualiza una vez por fecha de Asia/Shanghai. Una publicación sustituye data/daily-latest.json por completo y escribe el mismo documento en data/daily-YYYY-MM-DD.json y data/archive/daily/YYYY-MM-DD.json. No se mezcla con filas viejas.",
             "La de la semana se actualiza para cada semana de lunes a domingo en Asia/Shanghai (semana ISO). Una publicación sustituye data/weekly-latest.json por completo y escribe data/archive/weekly/YYYY-Www.json.",
             "El archivo del día se escribió primero a las 2026-10-16T10:59:47+08:00 y se reescribió a las 2026-10-16T17:03:22+08:00 al añadir las tiendas de Hong Kong. Precios y puestos corresponden a la fecha del archivo, no al stock del momento en que abres la página.",
-            "La semana no se queda en «copiar un día y llamarlo semana» como estado final. scripts/build_weekly.py lee data/archive/daily/. Si una semana ISO (hora de Shanghái, lunes a domingo) tiene dos o más diarios, quita duplicados por la URL del producto, ordena por días de aparición, puesto medio y mejor puesto, y escribe data/weekly-latest.json y data/archive/weekly/YYYY-Www.json sin seed. 2026-W42 usa 2026-10-15 y 2026-10-16, así que es un agregado y no una copia. Si una semana solo tiene un día, el script no reescribe el semanal que ya existe. Si ese archivo sigue con seed, la página dice que es la copia de ese día."
+            "La semana no se queda en «copiar un día y llamarlo semana» como estado final. scripts/build_weekly.py lee data/archive/daily/. Si una semana ISO (hora de Shanghái, lunes a domingo) tiene dos o más diarios, quita duplicados por la URL del producto, ordena por días de aparición, puesto medio y mejor puesto, y escribe data/weekly-latest.json y data/archive/weekly/YYYY-Www.json sin seed. 2026-W42 usa 2026-10-15, 2026-10-16 y 2026-10-17, así que es un agregado y no una copia. Si una semana solo tiene un día, el script no reescribe el semanal que ya existe. Si ese archivo sigue con seed, la página dice que es la copia de ese día."
           ]
         },
         {
@@ -360,7 +360,7 @@
             "No son las ventas de todo internet, ni el ranking oficial de Taobao, Tmall o Amazon.",
             "Solo se conservan filas que estaban abiertas y tenían enlace de producto. Una ficha sin enlace (Lush 4 / Lush Mini en la portada de Lovense, en el archivo del 2026-10-16) queda en omissions y no entra en el top 20.",
             "El precio, el stock, los descuentos y el puesto cambian. Una cifra marcada “As low as” es el precio de partida que mostraba esa página.",
-            "Si el JSON semanal tiene seed, es una copia de la lista de un día, no un recuento aparte de toda la semana. 2026-W42 no tiene seed: junta los días 2026-10-15 y 2026-10-16. Una semana con un solo día todavía puede ser seed.",
+            "Si el JSON semanal tiene seed, es una copia de la lista de un día, no un recuento aparte de toda la semana. 2026-W42 no tiene seed: junta los días 2026-10-15, 2026-10-16 y 2026-10-17. Una semana con un solo día todavía puede ser seed.",
             "Los enlaces externos usan nofollow. Este sitio no cobra, no envía pedidos ni da consejo médico o de salud, y no decide la compra por ti."
           ]
         }
@@ -395,11 +395,11 @@
       "items": [
         {
           "q": "¿De dónde salen los datos?",
-          "a": "De páginas públicas de más vendidos que se pudieron abrir al capturarlas. El diseño incluye Taobao/Tmall, Amazon y tiendas independientes o regionales. La entrega del 2026-10-16 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Taobao/Tmall ese día era un cascarón de búsqueda en JavaScript, sin filas, y no se inventaron productos de Taobao. Los archivos son data/daily-latest.json y data/weekly-latest.json."
+          "a": "De páginas públicas de más vendidos que se pudieron abrir al capturarlas. El diseño incluye Taobao/Tmall, Amazon y tiendas independientes o regionales. La entrega del 2026-10-17 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Taobao/Tmall no se volvió a consultar el 2026-10-17. Consultas anteriores devolvieron un cascarón de búsqueda en JavaScript, sin filas, y no se inventaron productos de Taobao. Los archivos son data/daily-latest.json y data/weekly-latest.json."
         },
         {
           "q": "¿Cada cuánto se actualiza?",
-          "a": "El día se sustituye por completo una vez por fecha de Shanghái. Cuando una semana ISO tiene dos o más diarios, scripts/build_weekly.py los junta por la URL del producto y no deja la copia de un día como semana terminada. Si solo hay un día, la semana puede seguir con seed, y la página lo dice. El archivo del día actual se escribió a las 2026-10-16T17:03:22+08:00."
+          "a": "El día se sustituye por completo una vez por fecha de Shanghái. Cuando una semana ISO tiene dos o más diarios, scripts/build_weekly.py los junta por la URL del producto y no deja la copia de un día como semana terminada. Si solo hay un día, la semana puede seguir con seed, y la página lo dice. El archivo del día actual se escribió a las 2026-10-17T10:44:14+08:00."
         },
         {
           "q": "¿Cómo se lee la lista?",
@@ -415,7 +415,7 @@
         },
         {
           "q": "¿En qué se diferencian hoy y esta semana?",
-          "a": "Hoy es una fecha de Shanghái. La semana es de lunes a domingo. La portada abre en hoy; ?board=weekly abre la semana. Una semana con seed es la copia de un día. 2026-W42 no tiene seed: junta 2026-10-15 y 2026-10-16, del 2026-10-12 al 2026-10-18."
+          "a": "Hoy es una fecha de Shanghái. La semana es de lunes a domingo. La portada abre en hoy; ?board=weekly abre la semana. Una semana con seed es la copia de un día. 2026-W42 no tiene seed: junta 2026-10-15, 2026-10-16 y 2026-10-17, del 2026-10-12 al 2026-10-18."
         },
         {
           "q": "¿Los precios siguen vigentes?",
@@ -582,7 +582,7 @@
           "h2": "Cómo leerlo",
           "paragraphs": [
             "El nombre del día es la fecha de Shanghái. El de la semana es la semana ISO, de lunes a domingo. Si el JSON semanal tiene seed, esa página dice que es la copia de un día. Si nombra varios días, es un agregado y no un seed.",
-            "2026-W42 junta los días 2026-10-15 y 2026-10-16. No es la copia de un solo día."
+            "2026-W42 junta los días 2026-10-15, 2026-10-16 y 2026-10-17. No es la copia de un solo día."
           ]
         }
       ]
@@ -594,11 +594,11 @@
     "items": [
       {
         "q": "¿Esto es una tienda?",
-        "a": "No. Lista Qing reúne páginas públicas de más vendidos que se pudieron abrir el 16 de octubre de 2026, para comparar nombres, precios y valoraciones. El pedido se hace en la tienda, después de revisar la ficha actual."
+        "a": "No. Lista Qing reúne páginas públicas de más vendidos que se pudieron abrir el 17 de octubre de 2026, para comparar nombres, precios y valoraciones. El pedido se hace en la tienda, después de revisar la ficha actual."
       },
       {
         "q": "¿Qué tiendas entran?",
-        "a": "La entrega del 2026-10-16 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Taobao/Tmall no tiene filas. Lo que no entró se lista al final y no se rellena con otros datos."
+        "a": "La entrega del 2026-10-17 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Taobao/Tmall no tiene filas. Lo que no entró se lista al final y no se rellena con otros datos."
       },
       {
         "q": "¿Los precios siguen vigentes?",
@@ -715,6 +715,66 @@
       "display": "Touch X",
       "blurb": "Cuarto en la lista de We-Vibe en EE. UU. Un masajeador de mano. El precio y la valoración se muestran tal como se capturaron.",
       "alt": "Foto de producto de We-Vibe Touch X"
+    },
+    "lovense-gush-2-motion-remote-controlled-penis-vibrator": {
+      "display": "Gush 2 Motion",
+      "blurb": "Primero en el orden de destacados de la portada de Lovense. El precio y la valoración salen de la ficha de ese día. Los detalles están en la tienda.",
+      "alt": "Foto de producto de Lovense Gush 2 Motion"
+    },
+    "lovense-solace-pro-ai-automatic-blowjob-machine-men": {
+      "display": "Solace Pro",
+      "blurb": "Segundo en el orden de destacados de la portada de Lovense. Un producto para hombres. Ese día la ficha mostraba un precio de oferta por debajo del tachado. La valoración es de esa página; aquí no añadimos instrucciones.",
+      "alt": "Foto de producto de Lovense Solace Pro"
+    },
+    "lesplay_hk-roomfun-double-vibration-wearable-dildo-set": {
+      "display": "Roomfun para dos",
+      "blurb": "Primera ficha con precio en la categoría de más vendidos de Les'Play en Hong Kong ese día. El nombre lo describe como un set para llevar entre dos. Esa página no mostraba valoración.",
+      "alt": "Foto de la ficha del set Roomfun"
+    },
+    "lesplay_hk-kisstoy-pupu-app-controlled-suction-vibrator-set": {
+      "display": "Kisstoy PUPU a distancia",
+      "blurb": "Segundo en la categoría de más vendidos de Les'Play en Hong Kong. El nombre indica control desde el teléfono. Esa página no tenía valoración; la ficha manda.",
+      "alt": "Foto de la ficha de Kisstoy PUPU"
+    },
+    "sexconcept_hk-fuji-world-seigi48-karakuri-dolls-ninja-position": {
+      "display": "Figura Seigi48 Futatsudomoe",
+      "blurb": "Primero en los más vendidos de Sex Concept en Hong Kong. Es una figura mecánica, no un dispositivo para llevar. El precio es el de oferta de ese día y la página no tenía valoración.",
+      "alt": "Foto de la ficha de la figura mecánica Seigi48 Futatsudomoe. Solo para adultos."
+    },
+    "sexconcept_hk-fuji-world-seigi48-miyama-clock-work-ukiyo-e-nin": {
+      "display": "Figura Seigi48 Miyama",
+      "blurb": "Segundo en los más vendidos de Sex Concept en Hong Kong. Otra figura mecánica. El precio es el de oferta de ese día y no había valoración.",
+      "alt": "Foto de la ficha de la figura mecánica Seigi48 Miyama. Solo para adultos."
+    },
+    "sistalk_hk-monster-pub-wiwi-fish-tail-antibacterial-vibrato": {
+      "display": "Monster Pub cola de pez",
+      "blurb": "Primero en la categoría de más vendidos de SISTALK en Hong Kong. El nombre de la tienda describe un masajeador con forma de cola de pez. Esa página no mostraba valoración.",
+      "alt": "Foto de la ficha del masajeador Monster Pub con forma de cola de pez"
+    },
+    "sistalk_hk-orgasm-150ml": {
+      "display": "HARU lubricante cálido, 150 ml",
+      "blurb": "Segundo en la categoría de más vendidos de SISTALK en Hong Kong, en botella de 150 ml. El título de la tienda es explícito. Aquí no describimos ingredientes ni efectos; eso se lee en la ficha del comercio.",
+      "alt": "Foto de la ficha del lubricante HARU de 150 ml"
+    },
+    "waddy-lelo-f1s-v3-male-masturbators": {
+      "display": "LELO F1S V3",
+      "blurb": "La primera fila del TOP 10 para hombres en la portada de Waddy con una ficha confirmada ese día. El nombre indica control por aplicación. Ese bloque no mostraba valoración.",
+      "alt": "Foto de la ficha de LELO F1S V3. Solo para adultos."
+    },
+    "waddy-erocome-antlia-masturbator-black": {
+      "display": "Erocome Antlia negro",
+      "blurb": "La siguiente fila con ficha confirmada en el TOP 10 para hombres de Waddy, en negro. Ese bloque no mostraba valoración.",
+      "alt": "Foto de la ficha de Erocome Antlia en negro. Solo para adultos."
+    },
+    "amazon-b0cnrzvjmg": {
+      "display": "MOOLIGIRL Rose",
+      "blurb": "Segundo en la lista pública de Amazon.com: un masajeador con forma de rosa. El enlace abre esta ficha. El título largo del anuncio se conserva debajo.",
+      "alt": "Foto de producto del masajeador MOOLIGIRL con forma de rosa"
+    },
+    "amazon-b0fykhc327": {
+      "display": "plusOne mini",
+      "blurb": "Tercero en la lista de Amazon.com. Un masajeador mini. El enlace abre esta ficha. Lo que diga el título largo hay que comprobarlo en Amazon.",
+      "alt": "Foto de producto del masajeador mini plusOne"
     }
   }
 }

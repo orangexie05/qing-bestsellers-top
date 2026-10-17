@@ -1,0 +1,48 @@
+{
+  "platform": "lovense",
+  "store": "Lovense",
+  "list_url": "https://www.lovense.com/",
+  "fetched_at": "2026-10-17T10:44:14+08:00",
+  "status": "ok",
+  "currency": "USD",
+  "rank_basis": "homepage_flagship_carousel_order",
+  "note": "No /best-sellers list. Rank from homepage flagship order; prices and ratings from product pages 2026-10-17.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Gush 2 Motion",
+      "product_url": "https://www.lovense.com/gush-2-motion-remote-controlled-penis-vibrator",
+      "purchase_url": "https://www.lovense.com/gush-2-motion-remote-controlled-penis-vibrator",
+      "price": 199.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.7,
+        "count": 61,
+        "sample": null
+      },
+      "id": "lovense-gush-2-motion-remote-controlled-penis-vibrator",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_gush2motion.jpg?v=20261015",
+      "image_kind": "official",
+      "notes": "List price from PDP. Homepage carousel order."
+    },
+    {
+      "rank": 2,
+      "name": "Solace Pro",
+      "product_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
+      "purchase_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
+      "price": 399.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.8,
+        "count": 185,
+        "sample": null
+      },
+      "id": "lovense-solace-pro-ai-automatic-blowjob-machine-men",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_solace22.jpg?v=20261015",
+      "image_kind": "official",
+      "compare_at_price": 658.0,
+      "note_key": "on_sale",
+      "notes": "Sale price $399 vs compare-at $658 on PDP."
+    }
+  ]
+}

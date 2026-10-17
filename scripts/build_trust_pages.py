@@ -158,7 +158,7 @@ def write_page(page_id: str) -> None:
                 "description": description,
                 "inLanguage": "zh-Hans",
                 "isFamilyFriendly": False,
-                "dateModified": "2026-10-16",
+                "dateModified": "2026-10-17",
                 "isPartOf": {"@id": BASE + "/#website"},
                 "audience": {"@type": "PeopleAudience", "requiredMinAge": 18},
             },
@@ -282,7 +282,7 @@ def write_page(page_id: str) -> None:
     <p id="foot-links">外链使用 nofollow。数据时区 Asia/Shanghai。</p>
     <p id="foot-pages"><a id="foot-daily" href="index.html">日榜</a> · <a id="foot-weekly" href="index.html?board=weekly">周榜</a> · <a id="foot-platform" href="by-platform.html">分平台</a> · <a id="foot-archive-page" href="archive/index.html">归档</a> · <a id="foot-about" href="about.html">关于本站</a> · <a id="foot-method" href="method.html">数据方法</a> · <a id="foot-faq" href="faq.html">常见问题</a> · <a id="foot-privacy" href="privacy.html">隐私政策</a> · <a id="foot-contact" href="contact.html">联系</a></p>
     <p><a id="foot-data" href="data/daily-latest.json">查看当前榜单 JSON</a> · <a id="foot-snapshot-data" href="data.json">综合快照</a></p>
-    <p id="foot-archive">日期归档：data/archive/daily/2026-10-16.json · data/archive/weekly/2026-W42.json</p>
+    <p id="foot-archive">日期归档：data/archive/daily/2026-10-17.json · data/archive/weekly/2026-W42.json</p>
   </div>
 </footer>
 <div id="live" class="skip" aria-live="polite"></div>

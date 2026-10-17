@@ -15,15 +15,15 @@ Time zone for every board date is Asia/Shanghai.
 - Daily: one calendar day. A routine publish replaces data/daily-latest.json in full and writes the same document to data/daily-YYYY-MM-DD.json and data/archive/daily/YYYY-MM-DD.json. Older rows are not merged into that file, and products are not invented to fill a Top 20.
 - Weekly: Monday through Sunday (ISO week). When data/archive/daily/ contains two or more daily files for that week, scripts/build_weekly.py dedupes by product URL and ranks by how many of those days the product appeared, then mean source rank, then best source rank, then rating, then review count. It writes data/weekly-latest.json and data/archive/weekly/YYYY-Www.json and does not mark that file as a seed.
 - If a week has only one daily archive, the script leaves the weekly file alone. A weekly JSON that still has a seed object is a copy of one day's chart, not a separate week-long tally. The page says so.
-- The current week 2026-W42 (2026-10-12 through 2026-10-18) is an aggregate of the 2026-10-15 and 2026-10-16 daily archives. It is not a seed.
+- The current week 2026-W42 (2026-10-12 through 2026-10-18) is an aggregate of the 2026-10-15, 2026-10-16, and 2026-10-17 daily archives. It is not a seed.
 
 Prices, ratings, and ranks match the file's date. They are not a live quote.
 
 ## What is and is not included
 
-Included when a public page could be read without login: Amazon.com sex-toy bestsellers, Dame, Lovense, We-Vibe, Womanizer, Waddy (Hong Kong), and — on 2026-10-16 — SISTALK HK hot-selling, Les'Play best-sellers, and Sex Concept best-sellers. Hong Kong ranks follow the order on that shop's public category page. Each source contributes at most 6 rows to the combined Top 20.
+Included when a public page could be read without login: Amazon.com sex-toy bestsellers, Dame, Lovense, We-Vibe, Womanizer, Waddy (Hong Kong), and — on 2026-10-16 and 2026-10-17 — SISTALK HK hot-selling, Les'Play best-sellers, and Sex Concept best-sellers. Hong Kong ranks follow the order on that shop's public category page. Each source contributes at most 6 rows to the combined Top 20.
 
-Taobao / Tmall is still missing. A fetch on 2026-10-16 returned the JavaScript search shell only: no product URL, item id, or price in the static HTML. Those rows were not invented. See data/sources/taobao_tmall.placeholder.json (empty items) and sources_skipped on the daily JSON. 18 Gifts' monthly bestseller page was blocked by a Cloudflare interstitial. LELO /best-sellers returned 404. MysteryVibe was not retried after HTTP 429. PChome 24h was not merged because the response was not a confirmed bestseller list.
+Taobao / Tmall is still missing. It was not re-fetched on 2026-10-17. A fetch on 2026-10-16 returned the JavaScript search shell only: no product URL, item id, or price in the static HTML. Those rows were not invented. See data/sources/taobao_tmall.placeholder.json (empty items) and sources_skipped on the daily JSON. 18 Gifts' monthly bestseller page was blocked by a Cloudflare interstitial. LELO /best-sellers returned 404. MysteryVibe was not retried after HTTP 429. PChome 24h was not merged because the response was not a confirmed bestseller list.
 
 ## Key URLs
 
@@ -31,7 +31,7 @@ Taobao / Tmall is still missing. A fetch on 2026-10-16 returned the JavaScript s
 - Weekly chart: https://orangexie05.github.io/qing-bestsellers-top/?board=weekly
 - By shop: https://orangexie05.github.io/qing-bestsellers-top/by-platform.html
 - Archive index: https://orangexie05.github.io/qing-bestsellers-top/archive/index.html
-- Example daily archive: https://orangexie05.github.io/qing-bestsellers-top/archive/daily/2026-10-16.html
+- Example daily archive: https://orangexie05.github.io/qing-bestsellers-top/archive/daily/2026-10-17.html
 - Example weekly archive: https://orangexie05.github.io/qing-bestsellers-top/archive/weekly/2026-W42.html
 - About: https://orangexie05.github.io/qing-bestsellers-top/about.html
 - Methodology: https://orangexie05.github.io/qing-bestsellers-top/method.html
