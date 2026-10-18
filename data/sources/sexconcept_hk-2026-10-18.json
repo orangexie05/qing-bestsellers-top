@@ -1,0 +1,48 @@
+{
+  "platform": "sexconcept_hk",
+  "store": "Sex Concept (HK)",
+  "list_url": "https://www.sexconcepthk.com/categories/best-sellers",
+  "fetched_at": "2026-10-18T10:45:48+08:00",
+  "status": "ok",
+  "currency": "HKD",
+  "rank_basis": "document_order_on_public_category_page",
+  "note": "Public Shopline category 畅销热卖. Sale price when compare-at visible.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Fuji World Seigi48 凸凹堂 二つ巴 忍者編 性愛體位動力機械擺件",
+      "product_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-karakuri-dolls-ninja-positions-powered-mechanical-ornament-2",
+      "purchase_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-karakuri-dolls-ninja-positions-powered-mechanical-ornament-2",
+      "price": 98.0,
+      "currency": "HKD",
+      "compare_at_price": 128.0,
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "sexconcept_hk-fuji-world-seigi48-karakuri-dolls-ninja-position",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/6abf83edd41407a256da9536/375x.png",
+      "image_kind": "official",
+      "note_key": "hk_list_sale"
+    },
+    {
+      "rank": 2,
+      "name": "Fuji World Seigi48 凸凹堂 忍者編 深山 性愛體位動力機械擺件",
+      "product_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja-doll",
+      "purchase_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja-doll",
+      "price": 98.0,
+      "currency": "HKD",
+      "compare_at_price": 128.0,
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "sexconcept_hk-fuji-world-seigi48-miyama-clock-work-ukiyo-e-nin",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/6abf81188523e64f2dbd373b/375x.png",
+      "image_kind": "official",
+      "note_key": "hk_list_sale"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "platform": "dame",
+  "store": "Dame Products",
+  "list_url": "https://dame.com/collections/bestsellers",
+  "fetched_at": "2026-10-18T10:45:48+08:00",
+  "status": "ok",
+  "currency": "USD",
+  "rank_basis": "collection_order_on_public_bestsellers",
+  "note": "Public Shopify collection bestsellers. Rank is collection order. Price and review figures from 2026-10-18 extract.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Hug Vibrating Cock Ring",
+      "product_url": "https://dame.com/products/hug",
+      "purchase_url": "https://dame.com/products/hug",
+      "price": 79.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.3,
+        "count": 95,
+        "sample": null
+      },
+      "id": "dame-hug",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/hug-1-fir.png?v=1776325569",
+      "image_kind": "official"
+    },
+    {
+      "rank": 2,
+      "name": "Eva Wearable Vibrator",
+      "product_url": "https://dame.com/products/eva-ii",
+      "purchase_url": "https://dame.com/products/eva-ii",
+      "price": 129.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.5,
+        "count": 1220,
+        "sample": null
+      },
+      "id": "dame-eva",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/eva-1-ice.png?v=1776326231",
+      "image_kind": "official"
+    },
+    {
+      "rank": 3,
+      "name": "Lay Panty Vibrator",
+      "product_url": "https://dame.com/products/lay",
+      "purchase_url": "https://dame.com/products/lay",
+      "price": 79.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.1,
+        "count": 15,
+        "sample": null
+      },
+      "id": "dame-lay",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/PDPImages_LAY-IC_01.jpg?v=1775651051",
+      "image_kind": "official"
+    },
+    {
+      "rank": 4,
+      "name": "Aer Suction Vibrator",
+      "product_url": "https://dame.com/products/aer",
+      "purchase_url": "https://dame.com/products/aer",
+      "price": 125.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.8,
+        "count": 937,
+        "sample": null
+      },
+      "id": "dame-aer",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/aer-1-periwinkle.png?v=1776325568",
+      "image_kind": "official"
+    },
+    {
+      "rank": 5,
+      "name": "Arousal Serum",
+      "product_url": "https://dame.com/products/arousal-serum",
+      "purchase_url": "https://dame.com/products/arousal-serum",
+      "price": 30.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.6,
+        "count": 208,
+        "sample": null
+      },
+      "id": "dame-arousal-serum",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/PDP_Images_ARO-1_01.png?v=1788422589",
+      "image_kind": "official"
+    },
+    {
+      "rank": 6,
+      "name": "Dip Basic Vibrator",
+      "product_url": "https://dame.com/products/dip",
+      "purchase_url": "https://dame.com/products/dip",
+      "price": 44.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.7,
+        "count": 293,
+        "sample": null
+      },
+      "id": "dame-dip",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/dip-1-plum.png?v=1776325628",
+      "image_kind": "official"
+    }
+  ]
+}

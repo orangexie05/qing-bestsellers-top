@@ -1,0 +1,47 @@
+{
+  "platform": "lesplay_hk",
+  "store": "Les'Play (HK)",
+  "list_url": "https://www.lesplayhk.com/categories/best-seller",
+  "fetched_at": "2026-10-18T10:45:48+08:00",
+  "status": "ok",
+  "currency": "HKD",
+  "rank_basis": "document_order_on_public_category_page",
+  "note": "Public Shopline category best-seller. Rank among priced rows with confirmed product URL.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Roomfun 雙人共震 穿戴式按摩棒套裝",
+      "product_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
+      "purchase_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
+      "price": 798.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-roomfun-double-vibration-wearable-dildo-set",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a7f097fc377fa203b144236/375x.png",
+      "image_kind": "official",
+      "note_key": "hk_list_order",
+      "notes": "Womanizer Next Liberty still appears above this on the category page but had no price today; this is first priced confirmed row."
+    },
+    {
+      "rank": 2,
+      "name": "Kisstoy 氣墊 PUPU 手機遙控 吸啜器震蛋組",
+      "product_url": "https://www.lesplayhk.com/products/kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "purchase_url": "https://www.lesplayhk.com/products/kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "price": 428.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a788bd5a7398aa91f72bf77/375x.png",
+      "image_kind": "official",
+      "note_key": "hk_list_order"
+    }
+  ]
+}

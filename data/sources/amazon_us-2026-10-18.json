@@ -1,0 +1,108 @@
+{
+  "platform": "amazon_us",
+  "store": "Amazon.com",
+  "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
+  "fetched_at": "2026-10-18T10:45:48+08:00",
+  "status": "ok",
+  "currency": "USD",
+  "rank_basis": "amazon_best_sellers_rank",
+  "note": "Public Amazon Best Sellers rank in Sex Toys. Price and review figures from 2026-10-18 extract.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Ava Vibrator Sex Toys – Battery Life 4 Hours | Water Resistant Body Safe Silicone | Clitoral Vibrators Couples Sex Toy with Multi Patterns & speeds Vibrator for Women - Purple",
+      "product_url": "https://www.amazon.com/dp/B07YW5DZBQ",
+      "purchase_url": "https://www.amazon.com/dp/B07YW5DZBQ",
+      "price": 16.47,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.2,
+        "count": 45143,
+        "sample": null
+      },
+      "id": "amazon-ava",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61hB-pRnvdL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 2,
+      "name": "Vibrator Dildo Sex Toys for Women - MOOLIGIRL Rose Sex Toy with Thrusting G Spot Vibrators & 10 Sucking Modes for Clitoral Nipple Stimulation Anal Dildos Adult Sex Toys Games for Couples Sex Machine",
+      "product_url": "https://www.amazon.com/dp/B0CNRZVJMG",
+      "purchase_url": "https://www.amazon.com/dp/B0CNRZVJMG",
+      "price": 29.99,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.3,
+        "count": 6505,
+        "sample": null
+      },
+      "id": "amazon-b0cnrzvjmg",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71ibbU+OxdL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 3,
+      "name": "plusOne Bullet Vibrator for Women - Silicone Mini Vibrator, Pink Mini | Sex Toy Personal Massager with 10 vibration settings, Fully Waterproof, USB Rechargeable",
+      "product_url": "https://www.amazon.com/dp/B0FYKHC327",
+      "purchase_url": "https://www.amazon.com/dp/B0FYKHC327",
+      "price": 12.79,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.1,
+        "count": 7456,
+        "sample": null
+      },
+      "id": "amazon-b0fykhc327",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61xedFnFwLL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 4,
+      "name": "Kstert 7.8\" Realistic Flesh Liquid Silicone Dildo with Strong Suction Cup | Sensual lifelike toy featuring a powerful suction base and perfect length, ideal for hands-free solo or couples' play.",
+      "product_url": "https://www.amazon.com/dp/B0C4GZ7CC4",
+      "purchase_url": "https://www.amazon.com/dp/B0C4GZ7CC4",
+      "price": 13.99,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.3,
+        "count": 4356,
+        "sample": null
+      },
+      "id": "amazon-b0c4gz7cc4",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51qiE+X+42L._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 5,
+      "name": "Vibrator Adult Sex Toys for Women - Sovokn 5IN1 Mouth Sucking Vibrator Rose Sex Toy, 10 Tongue Licking, 3 Auto & 1 Manual Sucking Adult Toys New APP, Anal Clit Nipple Vibrators Female Couples Sex Toys",
+      "product_url": "https://www.amazon.com/dp/B0CLRLP33T",
+      "purchase_url": "https://www.amazon.com/dp/B0CLRLP33T",
+      "price": 29.46,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.3,
+        "count": 3877,
+        "sample": null
+      },
+      "id": "amazon-b0clrlp33t",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/719sBWylJrL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 6,
+      "name": "Male Masturbator,Kingdemer Realistic Pocket Pussy Vagina Textured with 7.5in Depth Lifelike Soft and Fleshy Texture,Penis Training Masturbators Sex Machine Toy for Men",
+      "product_url": "https://www.amazon.com/dp/B0CZ9HDBB9",
+      "purchase_url": "https://www.amazon.com/dp/B0CZ9HDBB9",
+      "price": 15.99,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.3,
+        "count": 3401,
+        "sample": null
+      },
+      "id": "amazon-b0cz9hdbb9",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51yjsQ9muyL._AC_UL600_SR600,400_.jpg",
+      "image_kind": "official"
+    }
+  ]
+}

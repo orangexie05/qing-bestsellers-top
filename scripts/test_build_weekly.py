@@ -24,7 +24,7 @@ def test_real_week() -> None:
         fail("aggregated week must not carry seed")
     if doc["period"]["iso_week"] != "2026-W42":
         fail(doc["period"]["iso_week"])
-    if doc["aggregation"]["daily_dates"] != ["2026-10-15", "2026-10-16", "2026-10-17"]:
+    if doc["aggregation"]["daily_dates"] != ["2026-10-15", "2026-10-16", "2026-10-17", "2026-10-18"]:
         fail(str(doc["aggregation"]["daily_dates"]))
     if len(doc["items"]) != 20:
         fail(f"expected 20 items, got {len(doc['items'])}")
@@ -36,11 +36,11 @@ def test_real_week() -> None:
         if not item.get("product_url"):
             fail("missing url")
     hug = next(item for item in doc["items"] if item["id"] == "dame-hug")
-    if hug["appearances"] != 3:
+    if hug["appearances"] != 4:
         fail(f"hug appearances {hug['appearances']}")
-    one_day = [item for item in doc["items"] if item["appearances"] == 1]
-    if not one_day:
-        fail("expected some one-day products")
+    partial = [item for item in doc["items"] if item["appearances"] < 4]
+    if not partial:
+        fail("expected some products that did not appear on every day")
     ranks = [item["overall_rank"] for item in doc["items"]]
     if ranks != list(range(1, 21)):
         fail(str(ranks))

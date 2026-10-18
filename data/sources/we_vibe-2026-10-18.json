@@ -1,0 +1,64 @@
+{
+  "platform": "we_vibe",
+  "store": "We-Vibe",
+  "list_url": "https://www.we-vibe.com/us/bestsellers",
+  "fetched_at": "2026-10-18T10:45:48+08:00",
+  "status": "ok",
+  "currency": "USD",
+  "rank_basis": "bestsellers_page_order",
+  "note": "Public /us/bestsellers. Only rows with confirmed Magento PDP URLs included.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Chorus Pro",
+      "product_url": "https://www.we-vibe.com/us/chorus-pro",
+      "purchase_url": "https://www.we-vibe.com/us/chorus-pro",
+      "price": 229.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "wevibe-chorus",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/1bc522adbdeb181b78a833de4363b825/w/v/wvi_chorus_pro_purple_category_image_1000x1000_transparent_1.png",
+      "image_kind": "official",
+      "note_key": "price_from",
+      "notes": "As low as $229 on bestsellers + PDP."
+    },
+    {
+      "rank": 2,
+      "name": "We-Vibe Melt 2",
+      "product_url": "https://www.we-vibe.com/us/melt-2",
+      "purchase_url": "https://www.we-vibe.com/us/melt-2",
+      "price": 159.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "wevibe-melt2",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/1bc522adbdeb181b78a833de4363b825/w/v/wvi_melt2_purple_pdp_gallery_1000x1000_02_en.jpg",
+      "image_kind": "official",
+      "note_key": "price_from"
+    },
+    {
+      "rank": 3,
+      "name": "We-Vibe Nova 2",
+      "product_url": "https://www.we-vibe.com/us/nova-2",
+      "purchase_url": "https://www.we-vibe.com/us/nova-2",
+      "price": 159.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "wevibe-nova2",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/1811fe6d3b412f0f16d56ffe9f5c4792/w/v/wvi_nova2_blue_pdp_gallery_1500x1500_01a_1.jpg",
+      "image_kind": "official",
+      "note_key": "price_from"
+    }
+  ]
+}

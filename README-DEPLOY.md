@@ -56,6 +56,8 @@ find . -type f \( -name '*.html' -o -name '*.xml' -o -name 'robots.txt' \) -exec
 
 2026-10-17 的日榜已上线，来自当天公开页面的实抓，没有 `seed`。同一份内容写在 `data/daily-2026-10-17.json`、`data/daily-latest.json` 和 `data/archive/daily/2026-10-17.json`。
 
+2026-10-18 的日榜已上线，来自当天公开页面的实抓，没有 `seed`。同一份内容写在 `data/daily-2026-10-18.json`、`data/daily-latest.json` 和 `data/archive/daily/2026-10-18.json`。
+
 `data.json` 和 `data/archive/daily/2026-10-15.json` 仍是 2026-10-15 的综合快照，文件里带有 `seed`。不要把 10-16 的香港新行写回 10-15。
 
 ### 周榜怎么来
@@ -64,7 +66,7 @@ find . -type f \( -name '*.html' -o -name '*.xml' -o -name 'robots.txt' \) -exec
 
 只有一份日榜时，脚本不改已有周榜。那份周榜若仍带 `seed`，页面会写明它是某一天日榜的副本，不是单独统计的一周销量。
 
-2026-W42（2026-10-12–2026-10-18）由 2026-10-15、2026-10-16 与 2026-10-17 三份日榜汇总，不是 seed。
+2026-W42（2026-10-12–2026-10-18）由 2026-10-15、2026-10-16、2026-10-17 与 2026-10-18 四份日榜汇总，不是 seed。
 
 淘宝 / 天猫仍未收录。2026-10-16 打开 `https://s.taobao.com/search` 只得到需要 JavaScript 的搜索壳，静态 HTML 里没有商品链接、商品 id 或价格，所以没有编造行。空结构在 `data/sources/taobao_tmall.placeholder.json`。18 Gifts 被 Cloudflare 拦住，LELO `/best-sellers` 返回 404，MysteryVibe 在 429 之后没有重试，PChome 24h 的响应不是确认过的热销榜。2026-10-17 没有重抓这几家；当天 `sources_skipped` 只记了淘宝 / 天猫、18 Gifts 和 LELO。
 
