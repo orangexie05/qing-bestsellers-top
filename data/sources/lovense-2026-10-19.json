@@ -1,0 +1,63 @@
+{
+  "platform": "lovense",
+  "store": "Lovense",
+  "list_url": "https://www.lovense.com/",
+  "fetched_at": "2026-10-19T10:43:34+08:00",
+  "status": "ok",
+  "currency": "USD",
+  "rank_basis": "homepage_flagship_carousel_order",
+  "note": "Homepage Our Flagship Toys order. Real product URLs only. Reviews not on carousel.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Gush 2 Motion",
+      "product_url": "https://www.lovense.com/gush-2-motion-remote-controlled-penis-vibrator",
+      "purchase_url": "https://www.lovense.com/gush-2-motion-remote-controlled-penis-vibrator",
+      "price": 99.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lovense-gush-2-motion-remote-controlled-penis-vibrator",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_gush2motion.jpg?v=1599001499",
+      "image_kind": "official",
+      "notes": "Sale price shown on homepage Flagship Toys carousel."
+    },
+    {
+      "rank": 2,
+      "name": "Solace Pro",
+      "product_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
+      "purchase_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
+      "price": 199.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lovense-solace-pro-ai-automatic-blowjob-machine-men",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_solace22.jpg?v=1599001499",
+      "image_kind": "official",
+      "notes": "Sale price shown on homepage Flagship Toys carousel."
+    },
+    {
+      "rank": 3,
+      "name": "Ferri",
+      "product_url": "https://www.lovense.com/magnetic-panty-vibrator",
+      "purchase_url": "https://www.lovense.com/magnetic-panty-vibrator",
+      "price": 99.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lovense-magnetic-panty-vibrator",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_ferri.jpg?v=1599001499",
+      "image_kind": "official",
+      "notes": "Sale price shown on homepage Flagship Toys carousel."
+    }
+  ]
+}

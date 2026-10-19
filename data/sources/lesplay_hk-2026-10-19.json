@@ -1,0 +1,128 @@
+{
+  "platform": "lesplay_hk",
+  "store": "Les'Play (HK)",
+  "list_url": "https://www.lesplayhk.com/categories/best-seller",
+  "fetched_at": "2026-10-19T10:43:42+08:00",
+  "status": "ok",
+  "currency": "HKD",
+  "rank_basis": "plp_card_order",
+  "note": "Public Shopline PLP. Price from card price element before next product link. Reviews not on list.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Womanizer Next Liberty 3D陰蒂吸啜智能按摩器",
+      "product_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "purchase_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "price": 988.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-womanizer-next-liberty-3d-pleasure-air-stimulato",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6aa42b364f6f2d67e12c5d43/375x.webp?source_format=gif",
+      "image_kind": "official",
+      "note_key": "hk_list_order"
+    },
+    {
+      "rank": 2,
+      "name": "Roomfun 雙人共震 穿戴式按摩棒套裝",
+      "product_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
+      "purchase_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
+      "price": 798.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-roomfun-double-vibration-wearable-dildo-set",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a7f097fc377fa203b144236/375x.webp?source_format=png",
+      "image_kind": "official",
+      "note_key": "hk_list_order"
+    },
+    {
+      "rank": 3,
+      "name": "Kisstoy 氣墊 PUPU 手機遙控 吸啜器震蛋組",
+      "product_url": "https://www.lesplayhk.com/products/kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "purchase_url": "https://www.lesplayhk.com/products/kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "price": 428.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a788bd5a7398aa91f72bf77/375x.webp?source_format=png",
+      "image_kind": "official",
+      "note_key": "hk_list_order"
+    },
+    {
+      "rank": 4,
+      "name": "Kisstoy 手指糯米棒 超柔軟恆溫幼身按摩棒",
+      "product_url": "https://www.lesplayhk.com/products/kisstoy-finger-sticky-rice-vibrator",
+      "purchase_url": "https://www.lesplayhk.com/products/kisstoy-finger-sticky-rice-vibrator",
+      "price": 338.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-kisstoy-finger-sticky-rice-vibrator",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a12ed4403db9ec9627cfcb9/375x.webp?source_format=png",
+      "image_kind": "official",
+      "note_key": "hk_list_order"
+    },
+    {
+      "rank": 5,
+      "name": "WUZZ ULA 鯨尾舒感按摩器",
+      "product_url": "https://www.lesplayhk.com/products/wuzz-ula-whale-vulva-vibrator",
+      "purchase_url": "https://www.lesplayhk.com/products/wuzz-ula-whale-vulva-vibrator",
+      "price": 538.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-wuzz-ula-whale-vulva-vibrator",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a072aa6a735a79cdc732f4f/375x.webp?source_format=jpg",
+      "image_kind": "official",
+      "note_key": "hk_list_sale",
+      "compare_at_price": 598.0
+    },
+    {
+      "rank": 6,
+      "name": "WUZZ ELI 靈舌柔軟震動按摩棒",
+      "product_url": "https://www.lesplayhk.com/products/wuzz-eli-tongue-soft-vibrator",
+      "purchase_url": "https://www.lesplayhk.com/products/wuzz-eli-tongue-soft-vibrator",
+      "price": 538.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-wuzz-eli-tongue-soft-vibrator",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a073922f3456a02af7e986f/375x.webp?source_format=jpg",
+      "image_kind": "official",
+      "note_key": "hk_list_sale",
+      "compare_at_price": 598.0
+    }
+  ],
+  "omissions": [
+    {
+      "platform": "lesplay_hk",
+      "name": "Kisstoy 迷路 手機遙控穿戴震蛋【入體｜拍打｜吸啜｜震動 四款選】",
+      "reason": "Card without parseable price before next product; omitted."
+    },
+    {
+      "platform": "lesplay_hk",
+      "name": "Kisstoy TUTU 2｜突突二代 智能加溫二段伸縮炮機",
+      "reason": "Card without parseable price before next product; omitted."
+    }
+  ]
+}

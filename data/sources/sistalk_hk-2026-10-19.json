@@ -1,0 +1,116 @@
+{
+  "platform": "sistalk_hk",
+  "store": "SISTALK HK",
+  "list_url": "https://www.sistalk.hk/categories/hot-selling",
+  "fetched_at": "2026-10-19T10:43:42+08:00",
+  "status": "ok",
+  "currency": "HKD",
+  "rank_basis": "plp_card_order",
+  "note": "Public Shopline PLP. Price from card price element before next product link. Reviews not on list.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "小怪獸 魚擺擺 抗菌魚尾震動器",
+      "product_url": "https://www.sistalk.hk/products/monster-pub-wiwi-fish-tail-antibacterial-vibrator",
+      "purchase_url": "https://www.sistalk.hk/products/monster-pub-wiwi-fish-tail-antibacterial-vibrator",
+      "price": 398.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "sistalk_hk-monster-pub-wiwi-fish-tail-antibacterial-vibrato",
+      "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/6970712b5240724b98fe011e/375x.webp?source_format=gif",
+      "image_kind": "official",
+      "note_key": "hk_list_order"
+    },
+    {
+      "rank": 2,
+      "name": "HARU: ORGASM 草本熱浪迷情 高潮潤滑液",
+      "product_url": "https://www.sistalk.hk/products/orgasm-大麻熱浪迷情-熱感潤滑液-150ml",
+      "purchase_url": "https://www.sistalk.hk/products/orgasm-大麻熱浪迷情-熱感潤滑液-150ml",
+      "price": 218.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "sistalk_hk-orgasm-150ml",
+      "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/64467f32e55f380023436cc5/375x.webp?source_format=png",
+      "image_kind": "official",
+      "note_key": "hk_list_order"
+    },
+    {
+      "rank": 3,
+      "name": "赫茲少女: 失重#808 拍打G點震動棒棒【升級APP版】",
+      "product_url": "https://www.sistalk.hk/products/herzgirl-808-g-spot-tapping-massager-app",
+      "purchase_url": "https://www.sistalk.hk/products/herzgirl-808-g-spot-tapping-massager-app",
+      "price": 638.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "sistalk_hk-herzgirl-808-g-spot-tapping-massager-app",
+      "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/67fa65f447dbee000f0873da/375x.webp?source_format=png",
+      "image_kind": "official",
+      "note_key": "hk_list_order"
+    },
+    {
+      "rank": 4,
+      "name": "小怪獸: Monster Pop 魔炮 | 智能吸啜 · 點震炮機",
+      "product_url": "https://www.sistalk.hk/products/monster-pub-monster-pop",
+      "purchase_url": "https://www.sistalk.hk/products/monster-pub-monster-pop",
+      "price": 598.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "sistalk_hk-monster-pub-monster-pop",
+      "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/6807b7d98f3cfd0011c79658/375x.webp?source_format=gif",
+      "image_kind": "official",
+      "note_key": "hk_list_order"
+    },
+    {
+      "rank": 5,
+      "name": "歪歪馬: 加熱強力版蕉男友",
+      "product_url": "https://www.sistalk.hk/products/yy-horse-warming-peeled-banana-vibrator",
+      "purchase_url": "https://www.sistalk.hk/products/yy-horse-warming-peeled-banana-vibrator",
+      "price": 399.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "sistalk_hk-yy-horse-warming-peeled-banana-vibrator",
+      "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/650868b0e962da001a3f7101/375x.webp?source_format=png",
+      "image_kind": "official",
+      "note_key": "hk_list_order"
+    },
+    {
+      "rank": 6,
+      "name": "怪獸集合: AI智能 絢風飛機杯",
+      "product_url": "https://www.sistalk.hk/products/monster-hub-tornado-ai-smart-masturbation-cup",
+      "purchase_url": "https://www.sistalk.hk/products/monster-hub-tornado-ai-smart-masturbation-cup",
+      "price": 688.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "sistalk_hk-monster-hub-tornado-ai-smart-masturbation-cup",
+      "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/66a726cb9d18100013c0e834/375x.webp?source_format=png",
+      "image_kind": "official",
+      "note_key": "hk_list_sale",
+      "compare_at_price": 798.0
+    }
+  ],
+  "omissions": []
+}

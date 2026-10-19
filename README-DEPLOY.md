@@ -58,6 +58,8 @@ find . -type f \( -name '*.html' -o -name '*.xml' -o -name 'robots.txt' \) -exec
 
 2026-10-18 的日榜已上线，来自当天公开页面的实抓，没有 `seed`。同一份内容写在 `data/daily-2026-10-18.json`、`data/daily-latest.json` 和 `data/archive/daily/2026-10-18.json`。
 
+2026-10-19 的日榜已上线，来自当天公开页面的实抓，没有 `seed`。同一份内容写在 `data/daily-2026-10-19.json`、`data/daily-latest.json` 和 `data/archive/daily/2026-10-19.json`。
+
 `data.json` 和 `data/archive/daily/2026-10-15.json` 仍是 2026-10-15 的综合快照，文件里带有 `seed`。不要把 10-16 的香港新行写回 10-15。
 
 ### 周榜怎么来
