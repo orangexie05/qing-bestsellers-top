@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -73,7 +74,10 @@ def plain(path: str, lastmod: str, changefreq: str, priority: str) -> str:
 
 
 def main() -> int:
-    lastmod = "2026-10-17"
+    daily = boardlib.load_json(boardlib.ROOT / "data" / "daily-latest.json")
+    weekly = boardlib.load_json(boardlib.ROOT / "data" / "weekly-latest.json")
+    lastmod = str(daily.get("date") or daily.get("as_of") or "")[:10]
+    weekly_mod = str(weekly.get("as_of") or weekly.get("date") or lastmod)[:10]
     chunks: list[str] = []
     chunks += page_set("/", lastmod, "daily", "1.0")
     chunks += page_set("/", lastmod, "weekly", "0.9", ["board=weekly"])
@@ -96,14 +100,18 @@ def main() -> int:
     ):
         chunks += page_set(name, lastmod, freq, pri)
     chunks.append(plain("/llms.txt", lastmod, "monthly", "0.3"))
-    for rel, pri in (
-        ("/data.json", "0.3"),
-        ("/data/daily-latest.json", "0.4"),
-        ("/data/weekly-latest.json", "0.4"),
-        ("/data/daily-2026-10-16.json", "0.4"),
-        ("/data/daily-2026-10-17.json", "0.4"),
-    ):
-        chunks.append(plain(rel, lastmod, "daily", pri))
+    snapshot = boardlib.ROOT / "data.json"
+    if snapshot.exists():
+        snap = boardlib.load_json(snapshot)
+        stamp = str(snap.get("date") or snap.get("as_of") or lastmod)[:10]
+        chunks.append(plain("/data.json", stamp, "monthly", "0.3"))
+    chunks.append(plain("/data/daily-latest.json", lastmod, "daily", "0.4"))
+    chunks.append(plain("/data/weekly-latest.json", weekly_mod, "daily", "0.4"))
+    for path in sorted((boardlib.ROOT / "data").glob("daily-*.json")):
+        if not re.fullmatch(r"daily-\d{4}-\d{2}-\d{2}", path.stem):
+            continue
+        stamp = path.stem.removeprefix("daily-")
+        chunks.append(plain(f"/data/{path.name}", stamp, "daily", "0.4"))
     for day, path, _doc in boardlib.iter_daily_archives():
         chunks.append(plain(f"/data/archive/daily/{path.name}", day.isoformat(), "monthly", "0.2"))
     for path in sorted(weekly_dir.glob("*.json")):

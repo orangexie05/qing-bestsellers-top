@@ -16,7 +16,11 @@ def fail(message: str) -> None:
 
 
 def test_real_week() -> None:
-    dailies = [doc for _day, _path, doc in boardlib.iter_daily_archives()]
+    dailies = [
+        doc
+        for day, _path, doc in boardlib.iter_daily_archives()
+        if boardlib.iso_week_id(day) == "2026-W42"
+    ]
     doc = boardlib.aggregate_dailies(dailies, "2026-10-16T17:03:22+08:00")
     if not doc:
         fail("expected an aggregate for the October dailies")

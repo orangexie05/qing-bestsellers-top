@@ -419,6 +419,7 @@ def write_index(entries: list[tuple[str, str, str]]) -> None:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="rating" content="adult">
+<meta name="qing:as-of" content="{boardlib.load_json(boardlib.ROOT / "data" / "daily-latest.json").get("date", "")[:10]}">
 <title>{title}</title>
 <meta name="description" content="{description}">
 <meta name="robots" content="index,follow,max-snippet:-1">

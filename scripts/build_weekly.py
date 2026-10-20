@@ -3,10 +3,12 @@
 
 Monday routine, from the repo root:
 
-    python3 scripts/apply_source_extracts.py   # only when new extracts exist
-    python3 scripts/build_weekly.py
-    python3 scripts/build_archive_html.py
-    python3 scripts/build_sitemap.py
+    python3 scripts/publish_boards.py
+
+That also rebuilds archive HTML, sitemap.xml, llms.txt, and the homepage
+SEO shell from data/daily-latest.json. Do not stop after the JSON files:
+index.html title, description, and JSON-LD dates are rewritten only by
+scripts/build_homepage.py.
 
 If an ISO week has only one daily archive, this script does not write a weekly
 file and does not relabel a seed copy as a real week. The page keeps showing

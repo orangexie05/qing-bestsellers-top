@@ -128,6 +128,12 @@ def related_html(info: dict) -> str:
 
 def write_page(page_id: str) -> None:
     zh = boardlib.load_json(boardlib.ROOT / "i18n" / "zh-CN.json")
+    daily = boardlib.load_json(boardlib.ROOT / "data" / "daily-latest.json")
+    weekly = boardlib.load_json(boardlib.ROOT / "data" / "weekly-latest.json")
+    as_of = str(daily.get("as_of") or daily.get("date") or "")[:10]
+    daily_archive = (daily.get("publish") or {}).get("archive") or f"data/archive/daily/{as_of}.json"
+    weekly_archive = (weekly.get("publish") or {}).get("archive") or ""
+    archive_line = f"日期归档：{daily_archive}" + (f" · {weekly_archive}" if weekly_archive else "")
     info = zh["pages"][page_id]
     ui = zh["ui"]
     copy = packs(page_id)
@@ -158,7 +164,7 @@ def write_page(page_id: str) -> None:
                 "description": description,
                 "inLanguage": "zh-Hans",
                 "isFamilyFriendly": False,
-                "dateModified": "2026-10-17",
+                "dateModified": as_of,
                 "isPartOf": {"@id": BASE + "/#website"},
                 "audience": {"@type": "PeopleAudience", "requiredMinAge": 18},
             },
@@ -181,6 +187,7 @@ def write_page(page_id: str) -> None:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="7BUcqMUjtgmsXPcFlCGDMy5D-SxcqcEuFna2_NjYATE">
 <meta name="rating" content="adult">
+<meta name="qing:as-of" content="{as_of}">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <meta name="robots" content="index,follow,max-snippet:-1">
@@ -282,7 +289,7 @@ def write_page(page_id: str) -> None:
     <p id="foot-links">外链使用 nofollow。数据时区 Asia/Shanghai。</p>
     <p id="foot-pages"><a id="foot-daily" href="index.html">日榜</a> · <a id="foot-weekly" href="index.html?board=weekly">周榜</a> · <a id="foot-platform" href="by-platform.html">分平台</a> · <a id="foot-archive-page" href="archive/index.html">归档</a> · <a id="foot-about" href="about.html">关于本站</a> · <a id="foot-method" href="method.html">数据方法</a> · <a id="foot-faq" href="faq.html">常见问题</a> · <a id="foot-privacy" href="privacy.html">隐私政策</a> · <a id="foot-contact" href="contact.html">联系</a></p>
     <p><a id="foot-data" href="data/daily-latest.json">查看当前榜单 JSON</a> · <a id="foot-snapshot-data" href="data.json">综合快照</a></p>
-    <p id="foot-archive">日期归档：data/archive/daily/2026-10-17.json · data/archive/weekly/2026-W42.json</p>
+    <p id="foot-archive">{esc(archive_line)}</p>
   </div>
 </footer>
 <div id="live" class="skip" aria-live="polite"></div>

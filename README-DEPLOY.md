@@ -72,16 +72,24 @@ find . -type f \( -name '*.html' -o -name '*.xml' -o -name 'robots.txt' \) -exec
 
 淘宝 / 天猫仍未收录。2026-10-16 打开 `https://s.taobao.com/search` 只得到需要 JavaScript 的搜索壳，静态 HTML 里没有商品链接、商品 id 或价格，所以没有编造行。空结构在 `data/sources/taobao_tmall.placeholder.json`。18 Gifts 被 Cloudflare 拦住，LELO `/best-sellers` 返回 404，MysteryVibe 在 429 之后没有重试，PChome 24h 的响应不是确认过的热销榜。2026-10-17 没有重抓这几家；当天 `sources_skipped` 只记了淘宝 / 天猫、18 Gifts 和 LELO。
 
-周一（或有新日榜时）在仓库根目录：
+周一（或有新日榜时）在仓库根目录跑这一条。它会重算够天数的周榜，重写归档 HTML、首页和分平台页的 SEO 壳（title、description、Open Graph、Twitter、JSON-LD 的 dateModified / temporalCoverage、ItemList、页面上的摘要）、`llms.txt`、信任页和 `sitemap.xml`。不要只改 JSON 就停：`scripts/refresh_jsonld.py` 现在会调用首页壳重建，但完整发布用下面的命令，否则 sitemap 或信任页仍可能停在旧日期。
+
+```bash
+python3 scripts/publish_boards.py
+```
+
+等价的分步命令（日榜 JSON 已经写入 `data/daily-latest.json` 和 `data/archive/daily/` 之后）：
 
 ```bash
 python3 scripts/apply_source_extracts.py   # 仅当 data/sources/*-YYYY-MM-DD.json 已有 status ok
 python3 scripts/build_weekly.py
 python3 scripts/build_archive_html.py
+python3 scripts/build_homepage.py          # 首页 / 分平台 SEO 壳和 llms.txt，必须跑
 python3 scripts/build_sitemap.py
-python3 scripts/refresh_jsonld.py
-python3 scripts/build_trust_pages.py       # 隐私 / 联系文案改了 i18n 之后
+python3 scripts/build_trust_pages.py       # 隐私 / 联系文案；日期取自 daily-latest
 ```
+
+`scripts/refresh_jsonld.py` 与 `scripts/build_homepage.py` 是同一步，留下旧文件名是为了已经写在说明里的命令不会再只改 ItemList。
 
 信任页：`privacy.html`、`contact.html`。给抓取器用的说明：`llms.txt`。联系方式只有 GitHub Issues，没有另写邮箱。
 

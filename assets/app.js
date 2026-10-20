@@ -863,6 +863,20 @@
     slot.textContent = JSON.stringify(graph);
   }
 
+  function publishedAsOf() {
+    var node = document.querySelector('meta[name="qing:as-of"]');
+    if (node && node.getAttribute("content")) return node.getAttribute("content");
+    try {
+      var slot = document.getElementById("ld-json");
+      var parsed = slot && JSON.parse(slot.textContent);
+      var graph = (parsed && parsed["@graph"]) || [];
+      for (var i = 0; i < graph.length; i += 1) {
+        if (graph[i] && graph[i].dateModified) return graph[i].dateModified;
+      }
+    } catch (err) {}
+    return "";
+  }
+
   function writeInfoStructuredData() {
     var dict = state.dict;
     var slot = document.getElementById("ld-json");
@@ -884,7 +898,6 @@
       "isFamilyFriendly": false,
       "isPartOf": { "@id": BASE + "/#website" },
       "publisher": { "@id": BASE + "/#organization" },
-      "dateModified": "2026-10-16",
       "audience": { "@type": "PeopleAudience", "requiredMinAge": 18 },
       "primaryImageOfPage": {
         "@type": "ImageObject",
@@ -893,6 +906,8 @@
         "height": 630
       }
     };
+    var asOf = publishedAsOf();
+    if (asOf) node.dateModified = asOf;
     if (PAGE === "faq") {
       node.mainEntity = (info.items || []).map(function (item) {
         return {

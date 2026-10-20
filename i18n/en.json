@@ -90,13 +90,13 @@
     "navAbout": "About",
     "navMethod": "Method",
     "navFaq": "FAQ",
-    "footerSources": "Each issue follows its JSON. The design includes Taobao/Tmall, Amazon, and independent shops. The 2026-10-17 issue includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Taobao/Tmall is still absent.",
+    "footerSources": "Each issue follows its JSON. The design includes Taobao/Tmall, Amazon, and independent shops. The 2026-10-19 issue includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Taobao/Tmall is still absent.",
     "footerCadence": "Cadence: the daily file is replaced in full once per Shanghai day. The weekly file is aggregated when that ISO week has two or more daily archives. With only one daily, a weekly file may still be a seeded copy, and the page says so.",
     "footerAbout": "About",
     "footerMethod": "Methodology",
     "footerFaq": "FAQ",
     "footerLinksFixed": "Outbound links use nofollow. Time zone Asia/Shanghai.",
-    "footerArchiveFixed": "Readable archive: archive/index.html. JSON: data/archive/daily/2026-10-17.json · data/archive/weekly/2026-W42.json",
+    "footerArchiveFixed": "Readable archive: archive/index.html. JSON: data/archive/daily/2026-10-19.json · data/archive/weekly/2026-W42.json",
     "geoLabel": "Summary",
     "navArchive": "Archive",
     "navPrivacy": "Privacy",
@@ -340,7 +340,7 @@
             "The daily chart updates once per Asia/Shanghai date. A routine publish replaces data/daily-latest.json in full and writes the same document to data/daily-YYYY-MM-DD.json and data/archive/daily/YYYY-MM-DD.json. Older rows are not merged in.",
             "The weekly chart updates for each Monday–Sunday week in Asia/Shanghai (the ISO week). A routine publish replaces data/weekly-latest.json in full and writes data/archive/weekly/YYYY-Www.json.",
             "The daily file was first written at 2026-10-16T10:59:47+08:00 and rewritten at 2026-10-16T17:03:22+08:00 after the Hong Kong shops were added. Prices and ranks match the date in the file, not live stock at the moment you open the page.",
-            "The weekly chart is not meant to stay a copy of one day. scripts/build_weekly.py reads data/archive/daily/. When one ISO week (Asia/Shanghai, Monday–Sunday) has two or more daily files, it dedupes by product URL, ranks by days appeared, mean source rank, and best source rank, and writes data/weekly-latest.json plus data/archive/weekly/YYYY-Www.json with no seed. 2026-W42 uses 2026-10-15, 2026-10-16, and 2026-10-17, so it is an aggregate, not a copy. If a week has only one daily, the script leaves the existing weekly file alone. If that file still has seed, the page says it is a copy of that day."
+            "The weekly chart is not meant to stay a copy of one day. scripts/build_weekly.py reads data/archive/daily/. When one ISO week (Asia/Shanghai, Monday–Sunday) has two or more daily files, it dedupes by product URL, ranks by days appeared, mean source rank, and best source rank, and writes data/weekly-latest.json plus data/archive/weekly/YYYY-Www.json with no seed. 2026-W42 uses 2026-10-15, 2026-10-16, 2026-10-17, and 2026-10-18, so it is an aggregate, not a copy. If a week has only one daily, the script leaves the existing weekly file alone. If that file still has seed, the page says it is a copy of that day."
           ]
         },
         {
@@ -360,7 +360,7 @@
             "This is not worldwide sales, and it is not an official Taobao, Tmall, or Amazon master chart.",
             "Only rows that were open and had a product link are kept. A slide with no link (Lush 4 / Lush Mini on the Lovense homepage in the 2026-10-16 daily file) is recorded under omissions and is not in the top 20.",
             "Price, stock, discounts, and rank all move. A figure labeled “As low as” is the starting price shown on that page.",
-            "If a weekly JSON has seed, it is a copy of one day's chart, not a separate week-long tally. 2026-W42 has no seed: it is aggregated from the 2026-10-15, 2026-10-16, and 2026-10-17 daily files. A week with only one daily may still be a seed.",
+            "If a weekly JSON has seed, it is a copy of one day's chart, not a separate week-long tally. 2026-W42 has no seed: it is aggregated from the 2026-10-15, 2026-10-16, 2026-10-17, and 2026-10-18 daily files. A week with only one daily may still be a seed.",
             "Outbound links use nofollow. This site does not take payment, ship orders, or give medical or health advice, and it does not decide a purchase for you."
           ]
         }
@@ -395,11 +395,11 @@
       "items": [
         {
           "q": "Where does the data come from?",
-          "a": "From public bestseller pages that could be opened at scrape time. The design includes Taobao/Tmall, Amazon, and independent or regional shops. The 2026-10-17 chart includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Taobao/Tmall was not re-fetched on 2026-10-17. Earlier fetches returned a JavaScript search shell with no product rows, so no Taobao products were invented. The files are data/daily-latest.json and data/weekly-latest.json."
+          "a": "From public bestseller pages that could be opened at scrape time. The design includes Taobao/Tmall, Amazon, and independent or regional shops. The 2026-10-19 chart includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Taobao/Tmall was P26-10-19. Earlier fetches returned a JavaScript search shell with no product rows, so no Taobao products were invented. The files are data/daily-latest.json and data/weekly-latest.json."
         },
         {
           "q": "How often is it updated?",
-          "a": "The daily file is replaced in full once per Shanghai date. When an ISO week has two or more daily archives, scripts/build_weekly.py aggregates them by product URL instead of leaving a one-day copy as the finished week. With only one daily, the weekly file may still carry seed, and the page says so. The current daily file was written at 2026-10-17T10:44:14+08:00."
+          "a": "The daily file is replaced in full once per Shanghai date. When an ISO week has two or more daily archives, scripts/build_weekly.py aggregates them by product URL instead of leaving a one-day copy as the finished week. With only one daily, the weekly file may still carry seed, and the page says so. The current daily file was written at 2026-10-19T10:46:03+08:00."
         },
         {
           "q": "How do I read the list?",
@@ -415,7 +415,7 @@
         },
         {
           "q": "What is the difference between today and this week?",
-          "a": "Today is one Shanghai date. This week is Monday through Sunday. The home page opens on today; ?board=weekly opens the week. A weekly file with seed is a copy of one day. 2026-W42 has no seed: it aggregates 2026-10-15, 2026-10-16, and 2026-10-17, covering 2026-10-12 through 2026-10-18."
+          "a": "Today is one Shanghai date. This week is Monday through Sunday. The home page opens on today; ?board=weekly opens the week. A weekly file with seed is a copy of one day. 2026-W42 has no seed: it aggregates 2026-10-15, 2026-10-16, 2026-10-17, and 2026-10-18, covering 2026-10-12 through 2026-10-18."
         },
         {
           "q": "Are the prices still current?",
@@ -582,7 +582,7 @@
           "h2": "How to read it",
           "paragraphs": [
             "Daily filenames are Shanghai dates. Weekly filenames are ISO weeks, Monday through Sunday. If a weekly JSON has seed, that page says it is a copy of one day. If it names several daily dates, it is an aggregate, not a seed.",
-            "2026-W42 is aggregated from the 2026-10-15, 2026-10-16, and 2026-10-17 daily files. It is not a one-day copy."
+            "2026-W42 is aggregated from the 2026-10-15, 2026-10-16, 2026-10-17, and 2026-10-18 daily files. It is not a one-day copy."
           ]
         }
       ]
@@ -594,11 +594,11 @@
     "items": [
       {
         "q": "Is this a shop?",
-        "a": "No. Qing List lines up public bestseller pages that were open on 17 October 2026, so you can compare names, prices, and ratings. Order from the merchant only after you check the live page."
+        "a": "No. Qing List lines up public bestseller pages that were open on 19 October 2026, so you can compare names, prices, and ratings. Order from the merchant only after you check the live page."
       },
       {
         "q": "Which shops are included?",
-        "a": "The 2026-10-17 issue includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Taobao/Tmall has no product rows. Sources that did not make the file are listed at the bottom and are not backfilled."
+        "a": "The 2026-10-19 issue includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Taobao/Tmall has no product rows. Sources that did not make the file are listed at the bottom and are not backfilled."
       },
       {
         "q": "Are the prices still current?",
