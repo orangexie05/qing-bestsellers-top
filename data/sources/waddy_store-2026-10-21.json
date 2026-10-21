@@ -1,0 +1,109 @@
+{
+  "platform": "waddy_store",
+  "store": "Waddy Store (HK)",
+  "list_url": "https://www.waddystore.com/",
+  "fetched_at": "2026-10-21T10:44:36+08:00",
+  "status": "ok",
+  "currency": "HKD",
+  "rank_basis": "public_category_list_order",
+  "note": "Public Shopline PLP. Price from card before next product link; skipped template/zero-price cards.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "【聯承限定 賣完不補】NPG 八蜜凜 尿道雙穴名器飛機杯 Faleno聯承",
+      "product_url": "https://www.waddystore.com/products/npg-rin-hachimitsu-urethral-dual-orifice-masturbator-faleno-collaboration",
+      "purchase_url": "https://www.waddystore.com/products/npg-rin-hachimitsu-urethral-dual-orifice-masturbator-faleno-collaboration",
+      "price": 599.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "waddy_store-npg-rin-hachimitsu-urethral-dual-orifice-masturb",
+      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/6ad1e7e7f8978afeed3c4253/375x.webp?source_format=jpeg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 2,
+      "name": "LELO F1S V3 App 控制聲波電動男士飛機杯",
+      "product_url": "https://www.waddystore.com/products/lelo-f1s™-v3-male-masturbators",
+      "purchase_url": "https://www.waddystore.com/products/lelo-f1s™-v3-male-masturbators",
+      "price": 1947.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "waddy_store-lelo-f1s-v3-male-masturbators",
+      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/69294be382f98f00163aab6f/375x.webp?source_format=jpeg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 3,
+      "name": "Erocome Antlia 唧筒座 仿口愛夾縮吸啜電動飛機杯 黑色",
+      "product_url": "https://www.waddystore.com/products/erocome-antlia-masturbator-black",
+      "purchase_url": "https://www.waddystore.com/products/erocome-antlia-masturbator-black",
+      "price": 808.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "waddy_store-erocome-antlia-masturbator-black",
+      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/6916d3fbc68aca00149b2ad6/375x.webp?source_format=jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 4,
+      "name": "MyToys Rocky 全方位旋轉自動抽插電動飛機杯",
+      "product_url": "https://www.waddystore.com/products/mytoys-rocky",
+      "purchase_url": "https://www.waddystore.com/products/mytoys-rocky",
+      "price": 705.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "waddy_store-mytoys-rocky",
+      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/6916dfccff076c0010d8fbdc/375x.webp?source_format=jpg",
+      "image_kind": "official",
+      "compare_at_price": 800.0
+    },
+    {
+      "rank": 5,
+      "name": "T-BEST Electric-Ona-Hammar 錘形電動飛機杯",
+      "product_url": "https://www.waddystore.com/products/t-best-electric-ona-hammar-hammer-shaped-electric-airplane-cup",
+      "purchase_url": "https://www.waddystore.com/products/t-best-electric-ona-hammar-hammer-shaped-electric-airplane-cup",
+      "price": 769.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "waddy_store-t-best-electric-ona-hammar-hammer-shaped-electri",
+      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/6902e46681fe2b0012a0fc7a/375x.webp?source_format=jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 6,
+      "name": "SVAKOM Alex Neo 2 智能APP互動式強力節拍 電動飛機杯",
+      "product_url": "https://www.waddystore.com/products/svakom-alex-neo-2-masturbator",
+      "purchase_url": "https://www.waddystore.com/products/svakom-alex-neo-2-masturbator",
+      "price": 1328.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "waddy_store-svakom-alex-neo-2-masturbator",
+      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/69296300401b4300123dfcc1/375x.webp?source_format=png",
+      "image_kind": "official"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "platform": "lovense",
+  "store": "Lovense",
+  "list_url": "https://www.lovense.com/",
+  "fetched_at": "2026-10-21T10:45:14+08:00",
+  "status": "ok",
+  "currency": "USD",
+  "rank_basis": "homepage_flagship_carousel_order",
+  "note": "Homepage Flagship Toys title/price_box/learn_more. Real product URLs only. Reviews not on carousel.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Glint",
+      "product_url": "https://www.lovense.com/glint-touch-responsive-vibrating-small-butt-plug",
+      "purchase_url": "https://www.lovense.com/glint-touch-responsive-vibrating-small-butt-plug",
+      "price": 109.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lovense-https-www-lovense-com-glint-touch-responsive-vib",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_z11.jpg?v=456638368",
+      "image_kind": "official",
+      "notes": "Sale price shown on homepage Flagship Toys carousel."
+    },
+    {
+      "rank": 2,
+      "name": "Solace Pro",
+      "product_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
+      "purchase_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
+      "price": 199.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lovense-https-www-lovense-com-solace-pro-ai-automatic-bl",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_solace22.jpg?v=456638368",
+      "image_kind": "official",
+      "notes": "Sale price shown on homepage Flagship Toys carousel."
+    },
+    {
+      "rank": 3,
+      "name": "Ferri",
+      "product_url": "https://www.lovense.com/magnetic-panty-vibrator",
+      "purchase_url": "https://www.lovense.com/magnetic-panty-vibrator",
+      "price": 99.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lovense-https-www-lovense-com-magnetic-panty-vibrator",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_ferri.jpg?v=456638368",
+      "image_kind": "official",
+      "notes": "Sale price shown on homepage Flagship Toys carousel."
+    },
+    {
+      "rank": 4,
+      "name": "Lush 4",
+      "product_url": "https://www.lovense.com/lush-4-best-bluetooth-remote-controlled-g-spot-vibrator",
+      "purchase_url": "https://www.lovense.com/lush-4-best-bluetooth-remote-controlled-g-spot-vibrator",
+      "price": 129.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lovense-https-www-lovense-com-lush-4-best-bluetooth-remo",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller4/best_seller_lushmini.png?v=456638368",
+      "image_kind": "official",
+      "notes": "Sale price shown on homepage Flagship Toys carousel."
+    },
+    {
+      "rank": 5,
+      "name": "Lush 4 and Ferri",
+      "product_url": "https://www.lovense.com/best-sex-toys-for-women-g-spot-vibrator-clit-stimulator-lush-4",
+      "purchase_url": "https://www.lovense.com/best-sex-toys-for-women-g-spot-vibrator-clit-stimulator-lush-4",
+      "price": 228.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lovense-https-www-lovense-com-best-sex-toys-for-women-g",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller4/best_seller_ferri_lush4.png?v=456638368",
+      "image_kind": "official",
+      "notes": "Sale price shown on homepage Flagship Toys carousel."
+    },
+    {
+      "rank": 6,
+      "name": "Gush 2 Motion and Edge  2",
+      "product_url": "https://www.lovense.com/gush-2-motion-edge-2-best-sex-toys-massager-for-partners",
+      "purchase_url": "https://www.lovense.com/gush-2-motion-edge-2-best-sex-toys-massager-for-partners",
+      "price": 198.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lovense-https-www-lovense-com-gush-2-motion-edge-2-best",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller4/best_seller_edge2_gush2motion.png?v=456638368",
+      "image_kind": "official",
+      "notes": "Sale price shown on homepage Flagship Toys carousel."
+    }
+  ]
+}

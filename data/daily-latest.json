@@ -1,21 +1,21 @@
 {
   "board": "daily",
-  "generated_at": "2026-10-19T10:46:03+08:00",
-  "date": "2026-10-19",
-  "as_of": "2026-10-19",
+  "generated_at": "2026-10-21T10:45:41+08:00",
+  "date": "2026-10-21",
+  "as_of": "2026-10-21",
   "timezone": "Asia/Shanghai",
   "period": {
     "kind": "day",
-    "start": "2026-10-19",
-    "end": "2026-10-19",
-    "label": "2026-10-19",
+    "start": "2026-10-21",
+    "end": "2026-10-21",
+    "label": "2026-10-21",
     "timezone": "Asia/Shanghai"
   },
   "publish": {
     "schema_version": 1,
     "latest": "data/daily-latest.json",
-    "archive": "data/archive/daily/2026-10-19.json",
-    "dated": "data/daily-2026-10-19.json",
+    "archive": "data/archive/daily/2026-10-21.json",
+    "dated": "data/daily-2026-10-21.json",
     "archive_pattern": "data/archive/daily/YYYY-MM-DD.json",
     "timezone": "Asia/Shanghai",
     "overwrite": "Replace data/daily-latest.json in full and write the same document to dated and archive paths. Do not invent products."
@@ -25,41 +25,41 @@
   "sort_rule": "dedupe by product_url; cap 6 per source; sort by source rank ASC, then rating DESC (nulls last), then review count DESC (nulls last), then platform id, then name; take Top 20",
   "sources_included": [
     "amazon_us",
-    "we_vibe",
-    "womanizer",
     "dame",
     "lesplay_hk",
     "lovense",
     "sexconcept_hk",
     "sistalk_hk",
-    "waddy_store"
+    "waddy_store",
+    "we_vibe",
+    "womanizer"
   ],
   "sources_skipped": [
     {
       "platform": "taobao_tmall",
       "status": "blocked",
-      "note": "Not re-fetched on 2026-10-19. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains."
+      "note": "Not re-fetched on 2026-10-21. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains."
     },
     {
       "platform": "gifts_18",
       "status": "blocked",
-      "note": "Not re-fetched on 2026-10-19. Prior Cloudflare interstitial."
+      "note": "Not re-fetched on 2026-10-21. Prior Cloudflare interstitial."
     },
     {
       "platform": "lelo",
       "status": "not_found",
-      "note": "Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-19."
+      "note": "Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-21."
     }
   ],
   "omissions": [
     {
-      "platform": "lesplay_hk",
-      "name": "Kisstoy 迷路 手機遙控穿戴震蛋【入體｜拍打｜吸啜｜震動 四款選】",
+      "platform": "sistalk_hk",
+      "name": "monster pub flex heartbeat vibrator",
       "reason": "Card without parseable price before next product; omitted."
     },
     {
-      "platform": "lesplay_hk",
-      "name": "Kisstoy TUTU 2｜突突二代 智能加溫二段伸縮炮機",
+      "platform": "sistalk_hk",
+      "name": "monster pub mooma",
       "reason": "Card without parseable price before next product; omitted."
     }
   ],
@@ -71,15 +71,15 @@
       "name": "Ava Vibrator Sex Toys – Battery Life 4 Hours | Water Resistant Body Safe Silicone | Clitoral Vibrators Couples Sex Toy with Multi Patterns & speeds Vibrator for Women - Purple",
       "product_url": "https://www.amazon.com/dp/B07YW5DZBQ",
       "purchase_url": "https://www.amazon.com/dp/B07YW5DZBQ",
-      "price": 16.47,
+      "price": 16.97,
       "currency": "USD",
       "reviews": {
         "rating": 4.2,
-        "count": 45143,
+        "count": 45144,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:46:03+08:00",
-      "id": "amazon-ava",
+      "scraped_at": "2026-10-21T10:42:26+08:00",
+      "id": "amazon-b07yw5dzbq",
       "image": "https://images-na.ssl-images-amazon.com/images/I/61hB-pRnvdL._AC_UL600_SR600,400_.jpg",
       "image_kind": "official",
       "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
@@ -96,11 +96,11 @@
       "currency": "USD",
       "reviews": {
         "rating": 4.07,
-        "count": 58,
+        "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:34+08:00",
-      "id": "wevibe-chorus",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
+      "id": "we_vibe-https-www-we-vibe-com-us-chorus-pro",
       "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_chorus_pro_purple_category_image_1000x1000.jpg",
       "image_kind": "official",
       "list_url": "https://www.we-vibe.com/us/bestsellers",
@@ -117,11 +117,11 @@
       "currency": "USD",
       "reviews": {
         "rating": 3.87,
-        "count": 327,
+        "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:34+08:00",
-      "id": "womanizer-next",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
+      "id": "womanizer-https-www-womanizer-com-us-next",
       "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_next_pdp_gallery_image_aubergine_01_en_sticker_2.jpg",
       "image_kind": "official",
       "list_url": "https://www.womanizer.com/us/bestseller",
@@ -141,7 +141,7 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:42+08:00",
+      "scraped_at": "2026-10-21T10:43:44+08:00",
       "id": "dame-hug",
       "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/hug-1-fir.png?v=1776325569",
       "image_kind": "official",
@@ -152,19 +152,19 @@
       "platform": "lesplay_hk",
       "store": "Les'Play (HK)",
       "rank": 1,
-      "name": "Womanizer Next Liberty 3D陰蒂吸啜智能按摩器",
-      "product_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
-      "purchase_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
-      "price": 988.0,
+      "name": "台灣月釀碟片 標準型 限量顏色 (53ml)",
+      "product_url": "https://www.lesplayhk.com/products/tw-moonplate-regular-limited-edition",
+      "purchase_url": "https://www.lesplayhk.com/products/tw-moonplate-regular-limited-edition",
+      "price": 458.0,
       "currency": "HKD",
       "reviews": {
         "rating": null,
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:42+08:00",
-      "id": "lesplay_hk-womanizer-next-liberty-3d-pleasure-air-stimulato",
-      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6aa42b364f6f2d67e12c5d43/375x.webp?source_format=gif",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
+      "id": "lesplay_hk-tw-moonplate-regular-limited-edition",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6ad75b8a6d2dab0016573927/375x.webp?source_format=png",
       "image_kind": "official",
       "list_url": "https://www.lesplayhk.com/categories/best-seller",
       "note_key": "hk_list_order",
@@ -174,19 +174,19 @@
       "platform": "lovense",
       "store": "Lovense",
       "rank": 1,
-      "name": "Gush 2 Motion",
-      "product_url": "https://www.lovense.com/gush-2-motion-remote-controlled-penis-vibrator",
-      "purchase_url": "https://www.lovense.com/gush-2-motion-remote-controlled-penis-vibrator",
-      "price": 99.0,
+      "name": "Glint",
+      "product_url": "https://www.lovense.com/glint-touch-responsive-vibrating-small-butt-plug",
+      "purchase_url": "https://www.lovense.com/glint-touch-responsive-vibrating-small-butt-plug",
+      "price": 109.0,
       "currency": "USD",
       "reviews": {
         "rating": null,
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:34+08:00",
-      "id": "lovense-gush-2-motion-remote-controlled-penis-vibrator",
-      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_gush2motion.jpg?v=1599001499",
+      "scraped_at": "2026-10-21T10:45:14+08:00",
+      "id": "lovense-https-www-lovense-com-glint-touch-responsive-vib",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_z11.jpg?v=456638368",
       "image_kind": "official",
       "list_url": "https://www.lovense.com/",
       "notes": "Sale price shown on homepage Flagship Toys carousel.",
@@ -206,9 +206,9 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:42+08:00",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
       "id": "sexconcept_hk-fuji-world-seigi48-karakuri-dolls-ninja-position",
-      "image": "https://shoplineimg.com/650a996045789b00678df389/6abf83edd41407a256da9536/375x.webp?source_format=png",
+      "image": "https://img.shoplineapp.com/media/image_clips/6abf83edd41407a256da9536/original.png?1790936044=&owner_id=650a996045789b00678df389",
       "image_kind": "official",
       "list_url": "https://www.sexconcepthk.com/categories/best-sellers",
       "compare_at_price": 128.0,
@@ -229,7 +229,7 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:42+08:00",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
       "id": "sistalk_hk-monster-pub-wiwi-fish-tail-antibacterial-vibrato",
       "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/6970712b5240724b98fe011e/375x.webp?source_format=gif",
       "image_kind": "official",
@@ -251,8 +251,8 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:42+08:00",
-      "id": "waddy-npg-rin-hachimitsu",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
+      "id": "waddy_store-npg-rin-hachimitsu-urethral-dual-orifice-masturb",
       "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/6ad1e7e7f8978afeed3c4253/375x.webp?source_format=jpeg",
       "image_kind": "official",
       "list_url": "https://www.waddystore.com/",
@@ -270,11 +270,11 @@
       "currency": "USD",
       "reviews": {
         "rating": 4.48,
-        "count": 271,
+        "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:34+08:00",
-      "id": "womanizer-duo2",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
+      "id": "womanizer-https-www-womanizer-com-us-duo2",
       "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_duo2_black_pdp_gallery_1000x1000_en_01.jpg",
       "image_kind": "official",
       "list_url": "https://www.womanizer.com/us/bestseller",
@@ -291,10 +291,10 @@
       "currency": "USD",
       "reviews": {
         "rating": 4.3,
-        "count": 6505,
+        "count": 6516,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:46:03+08:00",
+      "scraped_at": "2026-10-21T10:42:26+08:00",
       "id": "amazon-b0cnrzvjmg",
       "image": "https://images-na.ssl-images-amazon.com/images/I/71ibbU+OxdL._AC_UL600_SR600,400_.jpg",
       "image_kind": "official",
@@ -312,11 +312,11 @@
       "currency": "USD",
       "reviews": {
         "rating": 4.06,
-        "count": 62,
+        "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:34+08:00",
-      "id": "wevibe-melt2",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
+      "id": "we_vibe-https-www-we-vibe-com-us-melt-2",
       "image": "https://www.we-vibe.com/static/version1792163997/frontend/Interactiv4/wevibe/en_US/Magento_Catalog/images/product/placeholder/image.jpg",
       "image_kind": "official",
       "list_url": "https://www.we-vibe.com/us/bestsellers",
@@ -336,8 +336,8 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:42+08:00",
-      "id": "dame-eva",
+      "scraped_at": "2026-10-21T10:43:44+08:00",
+      "id": "dame-eva-ii",
       "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/eva-1-ice.png?v=1776326231",
       "image_kind": "official",
       "list_url": "https://dame.com/collections/bestsellers",
@@ -347,19 +347,19 @@
       "platform": "lesplay_hk",
       "store": "Les'Play (HK)",
       "rank": 2,
-      "name": "Roomfun 雙人共震 穿戴式按摩棒套裝",
-      "product_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
-      "purchase_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
-      "price": 798.0,
+      "name": "Womanizer Next Liberty 3D陰蒂吸啜智能按摩器",
+      "product_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "purchase_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "price": 988.0,
       "currency": "HKD",
       "reviews": {
         "rating": null,
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:42+08:00",
-      "id": "lesplay_hk-roomfun-double-vibration-wearable-dildo-set",
-      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a7f097fc377fa203b144236/375x.webp?source_format=png",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
+      "id": "lesplay_hk-womanizer-next-liberty-3d-pleasure-air-stimulato",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6aa42b364f6f2d67e12c5d43/375x.webp?source_format=gif",
       "image_kind": "official",
       "list_url": "https://www.lesplayhk.com/categories/best-seller",
       "note_key": "hk_list_order",
@@ -379,9 +379,9 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:34+08:00",
-      "id": "lovense-solace-pro-ai-automatic-blowjob-machine-men",
-      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_solace22.jpg?v=1599001499",
+      "scraped_at": "2026-10-21T10:45:14+08:00",
+      "id": "lovense-https-www-lovense-com-solace-pro-ai-automatic-bl",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_solace22.jpg?v=456638368",
       "image_kind": "official",
       "list_url": "https://www.lovense.com/",
       "notes": "Sale price shown on homepage Flagship Toys carousel.",
@@ -401,9 +401,9 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:42+08:00",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
       "id": "sexconcept_hk-fuji-world-seigi48-miyama-clock-work-ukiyo-e-nin",
-      "image": "https://shoplineimg.com/650a996045789b00678df389/6abf81188523e64f2dbd373b/375x.webp?source_format=png",
+      "image": "https://img.shoplineapp.com/media/image_clips/6abf81188523e64f2dbd373b/original.png?1790935319=&owner_id=650a996045789b00678df389",
       "image_kind": "official",
       "list_url": "https://www.sexconcepthk.com/categories/best-sellers",
       "compare_at_price": 128.0,
@@ -424,7 +424,7 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:42+08:00",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
       "id": "sistalk_hk-orgasm-150ml",
       "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/64467f32e55f380023436cc5/375x.webp?source_format=png",
       "image_kind": "official",
@@ -446,8 +446,8 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:42+08:00",
-      "id": "waddy-lelo-f1s-v3-male-masturbators",
+      "scraped_at": "2026-10-21T10:44:36+08:00",
+      "id": "waddy_store-lelo-f1s-v3-male-masturbators",
       "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/69294be382f98f00163aab6f/375x.webp?source_format=jpeg",
       "image_kind": "official",
       "list_url": "https://www.waddystore.com/",
@@ -455,45 +455,45 @@
       "overall_rank": 18
     },
     {
-      "platform": "we_vibe",
-      "store": "We-Vibe",
+      "platform": "amazon_us",
+      "store": "Amazon.com",
       "rank": 3,
-      "name": "We-Vibe Nova 2",
-      "product_url": "https://www.we-vibe.com/us/nova2",
-      "purchase_url": "https://www.we-vibe.com/us/nova2",
-      "price": 159.0,
+      "name": "plusOne Bullet Vibrator for Women - Silicone Mini Vibrator, Pink Mini | Sex Toy Personal Massager with 10 vibration settings, Fully Waterproof, USB Rechargeable",
+      "product_url": "https://www.amazon.com/dp/B0FYKHC327",
+      "purchase_url": "https://www.amazon.com/dp/B0FYKHC327",
+      "price": 15.97,
       "currency": "USD",
       "reviews": {
-        "rating": 4.49,
-        "count": 255,
+        "rating": 4.1,
+        "count": 7456,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:34+08:00",
-      "id": "wevibe-nova2",
-      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_nova2_blue_pdp_gallery_1500x1500_01a_1.jpg",
+      "scraped_at": "2026-10-21T10:42:26+08:00",
+      "id": "amazon-b0fykhc327",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61xedFnFwLL._AC_UL600_SR600,400_.jpg",
       "image_kind": "official",
-      "list_url": "https://www.we-vibe.com/us/bestsellers",
+      "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
       "overall_rank": 19
     },
     {
-      "platform": "womanizer",
-      "store": "Womanizer",
+      "platform": "dame",
+      "store": "Dame Products",
       "rank": 3,
-      "name": "Womanizer Next Duo",
-      "product_url": "https://www.womanizer.com/us/next-duo",
-      "purchase_url": "https://www.womanizer.com/us/next-duo",
-      "price": 239.0,
+      "name": "Lay Panty Vibrator",
+      "product_url": "https://dame.com/products/lay",
+      "purchase_url": "https://dame.com/products/lay",
+      "price": 79.0,
       "currency": "USD",
       "reviews": {
-        "rating": 4.11,
-        "count": 75,
+        "rating": null,
+        "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-19T10:43:34+08:00",
-      "id": "womanizer-nextduo",
-      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/a/r/arc_perk_pdp_category_image_1000x1000_jpeg_1.jpeg",
+      "scraped_at": "2026-10-21T10:43:44+08:00",
+      "id": "dame-lay",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/PDPImages_LAY-IC_01.jpg?v=1775651051",
       "image_kind": "official",
-      "list_url": "https://www.womanizer.com/us/bestseller",
+      "list_url": "https://dame.com/collections/bestsellers",
       "overall_rank": 20
     }
   ]

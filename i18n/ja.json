@@ -90,13 +90,13 @@
     "navAbout": "このサイト",
     "navMethod": "方法",
     "navFaq": "FAQ",
-    "footerSources": "各回は対応する JSON に従います。設計上は淘宝 / 天猫、Amazon、インディーズ店舗を含みます。2026-10-19 に入っているのは Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫はまだありません。",
+    "footerSources": "各回は対応する JSON に従います。設計上は淘宝 / 天猫、Amazon、インディーズ店舗を含みます。2026-10-21 に入っているのは Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫はまだありません。",
     "footerCadence": "更新：デイリーは上海時間の一日ごとにファイルを差し替えます。週間は、同じ ISO 週にデイリーが 2 件以上あるとき、それらをまとめて作ります。1 件だけの週は seed 付きの写しのままで、ページにその旨を書きます。",
     "footerAbout": "このサイトについて",
     "footerMethod": "データの方法",
     "footerFaq": "よくある質問",
     "footerLinksFixed": "外部リンクは nofollow です。時間帯は Asia/Shanghai です。",
-    "footerArchiveFixed": "読めるアーカイブ：archive/index.html。JSON：data/archive/daily/2026-10-19.json · data/archive/weekly/2026-W42.json",
+    "footerArchiveFixed": "読めるアーカイブ：archive/index.html。JSON：data/archive/daily/2026-10-21.json · data/archive/weekly/2026-W43.json",
     "geoLabel": "このページの要約",
     "navArchive": "アーカイブ",
     "navPrivacy": "プライバシー",
@@ -395,11 +395,11 @@
       "items": [
         {
           "q": "データはどこから来ますか？",
-          "a": "取得時に開けた公開の売れ筋ページです。設計上の出典は淘宝 / 天猫、Amazon、インディーズ店舗と地域の店です。2026-10-19 に入っているのは Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫は 2026-10-17 に取り直していません。それ以前は JavaScript の検索シェルだけで商品行が無く、作ってもいません。ファイルは data/daily-latest.json と data/weekly-latest.json です。"
+          "a": "取得時に開けた公開の売れ筋ページです。設計上の出典は淘宝 / 天猫、Amazon、インディーズ店舗と地域の店です。2026-10-21 に入っているのは Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫は 2026-10-17 に取り直していません。それ以前は JavaScript の検索シェルだけで商品行が無く、作ってもいません。ファイルは data/daily-latest.json と data/weekly-latest.json です。"
         },
         {
           "q": "どのくらいの頻度で更新しますか？",
-          "a": "デイリーは上海時間の日付ごとにファイルを差し替えます。同じ ISO 週にデイリーが 2 件以上あるときは、scripts/build_weekly.py が商品 URL でまとめ、ある日の写しをその週の最終形にはしません。1 件だけの週は seed のままのことがあり、ページに書きます。現在のデイリーは 2026-10-19T10:46:03+08:00 に書いています。"
+          "a": "デイリーは上海時間の日付ごとにファイルを差し替えます。同じ ISO 週にデイリーが 2 件以上あるときは、scripts/build_weekly.py が商品 URL でまとめ、ある日の写しをその週の最終形にはしません。1 件だけの週は seed のままのことがあり、ページに書きます。現在のデイリーは 2026-10-21T10:45:41+08:00 に書いています。"
         },
         {
           "q": "このランキングはどう読めばよいですか？",
@@ -594,11 +594,11 @@
     "items": [
       {
         "q": "これは通販サイトですか？",
-        "a": "販売サイトではありません。2026年10月19日に開けた公開の売れ筋ページを並べ、商品名、価格、評価を見比べられるようにしたものです。購入は各店のページで在庫と価格を確認してからにしてください。"
+        "a": "販売サイトではありません。2026年10月21日に開けた公開の売れ筋ページを並べ、商品名、価格、評価を見比べられるようにしたものです。購入は各店のページで在庫と価格を確認してからにしてください。"
       },
       {
         "q": "どのショップが入っていますか？",
-        "a": "2026-10-19 の回は Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫の商品行はありません。入れなかった出典はページ末尾に書き、別のデータで埋めません。"
+        "a": "2026-10-21 の回は Amazon、Dame、Lovense、We-Vibe、Womanizer と、香港の Waddy、SISTALK、Les'Play、Sex Concept です。淘宝 / 天猫の商品行はありません。入れなかった出典はページ末尾に書き、別のデータで埋めません。"
       },
       {
         "q": "価格はそのまま使えますか？",
