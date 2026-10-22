@@ -30,7 +30,7 @@ DATE = r"20\d\d-\d\d-\d\d"
 LIST_SEP = r"(?:, and |, y | 与 | y |、|, )"
 LIST_RE = re.compile(rf"{DATE}(?:(?:{LIST_SEP}){DATE})+")
 PROSE_HTML = ("faq.html", "method.html", "about.html", "privacy.html", "contact.html")
-INFO_HTML = PROSE_HTML + ("archive/index.html",)
+INFO_HTML = PROSE_HTML + ("archive/index.html", "partners/index.html")
 OVERSEAS = ("amazon_us", "dame", "lovense", "we_vibe", "womanizer")
 HONG_KONG = ("waddy_store", "sistalk_hk", "lesplay_hk", "sexconcept_hk")
 LABELS = {
@@ -670,7 +670,7 @@ def faq_entities(items: list[dict]) -> list[dict]:
 
 SITE_ALT_EXTRAS = ("情趣用品排行榜", "Sex toy bestsellers", "Qing List")
 ABOUT_NAME = "情趣用品公开销售排行榜"
-TRUST_HTML = ("about.html", "method.html", "faq.html", "privacy.html", "contact.html")
+TRUST_HTML = ("about.html", "method.html", "faq.html", "privacy.html", "contact.html", "partners/index.html")
 
 
 def ranking_meta(locales: dict[str, dict]) -> tuple[str, str]:
@@ -775,7 +775,7 @@ def patch_trust_jsonld(path: Path, locales: dict[str, dict]) -> None:
     block = '<script type="application/ld+json" id="ld-json">\n' + rendered + "\n</script>"
     html = pattern.sub(lambda _match: block, html, count=1)
     path.write_text(html, encoding="utf-8")
-    print(f"refreshed site JSON-LD in {path.name}")
+    print(f"refreshed site JSON-LD in {path.relative_to(boardlib.ROOT)}")
 
 
 def patch_shell(path: Path, page_name: str, daily: dict, weekly: dict, locales: dict[str, dict]) -> None:
@@ -1031,11 +1031,12 @@ Not on the {day} daily chart: {skipped_text} Rows were not invented. The empty T
 - FAQ: https://orangexie05.github.io/qing-bestsellers-top/faq.html
 - Privacy: https://orangexie05.github.io/qing-bestsellers-top/privacy.html
 - Contact: https://orangexie05.github.io/qing-bestsellers-top/contact.html
+- Partners (directory badges and reciprocal links only): https://orangexie05.github.io/qing-bestsellers-top/partners/
 - Latest JSON: https://orangexie05.github.io/qing-bestsellers-top/data/daily-latest.json and https://orangexie05.github.io/qing-bestsellers-top/data/weekly-latest.json
 - Sitemap: https://orangexie05.github.io/qing-bestsellers-top/sitemap.xml
 - Plain-text sitemap (HTML URLs only): https://orangexie05.github.io/qing-bestsellers-top/sitemap.txt
 
-Outbound product links use rel="nofollow". Corrections go to GitHub issues: https://github.com/orangexie05/qing-bestsellers-top/issues
+Outbound product links use rel="nofollow". Directory badges and reciprocal links, when a directory requires one, stay on /partners/ only. They are not on the homepage and not in the global footer. Corrections go to GitHub issues: https://github.com/orangexie05/qing-bestsellers-top/issues
 
 ## Discovery
 

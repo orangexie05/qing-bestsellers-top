@@ -105,6 +105,7 @@
     "footerArchivePage": "アーカイブ",
     "footerPrivacy": "プライバシー",
     "footerContact": "連絡",
+    "footerPartners": "相互リンク",
     "footerArchiveData": "このアーカイブの JSON",
     "archiveDailyHeading": "デイリー",
     "archiveWeeklyHeading": "週間",
@@ -297,6 +298,19 @@
           "h2": "言語",
           "paragraphs": [
             "既定は簡体字中国語です。同じページを English、日本語、Español でも読めます。パラメータは ?lang=en、?lang=ja、?lang=es です。言語パラメータのない URL が中国語で、hreflang の x-default でもあります。"
+          ]
+        },
+        {
+          "h2": "ディレクトリと相互リンク",
+          "paragraphs": [
+            "青榜友链/合作目录页。Links we may add when directories require a reciprocal. 成人向けディレクトリがバッジや逆リンクを求める場合は、そのページだけに置きます。",
+            "ホームページに AdultList の dofollow リンクは置きません。全ページのフッターにも相互の外部リンクは置きません。商品リンクは nofollow のままです。"
+          ],
+          "links": [
+            {
+              "href": "partners/",
+              "label": "青榜の相互リンク / ディレクトリ"
+            }
           ]
         }
       ]
@@ -553,6 +567,114 @@
           "h2": "店舗への質問",
           "paragraphs": [
             "注文、配送、返品、使い方は商品ページの店舗へ。青榜は代金を受け取らず、発送せず、店舗の価格も変えられません。"
+          ]
+        }
+      ]
+    },
+    "partners": {
+      "title": "相互リンク｜青榜のディレクトリページ",
+      "description": "青榜友链/合作目录页。Links we may add when directories require a reciprocal. 成人向けディレクトリのバッジと逆リンクはこのページだけです。18歳以上。",
+      "ogImageAlt": "青榜の相互リンクページ。18歳以上。",
+      "kicker": "ディレクトリの逆リンク · 18歳以上",
+      "h1": "相互リンク / ディレクトリ",
+      "lead": "青榜友链/合作目录页。Links we may add when directories require a reciprocal.",
+      "related": [
+        {
+          "page": "about",
+          "label": "このサイトについて"
+        },
+        {
+          "page": "contact",
+          "label": "連絡"
+        },
+        {
+          "page": "daily",
+          "label": "デイリー"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "このページの用途",
+          "paragraphs": [
+            "青榜友链/合作目录页。Links we may add when directories require a reciprocal. 18.network や PornPlug のような成人向けディレクトリがバッジや逆リンクを求めるときは、ここだけに置きます。",
+            "ホームページに AdultList の dofollow リンクは置きません。各ページのフッターにあるのはこのページへのサイト内リンクだけで、相互の外部リンクはありません。商品リンクは nofollow のままです。",
+            "ディレクトリの規則が dofollow の逆リンクを求めるときだけ、その項目の nofollow を外し、隣の HTML コメントに規則を書きます。それ以外の外部リンクは nofollow です。"
+          ]
+        },
+        {
+          "h2": "ディレクトリのバッジ",
+          "paragraphs": [
+            "バッジは下の枠に置きます。画像、リンク、rel は各ディレクトリの規則に合わせて後から足せます。レイアウトは変えません。いま公開するバッジはありません。"
+          ],
+          "entries": [
+            {
+              "id": "18-network",
+              "name": "18.network",
+              "note": "近日追加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "pornplug",
+              "name": "PornPlug",
+              "note": "近日追加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "other",
+              "name": "その他のディレクトリ",
+              "note": "近日追加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            }
+          ]
+        },
+        {
+          "h2": "テキストの逆リンク",
+          "paragraphs": [
+            "ディレクトリが文章の逆リンクを求めるときは、この節に足します。ホームページにも、各ページのフッターにも置きません。"
+          ],
+          "entries": [
+            {
+              "id": "18-network-text",
+              "name": "18.network",
+              "note": "近日追加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "pornplug-text",
+              "name": "PornPlug",
+              "note": "近日追加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "other-text",
+              "name": "その他のディレクトリ",
+              "note": "近日追加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            }
           ]
         }
       ]

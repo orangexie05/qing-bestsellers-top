@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Write privacy.html and contact.html from i18n/zh-CN.json, with hreflang head copy."""
+"""Write privacy.html, contact.html, and partners/index.html from i18n.
+
+partners/index.html is the only place for adult-directory badges and reciprocal
+links. The global footer gets one internal link to that page. It does not get
+outbound directory links. A directory's dofollow reciprocal, when its rules
+require one, is added on the partners page only and noted in an HTML comment.
+"""
 
 from __future__ import annotations
 
@@ -16,7 +22,7 @@ BASE = boardlib.BASE
 LANGS = ("zh-CN", "en", "ja", "es")
 HTML_LANG = {"zh-CN": "zh-Hans", "en": "en", "ja": "ja", "es": "es"}
 OG = {"zh-CN": "zh_CN", "en": "en_US", "ja": "ja_JP", "es": "es_ES"}
-SCHEMA = {"privacy": "PrivacyPolicy", "contact": "ContactPage"}
+SCHEMA = {"privacy": "PrivacyPolicy", "contact": "ContactPage", "partners": "WebPage"}
 RELATED = {
     "daily": "index.html",
     "weekly": "index.html?board=weekly",
@@ -27,6 +33,7 @@ RELATED = {
     "privacy": "privacy.html",
     "contact": "contact.html",
     "archive": "archive/index.html",
+    "partners": "partners/",
 }
 GA = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SF9TQS3F1"></script>
@@ -37,6 +44,12 @@ GA = """<!-- Google tag (gtag.js) -->
 
   gtag('config', 'G-1SF9TQS3F1');
 </script>"""
+FOLLOW_COMMENT = """<!--
+  Reciprocal directory links stay on this page.
+  Omit nofollow on an outbound link only when that directory requires a dofollow reciprocal, and record the rule in the entry's rule field (rendered as a dofollow comment next to that link).
+  Do not copy those follow links onto the homepage or into the global footer.
+  Do not add an AdultList dofollow link on the homepage.
+-->"""
 
 
 def esc(value) -> str:
@@ -101,32 +114,77 @@ def head_script(path: str, copy: dict) -> str:
 </script>"""
 
 
-def sections_html(info: dict) -> str:
+def is_http(href: str) -> bool:
+    return href.startswith("https://") or href.startswith("http://")
+
+
+def media_src(src: str, root: str) -> str:
+    if not src or is_http(src) or src.startswith("/"):
+        return src
+    return root + src
+
+
+def entry_html(entry: dict, root: str) -> str:
+    name = esc(entry.get("name") or "")
+    note = esc(entry.get("note") or "")
+    href = str(entry.get("href") or "").strip()
+    follow = bool(entry.get("follow"))
+    rule = str(entry.get("rule") or "").strip()
+    image = str(entry.get("image") or "").strip()
+    slot_id = esc(entry.get("id") or entry.get("name") or "")
+    bits = []
+    if is_http(href):
+        if follow:
+            bits.append(f"<!-- dofollow required: {esc(rule or name)} -->")
+            rel = "noopener"
+        else:
+            rel = "nofollow noopener noreferrer"
+        bits.append(f'<a href="{esc(href)}" target="_blank" rel="{rel}">{name}</a>')
+    else:
+        bits.append(f'<span class="partner-name">{name}</span>')
+    if note:
+        bits.append(f'<span class="partner-note">{note}</span>')
+    if image:
+        alt = esc(entry.get("imageAlt") or entry.get("name") or "")
+        bits.append(f'<span class="partner-badge"><img src="{esc(media_src(image, root))}" alt="{alt}"></span>')
+    inner = "\n        ".join(bits)
+    return f'      <li class="partner-slot" data-partner="{slot_id}">\n        {inner}\n      </li>'
+
+
+def sections_html(info: dict, root: str) -> str:
     blocks = []
     for section in info.get("sections") or []:
         parts = [f"    <section class=\"prose-block\">\n      <h2>{esc(section.get('h2'))}</h2>"]
         for paragraph in section.get("paragraphs") or []:
             parts.append(f"      <p>{esc(paragraph)}</p>")
         for link in section.get("links") or []:
-            href = link.get("href") or ""
-            extra = ""
-            if href.startswith("http"):
+            href = str(link.get("href") or "")
+            if is_http(href):
                 extra = ' target="_blank" rel="noopener noreferrer"'
-            parts.append(f"      <p><a href=\"{esc(href)}\"{extra}>{esc(link.get('label') or href)}</a></p>")
+                rendered = href
+            else:
+                extra = ""
+                rendered = root + href
+            parts.append(f"      <p><a href=\"{esc(rendered)}\"{extra}>{esc(link.get('label') or href)}</a></p>")
+        entries = section.get("entries")
+        if entries is not None:
+            parts.append("      " + FOLLOW_COMMENT.replace("\n", "\n      "))
+            slots = "\n".join(entry_html(entry, root) for entry in entries)
+            parts.append(f"      <ul class=\"partner-slots\">\n{slots}\n      </ul>")
         parts.append("    </section>")
         blocks.append("\n".join(parts))
     return "\n".join(blocks)
 
 
-def related_html(info: dict) -> str:
+def related_html(info: dict, root: str) -> str:
     bits = []
     for item in info.get("related") or []:
         href = RELATED.get(item.get("page"), "index.html")
-        bits.append(f"<a href=\"{esc(href)}\">{esc(item.get('label'))}</a>")
+        bits.append(f"<a href=\"{esc(root + href)}\">{esc(item.get('label'))}</a>")
     return " · ".join(bits)
 
 
-def write_page(page_id: str) -> None:
+def write_page(page_id: str, filename: str | None = None, public_path: str | None = None, root: str = "") -> None:
     zh = boardlib.load_json(boardlib.ROOT / "i18n" / "zh-CN.json")
     daily = boardlib.load_json(boardlib.ROOT / "data" / "daily-latest.json")
     weekly = boardlib.load_json(boardlib.ROOT / "data" / "weekly-latest.json")
@@ -137,7 +195,7 @@ def write_page(page_id: str) -> None:
     info = zh["pages"][page_id]
     ui = zh["ui"]
     copy = packs(page_id)
-    path = f"/{page_id}.html"
+    path = public_path or f"/{page_id}.html"
     page_url = BASE + path
     title = info["title"]
     description = info["description"]
@@ -183,6 +241,11 @@ def write_page(page_id: str) -> None:
         "privacy": ' aria-current="page"' if page_id == "privacy" else "",
         "contact": ' aria-current="page"' if page_id == "contact" else "",
     }
+    partners_current = ' aria-current="page"' if page_id == "partners" else ""
+    policy = "\n  " + FOLLOW_COMMENT if page_id == "partners" else ""
+    body_extra = ""
+    if root or path.endswith("/"):
+        body_extra = f' data-path="{esc(path)}" data-root="{esc(root)}"'
     alts = "\n".join(
         f'<link rel="alternate" hreflang="{code}" href="{page_url if code in ("zh-CN", "x-default") else page_url + "?lang=" + code}">'
         for code in ("zh-CN", "en", "ja", "es", "x-default")
@@ -220,25 +283,25 @@ def write_page(page_id: str) -> None:
 <meta name="twitter:image" content="{BASE}/assets/og-share.png">
 <meta name="twitter:image:alt" content="{esc(alt)}">
 <meta name="theme-color" content="#1b1216">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+<link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{root}sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="styles.css" as="style">
-<link rel="stylesheet" href="styles.css">
+<link rel="preload" href="{root}styles.css" as="style">
+<link rel="stylesheet" href="{root}styles.css">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Sans+SC:wght@400;500;700&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Sans+SC:wght@400;500;700&amp;family=Outfit:wght@400;500;600;700&amp;display=swap"></noscript>
-<link rel="preload" href="assets/app.js" as="script">
+<link rel="preload" href="{root}assets/app.js" as="script">
 <script type="application/ld+json" id="ld-json">
 {ld}
 </script>
 {head_script(path, copy)}
 </head>
-<body class="is-gated" data-page="{page_id}">
+<body class="is-gated" data-page="{page_id}"{body_extra}>
 <a class="skip" id="skip-link" href="#main">跳到主要内容</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="{root}index.html">
       <span class="brand-mark" aria-hidden="true">18+</span>
       <span>
         <span class="brand-name" id="brand-name">青榜</span>
@@ -246,15 +309,15 @@ def write_page(page_id: str) -> None:
       </span>
     </a>
     <nav class="site-nav" id="site-nav" aria-label="页面">
-      <a href="index.html" id="nav-daily">日榜</a>
-      <a href="index.html?board=weekly" id="nav-weekly">周榜</a>
-      <a href="by-platform.html" id="nav-platform">分平台</a>
-      <a href="archive/index.html" id="nav-archive">归档</a>
-      <a href="about.html" id="nav-about">关于</a>
-      <a href="method.html" id="nav-method">方法</a>
-      <a href="faq.html" id="nav-faq">FAQ</a>
-      <a href="privacy.html" id="nav-privacy"{current['privacy']}>隐私</a>
-      <a href="contact.html" id="nav-contact"{current['contact']}>联系</a>
+      <a href="{root}index.html" id="nav-daily">日榜</a>
+      <a href="{root}index.html?board=weekly" id="nav-weekly">周榜</a>
+      <a href="{root}by-platform.html" id="nav-platform">分平台</a>
+      <a href="{root}archive/index.html" id="nav-archive">归档</a>
+      <a href="{root}about.html" id="nav-about">关于</a>
+      <a href="{root}method.html" id="nav-method">方法</a>
+      <a href="{root}faq.html" id="nav-faq">FAQ</a>
+      <a href="{root}privacy.html" id="nav-privacy"{current['privacy']}>隐私</a>
+      <a href="{root}contact.html" id="nav-contact"{current['contact']}>联系</a>
     </nav>
     <div class="lang" id="lang-switch" role="group" aria-label="语言">
       <button type="button" data-lang="zh-CN" aria-pressed="true">简体中文</button>
@@ -281,10 +344,10 @@ def write_page(page_id: str) -> None:
     <p class="kicker" id="page-kicker">{esc(info.get('kicker'))}</p>
     <h1 id="page-title">{esc(info.get('h1'))}</h1>
     <p class="lead" id="page-lead">{esc(info.get('lead'))}</p>
-    <p class="cross related" id="related-links">{related_html(info)}</p>
-  </header>
+    <p class="cross related" id="related-links">{related_html(info, root)}</p>
+  </header>{policy}
   <div id="page-sections" class="page-sections">
-{sections_html(info)}
+{sections_html(info, root)}
   </div>
 </main>
 </div>
@@ -295,24 +358,27 @@ def write_page(page_id: str) -> None:
     <p id="foot-cadence">{esc(ui.get('footerCadence'))}</p>
     <p id="foot-snapshot">本页是各平台公开热销榜的整理快照，不是医疗或健康建议，也不代表推荐购买。价格、库存和名次都会变，下单前请回到商家页面核对。</p>
     <p id="foot-links">外链使用 nofollow。数据时区 Asia/Shanghai。</p>
-    <p id="foot-pages"><a id="foot-daily" href="index.html">日榜</a> · <a id="foot-weekly" href="index.html?board=weekly">周榜</a> · <a id="foot-platform" href="by-platform.html">分平台</a> · <a id="foot-archive-page" href="archive/index.html">归档</a> · <a id="foot-about" href="about.html">关于本站</a> · <a id="foot-method" href="method.html">数据方法</a> · <a id="foot-faq" href="faq.html">常见问题</a> · <a id="foot-privacy" href="privacy.html">隐私政策</a> · <a id="foot-contact" href="contact.html">联系</a></p>
-    <p><a id="foot-data" href="data/daily-latest.json">查看当前榜单 JSON</a> · <a id="foot-snapshot-data" href="data.json">综合快照</a></p>
+    <p id="foot-pages"><a id="foot-daily" href="{root}index.html">日榜</a> · <a id="foot-weekly" href="{root}index.html?board=weekly">周榜</a> · <a id="foot-platform" href="{root}by-platform.html">分平台</a> · <a id="foot-archive-page" href="{root}archive/index.html">归档</a> · <a id="foot-about" href="{root}about.html">关于本站</a> · <a id="foot-method" href="{root}method.html">数据方法</a> · <a id="foot-faq" href="{root}faq.html">常见问题</a> · <a id="foot-privacy" href="{root}privacy.html">隐私政策</a> · <a id="foot-contact" href="{root}contact.html">联系</a></p>
+    <p id="foot-secondary"><a id="foot-partners" href="{root}partners/"{partners_current}>友链</a></p>
+    <p><a id="foot-data" href="{root}data/daily-latest.json">查看当前榜单 JSON</a> · <a id="foot-snapshot-data" href="{root}data.json">综合快照</a></p>
     <p id="foot-archive">{esc(archive_line)}</p>
   </div>
 </footer>
 <div id="live" class="skip" aria-live="polite"></div>
-<script src="assets/app.js" defer></script>
+<script src="{root}assets/app.js" defer></script>
 </body>
 </html>
 """
-    dest = boardlib.ROOT / f"{page_id}.html"
+    dest = boardlib.ROOT / (filename or f"{page_id}.html")
+    dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(doc, encoding="utf-8")
-    print(f"wrote {dest.name}")
+    print(f"wrote {dest.relative_to(boardlib.ROOT)}")
 
 
 def main() -> int:
     write_page("privacy")
     write_page("contact")
+    write_page("partners", filename="partners/index.html", public_path="/partners/", root="../")
     return 0
 
 

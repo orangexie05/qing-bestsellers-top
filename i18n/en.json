@@ -105,6 +105,7 @@
     "footerArchivePage": "Archive",
     "footerPrivacy": "Privacy",
     "footerContact": "Contact",
+    "footerPartners": "Partner links",
     "footerArchiveData": "This archive JSON",
     "archiveDailyHeading": "Daily",
     "archiveWeeklyHeading": "Weekly",
@@ -297,6 +298,19 @@
           "h2": "Languages",
           "paragraphs": [
             "Simplified Chinese is the default. The same pages can be read in English, Japanese, or Spanish with ?lang=en, ?lang=ja, or ?lang=es. The URL with no language parameter is Chinese, and it is the hreflang x-default."
+          ]
+        },
+        {
+          "h2": "Directory and partner links",
+          "paragraphs": [
+            "青榜友链/合作目录页. Links we may add when directories require a reciprocal. Badges and backlinks for adult directories stay on that one page.",
+            "The homepage does not carry an AdultList dofollow link, and reciprocal links are not in the footer of every page. Product links stay nofollow."
+          ],
+          "links": [
+            {
+              "href": "partners/",
+              "label": "Partner and directory page"
+            }
           ]
         }
       ]
@@ -553,6 +567,114 @@
           "h2": "Questions for the merchant",
           "paragraphs": [
             "Orders, delivery, returns, and how a product works are for the shop on the product page. Qing List does not take payment, ship goods, or change a merchant's price."
+          ]
+        }
+      ]
+    },
+    "partners": {
+      "title": "Partner links | Qing List directory page",
+      "description": "青榜友链/合作目录页. Links we may add when directories require a reciprocal. Adult-directory badges and backlinks stay on this page. Adults 18+ only.",
+      "ogImageAlt": "Qing List partner and directory page. Adults 18+ only.",
+      "kicker": "Directory links · Adults 18+ only",
+      "h1": "Partner and directory links",
+      "lead": "青榜友链/合作目录页. Links we may add when directories require a reciprocal.",
+      "related": [
+        {
+          "page": "about",
+          "label": "About"
+        },
+        {
+          "page": "contact",
+          "label": "Contact"
+        },
+        {
+          "page": "daily",
+          "label": "Today"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "What this page is for",
+          "paragraphs": [
+            "青榜友链/合作目录页. Links we may add when directories require a reciprocal. Adult directories such as 18.network and PornPlug get a badge or backlink here only.",
+            "The homepage does not carry an AdultList dofollow link. The footer on every page has one internal link to this page and no reciprocal outbound links. Product links stay nofollow.",
+            "If a directory's rules require a dofollow reciprocal, drop nofollow on that entry alone and record the rule in the HTML comment beside it. Every other outbound link stays nofollow."
+          ]
+        },
+        {
+          "h2": "Directory badges",
+          "paragraphs": [
+            "Badges sit in the slots below. Image, href, and rel can be filled in later from each directory's rules without changing the layout. Nothing is published in these slots yet."
+          ],
+          "entries": [
+            {
+              "id": "18-network",
+              "name": "18.network",
+              "note": "Coming soon",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "pornplug",
+              "name": "PornPlug",
+              "note": "Coming soon",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "other",
+              "name": "Other directories",
+              "note": "Coming soon",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            }
+          ]
+        },
+        {
+          "h2": "Text reciprocal links",
+          "paragraphs": [
+            "If a directory asks for a text backlink, it goes in this section. Not on the homepage, and not in the footer of every page."
+          ],
+          "entries": [
+            {
+              "id": "18-network-text",
+              "name": "18.network",
+              "note": "Coming soon",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "pornplug-text",
+              "name": "PornPlug",
+              "note": "Coming soon",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "other-text",
+              "name": "Other directories",
+              "note": "Coming soon",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            }
           ]
         }
       ]

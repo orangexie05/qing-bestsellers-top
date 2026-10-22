@@ -103,6 +103,7 @@
     if (PAGE === "faq") return "/faq.html";
     if (PAGE === "privacy") return "/privacy.html";
     if (PAGE === "contact") return "/contact.html";
+    if (PAGE === "partners") return "/partners/";
     if (PAGE === "archive-index") return "/archive/index.html";
     return "/";
   }
@@ -230,7 +231,7 @@
 
   function resolvePageMeta(dict) {
     var meta = (dict && dict.meta) || {};
-    if (PAGE === "about" || PAGE === "method" || PAGE === "faq" || PAGE === "privacy" || PAGE === "contact" || PAGE === "archive-index") {
+    if (PAGE === "about" || PAGE === "method" || PAGE === "faq" || PAGE === "privacy" || PAGE === "contact" || PAGE === "partners" || PAGE === "archive-index") {
       var info = (dict.pages && dict.pages[PAGE]) || {};
       return {
         title: info.title || "",
@@ -502,6 +503,7 @@
     setLink("foot-archive-page", ui.footerArchivePage, linkFor("archive/index.html"));
     setLink("foot-privacy", ui.footerPrivacy, linkFor("privacy.html"));
     setLink("foot-contact", ui.footerContact, linkFor("contact.html"));
+    setLink("foot-partners", ui.footerPartners, linkFor("partners/"), PAGE === "partners");
     setLink("archive-back-daily", ui.navDaily, linkFor("index.html", { board: "daily" }));
     setLink("archive-back-weekly", ui.navWeekly, linkFor("index.html", { board: "weekly" }));
     setLink("archive-back-index", ui.navArchive, linkFor("archive/index.html"));
@@ -664,8 +666,38 @@
     if (kind === "faq") return linkFor("faq.html");
     if (kind === "privacy") return linkFor("privacy.html");
     if (kind === "contact") return linkFor("contact.html");
+    if (kind === "partners") return linkFor("partners/");
     if (kind === "archive") return linkFor("archive/index.html");
     return linkFor("index.html", { board: "daily" });
+  }
+
+  function partnerSlot(entry) {
+    var slot = el("li", "partner-slot");
+    var name = entry.name || "";
+    if (entry.id) slot.setAttribute("data-partner", entry.id);
+    var href = entry.href || "";
+    if (/^https?:\/\//i.test(href)) {
+      if (entry.follow) {
+        slot.appendChild(document.createComment(" dofollow required: " + (entry.rule || name) + " "));
+      }
+      var anchor = el("a", null, name);
+      anchor.href = href;
+      anchor.target = "_blank";
+      anchor.rel = entry.follow ? "noopener" : "nofollow noopener noreferrer";
+      slot.appendChild(anchor);
+    } else {
+      slot.appendChild(el("span", "partner-name", name));
+    }
+    if (entry.note) slot.appendChild(el("span", "partner-note", entry.note));
+    if (entry.image) {
+      var badge = el("span", "partner-badge");
+      var img = document.createElement("img");
+      img.src = asset(entry.image);
+      img.alt = entry.imageAlt || name;
+      badge.appendChild(img);
+      slot.appendChild(badge);
+    }
+    return slot;
   }
 
   function paintInfo() {
@@ -709,16 +741,29 @@
         block.appendChild(el("p", null, paragraph));
       });
       (sectionData.links || []).forEach(function (link) {
-        var anchor = el("a", null, link.label || link.href);
-        anchor.href = link.href;
-        if (/^https?:/i.test(link.href || "")) {
+        var href = link.href || "";
+        var anchor = el("a", null, link.label || href);
+        if (/^https?:/i.test(href)) {
+          anchor.href = href;
           anchor.target = "_blank";
           anchor.rel = "noopener noreferrer";
+        } else {
+          anchor.href = linkFor(href);
         }
         var line = el("p");
         line.appendChild(anchor);
         block.appendChild(line);
       });
+      if (sectionData.entries) {
+        block.appendChild(document.createComment(
+          " Reciprocal directory links stay on this page. Omit nofollow only when that directory requires a dofollow reciprocal, and record the rule on the entry. Do not copy those links to the homepage or the global footer. Do not add an AdultList dofollow link on the homepage. "
+        ));
+        var slots = el("ul", "partner-slots");
+        sectionData.entries.forEach(function (entry) {
+          slots.appendChild(partnerSlot(entry));
+        });
+        block.appendChild(slots);
+      }
       if (sectionData.items && sectionData.items.length) {
         var list = el("ul");
         sectionData.items.forEach(function (item) {

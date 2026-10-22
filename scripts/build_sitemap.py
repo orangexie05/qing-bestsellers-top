@@ -102,6 +102,7 @@ def main() -> int:
         ("/faq.html", "monthly", "0.6"),
         ("/privacy.html", "monthly", "0.4"),
         ("/contact.html", "monthly", "0.4"),
+        ("/partners/", "monthly", "0.4"),
     ):
         chunks += page_set(name, lastmod, freq, pri)
     chunks.append(plain("/llms.txt", lastmod, "monthly", "0.3"))

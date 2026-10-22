@@ -6,6 +6,7 @@ from __future__ import annotations
 import io
 import json
 import os
+import re
 import sys
 import urllib.error
 from pathlib import Path
@@ -16,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import boardlib
 import build_homepage
 import build_sitemap
+import build_trust_pages
 import indexnow_ping
 import publish_boards
 
@@ -65,6 +67,7 @@ def main() -> int:
         f"{boardlib.BASE}/about.html",
         f"{boardlib.BASE}/faq.html",
         f"{boardlib.BASE}/method.html",
+        f"{boardlib.BASE}/partners/",
         f"{boardlib.BASE}/llms.txt",
         f"{boardlib.BASE}/sitemap.xml",
         f"{boardlib.BASE}/sitemap.txt",
@@ -117,6 +120,10 @@ def main() -> int:
         fail("sitemap.txt home")
     if f"{boardlib.BASE}/archive/daily/{day}.html" not in lines:
         fail("sitemap.txt daily")
+    if f"{boardlib.BASE}/partners/" not in lines:
+        fail("sitemap.txt partners")
+    if f"{boardlib.BASE}/partners/?lang=en" not in lines:
+        fail("sitemap.txt partners lang")
     if any(line.split("?", 1)[0].endswith(".json") or line.endswith(".txt") for line in lines):
         fail("sitemap.txt included a non-html url")
     xml = (boardlib.ROOT / "sitemap.xml").read_text(encoding="utf-8")
@@ -204,6 +211,51 @@ def main() -> int:
     html = (boardlib.ROOT / "index.html").read_text(encoding="utf-8")
     if "FAQPage" not in html or "不直接售卖" not in html:
         fail("homepage citation copy")
+    if re.search(r"adultlist", html, re.I):
+        fail("AdultList on homepage")
+    if 'id="foot-partners" href="partners/"' not in html:
+        fail("homepage partners link")
+    footer = html.split("<footer", 1)[-1]
+    if re.search(r"https?://[^\"']*(18\.network|pornplug|adultlist)", footer, re.I):
+        fail("reciprocal link in homepage footer")
+    about = (boardlib.ROOT / "about.html").read_text(encoding="utf-8")
+    if 'href="partners/"' not in about or "青榜友链/合作目录页" not in about:
+        fail("about partners link")
+    build_trust_pages.main()
+    again = build_trust_pages.main()
+    if again != 0:
+        fail("trust pages")
+    partners = (boardlib.ROOT / "partners" / "index.html").read_text(encoding="utf-8")
+    if build_trust_pages.main() != 0:
+        fail("trust pages rerun")
+    if partners != (boardlib.ROOT / "partners" / "index.html").read_text(encoding="utf-8"):
+        fail("partners page is not idempotent")
+    for needle in (
+        'name="rating" content="adult"',
+        'id="age-gate"',
+        'class="is-gated"',
+        'content="index,follow,max-snippet:-1"',
+        'rel="canonical" href="https://orangexie05.github.io/qing-bestsellers-top/partners/"',
+        "青榜友链/合作目录页",
+        "Links we may add when directories require a reciprocal",
+        "即将添加",
+        "18.network",
+        "PornPlug",
+        "dofollow",
+        'data-page="partners"',
+        'data-root="../"',
+        'href="../styles.css"',
+        'href="../assets/app.js"',
+    ):
+        if needle not in partners:
+            fail("partners page missing " + needle)
+    if re.search(r'<a [^>]*href="https?://(?!fonts\.|www\.googletagmanager|github\.com)', partners):
+        fail("unexpected outbound link on partners page")
+    if re.search(r"adultlist", partners, re.I) and re.search(r'href="[^"]*adultlist', partners, re.I):
+        fail("AdultList link on partners page")
+    home_footer = html.split("<footer", 1)[-1]
+    if home_footer.count("foot-partners") != 1:
+        fail("partners footer link count")
     print("discovery ok", key, f"sitemap.txt={len(lines)}")
     return 0
 

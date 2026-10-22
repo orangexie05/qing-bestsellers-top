@@ -150,6 +150,7 @@ def footer(root: str, json_href: str, archive_line: str, archive_self: bool = Fa
     <p id="foot-snapshot">本页是各平台公开热销榜的整理快照，不是医疗或健康建议，也不代表推荐购买。价格、库存和名次都会变，下单前请回到商家页面核对。</p>
     <p id="foot-links">外链使用 nofollow。数据时区 Asia/Shanghai。</p>
     <p id="foot-pages"><a id="foot-daily" href="{esc(href('index.html'))}">日榜</a> · <a id="foot-weekly" href="{esc(href('index.html?board=weekly'))}">周榜</a> · <a id="foot-platform" href="{esc(href('by-platform.html'))}">分平台</a> · <a id="foot-archive-page" href="{esc(href('archive/index.html'))}">归档</a> · <a id="foot-about" href="{esc(href('about.html'))}">关于本站</a> · <a id="foot-method" href="{esc(href('method.html'))}">数据方法</a> · <a id="foot-faq" href="{esc(href('faq.html'))}">常见问题</a> · <a id="foot-privacy" href="{esc(href('privacy.html'))}">隐私政策</a> · <a id="foot-contact" href="{esc(href('contact.html'))}">联系</a></p>
+    <p id="foot-secondary"><a id="foot-partners" href="{esc(href('partners/'))}">友链</a></p>
     <p><a id="foot-data" href="{esc(json_href)}">查看这份归档 JSON</a> · <a id="foot-snapshot-data" href="{esc(href('data.json'))}">综合快照</a></p>
     <p id="foot-archive">{esc(archive_line)}</p>
   </div>

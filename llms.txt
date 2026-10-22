@@ -50,11 +50,12 @@ Not on the 2026-10-22 daily chart: Taobao / Tmall (blocked: Not re-fetched on 20
 - FAQ: https://orangexie05.github.io/qing-bestsellers-top/faq.html
 - Privacy: https://orangexie05.github.io/qing-bestsellers-top/privacy.html
 - Contact: https://orangexie05.github.io/qing-bestsellers-top/contact.html
+- Partners (directory badges and reciprocal links only): https://orangexie05.github.io/qing-bestsellers-top/partners/
 - Latest JSON: https://orangexie05.github.io/qing-bestsellers-top/data/daily-latest.json and https://orangexie05.github.io/qing-bestsellers-top/data/weekly-latest.json
 - Sitemap: https://orangexie05.github.io/qing-bestsellers-top/sitemap.xml
 - Plain-text sitemap (HTML URLs only): https://orangexie05.github.io/qing-bestsellers-top/sitemap.txt
 
-Outbound product links use rel="nofollow". Corrections go to GitHub issues: https://github.com/orangexie05/qing-bestsellers-top/issues
+Outbound product links use rel="nofollow". Directory badges and reciprocal links, when a directory requires one, stay on /partners/ only. They are not on the homepage and not in the global footer. Corrections go to GitHub issues: https://github.com/orangexie05/qing-bestsellers-top/issues
 
 ## Discovery
 

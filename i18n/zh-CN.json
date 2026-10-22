@@ -105,6 +105,7 @@
     "footerArchivePage": "归档",
     "footerPrivacy": "隐私政策",
     "footerContact": "联系",
+    "footerPartners": "友链",
     "footerArchiveData": "查看这份归档 JSON",
     "archiveDailyHeading": "日榜",
     "archiveWeeklyHeading": "周榜",
@@ -297,6 +298,19 @@
           "h2": "语言",
           "paragraphs": [
             "默认是简体中文。同一页面可以用 English、日本語、Español 阅读，地址栏参数是 ?lang=en、?lang=ja、?lang=es。不带语言参数的网址是中文，也是 hreflang 的 x-default。"
+          ]
+        },
+        {
+          "h2": "目录与友链",
+          "paragraphs": [
+            "青榜友链/合作目录页。Links we may add when directories require a reciprocal. 成人目录如果要求徽章或回链，只放在那一页。",
+            "首页不放 AdultList 的 dofollow 链接，全站页脚也不放互惠外链。商品外链仍是 nofollow。"
+          ],
+          "links": [
+            {
+              "href": "partners/",
+              "label": "青榜友链 / 合作目录"
+            }
           ]
         }
       ]
@@ -553,6 +567,114 @@
           "h2": "商家的问题",
           "paragraphs": [
             "下单、配送、退货和使用问题，请联系商品页上的店铺。青榜不收款、不发货，也不能代商家改价。"
+          ]
+        }
+      ]
+    },
+    "partners": {
+      "title": "青榜友链 / 合作目录｜仅限 18 周岁以上",
+      "description": "青榜友链/合作目录页。Links we may add when directories require a reciprocal. 成人目录的徽章和回链只放在这一页。仅限 18 周岁以上。",
+      "ogImageAlt": "青榜友链与合作目录页，仅限 18 周岁以上",
+      "kicker": "目录回链 · 仅限 18 周岁以上",
+      "h1": "青榜友链 / 合作目录",
+      "lead": "青榜友链/合作目录页。Links we may add when directories require a reciprocal.",
+      "related": [
+        {
+          "page": "about",
+          "label": "关于本站"
+        },
+        {
+          "page": "contact",
+          "label": "联系"
+        },
+        {
+          "page": "daily",
+          "label": "日榜"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "这一页做什么",
+          "paragraphs": [
+            "青榜友链/合作目录页。Links we may add when directories require a reciprocal. 成人目录（例如 18.network、PornPlug）若要求徽章或回链，只加在这里。",
+            "首页不放 AdultList 的 dofollow 链接。每一页的页脚只有指向本页的站内链接，不放互惠外链。商品外链仍是 nofollow。",
+            "某个目录的规则如果要求 dofollow 回链，只在本页对应条目上取消 nofollow，并在该条目的 HTML 注释里记下规则。没有要求的链接继续 nofollow。"
+          ]
+        },
+        {
+          "h2": "目录徽章",
+          "paragraphs": [
+            "徽章放在下面的格子里。图片、链接和 rel 以后按各目录的规则补上，版式不用重做。现在还没有要挂出的徽章。"
+          ],
+          "entries": [
+            {
+              "id": "18-network",
+              "name": "18.network",
+              "note": "即将添加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "pornplug",
+              "name": "PornPlug",
+              "note": "即将添加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "other",
+              "name": "其他目录",
+              "note": "即将添加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            }
+          ]
+        },
+        {
+          "h2": "文字回链",
+          "paragraphs": [
+            "目录若要求一段文字回链，加在这一节。不放进首页，也不放进每一页的页脚。"
+          ],
+          "entries": [
+            {
+              "id": "18-network-text",
+              "name": "18.network",
+              "note": "即将添加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "pornplug-text",
+              "name": "PornPlug",
+              "note": "即将添加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "other-text",
+              "name": "其他目录",
+              "note": "即将添加",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            }
           ]
         }
       ]

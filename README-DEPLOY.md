@@ -52,7 +52,7 @@ QING_SKIP_INDEXNOW=1 python3 scripts/publish_boards.py
 
 密钥文件进 GitHub Pages 之前，第一次提交可能被 IndexNow 拒绝。部署完成后可以再跑 `python3 scripts/indexnow_ping.py`。
 
-`robots.txt` 保持 `User-agent: *` / `Allow: /`，并点名允许 Bingbot、DuckDuckBot、Slurp、Baiduspider、Yandex，以及 GPT、Claude、Perplexity、Google-Extended、Applebot-Extended 等回答引擎爬虫。页面仍是 `rating=adult`，年龄确认门不变。
+`robots.txt` 保持 `User-agent: *` / `Allow: /`，并点名允许 Bingbot、DuckDuckBot、Slurp、Baiduspider、Yandex，以及 GPT、Claude、Perplexity、Google-Extended、Applebot-Extended 等回答引擎爬虫。页面仍是 `rating=adult`，年龄确认门不变。可索引的说明页包括 `/partners/`（目录徽章和互惠链接只放这一页）。首页不要加 AdultList 的 dofollow 链接，全站页脚也不要放互惠外链；页脚只有一条指向 `/partners/` 的站内链接。目录规则要求 dofollow 时，只在友链页该条目上取消 nofollow，并在 HTML 注释里记下规则。
 
 `sitemap.txt` 与 `sitemap.xml` 同一批 URL，只保留 HTML（含语言和周榜参数），不收录 JSON。`robots.txt` 里有第二条 `Sitemap:`。
 

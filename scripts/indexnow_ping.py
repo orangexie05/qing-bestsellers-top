@@ -67,6 +67,7 @@ def changed_urls(daily: dict | None = None, weekly: dict | None = None) -> list[
         f"{boardlib.BASE}/method.html",
         f"{boardlib.BASE}/privacy.html",
         f"{boardlib.BASE}/contact.html",
+        f"{boardlib.BASE}/partners/",
         f"{boardlib.BASE}/archive/index.html",
         f"{boardlib.BASE}/llms.txt",
         f"{boardlib.BASE}/sitemap.xml",

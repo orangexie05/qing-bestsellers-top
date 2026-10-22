@@ -74,3 +74,7 @@ https://orangexie05.github.io/qing-bestsellers-top/contact.html
 https://orangexie05.github.io/qing-bestsellers-top/contact.html?lang=en
 https://orangexie05.github.io/qing-bestsellers-top/contact.html?lang=ja
 https://orangexie05.github.io/qing-bestsellers-top/contact.html?lang=es
+https://orangexie05.github.io/qing-bestsellers-top/partners/
+https://orangexie05.github.io/qing-bestsellers-top/partners/?lang=en
+https://orangexie05.github.io/qing-bestsellers-top/partners/?lang=ja
+https://orangexie05.github.io/qing-bestsellers-top/partners/?lang=es

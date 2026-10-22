@@ -105,6 +105,7 @@
     "footerArchivePage": "Archivo",
     "footerPrivacy": "Privacidad",
     "footerContact": "Contacto",
+    "footerPartners": "Enlaces",
     "footerArchiveData": "JSON de este archivo",
     "archiveDailyHeading": "Día",
     "archiveWeeklyHeading": "Semana",
@@ -297,6 +298,19 @@
           "h2": "Idiomas",
           "paragraphs": [
             "El predeterminado es chino simplificado. Las mismas páginas se leen en English, 日本語 o Español con ?lang=en, ?lang=ja o ?lang=es. La URL sin idioma es la china, y también el x-default de hreflang."
+          ]
+        },
+        {
+          "h2": "Directorios y enlaces recíprocos",
+          "paragraphs": [
+            "青榜友链/合作目录页. Links we may add when directories require a reciprocal. Las insignias y los enlaces de directorios para adultos van solo en esa página.",
+            "La portada no lleva un enlace dofollow de AdultList, y el pie de cada página no lleva enlaces recíprocos externos. Los enlaces de productos siguen en nofollow."
+          ],
+          "links": [
+            {
+              "href": "partners/",
+              "label": "Página de directorios"
+            }
           ]
         }
       ]
@@ -553,6 +567,114 @@
           "h2": "Preguntas para la tienda",
           "paragraphs": [
             "Pedidos, envío, devoluciones y el uso del producto corresponden a la tienda de la ficha. Lista Qing no cobra, no envía y no cambia el precio de la tienda."
+          ]
+        }
+      ]
+    },
+    "partners": {
+      "title": "Enlaces | página de directorios de Lista Qing",
+      "description": "青榜友链/合作目录页. Links we may add when directories require a reciprocal. Las insignias y los enlaces de directorios para adultos están solo en esta página. Solo mayores de 18.",
+      "ogImageAlt": "Página de directorios de Lista Qing. Solo mayores de 18.",
+      "kicker": "Enlaces de directorios · Solo mayores de 18",
+      "h1": "Enlaces de directorios",
+      "lead": "青榜友链/合作目录页. Links we may add when directories require a reciprocal.",
+      "related": [
+        {
+          "page": "about",
+          "label": "Acerca de"
+        },
+        {
+          "page": "contact",
+          "label": "Contacto"
+        },
+        {
+          "page": "daily",
+          "label": "Hoy"
+        }
+      ],
+      "sections": [
+        {
+          "h2": "Para qué está esta página",
+          "paragraphs": [
+            "青榜友链/合作目录页. Links we may add when directories require a reciprocal. Los directorios para adultos, como 18.network o PornPlug, reciben insignia o enlace solo aquí.",
+            "La portada no lleva un enlace dofollow de AdultList. El pie de cada página tiene un enlace interno a esta página y ningún enlace recíproco externo. Los enlaces de productos siguen en nofollow.",
+            "Si las reglas de un directorio exigen un recíproco dofollow, se quita nofollow solo en esa ficha y la regla queda en el comentario HTML de al lado. El resto de enlaces externos sigue en nofollow."
+          ]
+        },
+        {
+          "h2": "Insignias de directorios",
+          "paragraphs": [
+            "Las insignias van en los huecos de abajo. La imagen, el enlace y el rel se pueden completar después según las reglas de cada directorio, sin cambiar el diseño. Todavía no hay insignias publicadas."
+          ],
+          "entries": [
+            {
+              "id": "18-network",
+              "name": "18.network",
+              "note": "Próximamente",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "pornplug",
+              "name": "PornPlug",
+              "note": "Próximamente",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "other",
+              "name": "Otros directorios",
+              "note": "Próximamente",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            }
+          ]
+        },
+        {
+          "h2": "Enlaces recíprocos de texto",
+          "paragraphs": [
+            "Si un directorio pide un enlace de texto, va en esta sección. No en la portada y no en el pie de cada página."
+          ],
+          "entries": [
+            {
+              "id": "18-network-text",
+              "name": "18.network",
+              "note": "Próximamente",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "pornplug-text",
+              "name": "PornPlug",
+              "note": "Próximamente",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            },
+            {
+              "id": "other-text",
+              "name": "Otros directorios",
+              "note": "Próximamente",
+              "href": "",
+              "follow": false,
+              "rule": "",
+              "image": "",
+              "imageAlt": ""
+            }
           ]
         }
       ]
