@@ -1,4 +1,5 @@
 # Adults-only bestseller snapshot (18+). Public HTML is allowed.
+# This is not a store. Pages keep rating=adult and the on-page age gate.
 # Language versions are the same paths plus ?lang=en, ?lang=ja, or ?lang=es.
 # The URL with no lang parameter is zh-CN and x-default.
 # Daily chart is the default (no board parameter). Weekly adds ?board=weekly.
@@ -6,7 +7,39 @@
 # Info pages are public and indexable: /about.html /method.html /faq.html /privacy.html /contact.html
 # Readable board archives: /archive/index.html /archive/daily/YYYY-MM-DD.html /archive/weekly/YYYY-Www.html
 # Machine summary: /llms.txt
+# Plain-text HTML url list: /sitemap.txt
+# IndexNow key file (content is the key only): /16223717d1613cd89fa259593e9f7efd.txt
+# Named groups below repeat the public grant for search and answer-engine crawlers.
+# They do not relax the adults-only rating.
+
 User-agent: *
 Allow: /
 
+# Bing (also feeds Yahoo, DuckDuckGo, and Copilot), DuckDuckGo, Yahoo, Baidu, Yandex, Apple.
+User-agent: Bingbot
+User-agent: msnbot
+User-agent: DuckDuckBot
+User-agent: Slurp
+User-agent: Baiduspider
+User-agent: Baiduspider-render
+User-agent: YandexBot
+User-agent: Yandex
+User-agent: Applebot
+Allow: /
+
+# Answer engines. Allowed so they can cite the public charts. Still adults-only.
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Anthropic-AI
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://orangexie05.github.io/qing-bestsellers-top/sitemap.xml
+Sitemap: https://orangexie05.github.io/qing-bestsellers-top/sitemap.txt
