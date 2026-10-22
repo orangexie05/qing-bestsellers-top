@@ -178,8 +178,13 @@ def main() -> int:
         fail("bad token should be refused")
 
     config = json.loads((boardlib.ROOT / "seo.config.json").read_text(encoding="utf-8"))
-    if config.get("bing_site_verification") or config.get("baidu_site_verification"):
-        fail("committed verification config must stay empty")
+    if config.get("bing_site_verification") != "95D87CF043D728963935C2E82EE51110":
+        fail("committed bing verification token")
+    if config.get("baidu_site_verification"):
+        fail("baidu verification must stay empty")
+    auth = (boardlib.ROOT / "BingSiteAuth.xml").read_text(encoding="utf-8")
+    if "<user>95D87CF043D728963935C2E82EE51110</user>" not in auth:
+        fail("BingSiteAuth.xml")
 
     def ok() -> int:
         return 0

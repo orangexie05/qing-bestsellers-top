@@ -79,10 +79,10 @@ def main() -> int:
         fail("robots sitemap")
     if 'type="text/plain" href="llms.txt"' not in html:
         fail("llms link")
-    if 'name="msvalidate.01"' in html or 'name="baidu-site-verification"' in html:
-        fail("verification meta present without a code")
-    if "webmaster-verify" not in html:
-        fail("webmaster hook")
+    if 'name="msvalidate.01" content="95D87CF043D728963935C2E82EE51110"' not in html:
+        fail("bing verification meta")
+    if 'name="baidu-site-verification"' in html or "webmaster-verify" in html:
+        fail("baidu token or empty webmaster hook")
     if 'name="rating" content="adult"' not in html:
         fail("rating")
     if "不直接售卖" not in html:

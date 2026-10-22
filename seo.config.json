@@ -1,5 +1,5 @@
 {
   "_comment": "Optional webmaster tokens. Leave empty until a console issues a code. scripts/build_homepage.py writes a homepage meta tag only when the value is non-empty. bing_site_verification becomes meta name=msvalidate.01. baidu_site_verification becomes meta name=baidu-site-verification. Do not invent a code.",
-  "bing_site_verification": "",
+  "bing_site_verification": "95D87CF043D728963935C2E82EE51110",
   "baidu_site_verification": ""
 }
