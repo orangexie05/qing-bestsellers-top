@@ -1,0 +1,109 @@
+{
+  "platform": "lesplay_hk",
+  "store": "Les'Play (HK)",
+  "list_url": "https://www.lesplayhk.com/categories/best-seller",
+  "fetched_at": "2026-10-22T10:45:47+08:00",
+  "status": "ok",
+  "currency": "HKD",
+  "rank_basis": "public_category_list_order",
+  "note": "Public Shopline PLP. Price from card before next product link; skipped template/zero-price cards.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Formoonsa Menstrual Disc - Regular 53ml [Limited Edition]",
+      "product_url": "https://www.lesplayhk.com/products/tw-moonplate-regular-limited-edition",
+      "purchase_url": "https://www.lesplayhk.com/products/tw-moonplate-regular-limited-edition",
+      "price": 458.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-tw-moonplate-regular-limited-edition",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6ad75b8a6d2dab0016573927/375x.webp?source_format=png",
+      "image_kind": "official"
+    },
+    {
+      "rank": 2,
+      "name": "Womanizer Next Liberty 3D Pleasure Air Stimulator",
+      "product_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "purchase_url": "https://www.lesplayhk.com/products/womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "price": 988.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-womanizer-next-liberty-3d-pleasure-air-stimulator",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6aa42b364f6f2d67e12c5d43/375x.webp?source_format=gif",
+      "image_kind": "official"
+    },
+    {
+      "rank": 3,
+      "name": "Roomfun Double Vibration Wearable Dildo Set",
+      "product_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
+      "purchase_url": "https://www.lesplayhk.com/products/roomfun-double-vibration-wearable-dildo-set",
+      "price": 798.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-roomfun-double-vibration-wearable-dildo-set",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a7f097fc377fa203b144236/375x.webp?source_format=png",
+      "image_kind": "official"
+    },
+    {
+      "rank": 4,
+      "name": "Kisstoy PUPU App-Controlled Suction Vibrator Set",
+      "product_url": "https://www.lesplayhk.com/products/kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "purchase_url": "https://www.lesplayhk.com/products/kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "price": 428.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-kisstoy-pupu-app-controlled-suction-vibrator-set",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a788bd5a7398aa91f72bf77/375x.webp?source_format=png",
+      "image_kind": "official"
+    },
+    {
+      "rank": 5,
+      "name": "Kisstoy Finger Sticky Rice Vibrator",
+      "product_url": "https://www.lesplayhk.com/products/kisstoy-finger-sticky-rice-vibrator",
+      "purchase_url": "https://www.lesplayhk.com/products/kisstoy-finger-sticky-rice-vibrator",
+      "price": 338.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-kisstoy-finger-sticky-rice-vibrator",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a12ed4403db9ec9627cfcb9/375x.webp?source_format=png",
+      "image_kind": "official"
+    },
+    {
+      "rank": 6,
+      "name": "Kisstoy Lost Wearable Vibrator",
+      "product_url": "https://www.lesplayhk.com/products/kisstoy-lost-wearable-vibrator",
+      "purchase_url": "https://www.lesplayhk.com/products/kisstoy-lost-wearable-vibrator",
+      "price": 298.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "id": "lesplay_hk-kisstoy-lost-wearable-vibrator",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6a16fa91ffc4310d02b591d1/375x.webp?source_format=png",
+      "image_kind": "official",
+      "compare_at_price": 498.0
+    }
+  ]
+}

@@ -90,13 +90,13 @@
     "navAbout": "关于",
     "navMethod": "方法",
     "navFaq": "FAQ",
-    "footerSources": "来源以每期 JSON 为准。设计上包括淘宝 / 天猫、Amazon 和独立品牌店。2026-10-21 实际收录 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫仍未收录。",
+    "footerSources": "来源以每期 JSON 为准。设计上包括淘宝 / 天猫、Amazon 和独立品牌店。2026-10-22 实际收录 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫仍未收录。",
     "footerCadence": "更新频率：日榜按上海时间每天整份更新。周榜在同一 ISO 周有两份或更多日榜时由这些日榜汇总；只有一份日榜时，周榜仍可能是带 seed 的副本，页面会写明。",
     "footerAbout": "关于本站",
     "footerMethod": "数据方法",
     "footerFaq": "常见问题",
     "footerLinksFixed": "外链使用 nofollow。数据时区 Asia/Shanghai。",
-    "footerArchiveFixed": "可读归档：archive/index.html。JSON：data/archive/daily/2026-10-21.json · data/archive/weekly/2026-W43.json",
+    "footerArchiveFixed": "可读归档：archive/index.html。JSON：data/archive/daily/2026-10-22.json · data/archive/weekly/2026-W43.json",
     "geoLabel": "本页摘要",
     "navArchive": "归档",
     "navPrivacy": "隐私",
@@ -395,11 +395,11 @@
       "items": [
         {
           "q": "数据从哪里来？",
-          "a": "来自抓取时能打开的公开热销页。设计上的来源包括淘宝 / 天猫、Amazon，以及独立品牌店和地区店。2026-10-21 实际进入榜单的是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫这一天没有重抓；此前打开的是 JavaScript 搜索壳，没有商品行，所以没有编造淘宝商品。原始文件在 data/daily-latest.json 和 data/weekly-latest.json。"
+          "a": "来自抓取时能打开的公开热销页。设计上的来源包括淘宝 / 天猫、Amazon，以及独立品牌店和地区店。2026-10-22 实际进入榜单的是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫这一天没有重抓；此前打开的是 JavaScript 搜索壳，没有商品行，所以没有编造淘宝商品。原始文件在 data/daily-latest.json 和 data/weekly-latest.json。"
         },
         {
           "q": "多久更新一次？",
-          "a": "日榜按上海时间每个自然日整份更新。周榜在同一 ISO 周有两份或更多日榜时，用 scripts/build_weekly.py 按商品链接汇总，不再把单日副本当作那一周的最终结果。只有一份日榜时，周榜仍可能带 seed，页面会写明。当前日榜文件写于 2026-10-21T10:45:41+08:00。"
+          "a": "日榜按上海时间每个自然日整份更新。周榜在同一 ISO 周有两份或更多日榜时，用 scripts/build_weekly.py 按商品链接汇总，不再把单日副本当作那一周的最终结果。只有一份日榜时，周榜仍可能带 seed，页面会写明。当前日榜文件写于 2026-10-22T10:45:47+08:00。"
         },
         {
           "q": "怎么读这份榜？",
@@ -594,11 +594,11 @@
     "items": [
       {
         "q": "这是购物网站吗？",
-        "a": "不是。青榜把 2026 年 10 月 21 日能打开的公开热销页整理在一起，方便对照商品名称、价格和评分。要下单，请回到商家自己的页面核对。"
+        "a": "不是。青榜把 2026 年 10 月 22 日能打开的公开热销页整理在一起，方便对照商品名称、价格和评分。要下单，请回到商家自己的页面核对。"
       },
       {
         "q": "榜上有哪些店铺？",
-        "a": "2026-10-21 这一期是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫没有商品行。没能收录的来源写在页面末尾，没有拿别的数据来凑数。"
+        "a": "2026-10-22 这一期是 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。淘宝 / 天猫没有商品行。没能收录的来源写在页面末尾，没有拿别的数据来凑数。"
       },
       {
         "q": "这里的价格还准吗？",
