@@ -66,6 +66,8 @@ def main() -> int:
     llms = (boardlib.ROOT / "llms.txt").read_text(encoding="utf-8")
     if day not in llms or weekly["period"]["iso_week"] not in llms:
         fail("llms dates")
+    if "sitemap.txt" not in llms or "does not sell products" not in llms:
+        fail("llms discovery")
     if "2026-10-15, 2026-10-16, and 2026-10-17 daily" in llms:
         fail("llms still describes a three-day week")
     if "seed" in weekly and "no seed" not in llms.lower() and "has no seed" not in llms:
@@ -75,6 +77,16 @@ def main() -> int:
     robots = (boardlib.ROOT / "robots.txt").read_text(encoding="utf-8")
     if "Sitemap: https://orangexie05.github.io/qing-bestsellers-top/sitemap.xml" not in robots:
         fail("robots sitemap")
+    if 'type="text/plain" href="llms.txt"' not in html:
+        fail("llms link")
+    if 'name="msvalidate.01"' in html or 'name="baidu-site-verification"' in html:
+        fail("verification meta present without a code")
+    if "webmaster-verify" not in html:
+        fail("webmaster hook")
+    if 'name="rating" content="adult"' not in html:
+        fail("rating")
+    if "不直接售卖" not in html:
+        fail("non-store positioning")
     sitemap = (boardlib.ROOT / "sitemap.xml").read_text(encoding="utf-8")
     if f"/archive/daily/{day}.html" not in sitemap:
         fail("sitemap daily")

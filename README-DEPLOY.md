@@ -38,6 +38,33 @@ find . -type f \( -name '*.html' -o -name '*.xml' -o -name 'robots.txt' \) -exec
 - 外链已加 `rel="nofollow noopener"`。
 - 上线后在 Search Console 验证并提交 sitemap；可请求对首页 URL 编入索引。
 
+## IndexNow、Bing、Baidu
+
+站点在项目路径 `/qing-bestsellers-top/` 下，不能把 IndexNow 密钥放到 `orangexie05.github.io` 的主机根。密钥文件是仓库根目录的 `16223717d1613cd89fa259593e9f7efd.txt`（文件内容只有这串密钥）。线上地址：
+
+`https://orangexie05.github.io/qing-bestsellers-top/16223717d1613cd89fa259593e9f7efd.txt`
+
+`python3 scripts/publish_boards.py` 写完榜单页、`llms.txt`、`sitemap.xml` 和 `sitemap.txt` 之后，向 `https://api.indexnow.org/indexnow` 提交本次会变的 URL。`host` 是 `orangexie05.github.io`，`keyLocation` 指向上面这个项目路径里的密钥文件。IndexNow 失败只记日志，不让榜单发布失败。本地不想发请求时：
+
+```bash
+QING_SKIP_INDEXNOW=1 python3 scripts/publish_boards.py
+```
+
+密钥文件进 GitHub Pages 之前，第一次提交可能被 IndexNow 拒绝。部署完成后可以再跑 `python3 scripts/indexnow_ping.py`。
+
+`robots.txt` 保持 `User-agent: *` / `Allow: /`，并点名允许 Bingbot、DuckDuckBot、Slurp、Baiduspider、Yandex，以及 GPT、Claude、Perplexity、Google-Extended、Applebot-Extended 等回答引擎爬虫。页面仍是 `rating=adult`，年龄确认门不变。
+
+`sitemap.txt` 与 `sitemap.xml` 同一批 URL，只保留 HTML（含语言和周榜参数），不收录 JSON。`robots.txt` 里有第二条 `Sitemap:`。
+
+Bing Webmaster Tools 和百度搜索资源平台的验证码先留空，写在 `seo.config.json`：
+
+- `bing_site_verification`：只填 content，对应 `<meta name="msvalidate.01" content="...">`
+- `baidu_site_verification`：只填 content，对应 `<meta name="baidu-site-verification" content="...">`
+
+然后重新跑 `python3 scripts/build_homepage.py`（或整次 `publish_boards.py`）。空字符串不会输出这两条 meta，首页只留一段 HTML 注释说明钩子位置。不要编造验证码。
+
+还要在站长平台手工做的事：Bing Webmaster Tools 添加站点并提交 `sitemap.xml`（Yahoo、DuckDuckGo、Copilot 走 Bing 的索引）；Yandex Webmaster 提交 sitemap；百度搜索资源平台提交 `sitemap.txt` 或 `sitemap.xml`，验证通过后把验证码写入 `seo.config.json`。Google Search Console 的验证码已经在首页。
+
 ## 日榜 / 周榜数据
 
 页面默认打开日榜，用页首切换到周榜（地址栏加上 `?board=weekly`，语言参数仍是 `?lang=`）。
@@ -72,7 +99,7 @@ find . -type f \( -name '*.html' -o -name '*.xml' -o -name 'robots.txt' \) -exec
 
 淘宝 / 天猫仍未收录。2026-10-16 打开 `https://s.taobao.com/search` 只得到需要 JavaScript 的搜索壳，静态 HTML 里没有商品链接、商品 id 或价格，所以没有编造行。空结构在 `data/sources/taobao_tmall.placeholder.json`。18 Gifts 被 Cloudflare 拦住，LELO `/best-sellers` 返回 404，MysteryVibe 在 429 之后没有重试，PChome 24h 的响应不是确认过的热销榜。2026-10-17 没有重抓这几家；当天 `sources_skipped` 只记了淘宝 / 天猫、18 Gifts 和 LELO。
 
-周一（或有新日榜时）在仓库根目录跑这一条。它会重算够天数的周榜，重写归档 HTML、首页和分平台页的 SEO 壳（title、description、Open Graph、Twitter、JSON-LD 的 dateModified / temporalCoverage、ItemList、页面上的摘要）、`llms.txt`、信任页和 `sitemap.xml`。不要只改 JSON 就停：`scripts/refresh_jsonld.py` 现在会调用首页壳重建，但完整发布用下面的命令，否则 sitemap 或信任页仍可能停在旧日期。
+周一（或有新日榜时）在仓库根目录跑这一条。它会重算够天数的周榜，重写归档 HTML、首页和分平台页的 SEO 壳（title、description、Open Graph、Twitter、JSON-LD 的 dateModified / temporalCoverage、ItemList、页面上的摘要）、`llms.txt`、信任页、`sitemap.xml` 和 `sitemap.txt`，并通知 IndexNow。不要只改 JSON 就停：`scripts/refresh_jsonld.py` 现在会调用首页壳重建，但完整发布用下面的命令，否则 sitemap 或信任页仍可能停在旧日期。
 
 ```bash
 python3 scripts/publish_boards.py
@@ -85,8 +112,9 @@ python3 scripts/apply_source_extracts.py   # 仅当 data/sources/*-YYYY-MM-DD.js
 python3 scripts/build_weekly.py
 python3 scripts/build_archive_html.py
 python3 scripts/build_homepage.py          # 首页 / 分平台 SEO 壳和 llms.txt，必须跑
-python3 scripts/build_sitemap.py
+python3 scripts/build_sitemap.py           # sitemap.xml 和 sitemap.txt
 python3 scripts/build_trust_pages.py       # 隐私 / 联系文案；日期取自 daily-latest
+python3 scripts/indexnow_ping.py           # 可选；publish_boards.py 已经会调用
 ```
 
 `scripts/refresh_jsonld.py` 与 `scripts/build_homepage.py` 是同一步，留下旧文件名是为了已经写在说明里的命令不会再只改 ItemList。

@@ -10,6 +10,8 @@ data/daily-latest.json. Weekly strings follow data/weekly-latest.json.
 
 Prefer scripts/publish_boards.py after a daily or weekly JSON publish so
 archive HTML, the sitemap, llms.txt, and these shells stay on the same day.
+The homepage head also keeps a link to llms.txt and the Bing/Baidu
+verification hook from seo.config.json.
 """
 
 from __future__ import annotations
@@ -423,6 +425,76 @@ def stamp_as_of(html: str, day: str) -> str:
     return html
 
 
+LLMS_LINK = '<link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">'
+WEBMASTER_HOOK = (
+    "<!-- webmaster-verify: paste tokens into seo.config.json. "
+    "bing_site_verification -> meta name=msvalidate.01; "
+    "baidu_site_verification -> meta name=baidu-site-verification. "
+    "Leave both empty until Bing Webmaster Tools or Baidu Search Resource Platform issues a code. -->"
+)
+VERIFY_TOKEN = re.compile(r"^[A-Za-z0-9_-]{8,128}$")
+VERIFY_META_RES = (
+    re.compile(r'\n?<meta name="msvalidate\.01" content="[^"]*">'),
+    re.compile(r'\n?<meta name="baidu-site-verification" content="[^"]*">'),
+)
+
+
+def load_seo_config() -> dict:
+    path = boardlib.ROOT / "seo.config.json"
+    if not path.exists():
+        return {}
+    doc = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(doc, dict):
+        raise SystemExit("seo.config.json must be an object")
+    return doc
+
+
+def ensure_llms_link(html: str) -> str:
+    if 'type="text/plain" href="llms.txt"' in html:
+        return html
+    needle = '<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">'
+    if needle not in html:
+        raise SystemExit("homepage is missing the sitemap link")
+    return html.replace(needle, needle + "\n" + LLMS_LINK, 1)
+
+
+def verification_lines(config: dict) -> list[str]:
+    mapping = (
+        ("bing_site_verification", "msvalidate.01"),
+        ("baidu_site_verification", "baidu-site-verification"),
+    )
+    lines = []
+    for key, meta_name in mapping:
+        value = str(config.get(key) or "").strip()
+        if not value:
+            continue
+        if not VERIFY_TOKEN.fullmatch(value):
+            raise SystemExit(
+                f"{key} must be the verification token only (8-128 letters, digits, _ or -), or empty"
+            )
+        lines.append(f'<meta name="{meta_name}" content="{esc(value)}">')
+    return lines
+
+
+def apply_webmaster_hooks(html: str, config: dict | None = None) -> str:
+    """Insert Bing/Baidu meta tags when seo.config.json has a real token.
+
+    Empty values leave a comment and do not emit a meta tag. No placeholder
+    code is invented.
+    """
+    if config is None:
+        config = load_seo_config()
+    for pattern in VERIFY_META_RES:
+        html = pattern.sub("", html)
+    html = html.replace("\n" + WEBMASTER_HOOK, "").replace(WEBMASTER_HOOK, "")
+    lines = verification_lines(config)
+    block = "\n".join(lines) if lines else WEBMASTER_HOOK
+    match = re.search(r'(<meta name="google-site-verification" content="[^"]*">)', html)
+    if not match:
+        raise SystemExit("homepage is missing google-site-verification")
+    return html[: match.end()] + "\n" + block + html[match.end() :]
+
+
 def load_locales() -> dict[str, dict]:
     return {code: boardlib.load_json(boardlib.ROOT / "i18n" / f"{code}.json") for code in LANGS}
 
@@ -614,6 +686,9 @@ def patch_shell(path: Path, page_name: str, daily: dict, weekly: dict, locales: 
     ):
         html = set_meta(html, kind, name, content)
     html = stamp_as_of(html, day)
+    if path.name == "index.html":
+        html = ensure_llms_link(html)
+        html = apply_webmaster_hooks(html)
 
     pattern = re.compile(
         r'<script type="application/ld\+json" id="ld-json">\s*(.*?)\s*</script>',
@@ -833,8 +908,16 @@ Not on the {day} daily chart: {skipped_text} Rows were not invented. The empty T
 - Contact: https://orangexie05.github.io/qing-bestsellers-top/contact.html
 - Latest JSON: https://orangexie05.github.io/qing-bestsellers-top/data/daily-latest.json and https://orangexie05.github.io/qing-bestsellers-top/data/weekly-latest.json
 - Sitemap: https://orangexie05.github.io/qing-bestsellers-top/sitemap.xml
+- Plain-text sitemap (HTML URLs only): https://orangexie05.github.io/qing-bestsellers-top/sitemap.txt
 
 Outbound product links use rel="nofollow". Corrections go to GitHub issues: https://github.com/orangexie05/qing-bestsellers-top/issues
+
+## Discovery
+
+Search and answer-engine crawlers may fetch the public HTML. robots.txt allows User-agent: * and explicitly allows Bingbot, DuckDuckBot, Slurp, Baiduspider, YandexBot, Applebot, GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-SearchBot, Anthropic-AI, PerplexityBot, Google-Extended, and Applebot-Extended. That allow list does not change the adults-only rule: pages use rating=adult and an age gate before product cards. The site does not sell products, take payment, or ship orders.
+
+- robots.txt: https://orangexie05.github.io/qing-bestsellers-top/robots.txt
+- Homepage also links rel="alternate" type="text/plain" to llms.txt.
 
 ## Privacy in short
 

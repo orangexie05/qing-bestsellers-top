@@ -43,8 +43,16 @@ Not on the 2026-10-22 daily chart: Taobao / Tmall (blocked: Not re-fetched on 20
 - Contact: https://orangexie05.github.io/qing-bestsellers-top/contact.html
 - Latest JSON: https://orangexie05.github.io/qing-bestsellers-top/data/daily-latest.json and https://orangexie05.github.io/qing-bestsellers-top/data/weekly-latest.json
 - Sitemap: https://orangexie05.github.io/qing-bestsellers-top/sitemap.xml
+- Plain-text sitemap (HTML URLs only): https://orangexie05.github.io/qing-bestsellers-top/sitemap.txt
 
 Outbound product links use rel="nofollow". Corrections go to GitHub issues: https://github.com/orangexie05/qing-bestsellers-top/issues
+
+## Discovery
+
+Search and answer-engine crawlers may fetch the public HTML. robots.txt allows User-agent: * and explicitly allows Bingbot, DuckDuckBot, Slurp, Baiduspider, YandexBot, Applebot, GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-SearchBot, Anthropic-AI, PerplexityBot, Google-Extended, and Applebot-Extended. That allow list does not change the adults-only rule: pages use rating=adult and an age gate before product cards. The site does not sell products, take payment, or ship orders.
+
+- robots.txt: https://orangexie05.github.io/qing-bestsellers-top/robots.txt
+- Homepage also links rel="alternate" type="text/plain" to llms.txt.
 
 ## Privacy in short
 

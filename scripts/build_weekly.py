@@ -5,8 +5,9 @@ Monday routine, from the repo root:
 
     python3 scripts/publish_boards.py
 
-That also rebuilds archive HTML, sitemap.xml, llms.txt, and the homepage
-SEO shell from data/daily-latest.json. Do not stop after the JSON files:
+That also rebuilds archive HTML, sitemap.xml, sitemap.txt, llms.txt, and the
+homepage SEO shell from data/daily-latest.json, then notifies IndexNow.
+Do not stop after the JSON files:
 index.html title, description, and JSON-LD dates are rewritten only by
 scripts/build_homepage.py.
 

@@ -8,8 +8,10 @@ data/archive/daily/YYYY-MM-DD.json are in place:
 
 The command rebuilds an aggregated weekly file when an ISO week has two or
 more daily archives, then rewrites archive HTML, the homepage and by-platform
-SEO shells, llms.txt, trust pages, and sitemap.xml. A daily publish that stops
-before the homepage step is how index.html kept an older date.
+SEO shells, llms.txt, trust pages, sitemap.xml, and sitemap.txt. After those
+files are written it notifies IndexNow. A failed IndexNow POST is logged and
+does not fail the publish. A daily publish that stops before the homepage step
+is how index.html kept an older date.
 """
 
 from __future__ import annotations
@@ -24,6 +26,7 @@ import build_homepage
 import build_sitemap
 import build_trust_pages
 import build_weekly
+import indexnow_ping
 
 
 def main() -> int:
@@ -32,6 +35,11 @@ def main() -> int:
     code = build_homepage.main()
     build_trust_pages.main()
     build_sitemap.main()
+    # The boards are already on disk. IndexNow is only a notification.
+    try:
+        indexnow_ping.main()
+    except Exception as exc:
+        print(f"indexnow skipped: {exc}", file=sys.stderr)
     return code
 
 

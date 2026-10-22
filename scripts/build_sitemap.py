@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
-"""Rebuild sitemap.xml from the live pages, language variants, and JSON boards."""
+"""Rebuild sitemap.xml and sitemap.txt from the live pages and JSON boards.
+
+sitemap.txt is the same URL set as sitemap.xml, limited to HTML pages (including
+language and weekly query variants). Raw JSON and llms.txt stay in the XML
+sitemap only. Baidu can read the plain-text list; robots.txt points at both.
+"""
 
 from __future__ import annotations
 
 import re
 import sys
 from pathlib import Path
-from xml.sax.saxutils import escape
+from xml.sax.saxutils import escape, unescape
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -133,7 +138,28 @@ def main() -> int:
     dest = boardlib.ROOT / "sitemap.xml"
     dest.write_text(xml, encoding="utf-8")
     print(f"wrote sitemap.xml ({xml.count('<url>')} urls)")
+    write_sitemap_txt(xml)
     return 0
+
+
+def write_sitemap_txt(xml: str) -> int:
+    """One absolute HTML URL per line, in sitemap.xml order, with duplicates removed."""
+    lines: list[str] = []
+    seen: set[str] = set()
+    for raw in re.findall(r"<loc>([^<]+)</loc>", xml):
+        loc = unescape(raw).strip()
+        path = loc.split("?", 1)[0]
+        if not (path.endswith(".html") or path.endswith("/")):
+            continue
+        if loc in seen:
+            continue
+        seen.add(loc)
+        lines.append(loc)
+    text = "\n".join(lines) + ("\n" if lines else "")
+    dest = boardlib.ROOT / "sitemap.txt"
+    dest.write_text(text, encoding="utf-8")
+    print(f"wrote sitemap.txt ({len(lines)} html urls)")
+    return len(lines)
 
 
 if __name__ == "__main__":
