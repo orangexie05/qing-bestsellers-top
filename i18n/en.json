@@ -2,30 +2,31 @@
   "meta": {
     "htmlLang": "en",
     "ogLocale": "en_US",
-    "topTitle": "Intimate-product sales chart, top 20 today | {period}",
-    "topDescription": "Adults 18+ only. Intimate-product sales chart for {period} (Asia/Shanghai) from Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and, in Hong Kong, Waddy, SISTALK, Les'Play, and Sex Concept. Prices, ratings, and ranks are whatever that day's file records.",
-    "platformTitle": "Intimate-product sales chart by shop, today | {period}",
-    "platformDescription": "Adults 18+ only. The {period} (Asia/Shanghai) daily sales chart, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. No extra products were added.",
-    "ogImageAlt": "Qing List intimate-product sales chart for {period}. Adults 18+ only.",
+    "topTitle": "Sex toy bestsellers chart · daily top 20 | {period}",
+    "topDescription": "Adults 18+ only. Daily intimate-product / sex-toy bestsellers ranking for {period} (Asia/Shanghai) from Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Prices, ratings, and ranks match that day's file—this site does not sell.",
+    "platformTitle": "Sex toy bestsellers by shop · daily | {period}",
+    "platformDescription": "Adults 18+ only. The {period} (Asia/Shanghai) daily bestsellers chart, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. No extra products were added.",
+    "ogImageAlt": "Qing List sex-toy bestsellers chart for {period}. Adults 18+ only.",
     "boards": {
       "daily": {
-        "topTitle": "Intimate-product sales chart, top 20 today | {period}",
-        "topDescription": "Adults 18+ only. Intimate-product sales chart for {period} (Asia/Shanghai) from Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and, in Hong Kong, Waddy, SISTALK, Les'Play, and Sex Concept. Prices, ratings, and ranks are whatever that day's file records.",
-        "platformTitle": "Intimate-product sales chart by shop, today | {period}",
-        "platformDescription": "Adults 18+ only. The {period} (Asia/Shanghai) daily sales chart, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. No extra products were added.",
-        "ogImageAlt": "Qing List, today's intimate-product sales chart for {period}. Adults 18+ only.",
-        "archiveTitle": "Archived daily chart, top 20 | {period}"
+        "topTitle": "Sex toy bestsellers chart · daily top 20 | {period}",
+        "topDescription": "Adults 18+ only. Daily intimate-product / sex-toy bestsellers ranking for {period} (Asia/Shanghai) from Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Prices, ratings, and ranks match that day's file—this site does not sell.",
+        "platformTitle": "Sex toy bestsellers by shop · daily | {period}",
+        "platformDescription": "Adults 18+ only. The {period} (Asia/Shanghai) daily bestsellers chart, grouped by Amazon, Dame, Lovense, We-Vibe, Womanizer, and Waddy. No extra products were added.",
+        "ogImageAlt": "Qing List, today's sex-toy bestsellers chart for {period}. Adults 18+ only.",
+        "archiveTitle": "Archived daily bestsellers, top 20 | {period}"
       },
       "weekly": {
-        "topTitle": "Intimate-product sales chart, top 20 this week | {period}",
-        "topDescription": "Adults 18+ only. This week's intimate-product sales chart for {period} (Asia/Shanghai, Monday–Sunday). Prices, ratings, and ranks are whatever that week's file records.",
-        "platformTitle": "Intimate-product sales chart by shop, this week | {period}",
-        "platformDescription": "Adults 18+ only. This week's {period} (Asia/Shanghai) sales chart, grouped by shop. Same products as the combined list; nothing new was added.",
-        "ogImageAlt": "Qing List, this week's intimate-product sales chart for {period}. Adults 18+ only.",
-        "archiveTitle": "Archived weekly chart, top 20 | {period}"
+        "topTitle": "Sex toy bestsellers chart · weekly top 20 | {period}",
+        "topDescription": "Adults 18+ only. This week's intimate-product / sex-toy bestsellers ranking for {period} (Asia/Shanghai, Monday–Sunday). Prices, ratings, and ranks match that week's file—this site does not sell.",
+        "platformTitle": "Sex toy bestsellers by shop · this week | {period}",
+        "platformDescription": "Adults 18+ only. This week's {period} (Asia/Shanghai) bestsellers chart, grouped by shop. Same products as the combined list; nothing new was added.",
+        "ogImageAlt": "Qing List, this week's sex-toy bestsellers chart for {period}. Adults 18+ only.",
+        "archiveTitle": "Archived weekly bestsellers, top 20 | {period}"
       }
     },
-    "siteDescription": "Qing List is an adults-only snapshot of public intimate-product sales charts, daily and weekly. It does not sell products."
+    "siteDescription": "Qing List is an adults-only snapshot of public intimate-product and sex-toy bestsellers charts—daily and weekly rankings across several shops. It does not sell products.",
+    "seoKeywords": "sex toy bestsellers, sex toys ranking, intimate product bestsellers, best selling sex toys chart, daily sex toy chart, Qing List"
   },
   "ui": {
     "skip": "Skip to content",
@@ -171,31 +172,31 @@
   "pages": {
     "top": {
       "daily": {
-        "h1": "Intimate-product sales chart · top 20 today",
-        "lead": "Public lists for a single Shanghai date, side by side: independent brands, Amazon.com, and a Chinese-language Hong Kong shop. Only names, prices, ratings, and links from that file.",
-        "listTitle": "On today’s chart",
+        "h1": "Sex toy bestsellers · daily top 20",
+        "lead": "Public bestsellers lists for a single Shanghai date, side by side: independent brands, Amazon.com, and Chinese-language Hong Kong shops. Names, prices, ratings, and links only—so you can compare today's ranking without a storefront.",
+        "listTitle": "Today's top 20 bestsellers",
         "cross": "Browse today’s chart by shop",
         "geo": [
-          "This page is the public intimate-product sales chart for {period} ({tz}): {count} products.",
-          "The names come from public bestseller pages that were open that day: {sources}. This site does not sell anything, and the list is not a paid placement.",
+          "This page is the {period} ({tz}) public intimate-product / sex-toy bestsellers daily chart, {count} items.",
+          "Rows come from public hot-seller pages open that day: {sources}. This site does not sell products and is not an ad slot.",
           "{top}",
-          "The daily chart is replaced in full once per Shanghai date. The weekly chart covers Monday–Sunday. Prices, ratings, and ranks match that day's file, not a live quote.",
-          "Adults 18+ only. Sources left out are named at the bottom of the page. Nothing else was added to fill a gap."
+          "The daily chart is replaced in full each Shanghai calendar day; the weekly chart covers Monday–Sunday. Prices, ratings, and ranks match this file only.",
+          "Adults 18+ only. Skipped sources are listed at the bottom; nothing was invented to fill gaps."
         ],
         "geoTop": "Number 1 overall is {listing} from {store}, listed at {price}.",
         "geoTopNamed": "Number 1 overall is {listing} from {store} (shown here as {display}), listed at {price}."
       },
       "weekly": {
-        "h1": "Intimate-product sales chart · top 20 this week",
-        "lead": "Public bestsellers for a Monday–Sunday week in Shanghai time. Only names, prices, ratings, and links recorded in that week’s file.",
-        "listTitle": "On this week’s chart",
+        "h1": "Sex toy bestsellers · this week's top 20",
+        "lead": "Public bestsellers for one Shanghai ISO week (Monday–Sunday). Only the names, prices, ratings, and links in that weekly file.",
+        "listTitle": "This week's top 20 bestsellers",
         "cross": "Browse this week’s chart by shop",
         "geo": [
-          "This page is the intimate-product sales chart for the Shanghai week {period} ({tz}, Monday–Sunday{weekClause}): {count} products.",
+          "This page is the {period} ({tz}, Monday–Sunday{weekClause}) intimate-product / sex-toy bestsellers weekly chart, {count} items.",
           "{seed}",
           "{top}",
-          "A routine weekly publish replaces the latest file in full and keeps an ISO-week archive.",
-          "Adults 18+ only. Shops match the daily chart. A source that was not requested is not backfilled."
+          "The weekly chart updates for each Shanghai Monday–Sunday window; routine publish overwrites the latest file and archives by ISO week.",
+          "Adults 18+ only. Sources match the daily chart; a missing source is not backfilled."
         ],
         "geoSeed": "The weekly file says it is a copy of the daily chart from {snapshot}, not a separate week-long tally. Products, prices, ratings, and ranks match that day.",
         "geoNoSeed": "Ranks, prices, and ratings are whatever that week's file records, not a live quote.",
@@ -206,7 +207,7 @@
     },
     "platform": {
       "daily": {
-        "h1": "Today's sales chart, by shop",
+        "h1": "Sex toy bestsellers · by shop (daily)",
         "lead": "The same 20 products from today’s chart, grouped by the shop they came from. The count is how many made the combined list, not the full length of each shop’s own chart.",
         "cross": "View today’s combined ranking",
         "geo": [
@@ -220,7 +221,7 @@
         "geoTopNamed": "Number 1 overall is {listing} from {store} (shown here as {display}), listed at {price}."
       },
       "weekly": {
-        "h1": "This week's sales chart, by shop",
+        "h1": "Sex toy bestsellers · by shop (weekly)",
         "lead": "The same 20 products from this week’s chart, grouped by the shop they came from. The count is how many made the combined list, not the full length of each shop’s own chart.",
         "cross": "View this week’s combined ranking",
         "geo": [
@@ -611,6 +612,14 @@
       {
         "q": "What’s the difference between today and this week?",
         "a": "Today is one Shanghai date. This week is Monday through Sunday. The page opens on today; the switch at the top moves to this week. The latest files are data/daily-latest.json and data/weekly-latest.json. When several daily files exist for the same week, the weekly chart aggregates them. Only a file that still includes seed is a copy of that day's chart, not a separate week-long tally."
+      },
+      {
+        "q": "How does this page relate to “sex toy bestsellers” or ranking searches?",
+        "a": "Qing List snapshots public hot-seller pages from several shops into a daily and weekly chart (Asia/Shanghai). It answers “what ranks on open bestsellers lists today/this week,” with names, prices, and ratings—not a storefront and not invented sales counts. Buy only on the merchant’s own page."
+      },
+      {
+        "q": "Do you publish separate category rankings (e.g. vibrators only)?",
+        "a": "Not today. The combined top 20 follows each shop’s public hot-seller order. If a source page is itself a category list, ranks still follow that page’s order for that day; we do not invent category sales."
       }
     ],
     "more": "Read the full FAQ"

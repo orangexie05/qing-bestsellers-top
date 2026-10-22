@@ -2,30 +2,31 @@
   "meta": {
     "htmlLang": "zh-Hans",
     "ogLocale": "zh_CN",
-    "topTitle": "情趣用品销售榜 · 日榜 Top 20｜{period}（上海时间）",
-    "topDescription": "仅限 18 周岁以上。{period}（Asia/Shanghai）情趣用品销售日榜，汇总 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。价格、评分和名次以该日榜文件为准。",
-    "platformTitle": "情趣用品销售榜 · 分平台日榜｜{period}（上海时间）",
-    "platformDescription": "仅限成年人。{period}（Asia/Shanghai）情趣用品销售日榜，按 Amazon、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept 分开查看，不另编商品。",
-    "ogImageAlt": "青榜：{period} 情趣用品销售榜，仅限 18 周岁以上",
+    "topTitle": "情趣用品排行榜 · 销售日榜 Top 20｜{period}（上海时间）",
+    "topDescription": "仅限 18 周岁以上。{period}（Asia/Shanghai）情趣用品销量排行榜／公开热销日榜，汇总 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。价格、评分和名次以该日榜文件为准，不售卖。",
+    "platformTitle": "情趣用品排行榜 · 分店铺日榜｜{period}（上海时间）",
+    "platformDescription": "仅限成年人。{period}（Asia/Shanghai）情趣用品热销日榜，按 Amazon、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept 分开查看，不另编商品。",
+    "ogImageAlt": "青榜：{period} 情趣用品销量排行榜／日榜，仅限 18 周岁以上",
     "boards": {
       "daily": {
-        "topTitle": "情趣用品销售榜 · 日榜 Top 20｜{period}（上海时间）",
-        "topDescription": "仅限 18 周岁以上。{period}（Asia/Shanghai）情趣用品销售日榜，汇总 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。价格、评分和名次以该日榜文件为准。",
-        "platformTitle": "情趣用品销售榜 · 分平台日榜｜{period}（上海时间）",
-        "platformDescription": "仅限成年人。{period}（Asia/Shanghai）情趣用品销售日榜，按 Amazon、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept 分开查看，不另编商品。",
-        "ogImageAlt": "青榜日榜：{period} 情趣用品销售榜，仅限 18 周岁以上",
-        "archiveTitle": "归档日榜 · Top 20｜{period}（上海时间）"
+        "topTitle": "情趣用品排行榜 · 销售日榜 Top 20｜{period}（上海时间）",
+        "topDescription": "仅限 18 周岁以上。{period}（Asia/Shanghai）情趣用品销量排行榜／公开热销日榜，汇总 Amazon 美国站、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept。价格、评分和名次以该日榜文件为准，不售卖。",
+        "platformTitle": "情趣用品排行榜 · 分店铺日榜｜{period}（上海时间）",
+        "platformDescription": "仅限成年人。{period}（Asia/Shanghai）情趣用品热销日榜，按 Amazon、Dame、Lovense、We-Vibe、Womanizer，以及香港 Waddy、SISTALK、Les'Play 与 Sex Concept 分开查看，不另编商品。",
+        "ogImageAlt": "青榜日榜：{period} 情趣用品销量排行榜，仅限 18 周岁以上",
+        "archiveTitle": "归档日榜 · 情趣用品 Top 20｜{period}（上海时间）"
       },
       "weekly": {
-        "topTitle": "情趣用品销售榜 · 周榜 Top 20｜本周 {period}",
-        "topDescription": "仅限 18 周岁以上。本周 {period}（Asia/Shanghai，周一至周日）情趣用品销售周榜。价格、评分和名次以该周榜文件为准。",
-        "platformTitle": "情趣用品销售榜 · 分平台周榜｜本周 {period}",
-        "platformDescription": "仅限成年人。本周 {period}（Asia/Shanghai）情趣用品销售周榜按店铺分开。商品与综合榜相同，没有另编。",
-        "ogImageAlt": "青榜周榜：本周 {period} 情趣用品销售榜，仅限 18 周岁以上",
-        "archiveTitle": "归档周榜 · Top 20｜{period}"
+        "topTitle": "情趣用品排行榜 · 销售周榜 Top 20｜本周 {period}",
+        "topDescription": "仅限 18 周岁以上。本周 {period}（Asia/Shanghai，周一至周日）情趣用品销量排行榜／周榜。价格、评分和名次以该周榜文件为准，不售卖。",
+        "platformTitle": "情趣用品排行榜 · 分店铺周榜｜本周 {period}",
+        "platformDescription": "仅限成年人。本周 {period}（Asia/Shanghai）情趣用品热销周榜按店铺分开。商品与综合榜相同，没有另编。",
+        "ogImageAlt": "青榜周榜：本周 {period} 情趣用品销量排行榜，仅限 18 周岁以上",
+        "archiveTitle": "归档周榜 · 情趣用品 Top 20｜{period}"
       }
     },
-    "siteDescription": "青榜整理面向成年人的情趣用品公开销售榜，有日榜和周榜，不直接售卖。"
+    "siteDescription": "青榜（Qing List）整理面向成年人的情趣用品公开销售榜与热销排行榜，有日榜和周榜，方便对照多店名次、价格与评分；本站不直接售卖。",
+    "seoKeywords": "情趣用品排行榜, 情趣用品销量排行榜, 情趣用品热销榜, 情趣用品日榜, 情趣用品周榜, 成人用品排行榜, 青榜"
   },
   "ui": {
     "skip": "跳到主要内容",
@@ -171,12 +172,12 @@
   "pages": {
     "top": {
       "daily": {
-        "h1": "情趣用品销售日榜 · 前 20 名",
-        "lead": "按上海时间的当天，把几家能打开的公开热销放在一起：海外独立品牌、亚马逊美国站，以及香港店。只保留名称、价格、评分和链接。",
-        "listTitle": "日榜上的 20 款",
+        "h1": "情趣用品销量排行榜 · 日榜前 20 名",
+        "lead": "按上海时间的当天，把几家能打开的公开热销榜放在一起：海外独立品牌、亚马逊美国站，以及香港店。只保留名称、价格、评分和链接——方便对照「情趣用品排行榜／热销榜」里的当日名次。",
+        "listTitle": "日榜热销前 20 款",
         "cross": "按店铺查看这份日榜",
         "geo": [
-          "本页是 {period}（{tz}）的情趣用品公开销售日榜，共 {count} 款。",
+          "本页是 {period}（{tz}）的情趣用品公开销售日榜／销量排行榜，共 {count} 款。",
           "名单来自当天能打开的公开热销页：{sources}。本站不售卖，也不是广告位。",
           "{top}",
           "日榜按上海时间每天整份更新；周榜按周一至周日更新。价格、评分和名次只对得上这份日榜文件。",
@@ -186,12 +187,12 @@
         "geoTopNamed": "综合第 1 名是 {store} 的 {listing}（页面中文名：{display}），标价 {price}。"
       },
       "weekly": {
-        "h1": "情趣用品销售周榜 · 本周前 20 名",
-        "lead": "按上海时间的自然周（周一到周日）看公开热销。只保留这份周榜文件里的名称、价格、评分和链接。",
-        "listTitle": "周榜上的 20 款",
+        "h1": "情趣用品销量排行榜 · 本周前 20 名",
+        "lead": "按上海时间的自然周（周一到周日）看公开热销排行榜。只保留这份周榜文件里的名称、价格、评分和链接。",
+        "listTitle": "周榜热销前 20 款",
         "cross": "按店铺查看这份周榜",
         "geo": [
-          "本页是 {period}（{tz}，周一至周日{weekClause}）的情趣用品销售周榜，共 {count} 款。",
+          "本页是 {period}（{tz}，周一至周日{weekClause}）的情趣用品销售周榜／销量排行榜，共 {count} 款。",
           "{seed}",
           "{top}",
           "周榜按上海时间周一至周日更新，例行发布会整份覆盖最新文件并按 ISO 周归档。",
@@ -206,8 +207,8 @@
     },
     "platform": {
       "daily": {
-        "h1": "情趣用品销售日榜 · 按店铺",
-        "lead": "还是这份日榜里的 20 款，只是按来源店铺分组。括号里是进入综合榜的数量，不是该店榜单的全部长度。",
+        "h1": "情趣用品销量排行榜 · 按店铺日榜",
+        "lead": "还是这份日榜里的 20 款，只是按来源店铺分组。括号里是进入综合热销榜的数量，不是该店榜单的全部长度。",
         "cross": "查看日榜综合排序",
         "geo": [
           "本页把 {period}（{tz}）情趣用品销售日榜的 {count} 款按店铺分开，商品与综合榜相同。",
@@ -220,7 +221,7 @@
         "geoTopNamed": "综合第 1 名是 {store} 的 {listing}（页面中文名：{display}），标价 {price}。"
       },
       "weekly": {
-        "h1": "情趣用品销售周榜 · 按店铺",
+        "h1": "情趣用品销量排行榜 · 按店铺周榜",
         "lead": "还是这份周榜里的 20 款，只是按来源店铺分组。括号里是进入综合榜的数量，不是该店榜单的全部长度。",
         "cross": "查看周榜综合排序",
         "geo": [
@@ -611,6 +612,14 @@
       {
         "q": "日榜和周榜怎么分？",
         "a": "日榜是上海时间的一天，周榜是周一到周日的一周。打开页面时先看到日榜，页首可以改看周榜。两份最新数据在 data/daily-latest.json 和 data/weekly-latest.json。同一周有多份日榜时，周榜由它们汇总；数据里若仍带有 seed，那一份才是同一天日榜的副本，不是单独统计的一周销量。"
+      },
+      {
+        "q": "这份榜和「情趣用品排行榜／热销榜」搜索有什么关系？",
+        "a": "青榜按上海时间整理多家店铺当天或当周能打开的公开热销页，做成日榜与周榜快照，方便对照名次、价格和评分。它回答的是「今天／本周情趣用品公开销量排行如何」这类检索，不是购物车，也不编造销量数字。要下单请回到商家页面核对。"
+      },
+      {
+        "q": "有没有按品类（例如跳蛋、震动棒）的单独排行？",
+        "a": "目前没有按品类拆开的独立榜。综合日榜／周榜按各店公开热销名次汇总前 20；若某一期来源页本身是品类热销，名次仍跟该来源页当日顺序走，不会另外编造分类销量。"
       }
     ],
     "more": "查看全部常见问题"

@@ -2,30 +2,31 @@
   "meta": {
     "htmlLang": "ja",
     "ogLocale": "ja_JP",
-    "topTitle": "アダルトグッズ売上ランキング デイリー20｜{period}（上海時間）",
-    "topDescription": "18歳以上の方向け。{period}（Asia/Shanghai）のアダルトグッズ売上ランキング（デイリー）です。Amazon、Dame、Lovense、We-Vibe、Womanizer、香港の Waddy をまとめています。価格・評価・順位はその日のファイルの数字です。",
-    "platformTitle": "アダルトグッズ売上ランキング ショップ別デイリー｜{period}",
+    "topTitle": "アダルトグッズ売れ筋・売上ランキング デイリー20｜{period}（上海時間）",
+    "topDescription": "18歳以上の方向け。{period}（Asia/Shanghai）のアダルトグッズ／大人のおもちゃ売れ筋・売上ランキング（デイリー）。Amazon、Dame、Lovense、We-Vibe、Womanizer、香港の Waddy などをまとめています。価格・評価・順位はその日のファイルの数字です。販売はしていません。",
+    "platformTitle": "アダルトグッズ売れ筋ランキング ショップ別デイリー｜{period}",
     "platformDescription": "18歳以上の方向け。{period}（Asia/Shanghai）のデイリー売上ランキングを、Amazon、Dame、Lovense、We-Vibe、Womanizer、Waddy ごとに分けて見られます。商品は足していません。",
-    "ogImageAlt": "青榜。{period} のアダルトグッズ売上ランキング。18歳以上。",
+    "ogImageAlt": "青榜。{period} のアダルトグッズ売れ筋・売上ランキング。18歳以上。",
     "boards": {
       "daily": {
-        "topTitle": "アダルトグッズ売上ランキング デイリー20｜{period}（上海時間）",
-        "topDescription": "18歳以上の方向け。{period}（Asia/Shanghai）のアダルトグッズ売上ランキング（デイリー）です。Amazon、Dame、Lovense、We-Vibe、Womanizer、香港の Waddy をまとめています。価格・評価・順位はその日のファイルの数字です。",
-        "platformTitle": "アダルトグッズ売上ランキング ショップ別デイリー｜{period}",
+        "topTitle": "アダルトグッズ売れ筋・売上ランキング デイリー20｜{period}（上海時間）",
+        "topDescription": "18歳以上の方向け。{period}（Asia/Shanghai）のアダルトグッズ／大人のおもちゃ売れ筋・売上ランキング（デイリー）。Amazon、Dame、Lovense、We-Vibe、Womanizer、香港の Waddy などをまとめています。価格・評価・順位はその日のファイルの数字です。販売はしていません。",
+        "platformTitle": "アダルトグッズ売れ筋ランキング ショップ別デイリー｜{period}",
         "platformDescription": "18歳以上の方向け。{period}（Asia/Shanghai）のデイリー売上ランキングを、Amazon、Dame、Lovense、We-Vibe、Womanizer、Waddy ごとに分けて見られます。商品は足していません。",
-        "ogImageAlt": "青榜デイリー。{period} のアダルトグッズ売上ランキング。18歳以上。",
+        "ogImageAlt": "青榜デイリー。{period} のアダルトグッズ売れ筋ランキング。18歳以上。",
         "archiveTitle": "デイリーアーカイブ Top 20｜{period}（上海時間）"
       },
       "weekly": {
-        "topTitle": "アダルトグッズ売上ランキング 週間20｜今週 {period}",
-        "topDescription": "18歳以上の方向け。今週 {period}（Asia/Shanghai、月曜から日曜）のアダルトグッズ売上ランキングです。価格・評価・順位はその週のファイルの数字です。",
+        "topTitle": "アダルトグッズ売れ筋・売上ランキング 週間20｜今週 {period}",
+        "topDescription": "18歳以上の方向け。今週 {period}（Asia/Shanghai、月曜から日曜）のアダルトグッズ売れ筋・売上ランキングです。価格・評価・順位はその週のファイルの数字です。販売はしていません。",
         "platformTitle": "アダルトグッズ売上ランキング ショップ別週間｜今週 {period}",
         "platformDescription": "18歳以上の方向け。今週 {period}（Asia/Shanghai）の週間売上ランキングをショップごとに分けたものです。総合と同じ商品で、作り足してはいません。",
-        "ogImageAlt": "青榜の週間。今週 {period} のアダルトグッズ売上ランキング。18歳以上。",
+        "ogImageAlt": "青榜の週間。今週 {period} のアダルトグッズ売れ筋ランキング。18歳以上。",
         "archiveTitle": "週間アーカイブ Top 20｜{period}"
       }
     },
-    "siteDescription": "青榜は、成人向けのアダルトグッズ売上ランキング（デイリーと週間）を整理するサイトです。商品の販売はしていません。"
+    "siteDescription": "青榜は、成人向けのアダルトグッズ／大人のおもちゃ売れ筋・売上ランキング（デイリーと週間）を整理するサイトです。商品の販売はしていません。",
+    "seoKeywords": "アダルトグッズ売れ筋ランキング, アダルトグッズ売上ランキング, 大人のおもちゃランキング, 青榜"
   },
   "ui": {
     "skip": "本文へ移動",
@@ -171,9 +172,9 @@
   "pages": {
     "top": {
       "daily": {
-        "h1": "アダルトグッズ売上ランキング · デイリー20",
+        "h1": "アダルトグッズ売れ筋ランキング · デイリー20",
         "lead": "上海時間のその日に開けた公開リストを並べています。海外のインディーブランド、Amazon.com、香港の中文ショップです。ファイルにあった名称・価格・評価・リンクだけを残しています。",
-        "listTitle": "デイリーの 20 件",
+        "listTitle": "デイリー売れ筋 20 点",
         "cross": "このデイリーをショップ別に見る",
         "geo": [
           "このページは {period}（{tz}）のアダルトグッズ売上ランキング、デイリー {count} 件です。",
@@ -186,7 +187,7 @@
         "geoTopNamed": "総合1位は {store} の {listing}（このページの表示名：{display}）、価格は {price} です。"
       },
       "weekly": {
-        "h1": "アダルトグッズ売上ランキング · 今週の20",
+        "h1": "アダルトグッズ売れ筋ランキング · 今週の20",
         "lead": "上海時間の月曜から日曜を一週間として見た公開の売れ筋です。載っているのは、その週のファイルで確認できた名称・価格・評価・リンクだけです。",
         "listTitle": "週間の 20 件",
         "cross": "この週間をショップ別に見る",
@@ -206,7 +207,7 @@
     },
     "platform": {
       "daily": {
-        "h1": "売上ランキングのデイリー · ショップ別",
+        "h1": "アダルトグッズ売れ筋ランキング · ショップ別デイリー",
         "lead": "このデイリーに入った 20 件を、出てきた店舗ごとに分けたものです。件数は総合リストに入った数であり、各店のランキング全件ではありません。",
         "cross": "デイリーの総合順位を見る",
         "geo": [

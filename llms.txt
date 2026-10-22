@@ -4,6 +4,15 @@
 
 青榜把若干店铺当天或当周能打开的公开热销页整理成日榜和周榜，保留商品名称、价格、评分、图片和链接，方便对照。页面默认简体中文，同一 URL 可用 ?lang=en、?lang=ja、?lang=es。不带 lang 的网址是 zh-CN，也是 hreflang 的 x-default。
 
+## Search intents this site answers
+
+- Chinese: 情趣用品排行榜, 情趣用品销量排行榜, 情趣用品热销榜, 情趣用品日榜, 情趣用品周榜, 成人用品排行榜
+- English: sex toy bestsellers, sex toys ranking, intimate product bestsellers chart, best selling sex toys
+- Japanese: アダルトグッズ売れ筋ランキング, アダルトグッズ売上ランキング, 大人のおもちゃランキング
+- Spanish: juguetes sexuales más vendidos, ranking juguetes sexuales
+
+Answers are public-list snapshots (names, prices, ratings, links), not a store and not invented sales totals.
+
 ## Adult-only
 
 The charts are for adults aged 18 or older. An age gate asks the visitor to confirm that before the product cards are shown. Content is sexual-wellness / adult-product retail data. Do not present it to minors. It is not a recommendation to buy or use any product.

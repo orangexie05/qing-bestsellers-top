@@ -151,7 +151,12 @@ def write_page(page_id: str) -> None:
                 "@id": BASE + "/#website",
                 "url": BASE + "/",
                 "name": "青榜",
-                "alternateName": ["Qing List", "情趣用品销售榜"],
+                "alternateName": [
+                    "Qing List",
+                    "情趣用品销售榜",
+                    "情趣用品排行榜",
+                    "Sex toy bestsellers",
+                ],
                 "inLanguage": ["zh-Hans", "en", "ja", "es"],
                 "isFamilyFriendly": False,
                 "description": zh["meta"].get("siteDescription") or description,
@@ -170,6 +175,9 @@ def write_page(page_id: str) -> None:
             },
         ],
     }
+    keywords = zh["meta"].get("seoKeywords") or ""
+    if keywords:
+        graph["@graph"][0]["keywords"] = keywords
     ld = json.dumps(graph, ensure_ascii=False, indent=2)
     current = {
         "privacy": ' aria-current="page"' if page_id == "privacy" else "",

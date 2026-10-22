@@ -2,30 +2,31 @@
   "meta": {
     "htmlLang": "es",
     "ogLocale": "es_ES",
-    "topTitle": "Ranking de ventas de productos íntimos, top 20 de hoy | {period}",
-    "topDescription": "Solo mayores de 18 años. Ranking de ventas de productos íntimos del {period} (Asia/Shanghai): Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Precios, valoraciones y puestos son los de ese archivo del día.",
-    "platformTitle": "Ranking de ventas de hoy por tienda | {period}",
+    "topTitle": "Ranking de juguetes sexuales más vendidos · top 20 de hoy | {period}",
+    "topDescription": "Solo mayores de 18 años. Ranking de ventas / bestsellers de productos íntimos y juguetes sexuales del {period} (Asia/Shanghai): Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Precios, valoraciones y puestos son los de ese archivo del día. No vendemos.",
+    "platformTitle": "Bestsellers de juguetes sexuales por tienda · hoy | {period}",
     "platformDescription": "Solo mayores de 18 años. El ranking de ventas del {period} (Asia/Shanghai), separado por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy. No se añadieron productos.",
-    "ogImageAlt": "Lista Qing, ranking de ventas de productos íntimos del {period}. Solo mayores de 18.",
+    "ogImageAlt": "Lista Qing, ranking de juguetes sexuales más vendidos del {period}. Solo mayores de 18.",
     "boards": {
       "daily": {
-        "topTitle": "Ranking de ventas de productos íntimos, top 20 de hoy | {period}",
-        "topDescription": "Solo mayores de 18 años. Ranking de ventas de productos íntimos del {period} (Asia/Shanghai): Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Precios, valoraciones y puestos son los de ese archivo del día.",
-        "platformTitle": "Ranking de ventas de hoy por tienda | {period}",
+        "topTitle": "Ranking de juguetes sexuales más vendidos · top 20 de hoy | {period}",
+        "topDescription": "Solo mayores de 18 años. Ranking de ventas / bestsellers de productos íntimos y juguetes sexuales del {period} (Asia/Shanghai): Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play y Sex Concept. Precios, valoraciones y puestos son los de ese archivo del día. No vendemos.",
+        "platformTitle": "Bestsellers de juguetes sexuales por tienda · hoy | {period}",
         "platformDescription": "Solo mayores de 18 años. El ranking de ventas del {period} (Asia/Shanghai), separado por Amazon, Dame, Lovense, We-Vibe, Womanizer y Waddy. No se añadieron productos.",
-        "ogImageAlt": "Lista Qing, ranking de hoy del {period}. Solo mayores de 18.",
+        "ogImageAlt": "Lista Qing, bestsellers de hoy del {period}. Solo mayores de 18.",
         "archiveTitle": "Archivo del día, top 20 | {period}"
       },
       "weekly": {
-        "topTitle": "Ranking de ventas de productos íntimos, top 20 de esta semana | {period}",
-        "topDescription": "Solo mayores de 18 años. Ranking de ventas de esta semana, {period} (lunes a domingo, hora de Shanghái). Precios, valoraciones y puestos son los de ese archivo semanal.",
+        "topTitle": "Ranking de juguetes sexuales más vendidos · top 20 de esta semana | {period}",
+        "topDescription": "Solo mayores de 18 años. Ranking de bestsellers de esta semana, {period} (lunes a domingo, hora de Shanghái). Precios, valoraciones y puestos son los de ese archivo semanal. No vendemos.",
         "platformTitle": "Ranking de ventas de la semana por tienda | {period}",
         "platformDescription": "Solo mayores de 18 años. El ranking semanal del {period} (Asia/Shanghai), separado por tienda. Mismos productos que la lista combinada; no se inventó ninguno.",
-        "ogImageAlt": "Lista Qing, ranking de la semana del {period}. Solo mayores de 18.",
+        "ogImageAlt": "Lista Qing, bestsellers de la semana del {period}. Solo mayores de 18.",
         "archiveTitle": "Archivo semanal, top 20 | {period}"
       }
     },
-    "siteDescription": "Lista Qing reúne, para adultos, rankings públicos de ventas de productos íntimos, diarios y semanales. No vende productos."
+    "siteDescription": "Lista Qing reúne, para adultos, rankings públicos de ventas y bestsellers de productos íntimos / juguetes sexuales, diarios y semanales. No vende productos.",
+    "seoKeywords": "juguetes sexuales más vendidos, ranking juguetes sexuales, bestsellers productos íntimos, Lista Qing"
   },
   "ui": {
     "skip": "Saltar al contenido",
@@ -171,9 +172,9 @@
   "pages": {
     "top": {
       "daily": {
-        "h1": "Ranking de ventas de productos íntimos · top 20 de hoy",
+        "h1": "Juguetes sexuales más vendidos · top 20 de hoy",
         "lead": "Listas públicas de una sola fecha en hora de Shanghái: marcas independientes, Amazon.com y una tienda en chino de Hong Kong. Solo nombres, precios, valoraciones y enlaces de ese archivo.",
-        "listTitle": "En la lista de hoy",
+        "listTitle": "Top 20 bestsellers de hoy",
         "cross": "Ver la de hoy por tienda",
         "geo": [
           "Esta página es el ranking público de ventas de productos íntimos del {period} ({tz}): {count} productos.",
@@ -186,7 +187,7 @@
         "geoTopNamed": "El número 1 global es {listing} de {store} (aquí figura como {display}), a {price}."
       },
       "weekly": {
-        "h1": "Ranking de ventas de productos íntimos · top 20 de esta semana",
+        "h1": "Juguetes sexuales más vendidos · top 20 de esta semana",
         "lead": "Los más vendidos públicos de una semana de lunes a domingo, en hora de Shanghái. Solo nombres, precios, valoraciones y enlaces que figuran en el archivo de esa semana.",
         "listTitle": "En la lista de la semana",
         "cross": "Ver la semana por tienda",
@@ -206,7 +207,7 @@
     },
     "platform": {
       "daily": {
-        "h1": "Ranking de hoy, por tienda",
+        "h1": "Bestsellers de juguetes sexuales · por tienda (hoy)",
         "lead": "Los mismos 20 productos de la lista de hoy, agrupados por la tienda de origen. El número es cuántos entraron en la lista combinada, no la longitud completa del ranking de cada tienda.",
         "cross": "Ver el orden de hoy",
         "geo": [

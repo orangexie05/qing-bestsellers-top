@@ -668,6 +668,116 @@ def faq_entities(items: list[dict]) -> list[dict]:
     return entities
 
 
+SITE_ALT_EXTRAS = ("情趣用品排行榜", "Sex toy bestsellers", "Qing List")
+ABOUT_NAME = "情趣用品公开销售排行榜"
+TRUST_HTML = ("about.html", "method.html", "faq.html", "privacy.html", "contact.html")
+
+
+def ranking_meta(locales: dict[str, dict]) -> tuple[str, str]:
+    meta = (locales.get("zh-CN") or {}).get("meta") or {}
+    return meta.get("seoKeywords") or "", meta.get("siteDescription") or ""
+
+
+def apply_ranking_identity(node: dict, locales: dict[str, dict], *, chart_page: bool) -> None:
+    """Stamp JSON-LD with ranking-list keywords. No HTML meta keywords tag.
+
+    WebPage on the chart shells also gets an adults-only about Thing. WebSite
+    alternateName picks up 排行榜 / bestsellers names when they are missing.
+    """
+    kind = node.get("@type")
+    keywords, about_desc = ranking_meta(locales)
+    if kind == "WebPage" and chart_page:
+        if keywords:
+            node["keywords"] = keywords
+        if about_desc:
+            node["about"] = {
+                "@type": "Thing",
+                "name": ABOUT_NAME,
+                "description": about_desc,
+            }
+    elif kind == "WebSite":
+        alts = node.get("alternateName") or []
+        if isinstance(alts, str):
+            alts = [alts]
+        else:
+            alts = list(alts)
+        for extra in SITE_ALT_EXTRAS:
+            if extra not in alts:
+                alts.append(extra)
+        node["alternateName"] = alts
+        if keywords:
+            node["keywords"] = keywords
+        if about_desc:
+            node["description"] = about_desc
+    elif kind == "Organization" and about_desc:
+        node["description"] = about_desc
+
+
+def paint_visible_copy(html: str, page_name: str, locales: dict[str, dict]) -> str:
+    """Write the zh-CN H1, lead, and list title into the static shell.
+
+    app.js replaces these after it loads i18n. Crawlers that do not run
+    JavaScript need the ranking-list phrasing in the HTML itself.
+    """
+    page = locales["zh-CN"]["pages"][page_name]["daily"]
+    faq = locales["zh-CN"].get("faq") or {}
+    html = replace_element(
+        html,
+        r'(<h1 id="hero-title">)(.*?)(</h1>)',
+        esc(page.get("h1") or ""),
+        "hero-title",
+    )
+    html = replace_element(
+        html,
+        r'(<p class="lead" id="hero-lead">)(.*?)(</p>)',
+        esc(page.get("lead") or ""),
+        "hero-lead",
+    )
+    if 'id="list-title"' in html and page.get("listTitle"):
+        html = replace_element(
+            html,
+            r'(<h2 id="list-title">)(.*?)(</h2>)',
+            esc(page["listTitle"]),
+            "list-title",
+        )
+    if 'id="faq-title"' in html and faq.get("title"):
+        html = replace_element(
+            html,
+            r'(<h2 id="faq-title">)(.*?)(</h2>)',
+            esc(faq["title"]),
+            "faq-title",
+        )
+    if 'id="faq-lead"' in html and faq.get("lead"):
+        html = replace_element(
+            html,
+            r'(<p class="faq-lead" id="faq-lead">)(.*?)(</p>)',
+            esc(faq["lead"]),
+            "faq-lead",
+        )
+    return html
+
+
+def patch_trust_jsonld(path: Path, locales: dict[str, dict]) -> None:
+    if not path.exists():
+        return
+    html = path.read_text(encoding="utf-8")
+    pattern = re.compile(
+        r'<script type="application/ld\+json" id="ld-json">\s*(.*?)\s*</script>',
+        re.S,
+    )
+    match = pattern.search(html)
+    if not match:
+        return
+    graph = json.loads(match.group(1))
+    for node in graph.get("@graph") or []:
+        apply_ranking_identity(node, locales, chart_page=False)
+    rendered = json.dumps(graph, ensure_ascii=False, indent=2)
+    block = '<script type="application/ld+json" id="ld-json">\n' + rendered + "\n</script>"
+    html = pattern.sub(lambda _match: block, html, count=1)
+    path.write_text(html, encoding="utf-8")
+    print(f"refreshed site JSON-LD in {path.name}")
+
+
 def patch_shell(path: Path, page_name: str, daily: dict, weekly: dict, locales: dict[str, dict]) -> None:
     html = path.read_text(encoding="utf-8")
     packs = head_pack(locales, page_name, daily, weekly)
@@ -675,6 +785,7 @@ def patch_shell(path: Path, page_name: str, daily: dict, weekly: dict, locales: 
     products = locales["zh-CN"].get("products") or {}
     day = str(daily.get("date"))[:10]
     html = re.sub(r"<title>.*?</title>", f"<title>{esc(zh['title'])}</title>", html, count=1, flags=re.S)
+    html = paint_visible_copy(html, page_name, locales)
     for kind, name, content in (
         ("name", "description", zh["desc"]),
         ("property", "og:title", zh["title"]),
@@ -710,6 +821,11 @@ def patch_shell(path: Path, page_name: str, daily: dict, weekly: dict, locales: 
             node["dateModified"] = day
             node["temporalCoverage"] = coverage
             node["isFamilyFriendly"] = False
+            apply_ranking_identity(node, locales, chart_page=True)
+        elif kind == "WebSite":
+            apply_ranking_identity(node, locales, chart_page=True)
+        elif kind == "Organization":
+            apply_ranking_identity(node, locales, chart_page=True)
         elif kind == "ItemList":
             node["name"] = zh["title"]
             node["description"] = zh["desc"]
@@ -869,6 +985,15 @@ def write_llms(daily: dict, weekly: dict) -> None:
 
 青榜把若干店铺当天或当周能打开的公开热销页整理成日榜和周榜，保留商品名称、价格、评分、图片和链接，方便对照。页面默认简体中文，同一 URL 可用 ?lang=en、?lang=ja、?lang=es。不带 lang 的网址是 zh-CN，也是 hreflang 的 x-default。
 
+## Search intents this site answers
+
+- Chinese: 情趣用品排行榜, 情趣用品销量排行榜, 情趣用品热销榜, 情趣用品日榜, 情趣用品周榜, 成人用品排行榜
+- English: sex toy bestsellers, sex toys ranking, intimate product bestsellers chart, best selling sex toys
+- Japanese: アダルトグッズ売れ筋ランキング, アダルトグッズ売上ランキング, 大人のおもちゃランキング
+- Spanish: juguetes sexuales más vendidos, ranking juguetes sexuales
+
+Answers are public-list snapshots (names, prices, ratings, links), not a store and not invented sales totals.
+
 ## Adult-only
 
 The charts are for adults aged 18 or older. An age gate asks the visitor to confirm that before the product cards are shown. Content is sexual-wellness / adult-product retail data. Do not present it to minors. It is not a recommendation to buy or use any product.
@@ -943,6 +1068,8 @@ def main() -> int:
     locales = load_locales()
     patch_shell(boardlib.ROOT / "index.html", "top", daily, weekly, locales)
     patch_shell(boardlib.ROOT / "by-platform.html", "platform", daily, weekly, locales)
+    for name in TRUST_HTML:
+        patch_trust_jsonld(boardlib.ROOT / name, locales)
     write_llms(daily, weekly)
     title = re.search(r"<title>(.*?)</title>", (boardlib.ROOT / "index.html").read_text(encoding="utf-8"), re.S)
     if not title or day not in title.group(1):
