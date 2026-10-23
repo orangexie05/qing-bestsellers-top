@@ -1,0 +1,109 @@
+{
+  "platform": "we_vibe",
+  "store": "We-Vibe",
+  "list_url": "https://www.we-vibe.com/us/bestsellers",
+  "fetched_at": "2026-10-23T10:38:27+08:00",
+  "status": "ok",
+  "currency": "USD",
+  "rank_basis": "public_bestsellers_list_order",
+  "note": "Public https://www.we-vibe.com/us/bestsellers. Magento dataLayer view_item_list; confirmed PDP URLs from item_url. Ratings/counts from page data when present. No invented rows.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Chorus Pro",
+      "product_url": "https://www.we-vibe.com/us/chorus-pro",
+      "purchase_url": "https://www.we-vibe.com/us/chorus-pro",
+      "price": 229.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.07,
+        "count": 58,
+        "sample": null
+      },
+      "id": "we_vibe-www-we-vibe-com-us-chorus-pro",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_chorus_pro_purple_category_image_1000x1000.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 2,
+      "name": "We-Vibe Melt 2",
+      "product_url": "https://www.we-vibe.com/us/melt-2",
+      "purchase_url": "https://www.we-vibe.com/us/melt-2",
+      "price": 159.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.06,
+        "count": 62,
+        "sample": null
+      },
+      "id": "we_vibe-www-we-vibe-com-us-melt-2",
+      "image": "https://www.we-vibe.com/static/version1792163997/frontend/Interactiv4/wevibe/en_US/Magento_Catalog/images/product/placeholder/image.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 3,
+      "name": "We-Vibe Nova 2",
+      "product_url": "https://www.we-vibe.com/us/nova2",
+      "purchase_url": "https://www.we-vibe.com/us/nova2",
+      "price": 159.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.49,
+        "count": 255,
+        "sample": null
+      },
+      "id": "we_vibe-www-we-vibe-com-us-nova2",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_nova2_blue_pdp_gallery_1500x1500_01a_1.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 4,
+      "name": "We-Vibe Touch X",
+      "product_url": "https://www.we-vibe.com/us/touch-x",
+      "purchase_url": "https://www.we-vibe.com/us/touch-x",
+      "price": 109.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.26,
+        "count": 193,
+        "sample": null
+      },
+      "id": "we_vibe-www-we-vibe-com-us-touch-x",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_touchx_dalia_pdp_01_1.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 5,
+      "name": "We-Vibe Chorus",
+      "product_url": "https://www.we-vibe.com/us/chorus",
+      "purchase_url": "https://www.we-vibe.com/us/chorus",
+      "price": 159.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 3.92,
+        "count": 237,
+        "sample": null
+      },
+      "id": "we_vibe-www-we-vibe-com-us-chorus",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/c/h/chorus_pink_product_picture_5__1.jpg",
+      "image_kind": "official",
+      "compare_at_price": 219.0
+    },
+    {
+      "rank": 6,
+      "name": "We-Vibe Sync 2",
+      "product_url": "https://www.we-vibe.com/us/sync-2",
+      "purchase_url": "https://www.we-vibe.com/us/sync-2",
+      "price": 169.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 3.97,
+        "count": 307,
+        "sample": null
+      },
+      "id": "we_vibe-www-we-vibe-com-us-sync-2",
+      "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_sync_2nd_gen_purple_pdp_gallery_1000x1000_03_1.jpg",
+      "image_kind": "official"
+    }
+  ]
+}

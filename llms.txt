@@ -22,10 +22,10 @@ The charts are for adults aged 18 or older. An age gate asks the visitor to conf
 Time zone for every board date is Asia/Shanghai.
 
 - Daily: one calendar day. A routine publish replaces data/daily-latest.json in full and writes the same document to data/daily-YYYY-MM-DD.json and data/archive/daily/YYYY-MM-DD.json. Older rows are not merged into that file, and products are not invented to fill a Top 20.
-- The latest daily file is 2026-10-22, generated at 2026-10-22T10:45:47+08:00. Paths: data/daily-latest.json, data/daily-2026-10-22.json, data/archive/daily/2026-10-22.json.
+- The latest daily file is 2026-10-23, generated at 2026-10-23T10:38:27+08:00. Paths: data/daily-latest.json, data/daily-2026-10-23.json, data/archive/daily/2026-10-23.json.
 - Weekly: Monday through Sunday (ISO week). When data/archive/daily/ contains two or more daily files for that week, scripts/build_weekly.py dedupes by product URL and ranks by how many of those days the product appeared, then mean source rank, then best source rank, then rating, then review count. It writes data/weekly-latest.json and data/archive/weekly/YYYY-Www.json and does not mark that file as a seed.
 - If a week has only one daily archive, the script leaves the weekly file alone. A weekly JSON that still has a seed object is a copy of one day's chart, not a separate week-long tally. The page says so.
-- The published weekly file is 2026-W43 (2026-10-19 through 2026-10-25). It aggregates 3 daily archives: 2026-10-19, 2026-10-21, and 2026-10-22. It has no seed field. It is not a one-day copy and not a merchant-reported weekly sales total.
+- The published weekly file is 2026-W43 (2026-10-19 through 2026-10-25). It aggregates 4 daily archives: 2026-10-19, 2026-10-21, 2026-10-22, and 2026-10-23. It has no seed field. It is not a one-day copy and not a merchant-reported weekly sales total.
 
 Prices, ratings, and ranks match the file's date. They are not a live quote.
 
@@ -33,9 +33,9 @@ Every publish also runs scripts/build_homepage.py (via scripts/publish_boards.py
 
 ## What is and is not included
 
-The 2026-10-22 daily chart includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Hong Kong ranks follow the order on that shop's public category page. Each source contributes at most 6 rows to the combined Top 20.
+The 2026-10-23 daily chart includes Amazon.com, Dame, Lovense, We-Vibe, Womanizer, and Hong Kong shops Waddy, SISTALK, Les'Play, and Sex Concept. Hong Kong ranks follow the order on that shop's public category page. Each source contributes at most 6 rows to the combined Top 20.
 
-Not on the 2026-10-22 daily chart: Taobao / Tmall (blocked: Not re-fetched on 2026-10-22. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains.); 18 Gifts (blocked: Not re-fetched on 2026-10-22. Prior Cloudflare interstitial.); LELO (not_found: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-22.) Rows were not invented. The empty Taobao / Tmall placeholder remains data/sources/taobao_tmall.placeholder.json.
+Not on the 2026-10-23 daily chart: Taobao / Tmall (blocked: Not re-fetched on 2026-10-23. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains.); 18 Gifts (blocked: Not re-fetched on 2026-10-23. Prior Cloudflare interstitial.); LELO (not_found: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-23.) Rows were not invented. The empty Taobao / Tmall placeholder remains data/sources/taobao_tmall.placeholder.json.
 
 ## Key URLs
 
@@ -43,7 +43,7 @@ Not on the 2026-10-22 daily chart: Taobao / Tmall (blocked: Not re-fetched on 20
 - Weekly chart: https://orangexie05.github.io/qing-bestsellers-top/?board=weekly
 - By shop: https://orangexie05.github.io/qing-bestsellers-top/by-platform.html
 - Archive index: https://orangexie05.github.io/qing-bestsellers-top/archive/index.html
-- Example daily archive: https://orangexie05.github.io/qing-bestsellers-top/archive/daily/2026-10-22.html
+- Example daily archive: https://orangexie05.github.io/qing-bestsellers-top/archive/daily/2026-10-23.html
 - Example weekly archive: https://orangexie05.github.io/qing-bestsellers-top/archive/weekly/2026-W43.html
 - About: https://orangexie05.github.io/qing-bestsellers-top/about.html
 - Methodology: https://orangexie05.github.io/qing-bestsellers-top/method.html

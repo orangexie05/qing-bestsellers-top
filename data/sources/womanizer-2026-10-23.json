@@ -1,0 +1,109 @@
+{
+  "platform": "womanizer",
+  "store": "Womanizer",
+  "list_url": "https://www.womanizer.com/us/bestseller",
+  "fetched_at": "2026-10-23T10:38:27+08:00",
+  "status": "ok",
+  "currency": "USD",
+  "rank_basis": "public_bestsellers_list_order",
+  "note": "Public https://www.womanizer.com/us/bestseller. Magento dataLayer view_item_list; confirmed PDP URLs from item_url. Ratings/counts from page data when present. No invented rows.",
+  "items": [
+    {
+      "rank": 1,
+      "name": "Womanizer Next",
+      "product_url": "https://www.womanizer.com/us/next",
+      "purchase_url": "https://www.womanizer.com/us/next",
+      "price": 229.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 3.87,
+        "count": 327,
+        "sample": null
+      },
+      "id": "womanizer-www-womanizer-com-us-next",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_next_pdp_gallery_image_aubergine_01_en_sticker_2.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 2,
+      "name": "Womanizer DUO 2",
+      "product_url": "https://www.womanizer.com/us/duo2",
+      "purchase_url": "https://www.womanizer.com/us/duo2",
+      "price": 229.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.48,
+        "count": 271,
+        "sample": null
+      },
+      "id": "womanizer-www-womanizer-com-us-duo2",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_duo2_black_pdp_gallery_1000x1000_en_01.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 3,
+      "name": "Womanizer Premium 2",
+      "product_url": "https://www.womanizer.com/us/premium-2",
+      "purchase_url": "https://www.womanizer.com/us/premium-2",
+      "price": 189.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.42,
+        "count": 1027,
+        "sample": null
+      },
+      "id": "womanizer-www-womanizer-com-us-premium-2",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_premium2_blueberry_generic_internal_pdp_gallery_01a_1.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 4,
+      "name": "Womanizer Next Duo",
+      "product_url": "https://www.womanizer.com/us/next-duo",
+      "purchase_url": "https://www.womanizer.com/us/next-duo",
+      "price": 239.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.11,
+        "count": 75,
+        "sample": null
+      },
+      "id": "womanizer-www-womanizer-com-us-next-duo",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/a/r/arc_perk_pdp_category_image_1000x1000_jpeg_1.jpeg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 5,
+      "name": "Womanizer Next Liberty",
+      "product_url": "https://www.womanizer.com/us/next-liberty",
+      "purchase_url": "https://www.womanizer.com/us/next-liberty",
+      "price": 129.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.43,
+        "count": 46,
+        "sample": null
+      },
+      "id": "womanizer-www-womanizer-com-us-next-liberty",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_nextliberty_bluered_categoryimage_1.jpg",
+      "image_kind": "official"
+    },
+    {
+      "rank": 6,
+      "name": "Womanizer Liberty 2",
+      "product_url": "https://www.womanizer.com/us/liberty-2",
+      "purchase_url": "https://www.womanizer.com/us/liberty-2",
+      "price": 99.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.62,
+        "count": 1139,
+        "sample": null
+      },
+      "id": "womanizer-www-womanizer-com-us-liberty-2",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_liberty_2_pdp_gallery_image_sage_01a_fr.jpg",
+      "image_kind": "official",
+      "compare_at_price": 109.0
+    }
+  ]
+}
