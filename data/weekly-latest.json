@@ -1,8 +1,8 @@
 {
   "board": "weekly",
-  "generated_at": "2026-10-23T10:42:00+08:00",
-  "date": "2026-10-23",
-  "as_of": "2026-10-23",
+  "generated_at": "2026-10-24T10:42:47+08:00",
+  "date": "2026-10-24",
+  "as_of": "2026-10-24",
   "timezone": "Asia/Shanghai",
   "period": {
     "kind": "week",
@@ -20,10 +20,11 @@
       "2026-10-19",
       "2026-10-21",
       "2026-10-22",
-      "2026-10-23"
+      "2026-10-23",
+      "2026-10-24"
     ],
-    "daily_count": 4,
-    "note": "Built from 4 daily archives in 2026-W43 (2026-10-19, 2026-10-21, 2026-10-22, 2026-10-23). Deduped by product_url. Ranked by days appeared, then mean source rank, then best source rank, then rating, then review count. Not a merchant-reported weekly sales total. Does not invent products. No seed field, because this is not a one-day copy."
+    "daily_count": 5,
+    "note": "Built from 5 daily archives in 2026-W43 (2026-10-19, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24). Deduped by product_url. Ranked by days appeared, then mean source rank, then best source rank, then rating, then review count. Not a merchant-reported weekly sales total. Does not invent products. No seed field, because this is not a one-day copy."
   },
   "publish": {
     "schema_version": 1,
@@ -44,24 +45,24 @@
     "sistalk_hk",
     "waddy_store",
     "amazon_us",
-    "lesplay_hk",
-    "lovense"
+    "lovense",
+    "lesplay_hk"
   ],
   "sources_skipped": [
     {
       "platform": "taobao_tmall",
       "status": "blocked",
-      "note": "2026-10-19: Not re-fetched on 2026-10-19. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains. | 2026-10-21: Not re-fetched on 2026-10-21. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains. | 2026-10-22: Not re-fetched on 2026-10-22. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains. | 2026-10-23: Not re-fetched on 2026-10-23. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains."
+      "note": "2026-10-19: Not re-fetched on 2026-10-19. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains. | 2026-10-21: Not re-fetched on 2026-10-21. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains. | 2026-10-22: Not re-fetched on 2026-10-22. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains. | 2026-10-23: Not re-fetched on 2026-10-23. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains. | 2026-10-24: Not re-fetched on 2026-10-24. Prior days: PC search shell/CSR with no product rows. Empty placeholder remains."
     },
     {
       "platform": "gifts_18",
       "status": "blocked",
-      "note": "2026-10-19: Not re-fetched on 2026-10-19. Prior Cloudflare interstitial. | 2026-10-21: Not re-fetched on 2026-10-21. Prior Cloudflare interstitial. | 2026-10-22: Not re-fetched on 2026-10-22. Prior Cloudflare interstitial. | 2026-10-23: Not re-fetched on 2026-10-23. Prior Cloudflare interstitial."
+      "note": "2026-10-19: Not re-fetched on 2026-10-19. Prior Cloudflare interstitial. | 2026-10-21: Not re-fetched on 2026-10-21. Prior Cloudflare interstitial. | 2026-10-22: Not re-fetched on 2026-10-22. Prior Cloudflare interstitial. | 2026-10-23: Not re-fetched on 2026-10-23. Prior Cloudflare interstitial. | 2026-10-24: Not re-fetched on 2026-10-24. Prior Cloudflare interstitial."
     },
     {
       "platform": "lelo",
       "status": "not_found",
-      "note": "2026-10-19: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-19. | 2026-10-21: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-21. | 2026-10-22: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-22. | 2026-10-23: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-23."
+      "note": "2026-10-19: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-19. | 2026-10-21: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-21. | 2026-10-22: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-22. | 2026-10-23: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-23. | 2026-10-24: Official /best-sellers was 404 on prior days; not rechecked as a list URL on 2026-10-24."
     }
   ],
   "omissions": [
@@ -106,25 +107,27 @@
         "count": 58,
         "sample": null
       },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
+      "scraped_at": "2026-10-24T10:40:19+08:00",
       "id": "we_vibe-www-we-vibe-com-us-chorus-pro",
       "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_chorus_pro_purple_category_image_1000x1000.jpg",
       "image_kind": "official",
       "list_url": "https://www.we-vibe.com/us/bestsellers",
       "best_source_rank": 1,
       "mean_source_rank": 1.0,
-      "appearances": 4,
+      "appearances": 5,
       "appearance_dates": [
         "2026-10-19",
         "2026-10-21",
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-24"
       ],
       "source_ranks": {
         "2026-10-19": 1,
         "2026-10-21": 1,
         "2026-10-22": 1,
-        "2026-10-23": 1
+        "2026-10-23": 1,
+        "2026-10-24": 1
       },
       "overall_rank": 1
     },
@@ -142,25 +145,27 @@
         "count": 327,
         "sample": null
       },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
+      "scraped_at": "2026-10-24T10:40:19+08:00",
       "id": "womanizer-www-womanizer-com-us-next",
       "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_next_pdp_gallery_image_aubergine_01_en_sticker_2.jpg",
       "image_kind": "official",
       "list_url": "https://www.womanizer.com/us/bestseller",
       "best_source_rank": 1,
       "mean_source_rank": 1.0,
-      "appearances": 4,
+      "appearances": 5,
       "appearance_dates": [
         "2026-10-19",
         "2026-10-21",
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-24"
       ],
       "source_ranks": {
         "2026-10-19": 1,
         "2026-10-21": 1,
         "2026-10-22": 1,
-        "2026-10-23": 1
+        "2026-10-23": 1,
+        "2026-10-24": 1
       },
       "overall_rank": 2
     },
@@ -178,25 +183,27 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
+      "scraped_at": "2026-10-24T10:40:19+08:00",
       "id": "dame-hug",
       "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/hug-1-fir.png?v=1776325569",
       "image_kind": "official",
       "list_url": "https://dame.com/collections/bestsellers",
       "best_source_rank": 1,
       "mean_source_rank": 1.0,
-      "appearances": 4,
+      "appearances": 5,
       "appearance_dates": [
         "2026-10-19",
         "2026-10-21",
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-24"
       ],
       "source_ranks": {
         "2026-10-19": 1,
         "2026-10-21": 1,
         "2026-10-22": 1,
-        "2026-10-23": 1
+        "2026-10-23": 1,
+        "2026-10-24": 1
       },
       "overall_rank": 3
     },
@@ -214,7 +221,7 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
+      "scraped_at": "2026-10-24T10:40:19+08:00",
       "id": "sexconcept_hk-fuji-world-seigi48-karakuri-dolls-ninja-positions",
       "image": "https://shoplineimg.com/650a996045789b00678df389/6abf83edd41407a256da9536/375x.webp?source_format=png",
       "image_kind": "official",
@@ -223,18 +230,20 @@
       "compare_at_price": 128.0,
       "best_source_rank": 1,
       "mean_source_rank": 1.0,
-      "appearances": 4,
+      "appearances": 5,
       "appearance_dates": [
         "2026-10-19",
         "2026-10-21",
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-24"
       ],
       "source_ranks": {
         "2026-10-19": 1,
         "2026-10-21": 1,
         "2026-10-22": 1,
-        "2026-10-23": 1
+        "2026-10-23": 1,
+        "2026-10-24": 1
       },
       "overall_rank": 4
     },
@@ -252,7 +261,7 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
+      "scraped_at": "2026-10-24T10:40:19+08:00",
       "id": "sistalk_hk-monster-pub-wiwi-fish-tail-antibacterial-vibrator",
       "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/6970712b5240724b98fe011e/375x.webp?source_format=gif",
       "image_kind": "official",
@@ -260,18 +269,20 @@
       "note_key": "hk_list_order",
       "best_source_rank": 1,
       "mean_source_rank": 1.0,
-      "appearances": 4,
+      "appearances": 5,
       "appearance_dates": [
         "2026-10-19",
         "2026-10-21",
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-24"
       ],
       "source_ranks": {
         "2026-10-19": 1,
         "2026-10-21": 1,
         "2026-10-22": 1,
-        "2026-10-23": 1
+        "2026-10-23": 1,
+        "2026-10-24": 1
       },
       "overall_rank": 5
     },
@@ -289,7 +300,7 @@
         "count": null,
         "sample": null
       },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
+      "scraped_at": "2026-10-24T10:40:19+08:00",
       "id": "waddy_store-npg-rin-hachimitsu-urethral-dual-orifice-masturbator",
       "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/6ad1e7e7f8978afeed3c4253/375x.webp?source_format=jpeg",
       "image_kind": "official",
@@ -297,18 +308,20 @@
       "note_key": "hk_list_order",
       "best_source_rank": 1,
       "mean_source_rank": 1.0,
-      "appearances": 4,
+      "appearances": 5,
       "appearance_dates": [
         "2026-10-19",
         "2026-10-21",
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-24"
       ],
       "source_ranks": {
         "2026-10-19": 1,
         "2026-10-21": 1,
         "2026-10-22": 1,
-        "2026-10-23": 1
+        "2026-10-23": 1,
+        "2026-10-24": 1
       },
       "overall_rank": 6
     },
@@ -323,28 +336,30 @@
       "currency": "USD",
       "reviews": {
         "rating": 4.3,
-        "count": 6536,
+        "count": 6540,
         "sample": null
       },
-      "scraped_at": "2026-10-23T10:35:00+08:00",
+      "scraped_at": "2026-10-24T10:41:08+08:00",
       "id": "amazon-b0cnrzvjmg",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/71ibbU+OxdL._AC_UL600_SR600,400_.jpg",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71ibbU+OxdL._AC_UL300_SR300,200_.jpg",
       "image_kind": "official",
       "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
       "best_source_rank": 1,
-      "mean_source_rank": 1.5,
-      "appearances": 4,
+      "mean_source_rank": 1.4,
+      "appearances": 5,
       "appearance_dates": [
         "2026-10-19",
         "2026-10-21",
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-24"
       ],
       "source_ranks": {
         "2026-10-19": 2,
         "2026-10-21": 2,
         "2026-10-22": 1,
-        "2026-10-23": 1
+        "2026-10-23": 1,
+        "2026-10-24": 1
       },
       "overall_rank": 7
     },
@@ -355,34 +370,381 @@
       "name": "Ava Vibrator Sex Toys – Battery Life 4 Hours | Water Resistant Body Safe Silicone | Clitoral Vibrators Couples Sex Toy with Multi Patterns & speeds Vibrator for Women - Purple",
       "product_url": "https://www.amazon.com/dp/B07YW5DZBQ",
       "purchase_url": "https://www.amazon.com/dp/B07YW5DZBQ",
-      "price": 16.97,
+      "price": 16.47,
       "currency": "USD",
       "reviews": {
         "rating": 4.2,
-        "count": 45148,
+        "count": 45147,
         "sample": null
       },
-      "scraped_at": "2026-10-23T10:35:00+08:00",
+      "scraped_at": "2026-10-24T10:41:08+08:00",
       "id": "amazon-b07yw5dzbq",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/61hB-pRnvdL._AC_UL600_SR600,400_.jpg",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61hB-pRnvdL._AC_UL300_SR300,200_.jpg",
       "image_kind": "official",
       "list_url": "https://www.amazon.com/Best-Sellers-Sex-Toys/zgbs/hpc/3777811",
       "best_source_rank": 1,
-      "mean_source_rank": 1.5,
-      "appearances": 4,
+      "mean_source_rank": 1.6,
+      "appearances": 5,
       "appearance_dates": [
         "2026-10-19",
         "2026-10-21",
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-24"
       ],
       "source_ranks": {
         "2026-10-19": 1,
         "2026-10-21": 1,
         "2026-10-22": 2,
-        "2026-10-23": 2
+        "2026-10-23": 2,
+        "2026-10-24": 2
       },
       "overall_rank": 8
+    },
+    {
+      "platform": "womanizer",
+      "store": "Womanizer",
+      "rank": 2,
+      "name": "Womanizer DUO 2",
+      "product_url": "https://www.womanizer.com/us/duo2",
+      "purchase_url": "https://www.womanizer.com/us/duo2",
+      "price": 229.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.48,
+        "count": 271,
+        "sample": null
+      },
+      "scraped_at": "2026-10-24T10:40:19+08:00",
+      "id": "womanizer-www-womanizer-com-us-duo2",
+      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_duo2_black_pdp_gallery_1000x1000_en_01.jpg",
+      "image_kind": "official",
+      "list_url": "https://www.womanizer.com/us/bestseller",
+      "best_source_rank": 2,
+      "mean_source_rank": 2.0,
+      "appearances": 5,
+      "appearance_dates": [
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "source_ranks": {
+        "2026-10-19": 2,
+        "2026-10-21": 2,
+        "2026-10-22": 2,
+        "2026-10-23": 2,
+        "2026-10-24": 2
+      },
+      "overall_rank": 9
+    },
+    {
+      "platform": "we_vibe",
+      "store": "We-Vibe",
+      "rank": 2,
+      "name": "We-Vibe Melt 2",
+      "product_url": "https://www.we-vibe.com/us/melt-2",
+      "purchase_url": "https://www.we-vibe.com/us/melt-2",
+      "price": 159.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": 4.06,
+        "count": 62,
+        "sample": null
+      },
+      "scraped_at": "2026-10-24T10:40:19+08:00",
+      "id": "we_vibe-www-we-vibe-com-us-melt-2",
+      "image": "https://www.we-vibe.com/static/version1792163997/frontend/Interactiv4/wevibe/en_US/Magento_Catalog/images/product/placeholder/image.jpg",
+      "image_kind": "official",
+      "list_url": "https://www.we-vibe.com/us/bestsellers",
+      "best_source_rank": 2,
+      "mean_source_rank": 2.0,
+      "appearances": 5,
+      "appearance_dates": [
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "source_ranks": {
+        "2026-10-19": 2,
+        "2026-10-21": 2,
+        "2026-10-22": 2,
+        "2026-10-23": 2,
+        "2026-10-24": 2
+      },
+      "overall_rank": 10
+    },
+    {
+      "platform": "dame",
+      "store": "Dame Products",
+      "rank": 2,
+      "name": "Eva Wearable Vibrator",
+      "product_url": "https://dame.com/products/eva-ii",
+      "purchase_url": "https://dame.com/products/eva-ii",
+      "price": 129.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-24T10:40:19+08:00",
+      "id": "dame-eva-ii",
+      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/eva-1-ice.png?v=1776326231",
+      "image_kind": "official",
+      "list_url": "https://dame.com/collections/bestsellers",
+      "best_source_rank": 2,
+      "mean_source_rank": 2.0,
+      "appearances": 5,
+      "appearance_dates": [
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "source_ranks": {
+        "2026-10-19": 2,
+        "2026-10-21": 2,
+        "2026-10-22": 2,
+        "2026-10-23": 2,
+        "2026-10-24": 2
+      },
+      "overall_rank": 11
+    },
+    {
+      "platform": "lovense",
+      "store": "Lovense",
+      "rank": 2,
+      "name": "Solace Pro",
+      "product_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
+      "purchase_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
+      "price": 199.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-24T10:41:17+08:00",
+      "id": "lovense-www-lovense-com-solace-pro-ai-automatic-blowjob-machine",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_solace22.jpg?v=20261023",
+      "image_kind": "official",
+      "list_url": "https://www.lovense.com/",
+      "notes": "Sale price shown on homepage Flagship Toys carousel.",
+      "best_source_rank": 2,
+      "mean_source_rank": 2.0,
+      "appearances": 5,
+      "appearance_dates": [
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "source_ranks": {
+        "2026-10-19": 2,
+        "2026-10-21": 2,
+        "2026-10-22": 2,
+        "2026-10-23": 2,
+        "2026-10-24": 2
+      },
+      "overall_rank": 12
+    },
+    {
+      "platform": "sexconcept_hk",
+      "store": "Sex Concept (HK)",
+      "rank": 2,
+      "name": "Fuji World Seigi48 凸凹堂 忍者編 深山 性愛體位動力機械擺件",
+      "product_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja-doll",
+      "purchase_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja-doll",
+      "price": 98.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-24T10:40:19+08:00",
+      "id": "sexconcept_hk-fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja",
+      "image": "https://shoplineimg.com/650a996045789b00678df389/6abf81188523e64f2dbd373b/375x.webp?source_format=png",
+      "image_kind": "official",
+      "list_url": "https://www.sexconcepthk.com/categories/best-sellers",
+      "note_key": "hk_list_sale",
+      "compare_at_price": 128.0,
+      "best_source_rank": 2,
+      "mean_source_rank": 2.0,
+      "appearances": 5,
+      "appearance_dates": [
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "source_ranks": {
+        "2026-10-19": 2,
+        "2026-10-21": 2,
+        "2026-10-22": 2,
+        "2026-10-23": 2,
+        "2026-10-24": 2
+      },
+      "overall_rank": 13
+    },
+    {
+      "platform": "sistalk_hk",
+      "store": "SISTALK HK",
+      "rank": 2,
+      "name": "HARU: ORGASM 草本熱浪迷情 高潮潤滑液",
+      "product_url": "https://www.sistalk.hk/products/orgasm-大麻熱浪迷情-熱感潤滑液-150ml",
+      "purchase_url": "https://www.sistalk.hk/products/orgasm-大麻熱浪迷情-熱感潤滑液-150ml",
+      "price": 218.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-24T10:40:19+08:00",
+      "id": "sistalk_hk-orgasm-150ml",
+      "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/64467f32e55f380023436cc5/375x.webp?source_format=png",
+      "image_kind": "official",
+      "list_url": "https://www.sistalk.hk/categories/hot-selling",
+      "note_key": "hk_list_order",
+      "best_source_rank": 2,
+      "mean_source_rank": 2.0,
+      "appearances": 5,
+      "appearance_dates": [
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "source_ranks": {
+        "2026-10-19": 2,
+        "2026-10-21": 2,
+        "2026-10-22": 2,
+        "2026-10-23": 2,
+        "2026-10-24": 2
+      },
+      "overall_rank": 14
+    },
+    {
+      "platform": "waddy_store",
+      "store": "Waddy Store (HK)",
+      "rank": 2,
+      "name": "LELO F1S V3 App 控制聲波電動男士飛機杯",
+      "product_url": "https://www.waddystore.com/products/lelo-f1s™-v3-male-masturbators",
+      "purchase_url": "https://www.waddystore.com/products/lelo-f1s™-v3-male-masturbators",
+      "price": 1947.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-24T10:40:19+08:00",
+      "id": "waddy_store-lelo-f1s-v3-male-masturbators",
+      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/69294be382f98f00163aab6f/375x.webp?source_format=jpeg",
+      "image_kind": "official",
+      "list_url": "https://www.waddystore.com/",
+      "note_key": "hk_list_order",
+      "best_source_rank": 2,
+      "mean_source_rank": 2.0,
+      "appearances": 5,
+      "appearance_dates": [
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "source_ranks": {
+        "2026-10-19": 2,
+        "2026-10-21": 2,
+        "2026-10-22": 2,
+        "2026-10-23": 2,
+        "2026-10-24": 2
+      },
+      "overall_rank": 15
+    },
+    {
+      "platform": "lovense",
+      "store": "Lovense",
+      "rank": 1,
+      "name": "Glint",
+      "product_url": "https://www.lovense.com/glint-touch-responsive-vibrating-small-butt-plug",
+      "purchase_url": "https://www.lovense.com/glint-touch-responsive-vibrating-small-butt-plug",
+      "price": 109.0,
+      "currency": "USD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-24T10:41:17+08:00",
+      "id": "lovense-www-lovense-com-glint-touch-responsive-vibrating-small-b",
+      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_z11.jpg?v=20261023",
+      "image_kind": "official",
+      "list_url": "https://www.lovense.com/",
+      "notes": "Sale price shown on homepage Flagship Toys carousel.",
+      "best_source_rank": 1,
+      "mean_source_rank": 1.0,
+      "appearances": 4,
+      "appearance_dates": [
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "source_ranks": {
+        "2026-10-21": 1,
+        "2026-10-22": 1,
+        "2026-10-23": 1,
+        "2026-10-24": 1
+      },
+      "overall_rank": 16
+    },
+    {
+      "platform": "lesplay_hk",
+      "store": "Les'Play (HK)",
+      "rank": 1,
+      "name": "台灣月釀碟片 標準型 限量新色 (53ml)",
+      "product_url": "https://www.lesplayhk.com/products/tw-moonplate-regular-limited-edition",
+      "purchase_url": "https://www.lesplayhk.com/products/tw-moonplate-regular-limited-edition",
+      "price": 458.0,
+      "currency": "HKD",
+      "reviews": {
+        "rating": null,
+        "count": null,
+        "sample": null
+      },
+      "scraped_at": "2026-10-24T10:40:19+08:00",
+      "id": "lesplay_hk-tw-moonplate-regular-limited-edition",
+      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6ad75b8a6d2dab0016573927/375x.webp?source_format=png",
+      "image_kind": "official",
+      "list_url": "https://www.lesplayhk.com/categories/best-seller",
+      "note_key": "hk_list_order",
+      "best_source_rank": 1,
+      "mean_source_rank": 1.25,
+      "appearances": 4,
+      "appearance_dates": [
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "source_ranks": {
+        "2026-10-21": 1,
+        "2026-10-22": 1,
+        "2026-10-23": 1,
+        "2026-10-24": 2
+      },
+      "overall_rank": 17
     },
     {
       "platform": "lesplay_hk",
@@ -419,333 +781,6 @@
         "2026-10-22": 2,
         "2026-10-23": 2
       },
-      "overall_rank": 9
-    },
-    {
-      "platform": "womanizer",
-      "store": "Womanizer",
-      "rank": 2,
-      "name": "Womanizer DUO 2",
-      "product_url": "https://www.womanizer.com/us/duo2",
-      "purchase_url": "https://www.womanizer.com/us/duo2",
-      "price": 229.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": 4.48,
-        "count": 271,
-        "sample": null
-      },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
-      "id": "womanizer-www-womanizer-com-us-duo2",
-      "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_duo2_black_pdp_gallery_1000x1000_en_01.jpg",
-      "image_kind": "official",
-      "list_url": "https://www.womanizer.com/us/bestseller",
-      "best_source_rank": 2,
-      "mean_source_rank": 2.0,
-      "appearances": 4,
-      "appearance_dates": [
-        "2026-10-19",
-        "2026-10-21",
-        "2026-10-22",
-        "2026-10-23"
-      ],
-      "source_ranks": {
-        "2026-10-19": 2,
-        "2026-10-21": 2,
-        "2026-10-22": 2,
-        "2026-10-23": 2
-      },
-      "overall_rank": 10
-    },
-    {
-      "platform": "we_vibe",
-      "store": "We-Vibe",
-      "rank": 2,
-      "name": "We-Vibe Melt 2",
-      "product_url": "https://www.we-vibe.com/us/melt-2",
-      "purchase_url": "https://www.we-vibe.com/us/melt-2",
-      "price": 159.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": 4.06,
-        "count": 62,
-        "sample": null
-      },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
-      "id": "we_vibe-www-we-vibe-com-us-melt-2",
-      "image": "https://www.we-vibe.com/static/version1792163997/frontend/Interactiv4/wevibe/en_US/Magento_Catalog/images/product/placeholder/image.jpg",
-      "image_kind": "official",
-      "list_url": "https://www.we-vibe.com/us/bestsellers",
-      "best_source_rank": 2,
-      "mean_source_rank": 2.0,
-      "appearances": 4,
-      "appearance_dates": [
-        "2026-10-19",
-        "2026-10-21",
-        "2026-10-22",
-        "2026-10-23"
-      ],
-      "source_ranks": {
-        "2026-10-19": 2,
-        "2026-10-21": 2,
-        "2026-10-22": 2,
-        "2026-10-23": 2
-      },
-      "overall_rank": 11
-    },
-    {
-      "platform": "dame",
-      "store": "Dame Products",
-      "rank": 2,
-      "name": "Eva Wearable Vibrator",
-      "product_url": "https://dame.com/products/eva-ii",
-      "purchase_url": "https://dame.com/products/eva-ii",
-      "price": 129.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
-      "id": "dame-eva-ii",
-      "image": "https://cdn.shopify.com/s/files/1/1027/2873/files/eva-1-ice.png?v=1776326231",
-      "image_kind": "official",
-      "list_url": "https://dame.com/collections/bestsellers",
-      "best_source_rank": 2,
-      "mean_source_rank": 2.0,
-      "appearances": 4,
-      "appearance_dates": [
-        "2026-10-19",
-        "2026-10-21",
-        "2026-10-22",
-        "2026-10-23"
-      ],
-      "source_ranks": {
-        "2026-10-19": 2,
-        "2026-10-21": 2,
-        "2026-10-22": 2,
-        "2026-10-23": 2
-      },
-      "overall_rank": 12
-    },
-    {
-      "platform": "lovense",
-      "store": "Lovense",
-      "rank": 2,
-      "name": "Solace Pro",
-      "product_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
-      "purchase_url": "https://www.lovense.com/solace-pro-ai-automatic-blowjob-machine-men",
-      "price": 199.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-23T10:39:17+08:00",
-      "id": "lovense-www-lovense-com-solace-pro-ai-automatic-blowjob-machine",
-      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_solace22.jpg?v=20261022",
-      "image_kind": "official",
-      "list_url": "https://www.lovense.com/",
-      "notes": "Sale price shown on homepage Flagship Toys carousel.",
-      "best_source_rank": 2,
-      "mean_source_rank": 2.0,
-      "appearances": 4,
-      "appearance_dates": [
-        "2026-10-19",
-        "2026-10-21",
-        "2026-10-22",
-        "2026-10-23"
-      ],
-      "source_ranks": {
-        "2026-10-19": 2,
-        "2026-10-21": 2,
-        "2026-10-22": 2,
-        "2026-10-23": 2
-      },
-      "overall_rank": 13
-    },
-    {
-      "platform": "sexconcept_hk",
-      "store": "Sex Concept (HK)",
-      "rank": 2,
-      "name": "Fuji World Seigi48 凸凹堂 忍者編 深山 性愛體位動力機械擺件",
-      "product_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja-doll",
-      "purchase_url": "https://www.sexconcepthk.com/products/fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja-doll",
-      "price": 98.0,
-      "currency": "HKD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
-      "id": "sexconcept_hk-fuji-world-seigi48-miyama-clock-work-ukiyo-e-ninja",
-      "image": "https://shoplineimg.com/650a996045789b00678df389/6abf81188523e64f2dbd373b/375x.webp?source_format=png",
-      "image_kind": "official",
-      "list_url": "https://www.sexconcepthk.com/categories/best-sellers",
-      "note_key": "hk_list_sale",
-      "compare_at_price": 128.0,
-      "best_source_rank": 2,
-      "mean_source_rank": 2.0,
-      "appearances": 4,
-      "appearance_dates": [
-        "2026-10-19",
-        "2026-10-21",
-        "2026-10-22",
-        "2026-10-23"
-      ],
-      "source_ranks": {
-        "2026-10-19": 2,
-        "2026-10-21": 2,
-        "2026-10-22": 2,
-        "2026-10-23": 2
-      },
-      "overall_rank": 14
-    },
-    {
-      "platform": "sistalk_hk",
-      "store": "SISTALK HK",
-      "rank": 2,
-      "name": "HARU: ORGASM 草本熱浪迷情 高潮潤滑液",
-      "product_url": "https://www.sistalk.hk/products/orgasm-大麻熱浪迷情-熱感潤滑液-150ml",
-      "purchase_url": "https://www.sistalk.hk/products/orgasm-大麻熱浪迷情-熱感潤滑液-150ml",
-      "price": 218.0,
-      "currency": "HKD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
-      "id": "sistalk_hk-orgasm-150ml",
-      "image": "https://shoplineimg.com/5d5d2078f982a4000166e291/64467f32e55f380023436cc5/375x.webp?source_format=png",
-      "image_kind": "official",
-      "list_url": "https://www.sistalk.hk/categories/hot-selling",
-      "note_key": "hk_list_order",
-      "best_source_rank": 2,
-      "mean_source_rank": 2.0,
-      "appearances": 4,
-      "appearance_dates": [
-        "2026-10-19",
-        "2026-10-21",
-        "2026-10-22",
-        "2026-10-23"
-      ],
-      "source_ranks": {
-        "2026-10-19": 2,
-        "2026-10-21": 2,
-        "2026-10-22": 2,
-        "2026-10-23": 2
-      },
-      "overall_rank": 15
-    },
-    {
-      "platform": "waddy_store",
-      "store": "Waddy Store (HK)",
-      "rank": 2,
-      "name": "LELO F1S V3 App 控制聲波電動男士飛機杯",
-      "product_url": "https://www.waddystore.com/products/lelo-f1s™-v3-male-masturbators",
-      "purchase_url": "https://www.waddystore.com/products/lelo-f1s™-v3-male-masturbators",
-      "price": 1947.0,
-      "currency": "HKD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
-      "id": "waddy_store-lelo-f1s-v3-male-masturbators",
-      "image": "https://shoplineimg.com/5f23e6c55680fc0012f13584/69294be382f98f00163aab6f/375x.webp?source_format=jpeg",
-      "image_kind": "official",
-      "list_url": "https://www.waddystore.com/",
-      "note_key": "hk_list_order",
-      "best_source_rank": 2,
-      "mean_source_rank": 2.0,
-      "appearances": 4,
-      "appearance_dates": [
-        "2026-10-19",
-        "2026-10-21",
-        "2026-10-22",
-        "2026-10-23"
-      ],
-      "source_ranks": {
-        "2026-10-19": 2,
-        "2026-10-21": 2,
-        "2026-10-22": 2,
-        "2026-10-23": 2
-      },
-      "overall_rank": 16
-    },
-    {
-      "platform": "lesplay_hk",
-      "store": "Les'Play (HK)",
-      "rank": 1,
-      "name": "台灣月釀碟片 標準型 限量新色 (53ml)",
-      "product_url": "https://www.lesplayhk.com/products/tw-moonplate-regular-limited-edition",
-      "purchase_url": "https://www.lesplayhk.com/products/tw-moonplate-regular-limited-edition",
-      "price": 458.0,
-      "currency": "HKD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
-      "id": "lesplay_hk-tw-moonplate-regular-limited-edition",
-      "image": "https://shoplineimg.com/5f4ff3ce854101002cda771e/6ad75b8a6d2dab0016573927/375x.webp?source_format=png",
-      "image_kind": "official",
-      "list_url": "https://www.lesplayhk.com/categories/best-seller",
-      "note_key": "hk_list_order",
-      "best_source_rank": 1,
-      "mean_source_rank": 1.0,
-      "appearances": 3,
-      "appearance_dates": [
-        "2026-10-21",
-        "2026-10-22",
-        "2026-10-23"
-      ],
-      "source_ranks": {
-        "2026-10-21": 1,
-        "2026-10-22": 1,
-        "2026-10-23": 1
-      },
-      "overall_rank": 17
-    },
-    {
-      "platform": "lovense",
-      "store": "Lovense",
-      "rank": 1,
-      "name": "Glint",
-      "product_url": "https://www.lovense.com/glint-touch-responsive-vibrating-small-butt-plug",
-      "purchase_url": "https://www.lovense.com/glint-touch-responsive-vibrating-small-butt-plug",
-      "price": 109.0,
-      "currency": "USD",
-      "reviews": {
-        "rating": null,
-        "count": null,
-        "sample": null
-      },
-      "scraped_at": "2026-10-23T10:39:17+08:00",
-      "id": "lovense-www-lovense-com-glint-touch-responsive-vibrating-small-b",
-      "image": "https://cdn.lovense.com/UploadFiles/web/index0912/newindex_2/bestSeller_3/pc_best_seller_z11.jpg?v=20261022",
-      "image_kind": "official",
-      "list_url": "https://www.lovense.com/",
-      "notes": "Sale price shown on homepage Flagship Toys carousel.",
-      "best_source_rank": 1,
-      "mean_source_rank": 1.0,
-      "appearances": 3,
-      "appearance_dates": [
-        "2026-10-21",
-        "2026-10-22",
-        "2026-10-23"
-      ],
-      "source_ranks": {
-        "2026-10-21": 1,
-        "2026-10-22": 1,
-        "2026-10-23": 1
-      },
       "overall_rank": 18
     },
     {
@@ -762,23 +797,25 @@
         "count": 255,
         "sample": null
       },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
+      "scraped_at": "2026-10-24T10:40:19+08:00",
       "id": "we_vibe-www-we-vibe-com-us-nova2",
       "image": "https://www.we-vibe.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/v/wvi_nova2_blue_pdp_gallery_1500x1500_01a_1.jpg",
       "image_kind": "official",
       "list_url": "https://www.we-vibe.com/us/bestsellers",
       "best_source_rank": 3,
       "mean_source_rank": 3.0,
-      "appearances": 3,
+      "appearances": 4,
       "appearance_dates": [
         "2026-10-19",
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-24"
       ],
       "source_ranks": {
         "2026-10-19": 3,
         "2026-10-22": 3,
-        "2026-10-23": 3
+        "2026-10-23": 3,
+        "2026-10-24": 3
       },
       "overall_rank": 19
     },
@@ -793,24 +830,26 @@
       "currency": "USD",
       "reviews": {
         "rating": 4.42,
-        "count": 1027,
+        "count": 1029,
         "sample": null
       },
-      "scraped_at": "2026-10-23T10:38:27+08:00",
+      "scraped_at": "2026-10-24T10:40:19+08:00",
       "id": "womanizer-www-womanizer-com-us-premium-2",
       "image": "https://www.womanizer.com/media/catalog/product/cache/f294c2d88e4b6f957d492e0619dcdebc/w/m/wmz_premium2_blueberry_generic_internal_pdp_gallery_01a_1.jpg",
       "image_kind": "official",
       "list_url": "https://www.womanizer.com/us/bestseller",
       "best_source_rank": 3,
       "mean_source_rank": 3.0,
-      "appearances": 2,
+      "appearances": 3,
       "appearance_dates": [
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-24"
       ],
       "source_ranks": {
         "2026-10-22": 3,
-        "2026-10-23": 3
+        "2026-10-23": 3,
+        "2026-10-24": 3
       },
       "overall_rank": 20
     }

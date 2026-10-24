@@ -91,13 +91,13 @@
     "navAbout": "Acerca",
     "navMethod": "Método",
     "navFaq": "FAQ",
-    "footerSources": "Cada entrega sigue su JSON. El diseño incluye Taobao/Tmall, Amazon y tiendas independientes. La entrega del 2026-10-23 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play, y Sex Concept. Taobao/Tmall sigue sin filas.",
+    "footerSources": "Cada entrega sigue su JSON. El diseño incluye Taobao/Tmall, Amazon y tiendas independientes. La entrega del 2026-10-24 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play, y Sex Concept. Taobao/Tmall sigue sin filas.",
     "footerCadence": "Cadencia: el día se sustituye por completo una vez por fecha de Shanghái. La semana se agrega cuando ese ISO tiene dos o más diarios. Si solo hay un día, la semana puede seguir siendo una copia con seed, y la página lo dice.",
     "footerAbout": "Acerca de",
     "footerMethod": "Método",
     "footerFaq": "Preguntas",
     "footerLinksFixed": "Los enlaces externos usan nofollow. Zona horaria Asia/Shanghai.",
-    "footerArchiveFixed": "Archivo legible: archive/index.html. JSON: data/archive/daily/2026-10-23.json · data/archive/weekly/2026-W43.json",
+    "footerArchiveFixed": "Archivo legible: archive/index.html. JSON: data/archive/daily/2026-10-24.json · data/archive/weekly/2026-W43.json",
     "geoLabel": "Resumen",
     "navArchive": "Archivo",
     "navPrivacy": "Privacidad",
@@ -410,11 +410,11 @@
       "items": [
         {
           "q": "¿De dónde salen los datos?",
-          "a": "De páginas públicas de más vendidos que se pudieron abrir al capturarlas. El diseño incluye Taobao/Tmall, Amazon y tiendas independientes o regionales. La entrega del 2026-10-23 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play, y Sex Concept. Taobao/Tmall no se volvió a consultar el 2026-10-17. Consultas anteriores devolvieron un cascarón de búsqueda en JavaScript, sin filas, y no se inventaron productos de Taobao. Los archivos son data/daily-latest.json y data/weekly-latest.json."
+          "a": "De páginas públicas de más vendidos que se pudieron abrir al capturarlas. El diseño incluye Taobao/Tmall, Amazon y tiendas independientes o regionales. La entrega del 2026-10-24 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play, y Sex Concept. Taobao/Tmall no se volvió a consultar el 2026-10-17. Consultas anteriores devolvieron un cascarón de búsqueda en JavaScript, sin filas, y no se inventaron productos de Taobao. Los archivos son data/daily-latest.json y data/weekly-latest.json."
         },
         {
           "q": "¿Cada cuánto se actualiza?",
-          "a": "El día se sustituye por completo una vez por fecha de Shanghái. Cuando una semana ISO tiene dos o más diarios, scripts/build_weekly.py los junta por la URL del producto y no deja la copia de un día como semana terminada. Si solo hay un día, la semana puede seguir con seed, y la página lo dice. El archivo del día actual se escribió a las 2026-10-23T10:38:27+08:00."
+          "a": "El día se sustituye por completo una vez por fecha de Shanghái. Cuando una semana ISO tiene dos o más diarios, scripts/build_weekly.py los junta por la URL del producto y no deja la copia de un día como semana terminada. Si solo hay un día, la semana puede seguir con seed, y la página lo dice. El archivo del día actual se escribió a las 2026-10-24T10:40:19+08:00."
         },
         {
           "q": "¿Cómo se lee la lista?",
@@ -717,11 +717,11 @@
     "items": [
       {
         "q": "¿Esto es una tienda?",
-        "a": "No. Lista Qing reúne páginas públicas de más vendidos que se pudieron abrir el 23 de octubre de 2026, para comparar nombres, precios y valoraciones. El pedido se hace en la tienda, después de revisar la ficha actual."
+        "a": "No. Lista Qing reúne páginas públicas de más vendidos que se pudieron abrir el 24 de octubre de 2026, para comparar nombres, precios y valoraciones. El pedido se hace en la tienda, después de revisar la ficha actual."
       },
       {
         "q": "¿Qué tiendas entran?",
-        "a": "La entrega del 2026-10-23 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play, y Sex Concept. Taobao/Tmall no tiene filas. Lo que no entró se lista al final y no se rellena con otros datos."
+        "a": "La entrega del 2026-10-24 incluye Amazon, Dame, Lovense, We-Vibe, Womanizer y, en Hong Kong, Waddy, SISTALK, Les'Play, y Sex Concept. Taobao/Tmall no tiene filas. Lo que no entró se lista al final y no se rellena con otros datos."
       },
       {
         "q": "¿Los precios siguen vigentes?",
